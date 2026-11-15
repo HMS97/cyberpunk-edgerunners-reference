@@ -321,6 +321,8 @@
     'fa.how': { zh: '怎么用', en: 'How to use' },
     'fa.evNote': { zh: '证据说明', en: 'About the evidence' },
     'fa.animeNote': { zh: '动画说明', en: 'About the anime' },
+    'fa.intro': { zh: '夜之城里的帮派、公司、机构，以及在这座城市里讨生活的普通人。每一项都写了他们穿什么、用什么颜色、装什么义体、在哪一带出没，点进去就能复制游戏风或动画风的人物和场景提示词。', en: 'The gangs, corporations and institutions of Night City, plus the ordinary people working to get by. Each entry covers what they wear, their colors, their cyberware and where they hang out. Open one to copy character and scene prompts in the game or anime style.' },
+    'fa.howto': { zh: '详情页里还能看到他们在游戏里的义体款式，以及常出没的街区和地点，点击会跳到「义体」和「场景」页。只有在动画里真正出场过的势力才配动画截图，其余只有游戏图。', en: 'Detail pages also show their in-game cyberware styles and the districts and places they frequent, linking to the Cyberware and Scenes pages. Only factions that actually appear in the anime have anime stills; the rest show game images only.' },
     'fa.evLegend': { zh: '字段后的标记：出处 = Wiki 明写；观察 = 从图中看到；推断 = 合理推测（灰色虚线）。', en: 'Badges after a field: Sourced = stated on the Wiki; Observed = seen in images; Inferred = reasonable guess (grey, dashed).' },
     'fa.back': { zh: '← 全部势力', en: '← All factions' },
     'fa.navAria': { zh: '势力导航', en: 'Faction navigation' },

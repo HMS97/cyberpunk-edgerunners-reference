@@ -54,10 +54,9 @@
     root.appendChild(h('div', { class: 'hero' },
       h('span', { class: 'kicker' }, 'FACTIONS'),
       h('h1', null, t('fa.h1')),
-      isStr(m.how_to_use) ? h('p', { class: 'note' }, tr(m.how_to_use)) : null,
-      isStr(m.evidence_note) ? h('p', { class: 'note' }, tr(m.evidence_note)) : null,
-      h('p', { class: 'note' }, t('fa.evLegend')),
-      isStr(m.anime_note) ? h('p', { class: 'note' }, tr(m.anime_note)) : null));
+      h('p', { class: 'lede' }, t('fa.intro')),
+      h('p', { class: 'note' }, t('fa.howto')),
+      h('p', { class: 'note' }, t('fa.evLegend'))));
     var items = GROUPS.map(function (g) {
       return { key: g.key, label: tabLabel(g), render: function () {
         return h('div', { class: 'grid', style: { 'grid-template-columns': 'repeat(auto-fill,minmax(min(46%,200px),1fr))' } }, groupList(g).map(card));
