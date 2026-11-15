@@ -96,6 +96,8 @@ li{margin-bottom:4px}
 .ev{display:inline-block; font-size:11px; padding:0 6px; border:1px solid currentColor; margin-left:6px; vertical-align:2px; line-height:1.6}
 .ev.source{color:var(--cyan)}
 .ev.observed{color:var(--mute)}
+.ev.inferred{color:var(--mute); border-style:dashed; opacity:.7}
+dd.inferred{color:var(--mute)}
 .chip{all:unset; cursor:pointer; display:inline-block; font-size:13px; padding:4px 11px; border:1px solid var(--line2); color:var(--paper); font-family:var(--sans); line-height:1.5;
   clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%)}
 .chip:hover{border-color:var(--cyan); color:var(--cyan)}
@@ -286,3 +288,29 @@ html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3{overflow-wrap:break-wor
   .home-cards.five{grid-template-columns:minmax(0,1fr)}
   .home-cards.five > :last-child{grid-column:auto}
 }
+
+/* ---------- 首页六张分区卡：3 + 3 ---------- */
+.home-cards.six{grid-template-columns:repeat(6,minmax(0,1fr))}
+.home-cards.six > *{grid-column:span 2}
+.home-cards.six .pv-grid.six{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (min-width:961px){.home-cards.six .pv.portrait{aspect-ratio:1/1}}
+@media (max-width:960px){
+  .home-cards.six{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .home-cards.six > *{grid-column:auto}
+}
+@media (max-width:720px){.home-cards.six{grid-template-columns:minmax(0,1fr)}}
+.pv-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.pv-grid.four .pv{aspect-ratio:1/1}
+
+/* ---------- 势力页 ---------- */
+.fcard-sw{display:flex; gap:4px; margin-top:8px}
+.fcard-sw i{display:block; width:18px; height:18px; border:1px solid rgba(255,255,255,.2)}
+.fcard .thumb .badge.kind{left:auto; right:6px}
+.fnote{font-size:12.5px; color:var(--mute); margin-top:6px}
+.fnote.inline{display:block; margin-top:4px}
+.cwstrip{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,120px),1fr)); gap:10px}
+.cwstrip a{display:block; text-decoration:none; color:var(--mute2); font-size:12.5px; text-align:center; background:var(--ink3); border:1px solid var(--line); padding:8px 6px}
+.cwstrip img{width:100%; aspect-ratio:1/1; object-fit:contain; display:block; margin-bottom:4px}
+.mt-card{background:var(--ink2); border:1px solid var(--line); border-left:3px solid var(--cyan); padding:12px 14px}
+.mt-card h4{margin:0 0 4px}
+.flist{margin:0; padding-left:18px}

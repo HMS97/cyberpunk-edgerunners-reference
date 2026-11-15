@@ -8,13 +8,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 FILES = ["edgerunners_character_kb.json", "edgerunners_scene_kb.json", "edgerunners_s2_scene_kb.json",
-         "style_guides.json", "cyberware_icons.json", "action_style_guides.json"]
+         "style_guides.json", "cyberware_icons.json", "action_style_guides.json", "factions_kb.json"]
 SKIP = {"zh", "prompt_zh", "keywords_zh", "negative_zh", "body_zh"}
 CJK = re.compile(r"[一-鿿]")
 
 
 def walk(o, key, out):
     if isinstance(o, dict):
+        # a scene description object {zh, lighting} is content, not a prompt: keep its zh text
+        if "lighting" in o and isinstance(o.get("zh"), str) and CJK.search(o["zh"]):
+            out.setdefault(o["zh"], "scene")
         for k, v in o.items():
             walk(v, k, out)
     elif isinstance(o, list):

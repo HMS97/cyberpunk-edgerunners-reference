@@ -99,12 +99,22 @@
       return r ? tlink('actions.html#' + k, KB.local(r.thumb_local), tr(r.label) || styName(k), { badge: k }) : null;
     }));
 
+    var FE = arr(D.f.entries);
+    var fN = { g: 0, o: 0, j: 0 };
+    FE.forEach(function (e) { if (e.kind === 'gang' || e.kind === 'nomad') fN.g++; else if (e.kind === 'job') fN.j++; else fN.o++; });
+    var facPv = h('div', { class: 'pv-grid four' }, ['maelstrom', 'arasaka', 'netrunner', 'trauma_team'].map(function (id) {
+      var e = FE.filter(function (x) { return x.id === id; })[0]; if (!e) return null;
+      var ims = arr(e.images), im = (KB.state.style === 'game' ? ims.filter(function (i) { return i.style === 'game'; })[0] : ims.filter(function (i) { return i.style !== 'game'; })[0]) || ims[0];
+      var nme = KB.en() ? (e.en || tr(e.zh)) : e.zh;
+      return tlink('factions.html#' + encodeURIComponent(id), KB.imgSrc(im, 'thumb'), nme, { badge: im && im.style });
+    }));
     var sec = KB.section('sections', t('home.sections'), 'Sections');
-    sec.appendChild(h('div', { class: 'grid home-cards five' },
+    sec.appendChild(h('div', { class: 'grid home-cards six' },
       card({ href: 'styles.html', color: 'var(--paper)', n: 3, title: t('home.c1.title'), short: t('nav.styles'), desc: t('home.c1.desc'), preview: styleTri }),
       card({ href: 'actions.html', color: 'var(--pink-d)', n: moves, title: t('home.c5.title'), short: t('nav.actions'), desc: t('home.c5.desc'), preview: actPv }),
       card({ href: 'characters.html', color: 'var(--pink)', n: chars.length, title: t('home.c2.title'), short: t('nav.characters'), desc: t('home.c2.desc', { season: seasonTxt }), preview: charPv }),
       card({ href: 'scenes.html', color: 'var(--yel)', n: l1.length + l2.length, title: t('home.c3.title'), short: t('nav.scenes'), desc: t('home.c3.desc', { d: arr(D.s1.districts).length, e: epN }), preview: scenePv }),
+      card({ href: 'factions.html', color: 'var(--cyan-d, var(--cyan))', n: FE.length, title: t('home.c6.title'), short: t('nav.factions'), desc: t('home.c6.desc', { g: fN.g, o: fN.o, j: fN.j }), preview: facPv }),
       card({ href: 'cyberware.html', color: 'var(--cyan)', n: icons, title: t('home.c4.title'), short: t('nav.cyberware'), desc: t('home.c4.desc', { v: arr(D.c.cyberware_vocab).length, s: secs.length }), preview: cwPv })));
     root.appendChild(sec);
 
@@ -146,9 +156,9 @@
   }
 
   KB.ready.then(function () {
-    return Promise.all([KB.load('edgerunners_character_kb.json'), KB.load('edgerunners_scene_kb.json'), KB.load('edgerunners_s2_scene_kb.json').catch(function () { return {}; }), KB.load('cyberware_icons.json'), KB.load('style_guides.json').catch(function () { return {}; }), KB.load('action_style_guides.json').catch(function () { return {}; })]);
+    return Promise.all([KB.load('edgerunners_character_kb.json'), KB.load('edgerunners_scene_kb.json'), KB.load('edgerunners_s2_scene_kb.json').catch(function () { return {}; }), KB.load('cyberware_icons.json'), KB.load('style_guides.json').catch(function () { return {}; }), KB.load('action_style_guides.json').catch(function () { return {}; }), KB.load('factions_kb.json').catch(function () { return {}; })]);
   }).then(function (r) {
-    D = { c: r[0], s1: r[1], s2: r[2], ic: r[3], g: r[4], a: r[5] || {} };
+    D = { c: r[0], s1: r[1], s2: r[2], ic: r[3], g: r[4], a: r[5] || {}, f: r[6] || {} };
     render();
     KB.onChange(function () { var y = window.scrollY; render(); window.scrollTo(0, y); });
   }).catch(function (e) { KB.fail(root, e); });

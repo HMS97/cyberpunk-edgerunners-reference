@@ -12,6 +12,8 @@ A fan-made design reference for *Cyberpunk: Edgerunners* (season 1, 2022) and *C
 |---|---|
 | `site/` | 网站：首页、画风、动作、角色、场景、义体 6 个页面，直接读取下面的 JSON；顶栏可切换季、风格（动画 / 游戏）和语言（中 / EN，也可用 `?lang=en`） |
 | `action_style_guides.json` / `.md` | 三套动作风格（游戏 / 第一季动画 / 第二季动画）：动作规则、招式卡片、关键词、负面词、AI 视频提示词模板 |
+| `factions_kb.json` / `.md` | 夜之城势力与职业：帮派 11、公司与机构 12、打工的（职业群像）15，每项有穿搭、配色、标志、义体、成员类型、地盘与场景，以及游戏风和动画风的人物、场景提示词；链接到义体款式、场景大区和地点 |
+| `tools/` | `build_factions.py` 合并势力资料、`build_manifest.py` 下载并登记图片本地副本、`extract_i18n.py` 检查待翻译文字 |
 | `i18n/en.json` | 英文版用的内容对照表（中文原文 → 英文）；`tools/extract_i18n.py` 检查哪些文字还没翻译 |
 | `edgerunners_character_kb.json` / `.md` | 角色知识库：21 个角色（第一季 9、第二季 12），外观、义体、配色、参考图、动画和游戏两套提示词 |
 | `edgerunners_scene_kb.json` / `.md` | 第一季场景：地点、夜之城大区、情绪主色、每集主视觉 |

@@ -327,7 +327,7 @@
   };
 
   /* ---------- chrome: top bar + footer ---------- */
-  var PAGES = ['index', 'styles', 'actions', 'characters', 'scenes', 'cyberware'];
+  var PAGES = ['index', 'styles', 'actions', 'characters', 'scenes', 'factions', 'cyberware'];
   var LS = { season: LS_SEASON, style: LS_STYLE };
   var listeners = [];
   KB.onChange = function (fn) { listeners.push(fn); };

@@ -11,6 +11,8 @@
     'title.characters': { zh: '角色 · 边缘行者知识库', en: 'Characters · Edgerunners KB' },
     'title.character': { zh: '{name} · 角色 · 边缘行者知识库', en: '{name} · Characters · Edgerunners KB' },
     'title.scenes': { zh: '场景 · 边缘行者知识库', en: 'Scenes · Edgerunners KB' },
+    'title.factions': { zh: '势力 · 边缘行者知识库', en: 'Factions · Edgerunners KB' },
+    'title.faction': { zh: '{name} · 势力 · 边缘行者知识库', en: '{name} · Factions · Edgerunners KB' },
     'title.cyberware': { zh: '义体 · 边缘行者知识库', en: 'Cyberware · Edgerunners KB' },
     'meta.desc': { zh: '赛博朋克：边缘行者（第一、二季）角色、场景、画风与义体的设计参考知识库。', en: 'A design reference knowledge base for Cyberpunk: Edgerunners (seasons 1 and 2): characters, scenes, art styles and cyberware.' },
     'loading': { zh: '正在加载数据…', en: 'Loading data…' },
@@ -24,6 +26,7 @@
     'nav.actions': { zh: '动作', en: 'Motion' },
     'nav.characters': { zh: '角色', en: 'Characters' },
     'nav.scenes': { zh: '场景', en: 'Scenes' },
+    'nav.factions': { zh: '势力', en: 'Factions' },
     'nav.cyberware': { zh: '义体', en: 'Cyberware' },
     'tg.season': { zh: '季', en: 'Season' },
     'tg.style': { zh: '风格', en: 'Style' },
@@ -75,6 +78,7 @@
     'cur.style': { zh: '当前风格', en: 'Current style' },
     'ev.source': { zh: '出处', en: 'Sourced' },
     'ev.observed': { zh: '观察', en: 'Observed' },
+    'ev.inferred': { zh: '推断', en: 'Inferred' },
     'list.sep': { zh: '、', en: ', ' },
     'colon': { zh: '：', en: ': ' },
 
@@ -93,7 +97,7 @@
     'home.collageCap': { zh: '拼贴图为角色设定图 · AI 生成（gpt-image-2.6-sunburst）', en: 'Collage of character design sheets · AI-generated (gpt-image-2.6-sunburst)' },
     'home.go': { zh: '进入{x} →', en: 'Open {x} →' },
     'home.refAlt': { zh: '{x}参考图', en: '{x} reference' },
-    'home.sections': { zh: '五个分区', en: 'Five sections' },
+    'home.sections': { zh: '六个分区', en: 'Six sections' },
     'home.c1.title': { zh: '套画风', en: 'art styles' },
     'home.c1.desc': { zh: '游戏风、第一季动画、第二季动画的规范、关键词、负面词、对比表和互转规则。', en: 'Specs, keywords, negative prompts, comparison table and conversion rules for the game style, season 1 anime and season 2 anime.' },
     'home.c2.title': { zh: '位角色', en: 'characters' },
@@ -249,6 +253,7 @@
     'ch.promptNote': { zh: '默认打开当前「风格」对应的那一套；「纯描述」不带画风关键词，可以自己接任意画风。', en: 'Opens the set matching the current Style. "Plain description" has no style keywords, so you can pair it with any style.' },
     'ch.gallery': { zh: '图集', en: 'Gallery' },
     'ch.imgs': { zh: '{n} 张', en: '{n} images' },
+    'ch.imgs.one': { zh: '{n} 张', en: '{n} image' },
     'ch.galNote': { zh: '徽章标示画风：动画 = 第一季，S2动画 = 第二季，游戏 = 赛博朋克 2077。当前风格的图排在前面。点击放大。', en: 'Badges mark the style: Anime = season 1, S2 anime = season 2, Game = Cyberpunk 2077. Images in the current style come first. Click to enlarge.' },
 
     /* 场景页 */
@@ -304,6 +309,59 @@
     'sc.lede': { zh: '第一、二季地点，夜之城大区，每集主视觉和场景生成模板。地点图片按当前「风格」排序，提示词默认打开当前风格那一套；「季」开关会隐藏另一季的地点和剧集。', en: 'Season 1 and 2 locations, Night City districts, episode key art and scene generation templates. Location images are sorted by the current Style and prompts open the matching set; the Season toggle hides the other season\'s locations and episodes.' },
     'sc.tabsAria': { zh: '场景分区', en: 'Scene sections' },
 
+    /* 势力页 */
+    'fa.h1': { zh: '势力 / Factions', en: 'Factions' },
+    'fa.tab.gangs': { zh: '帮派', en: 'Gangs' },
+    'fa.tab.orgs': { zh: '公司与机构', en: 'Corps & Institutions' },
+    'fa.tab.jobs': { zh: '打工的', en: 'Jobs' },
+    'fa.tabsAria': { zh: '势力分类', en: 'Faction groups' },
+    'fa.count': { zh: '{n} 个', en: '{n}' },
+    'fa.notAnime': { zh: '无动画出场', en: 'Not in the anime' },
+    'fa.notAnimeNote': { zh: '无动画出场，显示游戏图', en: 'Not in the anime; showing a game image' },
+    'fa.how': { zh: '怎么用', en: 'How to use' },
+    'fa.evNote': { zh: '证据说明', en: 'About the evidence' },
+    'fa.animeNote': { zh: '动画说明', en: 'About the anime' },
+    'fa.evLegend': { zh: '字段后的标记：出处 = Wiki 明写；观察 = 从图中看到；推断 = 合理推测（灰色虚线）。', en: 'Badges after a field: Sourced = stated on the Wiki; Observed = seen in images; Inferred = reasonable guess (grey, dashed).' },
+    'fa.back': { zh: '← 全部势力', en: '← All factions' },
+    'fa.navAria': { zh: '势力导航', en: 'Faction navigation' },
+    'fa.gallery': { zh: '图集', en: 'Gallery' },
+    'fa.galNote': { zh: '徽章标示画风。第二季动画图只在「季」为全部或第二季时显示，第一季动画图只在全部或第一季时显示；游戏图始终显示。', en: 'Badges mark the style. S2 anime images show only when Season is All or S2, S1 anime images only when All or S1; game images always show.' },
+    'fa.noAnimeImg': { zh: '当前「季」下没有动画图。', en: 'No anime images for the current Season.' },
+    'fa.profile': { zh: '设定资料', en: 'Profile' },
+    'f.appears': { zh: '出场', en: 'Appears in' },
+    'f.territory': { zh: '地盘', en: 'Territory' },
+    'f.districts': { zh: '大区', en: 'Districts' },
+    'f.locations': { zh: '地点', en: 'Locations' },
+    'f.fashion': { zh: '穿搭', en: 'Fashion' },
+    'f.colors': { zh: '配色', en: 'Colors' },
+    'f.emblem': { zh: '标志', en: 'Emblem' },
+    'f.cyberware': { zh: '义体', en: 'Cyberware' },
+    'f.gear': { zh: '装备', en: 'Gear' },
+    'f.workplace': { zh: '工作场所', en: 'Workplace' },
+    'f.tools': { zh: '工具', en: 'Tools' },
+    'f.notable': { zh: '代表人物', en: 'Notable people' },
+    'fa.members': { zh: '成员类型', en: 'Member types' },
+    'fa.cwStyles': { zh: '游戏义体款式', en: 'In-game cyberware styles' },
+    'fa.cwNote': { zh: '点击跳到义体页。', en: 'Click to open the Cyberware page.' },
+    'fa.scene': { zh: '场景', en: 'Scene' },
+    'fa.personPrompts': { zh: '人物提示词', en: 'Character prompts' },
+    'fa.scenePrompts': { zh: '场景提示词', en: 'Scene prompts' },
+    'fa.promptNote': { zh: '默认打开当前「风格」对应的那一套。', en: 'Opens the set matching the current Style.' },
+    'fa.sceneNegNote': { zh: '场景提示词没有自带负面词，下面的负面词沿用同风格的人物提示词。', en: 'Scene prompts have no negative prompt of their own; the negatives below reuse the character prompt of the same style.' },
+    'fa.negEnReuse': { zh: '负面词 EN（沿用人物提示词）', en: 'Negative (English, from character prompt)' },
+    'fa.negZhReuse': { zh: '负面词 中文（沿用人物提示词）', en: 'Negative (Chinese, from character prompt)' },
+    'fa.gaps': { zh: '资料缺口', en: 'Data gaps' },
+    'fa.sources': { zh: '资料来源', en: 'Sources' },
+    'fa.sec.prompts': { zh: '提示词', en: 'Prompts' },
+    'home.c6.title': { zh: '个势力', en: 'factions' },
+    'home.c6.desc': { zh: '{g} 个帮派与游牧民、{o} 家公司与机构、{j} 种打工职业：穿搭、配色、标志、义体和提示词。', en: '{g} gangs and nomads, {o} corporations and institutions, {j} jobs: fashion, colors, emblems, cyberware and prompts.' },
+    'ap.2020': { zh: '2020', en: '2020' },
+    'ap.RED': { zh: 'RED', en: 'RED' },
+    'ap.2077': { zh: '2077 游戏', en: '2077 (game)' },
+    'ap.PL': { zh: '2077 幻影自由', en: '2077: Phantom Liberty' },
+    'ap.EDGE': { zh: '边缘行者 第一季', en: 'Edgerunners S1' },
+    'ap.EDGEII': { zh: '边缘行者 第二季', en: 'Edgerunners S2' },
+
     /* 义体页 */
     'cw.effect': { zh: '效果：', en: 'Effect: ' },
     'cw.seenOn': { zh: '见于：', en: 'Seen on: ' },
@@ -345,6 +403,8 @@
   }
 
   function t(key, vars) {
+    // singular form: use "<key>.one" when n === 1 and it exists
+    if (vars && Number(vars.n) === 1 && DICT[key + '.one']) key = key + '.one';
     var e = DICT[key];
     var s = e ? (e[lang] != null ? e[lang] : e.zh) : key;
     if (vars) s = s.replace(/\{(\w+)\}/g, function (m, k) { return vars[k] != null ? String(vars[k]) : m; });
