@@ -1,0 +1,241 @@
+[
+  {
+    "id": "david",
+    "name_zh": "大卫·马丁内斯",
+    "file": "david_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (sprinting forward with green afterimage trail, firing a pistol mid-air, crouched landing, punching with a cyberarm). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: the spine-mounted sandevistan implant on his bare back with glowing modules, glowing kiroshi cybernetic eye close-up, forearm projectile launcher open, the yellow jacket collar with glowing blue lining. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: lean 17-year-old latino boy, narrow face, sharp nose, light brown eyes; dark brown hair styled as one tall swept-up quiff/crest rising up and slightly forward from the forehead, both sides shaved very short (NOT a spiky ball of hair); oversized bright yellow jacket with silver-white reflective horizontal stripes on chest and sleeves, high gray inner collar with glowing light-blue lining; black t-shirt, two gold chain necklaces; loose blue-gray cropped jogger pants; gray sneakers; arms look human (cyberware hidden), slim build.\nMAIN COLORS: #F5D21E, #111111, #3BE36B, #39C8FF.\n\nSTYLE: 2020s Japanese cyberpunk TV anime style (Studio Trigger-like): bold black variable-weight lineart, flat two-tone cel shading with hard geometric shadow shapes, shadows tinted violet instead of gray, clean saturated flat colors, small neon cyan glow accents on cyberware, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "David_by_Yoshiyuki",
+      "David_Martinez_Cosplay_Guide_03",
+      "David_Infobox"
+    ]
+  },
+  {
+    "id": "lucy",
+    "name_zh": "露西（Lucyna Kushinada）",
+    "file": "lucy_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (lashing a glowing monowire whip, crouching while jacked into a handheld cyberdeck by a neck cable, leaping sideways, standing calmly with wire coiled). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: wrist monowire emitter with the coiled glowing filament, handheld cyberdeck with cable, back-of-scalp deep dive port, black knee-high boot. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: slender young woman; hair: straight sleek blunt bob with heavy straight-cut bangs at eyebrow level, longer on her left side, white hair with pastel pink on top fading to mint-cyan at the ends; gray eyes with sharp red winged eyeliner and red lipstick; cropped white jacket worn off the shoulders; black high-neck sleeveless leotard with a red V-shaped trim at the neck; white shorts; gray thigh-high stockings; black knee-high heeled boots with red soles.\nMAIN COLORS: #F4F4F4, #111111, #E8334A, #FF9CCB, #9CE6FF, #C9A6FF.\n\nSTYLE: 2020s Japanese cyberpunk TV anime style (Studio Trigger-like): bold black variable-weight lineart, flat two-tone cel shading with hard geometric shadow shapes, shadows tinted violet instead of gray, clean saturated flat colors, small neon cyan glow accents on cyberware, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Lucy_by_Yoshiyuki",
+      "Lucyna_Kushinada_Cosplay_Guide_03",
+      "Lucy_Infobox"
+    ]
+  },
+  {
+    "id": "rebecca",
+    "name_zh": "丽贝卡",
+    "file": "rebecca_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (firing an oversized shotgun one-handed, jumping with both cyberarms raised, laughing crouched on a ledge, punching with a huge cyber fist). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: red right cyber gorilla arm and blue left cyber gorilla arm, pink-and-yellow cybernetic eye close-up, pink neck tattoo, oversized shotgun. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: very short petite girl with small childlike proportions, chalk-white skin with a faint blue tint; pale mint-aqua hair in two long twin tails held by a black headband with small cat-ear-like clips; huge round cybernetic eyes with glowing pink-red rings and yellow centers; a pink skull-with-X-eyes tattoo on the neck and chest; a hugely oversized black hooded jacket with neon lime-green trim and small crescent emblems, sleeves so long they cover her hands, hem down to mid-thigh; black bra underneath; bare pale legs, black sneakers with lime soles; in action panels she has huge chunky cyberarms, red right arm and blue left arm.\nMAIN COLORS: #7BE36E, #E8F4FF, #FF4FA0, #111111, #E33B3B, #3B6BE3.\n\nSTYLE: 2020s Japanese cyberpunk TV anime style (Studio Trigger-like): bold black variable-weight lineart, flat two-tone cel shading with hard geometric shadow shapes, shadows tinted violet instead of gray, clean saturated flat colors, small neon cyan glow accents on cyberware, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Rebecca_by_Yoshiyuki",
+      "Rebecca_Cosplay_Guide_03",
+      "Rebecca_Gorilla_Arm"
+    ]
+  },
+  {
+    "id": "maine",
+    "name_zh": "曼恩",
+    "file": "maine_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (charging forward like a tank, flexing huge arms, firing a forearm launcher, grabbing an enemy by the head). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: black cyber visor with red light close-up, cyber seam lines on the chest, forearm projectile launcher, heavy cyberleg. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: giant hulking muscular man, tan skin, heavy square jaw; hair: a very tall smooth cream-white pompadour shaped like a solid rounded dome/fin swept straight back (one smooth mass, NOT spiky); black wraparound cyber visor over the eyes with a single small red light on the left; thin cyber seam lines across his face; big red scarf/hood around the neck; black leather jacket with red ring details, worn open over a bare chest with vertical vent-like cyber slits on the abdomen.\nMAIN COLORS: #F1E7D2, #D8282F, #111111, #FF2A2A, #B07A55.\n\nSTYLE: 2020s Japanese cyberpunk TV anime style (Studio Trigger-like): bold black variable-weight lineart, flat two-tone cel shading with hard geometric shadow shapes, shadows tinted violet instead of gray, clean saturated flat colors, small neon cyan glow accents on cyberware, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Maine_by_Yoshiyuki",
+      "Maine_Infobox"
+    ]
+  },
+  {
+    "id": "kiwi",
+    "name_zh": "琪薇",
+    "file": "kiwi_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (typing on a handheld cyberdeck with cables, aiming a pistol, walking with coat flowing, sitting cross-legged jacked in). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: red jaw mask close-up, handheld cyberdeck with cables, spiderweb tattoo on skin, neck neural port. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: very tall slender woman; pale peach-blonde hair in a straight blunt bob with straight-cut bangs; narrow sharp golden-yellow eyes; a pink respirator-style mask with horizontal vent slits covering her mouth and jaw (under it a dark mechanical jaw); red skin-tight high-neck long-sleeve outfit with black horizontal stripes and a black harness, a long red coat, black thigh-high boots.\nMAIN COLORS: #C8212E, #F2E6B8, #111111, #3D7BFF.\n\nSTYLE: 2020s Japanese cyberpunk TV anime style (Studio Trigger-like): bold black variable-weight lineart, flat two-tone cel shading with hard geometric shadow shapes, shadows tinted violet instead of gray, clean saturated flat colors, small neon cyan glow accents on cyberware, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Kiwi_by_Yoshiyuki",
+      "Kiwi_Mask",
+      "Kiwi_01_EP3"
+    ]
+  },
+  {
+    "id": "dorio",
+    "name_zh": "多里奥",
+    "file": "dorio_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (swinging a heavy cyber fist, kneeling and firing a gun hidden in her leg, bracing with a shotgun, carrying a crate on her shoulder). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: bare-metal cyberleg with hidden gun compartment, black cyber gorilla hand, face with cyber seam line, open jacket collar. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: very tall muscular woman, blue eyes, small cyan cyber line marks on her cheek; blond hair with a long swept side fringe falling over one eye, short at the back; oversized blue-violet jacket with black collar worn open (chest covered by the jacket edges), black tight shorts; both legs are exposed bare-metal cybernetic legs; one black cybernetic hand.\nMAIN COLORS: #F2E58A, #3E4FB8, #111111, #9AA3AD.\n\nSTYLE: 2020s Japanese cyberpunk TV anime style (Studio Trigger-like): bold black variable-weight lineart, flat two-tone cel shading with hard geometric shadow shapes, shadows tinted violet instead of gray, clean saturated flat colors, small neon cyan glow accents on cyberware, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Dorio_by_Yoshiyuki",
+      "Dorio_Infobox",
+      "Dorio_01_EP6"
+    ]
+  },
+  {
+    "id": "pilar",
+    "name_zh": "皮拉",
+    "file": "pilar_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (tinkering with a gadget, laughing with arms spread, pointing a pistol, crouched hotwiring a panel). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: cyber goggles and metal jaw implant close-up, long-fingered metallic robotic hand open and in a fist, neck neural port, tool. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: lanky grinning man, pale skin; hair: a huge black spiky pompadour swept back and up; a thin horizontal black visor across the eyes with one glowing orange-yellow slit; a dark brown beard-shaped cyberware panel running from his ears down around his jaw and chin; very long thin golden mechanical fingers on both hands; black sleeveless vest over a gray shirt, jeans.\nMAIN COLORS: #111111, #C9B26A, #B8C2C8, #3A5A8C.\n\nSTYLE: 2020s Japanese cyberpunk TV anime style (Studio Trigger-like): bold black variable-weight lineart, flat two-tone cel shading with hard geometric shadow shapes, shadows tinted violet instead of gray, clean saturated flat colors, small neon cyan glow accents on cyberware, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Pilar_by_Yoshiyuki",
+      "Pilar_Infobox",
+      "Pilar_Inside_Look"
+    ]
+  },
+  {
+    "id": "falco",
+    "name_zh": "法尔科",
+    "file": "falco_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (driving with one hand on the wheel, quick-drawing his revolver, leaning on a car smoking, firing over his shoulder). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: silver-and-black cyberarm with rolled-up sleeve, revolver in holster, yellow ammo belt, curled mustache close-up. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: middle-aged man, semi-long dark brown hair parted in the middle and puffed out to the sides, thick dark mustache curled up at the ends, big grin; western style: multi-tone brown waistcoat with shoulder straps over a white high-collar long-sleeve shirt with the right sleeve rolled up revealing a silver-and-black cyberarm; dark brown pants; yellow ammo belt with a holstered heavy revolver.\nMAIN COLORS: #6B4428, #F2EFE6, #E2B23A, #B8BCC2.\n\nSTYLE: 2020s Japanese cyberpunk TV anime style (Studio Trigger-like): bold black variable-weight lineart, flat two-tone cel shading with hard geometric shadow shapes, shadows tinted violet instead of gray, clean saturated flat colors, small neon cyan glow accents on cyberware, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Falco_by_Yoshiyuki",
+      "Falco_Infobox",
+      "Falco_01_EP06"
+    ]
+  },
+  {
+    "id": "smasher",
+    "name_zh": "亚当·重锤",
+    "file": "smasher_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (walking through fire, firing a massive arm cannon, crushing something in one fist, crouched for a lunge). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: skull-like chrome faceplate with red eyes close-up, mechanical hand, arm cannon, armored torso plating. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: towering full-body cyborg, almost no human flesh left: skull-like dark chrome faceplate with glowing red eyes, hulking heavily armored mechanical body with layered plates, huge arm cannon.\nMAIN COLORS: #2A2A30, #8A8F99, #FF2A2A, #E25822.\n\nSTYLE: 2020s Japanese cyberpunk TV anime style (Studio Trigger-like): bold black variable-weight lineart, flat two-tone cel shading with hard geometric shadow shapes, shadows tinted violet instead of gray, clean saturated flat colors, small neon cyan glow accents on cyberware, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Adam_Smasher_Infobox_CPEDGE",
+      "Adam_Smasher_Infobox_CP2077"
+    ]
+  },
+  {
+    "id": "roman",
+    "name_zh": "罗曼·卡拉克斯",
+    "season": 2,
+    "file": "roman_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (filming with a green handheld camera held up to his eye, running with the yellow sling bag bouncing, crouching to frame a shot with an older gray camera, sitting on a ledge looking up). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: green handheld camera, the red t-shirt with big letter B logo, black velvet choker and earring, chunky white sneaker with red sock. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: small 12-year-old boy, fluffy blond hair with peach-orange tips parted on the left, emerald green eyes, small silver cyber mark on the left forehead, earring in the left ear, white and navy oversized bomber jacket with green LED strip and bright green inner collar, red t-shirt with a big white letter B logo, black velvet choker, blue shorts with white side stripes, bandages on his thighs, chunky white sneakers with red socks, yellow sling bag, holding a green handheld video camera.\nMAIN COLORS: #F6E08A, #F4F4F4, #2B3A6B, #D8282F, #3BE36B, #F2C230.\n\nSTYLE: 2026 Japanese cyberpunk TV anime style matching the attached references (Studio Trigger, Cyberpunk Edgerunners 2 look): clean thin lineart, flat cel shading with small hard-edged shadows that follow the facial features, natural skin tones (do NOT tint faces with neon light), clean saturated flat colors, faces slightly rounder with large expressive eyes, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Roman_Infobox",
+      "Roman_Carax_Cosplay_Guide_05",
+      "Roman_01"
+    ]
+  },
+  {
+    "id": "d",
+    "name_zh": "D",
+    "season": 2,
+    "file": "d_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (jacked in as a netrunner with a cable from his neck and glowing eyes, walking with hands in jacket pockets, crouched on a rooftop edge, reaching out with long fingers). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: burn scar on the right side of the face, black ear implant, netrunner suit fabric covering the middle finger, ballet flat shoe with red-trimmed shin guard. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: tall very slender man, messy long spiky black hair with a teal tint falling over his face, green eyes, a large red burn scar covering the right side of his face and neck, black ear implant in place of the missing right ear, oversized blue leather jacket with white trim, pockets and a gray square patch, dark navy netrunner bodysuit with red trim covering up to his middle fingers, dark slim pants, shin guards with red trim, ballet-style flat shoes.\nMAIN COLORS: #2F5FD0, #F4F4F4, #1B2340, #E8213F, #3BE36B, #123A44.\n\nSTYLE: 2026 Japanese cyberpunk TV anime style matching the attached references (Studio Trigger, Cyberpunk Edgerunners 2 look): clean thin lineart, flat cel shading with small hard-edged shadows that follow the facial features, natural skin tones (do NOT tint faces with neon light), clean saturated flat colors, faces slightly rounder with large expressive eyes, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "D_Infobox",
+      "D_Cosplay_Guide_05",
+      "D_02"
+    ]
+  },
+  {
+    "id": "talia",
+    "name_zh": "塔莉亚·杨",
+    "season": 2,
+    "file": "talia_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (leaping high on her grasshopper legs, crouched like an insect ready to spring, kicking with a clawed foot, standing with her braid swinging and the mouthpiece displaying a grin). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: black segmented insect mouthpiece close-up, silver grasshopper leg with red claws, silver cyber hand with red fingers, the long jagged pink braid. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: tall slender heavily augmented girl, pink hair in one very long braid with a jagged edge plus a long middle lock, two long thin antenna-like strands arching from the top of her head, sharp teal eyes with insect-like pupils, black segmented insect-like mouthpiece implant covering her lower face, open hooded black one-piece tracksuit with mid-length sleeves exposing a torso of cybernetic body panels, silver cybernetic arms with red fingers, silver digitigrade grasshopper-like cybernetic legs with red claw tips.\nMAIN COLORS: #F2A3B8, #111111, #B8C2C8, #E8213F, #5FE0D0.\n\nSTYLE: 2026 Japanese cyberpunk TV anime style matching the attached references (Studio Trigger, Cyberpunk Edgerunners 2 look): clean thin lineart, flat cel shading with small hard-edged shadows that follow the facial features, natural skin tones (do NOT tint faces with neon light), clean saturated flat colors, faces slightly rounder with large expressive eyes, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Talia_Yang_Infobox",
+      "Talia_Yang_Cosplay_Guide_05",
+      "Talia_02"
+    ]
+  },
+  {
+    "id": "kingsley",
+    "name_zh": "韦克·金斯利",
+    "season": 2,
+    "file": "kingsley_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (standing like a king with coat flaring, punching with a red cyber hand, pointing with the gold K finger, sitting slumped on a crate). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: red round-lens glasses close-up, gold index finger engraved K on the red cyber hand, skull-shaped knee guard, gold crown emblem on the coat back. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: tall burly man, short blond hair slicked back with trimmed sides, small trimmed blond royal goatee, round red-lensed glasses, red line implants on the left side of his head, dark green armored neck, long gray high-collared coat with teal lining and red patches and a gold three-point crown painted on the back, black bulletproof vest, necklace, green pants with skull-shaped knee guards, dark brown boots, red cybernetic hands with a gold index finger engraved K.\nMAIN COLORS: #C9C6C0, #2BC1B5, #E8213F, #4E6B4A, #E2B23A, #F2E58A.\n\nSTYLE: 2026 Japanese cyberpunk TV anime style matching the attached references (Studio Trigger, Cyberpunk Edgerunners 2 look): clean thin lineart, flat cel shading with small hard-edged shadows that follow the facial features, natural skin tones (do NOT tint faces with neon light), clean saturated flat colors, faces slightly rounder with large expressive eyes, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Weak_Kingsley_Infobox",
+      "Weak_Kingsley_Cosplay_Guide_05",
+      "Screenshot_007_Weak"
+    ]
+  },
+  {
+    "id": "avida",
+    "name_zh": "阿维达·杨",
+    "season": 2,
+    "file": "avida_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (standing with arms crossed in her boxy suit, singing into a vintage microphone, looking down coldly, adjusting her golden neck collar). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: golden cybernetic neck collar, gold middle finger engraved A, blue lips and purple eyeshadow close-up, long drop earring. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: mature dark-skinned woman, dark brown curly hair slicked back on top with a wavy hairline and a huge cloud-like mass of curls behind her head, blue eyes, heavy purple eyeshadow, red eyeliner, blue lipstick, gold-white cyberware at the temples and thin implant seams on her face, long drop earrings, golden cybernetic neck collar, broad-shouldered boxy dark navy corporate suit over a white shirt, gold cybernetic middle finger engraved A.\nMAIN COLORS: #3A2418, #2A3346, #F2C230, #7B5CE8, #3D8BFF, #F4F1E8.\n\nSTYLE: 2026 Japanese cyberpunk TV anime style matching the attached references (Studio Trigger, Cyberpunk Edgerunners 2 look): clean thin lineart, flat cel shading with small hard-edged shadows that follow the facial features, natural skin tones (do NOT tint faces with neon light), clean saturated flat colors, faces slightly rounder with large expressive eyes, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Avida_Yang_Infobox",
+      "Avida_02",
+      "Avida_01"
+    ]
+  },
+  {
+    "id": "kiril",
+    "name_zh": "基里尔·杨",
+    "season": 2,
+    "file": "kiril_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (smoking with one white cyber hand, gripping a desk with gorilla-arm force, walking briskly in his suit, looking back over his shoulder). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: white and orange cyber jaw close-up, orange cyber eye, white gorilla-arm hand, orange piping on the suit collar. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: middle-aged man, short spiky dark navy hair, orange cybernetic irises, white cybernetic jaw plating with orange lines and an orange chin plate, cigarette in his mouth, dark gray almost black high-collared suit with thin Kang Tao orange piping, white cybernetic gorilla arm hands.\nMAIN COLORS: #1E1F26, #F28C1E, #F4F4F4, #2B3A6B.\n\nSTYLE: 2026 Japanese cyberpunk TV anime style matching the attached references (Studio Trigger, Cyberpunk Edgerunners 2 look): clean thin lineart, flat cel shading with small hard-edged shadows that follow the facial features, natural skin tones (do NOT tint faces with neon light), clean saturated flat colors, faces slightly rounder with large expressive eyes, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Kiril_Yang_Infobox",
+      "Kiril_01",
+      "5_Days_Kiril"
+    ]
+  },
+  {
+    "id": "jessie",
+    "name_zh": "杰西",
+    "season": 2,
+    "file": "jessie_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (editing a braindance with the glove raised, sipping a large drink, leaning on a console laughing, waving with the purple arm). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: braindance editing glove with skeletal fingers, purple arm with blue dividing streak, yellow off-shoulder top, overall shorts buckle. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: young woman, long straight silver-gray hair, purple eyes, pale white skin with the right side of her body and entire right arm purple divided by a blue streak, yellow off-shoulder crop top, blue denim overall shorts, black braindance editing glove with skeletal mechanical fingers.\nMAIN COLORS: #D9DCE0, #9B6BD8, #F2C230, #3B5FA8, #4FB3E8.\n\nSTYLE: 2026 Japanese cyberpunk TV anime style matching the attached references (Studio Trigger, Cyberpunk Edgerunners 2 look): clean thin lineart, flat cel shading with small hard-edged shadows that follow the facial features, natural skin tones (do NOT tint faces with neon light), clean saturated flat colors, faces slightly rounder with large expressive eyes, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Jessie_Infobox",
+      "Jessie_01"
+    ]
+  },
+  {
+    "id": "kyoko",
+    "name_zh": "京子（田网京子）",
+    "season": 2,
+    "file": "kyoko_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (typing at a keyboard with the red cyberarm, grinning and pushing up her octagonal glasses, holding a red data chip, standing on tiptoe to reach a shelf). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: gray partial faceplate and octagonal glasses close-up, red cyberarm hand, red data chip with green circuitry, pink sandal. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: extremely short woman, black hair slicked back into a ponytail, red cybernetic eyes behind octagonal glasses, gray partial faceplate running down the center of her face to her upper lip with stitch-like seams, toothy grin with small fangs, green shirt, khaki green shorts, pink sandals, red cybernetic right arm.\nMAIN COLORS: #111111, #9AA3AD, #E8213F, #4CAF50, #8A9A5B, #FF8FB1.\n\nSTYLE: 2026 Japanese cyberpunk TV anime style matching the attached references (Studio Trigger, Cyberpunk Edgerunners 2 look): clean thin lineart, flat cel shading with small hard-edged shadows that follow the facial features, natural skin tones (do NOT tint faces with neon light), clean saturated flat colors, faces slightly rounder with large expressive eyes, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Kyoko_Infobox",
+      "Kyoko_01",
+      "Kyoko_02"
+    ]
+  },
+  {
+    "id": "omi",
+    "name_zh": "奥米",
+    "season": 2,
+    "file": "omi_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (punching with a dark gorilla arm, adjusting her cap, crouched on a step, running with arms swinging). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: blue cap with red and white stripe, eye with horizontal pupil, dark gorilla-arm fist, pink harness buckle. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: young athletic woman, messy dark green wolf-cut hair bursting out from under a blue baseball cap with red and white stripes, cyber eyes with blue outer and purple inner irises and horizontal pupils, pink slash marks on her cheek, sleeveless blue high-zip vest with a pink harness, baggy pants, yellow and white high-top sneakers, dark chunky gorilla cyberarms.\nMAIN COLORS: #3E5A1E, #2F4FA0, #FF5FA2, #E8213F, #F2D23A.\n\nSTYLE: 2026 Japanese cyberpunk TV anime style matching the attached references (Studio Trigger, Cyberpunk Edgerunners 2 look): clean thin lineart, flat cel shading with small hard-edged shadows that follow the facial features, natural skin tones (do NOT tint faces with neon light), clean saturated flat colors, faces slightly rounder with large expressive eyes, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Omi_Infobox",
+      "Omi_01",
+      "Omi_03"
+    ]
+  },
+  {
+    "id": "yupi",
+    "name_zh": "尤皮",
+    "season": 2,
+    "file": "yupi_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (lying upside down laughing, pulling her purple goggles down over her eyes, holding a soda can, dancing with arms up). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: oversized purple goggles, lavender criss-cross top, silver jewelry, purple nails holding a soda can. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: slim young woman, shoulder-length light lime-green hair fading to teal at the ends, blue eyes with a hint of green, purple eyeshadow with small dot accents under the eyes, oversized purple goggles pushed up on her forehead, black cyber choker, long earrings, lavender criss-cross strappy crop tank top, pink and purple miniskirt with a belt pouch, silver jewelry, purple fingernails.\nMAIN COLORS: #D6F27A, #4FD1C5, #B48CF2, #FF8FC8, #C0C6D0.\n\nSTYLE: 2026 Japanese cyberpunk TV anime style matching the attached references (Studio Trigger, Cyberpunk Edgerunners 2 look): clean thin lineart, flat cel shading with small hard-edged shadows that follow the facial features, natural skin tones (do NOT tint faces with neon light), clean saturated flat colors, faces slightly rounder with large expressive eyes, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Yupi_Infobox",
+      "Yupi_03",
+      "Yupi_01"
+    ]
+  },
+  {
+    "id": "meshuga",
+    "name_zh": "梅舒加",
+    "season": 2,
+    "file": "meshuga_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (reaching out an open black cyber hand with gold bangles, holding a glass of whiskey, sitting with hood up, netrunning with cables). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: black cyber hand with gold bangles, gold chains, metal head implant, tape on the nose. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: big man, yellow-green buzz cut and short beard, metal implants on the sides of his head and face, tape across his nose, oversized light blue hoodie and matching baggy pants with orange lining, several gold chains, one black cybernetic hand with gold bangles.\nMAIN COLORS: #4FB3E8, #F28C1E, #E2B23A, #C9E05A, #1E1F26.\n\nSTYLE: 2026 Japanese cyberpunk TV anime style matching the attached references (Studio Trigger, Cyberpunk Edgerunners 2 look): clean thin lineart, flat cel shading with small hard-edged shadows that follow the facial features, natural skin tones (do NOT tint faces with neon light), clean saturated flat colors, faces slightly rounder with large expressive eyes, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Meshuga_02",
+      "Meshuga_01"
+    ]
+  },
+  {
+    "id": "capri",
+    "name_zh": "卡普里",
+    "season": 2,
+    "file": "capri_sheet.png",
+    "prompt": "Anime character design sheet, landscape 16:9, flat light-gray background (#C9C9CF), divided into clean rectangular panels by thin gray gutters, no text, no labels, no logos, no watermark. Panel layout: (1) LEFT column: full-body FRONT view and full-body BACK view of the same character standing side by side in a neutral pose, same height, feet visible. (2) CENTER column: four dynamic action poses of the same character in a 2x2 grid (floating cross-legged as a glitchy hologram, bursting into jagged magenta shards, peeking with boxed eyes, standing in a flat graphic pose). (3) TOP-RIGHT: one large head-and-shoulders close-up (neutral expression) plus a vertical strip of three small expression heads (calm, angry, shouting). (4) BOTTOM-RIGHT: a row of detail panels: boxed green-framed eye close-up, jagged magenta hair shard, green geometric decal, the red chip she lives in. Identical face, hairstyle, outfit, proportions and colors in every panel.\n\nCHARACTER: glitchy holographic AI construct, lean black silhouette feminine body with green geometric decals, huge jagged magenta-pink hair with green tips, blue eyes with white pupils and green-ringed black sclera boxed in green rectangles, flat graphic style.\nMAIN COLORS: #E8213F, #FF3FA4, #111111, #2BE07A, #3D8BFF.\n\nSTYLE: 2026 Japanese cyberpunk TV anime style matching the attached references (Studio Trigger, Cyberpunk Edgerunners 2 look): clean thin lineart, flat cel shading with small hard-edged shadows that follow the facial features, natural skin tones (do NOT tint faces with neon light), clean saturated flat colors, faces slightly rounder with large expressive eyes, no gradients, no painterly rendering, no 3D realism.",
+    "refs": [
+      "Capri_Infobox",
+      "Capri_01",
+      "Capri_02"
+    ]
+  }
+]

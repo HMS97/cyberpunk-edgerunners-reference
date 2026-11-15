@@ -1,0 +1,1015 @@
+{
+ "meta": {
+  "title": "赛博朋克 2077 游戏义体图标",
+  "source": "cyberpunk.fandom.com 分类 Cyberpunk 2077 Cyberware（2.0 版之后）",
+  "style": "game",
+  "note": "img 已是 assets/wiki 本地副本；url 是 Wiki 页面。"
+ },
+ "sections": [
+  {
+   "key": "Face",
+   "zh": "面部 / 光学义眼",
+   "en": "Face · Optics",
+   "short": "义眼",
+   "items": [
+    {
+     "t": "Basic Kiroshi Optics",
+     "img": "assets/wiki/KiroshiOptics-a51faadb.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Basic_Kiroshi_Optics"
+    },
+    {
+     "t": "Behavioral Imprint-synced Faceplate",
+     "img": "assets/wiki/MaskCW-6215db84.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Behavioral_Imprint-synced_Faceplate"
+    },
+    {
+     "t": "Kiroshi Clairvoyant Optics",
+     "img": "assets/wiki/KiroshiOpticsWallhack-70934383.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Kiroshi_Clairvoyant_Optics"
+    },
+    {
+     "t": "Kiroshi Cockatrice Optics",
+     "img": "assets/wiki/Iconic_KiroshiOpticsBare-4a7d2a37.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Kiroshi_Cockatrice_Optics"
+    },
+    {
+     "t": "Kiroshi Doomsayer Optics",
+     "img": "assets/wiki/KiroshiOpticsHunter-4c0c433a.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Kiroshi_Doomsayer_Optics"
+    },
+    {
+     "t": "Kiroshi Sentry Optics",
+     "img": "assets/wiki/KiroshiOpticsSensor-1fb9864d.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Kiroshi_Sentry_Optics"
+    },
+    {
+     "t": "Kiroshi Stalker Optics",
+     "img": "assets/wiki/KiroshiOpticsPiercing-bcf6bb88.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Kiroshi_Stalker_Optics"
+    },
+    {
+     "t": "Kiroshi The Oracle Optics",
+     "img": "assets/wiki/KiroshiOpticsCombined-046af83e.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Kiroshi_The_Oracle_Optics"
+    }
+   ]
+  },
+  {
+   "key": "Frontal cortex",
+   "zh": "额叶皮层",
+   "en": "Frontal Cortex",
+   "short": "额叶",
+   "items": [
+    {
+     "t": "Axolotl",
+     "img": "assets/wiki/SubdermalCoProcessor-4ef9f84a.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Axolotl"
+    },
+    {
+     "t": "Bioconductor",
+     "img": "assets/wiki/BioConductors-a3d5c1a4.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Bioconductor"
+    },
+    {
+     "t": "COX-2 Cybersomatic Optimizer",
+     "img": "assets/wiki/BioConductors-a3d5c1a4.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/COX-2_Cybersomatic_Optimizer"
+    },
+    {
+     "t": "Camillo RAM Manager",
+     "img": "assets/wiki/CamilloRamManager-542a13ef.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Camillo_RAM_Manager"
+    },
+    {
+     "t": "Ex-Disk",
+     "img": "assets/wiki/ExDisk-d7e5b7b1.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Ex-Disk"
+    },
+    {
+     "t": "Kerenzikov Boost System",
+     "img": "assets/wiki/KerenziovBoostSystem-1ebca1c7.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Kerenzikov_Boost_System"
+    },
+    {
+     "t": "Mechatronic Core",
+     "img": "assets/wiki/MechatronicCore-5522c416.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Mechatronic_Core"
+    },
+    {
+     "t": "Memory Boost",
+     "img": "assets/wiki/MemoryBoost-2e163797.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Memory_Boost"
+    },
+    {
+     "t": "Newton Module",
+     "img": "assets/wiki/SubdermalCoProcessor-4ef9f84a.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Newton_Module"
+    },
+    {
+     "t": "Quantum Tuner",
+     "img": "assets/wiki/TimeBank-438416d0.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Quantum_Tuner"
+    },
+    {
+     "t": "RAM Reallocator",
+     "img": "assets/wiki/CamilloRamManager-542a13ef.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/RAM_Reallocator"
+    },
+    {
+     "t": "RAM Upgrade",
+     "img": "assets/wiki/RamUpgrade-97b329de.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/RAM_Upgrade"
+    },
+    {
+     "t": "Self-ICE",
+     "img": "assets/wiki/SelfIce-a469e3b7.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Self-ICE"
+    }
+   ]
+  },
+  {
+   "key": "Sandevistan Operating system",
+   "zh": "操作系统 · 斯安威斯坦",
+   "en": "OS · Sandevistan",
+   "short": "斯安威斯坦",
+   "items": [
+    {
+     "t": "Dynalar Sandevistan",
+     "img": "assets/wiki/SandevistanC2-999b6c20.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Dynalar_Sandevistan"
+    },
+    {
+     "t": "Militech Apogee",
+     "img": "assets/wiki/SandevistanApogee-01acb0d5.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Militech_Apogee"
+    },
+    {
+     "t": "Militech Falcon",
+     "img": "assets/wiki/SandevistanC4-0b3c1bab.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Militech_Falcon"
+    },
+    {
+     "t": "QianT Warp Dancer",
+     "img": "assets/wiki/SandevistanC3-28bc59c3.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/QianT_Warp_Dancer"
+    },
+    {
+     "t": "Zetatech Sandevistan",
+     "img": "assets/wiki/SandevistanC1-7a9d0753.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Zetatech_Sandevistan"
+    }
+   ]
+  },
+  {
+   "key": "Berserk Operating system",
+   "zh": "操作系统 · 狂暴",
+   "en": "OS · Berserk",
+   "short": "狂暴",
+   "items": [
+    {
+     "t": "BioDyne Berserk",
+     "img": "assets/wiki/BerserkC2-8ccaf264.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/BioDyne_Berserk"
+    },
+    {
+     "t": "Militech Berserk",
+     "img": "assets/wiki/BerserkC4-e0707ed5.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Militech_Berserk"
+    },
+    {
+     "t": "Moore Tech Berserk",
+     "img": "assets/wiki/BerserkC1-2e8c791c.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Moore_Tech_Berserk"
+    },
+    {
+     "t": "Zetatech Berserk",
+     "img": "assets/wiki/BerserkC3-67a1a048.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Zetatech_Berserk"
+    }
+   ]
+  },
+  {
+   "key": "Cyberdecks",
+   "zh": "操作系统 · 网络接入仓",
+   "en": "OS · Cyberdeck",
+   "short": "接入仓",
+   "items": [
+    {
+     "t": "Arasaka Shadow",
+     "img": "assets/wiki/ArasakaShadow-ee883f80.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Arasaka_Shadow"
+    },
+    {
+     "t": "Biotech Σ (cyberdeck)",
+     "img": "assets/wiki/BiotechSigma-af34af71.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Biotech_%CE%A3_(cyberdeck)"
+    },
+    {
+     "t": "Militech Canto",
+     "img": "assets/wiki/HauntedCyberdeck-11ca4f16.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Militech_Canto"
+    },
+    {
+     "t": "Militech Paraline",
+     "img": "assets/wiki/MilitechParaline-24d027c2.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Militech_Paraline"
+    },
+    {
+     "t": "NetWatch Netdriver",
+     "img": "assets/wiki/NetWatchNetdriver-87a0a790.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/NetWatch_Netdriver"
+    },
+    {
+     "t": "Raven Microcyber",
+     "img": "assets/wiki/RavenMicrocyber-ce65b493.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Raven_Microcyber"
+    },
+    {
+     "t": "Tetratronic Rippler",
+     "img": "assets/wiki/TetratronicRippler-a41389f2.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Tetratronic_Rippler"
+    }
+   ]
+  },
+  {
+   "key": "Operating System",
+   "zh": "操作系统 · 其他",
+   "en": "OS · Misc",
+   "short": "OS其他",
+   "items": [
+    {
+     "t": "Berserk",
+     "img": null,
+     "url": "https://cyberpunk.fandom.com/wiki/Berserk"
+    },
+    {
+     "t": "Chrome Compressor",
+     "img": "assets/wiki/CyberwareCapacityBooster-07a8abc1.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Chrome_Compressor"
+    },
+    {
+     "t": "Cyberdeck",
+     "img": null,
+     "url": "https://cyberpunk.fandom.com/wiki/Cyberdeck"
+    },
+    {
+     "t": "Sandevistan",
+     "img": "assets/wiki/Neuralport__26_Sandevistan_CPEDGE-66674dfd.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Sandevistan"
+    }
+   ]
+  },
+  {
+   "key": "Arms",
+   "zh": "手臂",
+   "en": "Arms",
+   "short": "手臂",
+   "items": [
+    {
+     "t": "Electrifying Gorilla Arms",
+     "img": "assets/wiki/StrongArms-a3231cab.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Electrifying_Gorilla_Arms"
+    },
+    {
+     "t": "Electrifying Mantis Blades",
+     "img": "assets/wiki/MantisBlades-95d4d227.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Electrifying_Mantis_Blades"
+    },
+    {
+     "t": "Electrifying Monowire",
+     "img": "assets/wiki/NanoWires-7905031c.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Electrifying_Monowire"
+    },
+    {
+     "t": "Electrifying Projectile Launch System",
+     "img": "assets/wiki/ProjectileLauncher-1cde95e8.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Electrifying_Projectile_Launch_System"
+    },
+    {
+     "t": "Gorilla Arms",
+     "img": "assets/wiki/StrongArms-a3231cab.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Gorilla_Arms"
+    },
+    {
+     "t": "Mantis Blades",
+     "img": "assets/wiki/MantisBlades-95d4d227.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Mantis_Blades"
+    },
+    {
+     "t": "MaxTac Mantis Blades",
+     "img": "assets/wiki/MantisBlades-95d4d227.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/MaxTac_Mantis_Blades"
+    },
+    {
+     "t": "Monowire",
+     "img": "assets/wiki/NanoWires-7905031c.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Monowire"
+    },
+    {
+     "t": "Projectile Launch System",
+     "img": "assets/wiki/ProjectileLauncher-1cde95e8.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Projectile_Launch_System"
+    },
+    {
+     "t": "Thermal Gorilla Arms",
+     "img": "assets/wiki/StrongArms-a3231cab.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Thermal_Gorilla_Arms"
+    },
+    {
+     "t": "Thermal Mantis Blades",
+     "img": "assets/wiki/MantisBlades-95d4d227.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Thermal_Mantis_Blades"
+    },
+    {
+     "t": "Thermal Monowire",
+     "img": "assets/wiki/NanoWires-7905031c.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Thermal_Monowire"
+    },
+    {
+     "t": "Thermal Projectile Launch System",
+     "img": "assets/wiki/ProjectileLauncher-1cde95e8.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Thermal_Projectile_Launch_System"
+    },
+    {
+     "t": "Toxic Gorilla Arms",
+     "img": "assets/wiki/StrongArms-a3231cab.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Toxic_Gorilla_Arms"
+    },
+    {
+     "t": "Toxic Mantis Blades",
+     "img": "assets/wiki/MantisBlades-95d4d227.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Toxic_Mantis_Blades"
+    },
+    {
+     "t": "Toxic Monowire",
+     "img": "assets/wiki/NanoWires-7905031c.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Toxic_Monowire"
+    },
+    {
+     "t": "Toxic Projectile Launch System",
+     "img": "assets/wiki/ProjectileLauncher-1cde95e8.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Toxic_Projectile_Launch_System"
+    }
+   ]
+  },
+  {
+   "key": "Styles",
+   "zh": "手臂外观（帮派 / 公司款）",
+   "en": "Arm Styles",
+   "short": "手臂外观",
+   "items": [
+    {
+     "t": "Aldecaldos Gorilla Arms",
+     "img": "assets/wiki/AldecaldosStrongArmsCosmetic-6979aab2.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Aldecaldos_Gorilla_Arms"
+    },
+    {
+     "t": "Aldecaldos Mantis Blades",
+     "img": "assets/wiki/AldecaldosMantisBladesCosmetic-a4ef6930.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Aldecaldos_Mantis_Blades"
+    },
+    {
+     "t": "Aldecaldos Projectile Launch System",
+     "img": "assets/wiki/AldecaldosProjectileLauncherCosmetic-8563840f.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Aldecaldos_Projectile_Launch_System"
+    },
+    {
+     "t": "Arasaka Mantis Blades",
+     "img": "assets/wiki/ArasakaMantisBladesCosmetic-1066c74b.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Arasaka_Mantis_Blades"
+    },
+    {
+     "t": "Arasaka Monowire",
+     "img": "assets/wiki/ArasakaNanoWiresCosmetic-e414cbe1.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Arasaka_Monowire"
+    },
+    {
+     "t": "Barghest Gorilla Arms",
+     "img": "assets/wiki/BarghestStrongArmsCosmetic-c0d696b8.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Barghest_Gorilla_Arms"
+    },
+    {
+     "t": "Barghest Mantis Blades",
+     "img": "assets/wiki/BarghestMantisBladesCosmetic-0477c74e.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Barghest_Mantis_Blades"
+    },
+    {
+     "t": "Barghest Monowire",
+     "img": "assets/wiki/BarghestNanoWiresCosmetic-2f55659c.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Barghest_Monowire"
+    },
+    {
+     "t": "Darra Polytechnic Monowire",
+     "img": "assets/wiki/DarraNanoWiresCosmetic-cb059bc5.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Darra_Polytechnic_Monowire"
+    },
+    {
+     "t": "Darra Polytechnic Projectile Launch System",
+     "img": "assets/wiki/DarraProjectileLauncherCosmetic-28e86b59.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Darra_Polytechnic_Projectile_Launch_System"
+    },
+    {
+     "t": "Jinguji Gorilla Arms",
+     "img": "assets/wiki/JingujiStrongArmsCosmetic-365d2bd8.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Jinguji_Gorilla_Arms"
+    },
+    {
+     "t": "Jinguji Mantis Blades",
+     "img": "assets/wiki/JingujiMantisBladesCosmetic-1737b87a.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Jinguji_Mantis_Blades"
+    },
+    {
+     "t": "Jinguji Monowire",
+     "img": "assets/wiki/JingujiNanoWiresCosmetic-f5b9940f.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Jinguji_Monowire"
+    },
+    {
+     "t": "Kang Tao Gorilla Arms",
+     "img": "assets/wiki/KangTaoStrongArmsCosmetic-cae65ad6.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Kang_Tao_Gorilla_Arms"
+    },
+    {
+     "t": "Kang Tao Mantis Blades",
+     "img": "assets/wiki/KangTaoMantisBladesCosmetic-2558d500.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Kang_Tao_Mantis_Blades"
+    },
+    {
+     "t": "Kang Tao Projectile Launch System",
+     "img": "assets/wiki/KangTaoProjectileLauncherCosmetic-37db7626.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Kang_Tao_Projectile_Launch_System"
+    },
+    {
+     "t": "Militech Gorilla Arms",
+     "img": "assets/wiki/MilitechStrongArmsCosmetic-abcfd4d1.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Militech_Gorilla_Arms"
+    },
+    {
+     "t": "Militech Mantis Blades",
+     "img": "assets/wiki/MilitechMantisBladesCosmetic-48774825.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Militech_Mantis_Blades"
+    },
+    {
+     "t": "Militech Projectile Launch System",
+     "img": "assets/wiki/MilitechProjectileLauncherCosmetic-8e5719ca.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Militech_Projectile_Launch_System"
+    },
+    {
+     "t": "MoorE Technologies Mantis Blades",
+     "img": "assets/wiki/MooreMantisBladesCosmetic-15f64704.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/MoorE_Technologies_Mantis_Blades"
+    },
+    {
+     "t": "MoorE Technologies Monowire",
+     "img": "assets/wiki/MooreNanoWiresCosmetic-0228b183.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/MoorE_Technologies_Monowire"
+    },
+    {
+     "t": "MoorE Technologies Projectile Launch System",
+     "img": "assets/wiki/MooreProjectileLauncherCosmetic-ee12e48d.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/MoorE_Technologies_Projectile_Launch_System"
+    },
+    {
+     "t": "Mox Gorilla Arms",
+     "img": "assets/wiki/MoxStrongArmsCosmetic-9edcdb48.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Mox_Gorilla_Arms"
+    },
+    {
+     "t": "Mox Mantis Blades",
+     "img": "assets/wiki/MoxMantisBladesCosmetic-21fa9c30.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Mox_Mantis_Blades"
+    },
+    {
+     "t": "Mox Monowire",
+     "img": "assets/wiki/MoxNanoWiresCosmetic-5d75a1d9.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Mox_Monowire"
+    },
+    {
+     "t": "Sixth Street Monowire",
+     "img": "assets/wiki/SixthStreeNanoWiresCosmetic-247b992c.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Sixth_Street_Monowire"
+    },
+    {
+     "t": "Tsunami Gorilla Arms",
+     "img": "assets/wiki/TsunamiStrongArmsCosmetic-f8c2ea61.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Tsunami_Gorilla_Arms"
+    },
+    {
+     "t": "Tsunami Mantis Blades",
+     "img": "assets/wiki/TsunamiMantisBladesCosmetic-6fe9f2d3.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Tsunami_Mantis_Blades"
+    },
+    {
+     "t": "Tsunami Monowire",
+     "img": "assets/wiki/TsunamiNanoWiresCosmetic-996b4ead.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Tsunami_Monowire"
+    },
+    {
+     "t": "Tyger Claws Gorilla Arms",
+     "img": "assets/wiki/TygerClawsStrongArmsCosmetic-0b83b3f9.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Tyger_Claws_Gorilla_Arms"
+    },
+    {
+     "t": "Tyger Claws Mantis Blades",
+     "img": "assets/wiki/TygerClawsMantisBladesCosmetic-35496bbe.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Tyger_Claws_Mantis_Blades"
+    },
+    {
+     "t": "Valentinos Mantis Blades",
+     "img": "assets/wiki/ValentinosMantisBladesCosmetic-2b0b5063.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Valentinos_Mantis_Blades"
+    },
+    {
+     "t": "Valentinos Monowire",
+     "img": "assets/wiki/ValentinosNanoWiresCosmetic-6f154748.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Valentinos_Monowire"
+    },
+    {
+     "t": "Valentinos Projectile Launch System",
+     "img": "assets/wiki/ValentinosProjectileLauncherCosmetic-c03fef91.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Valentinos_Projectile_Launch_System"
+    },
+    {
+     "t": "Voodoo Boys Gorilla Arms",
+     "img": "assets/wiki/VoodooBoysStrongArmsCosmetic-9fad310c.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Voodoo_Boys_Gorilla_Arms"
+    },
+    {
+     "t": "Voodoo Boys Mantis Blades",
+     "img": "assets/wiki/VoodooBoysMantisBladesCosmetic-90f3d24f.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Voodoo_Boys_Mantis_Blades"
+    },
+    {
+     "t": "Voodoo Boys Projectile Launch System",
+     "img": "assets/wiki/VoodooBoysProjectileLauncherCosmetic-75918a9d.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Voodoo_Boys_Projectile_Launch_System"
+    },
+    {
+     "t": "Wraiths Gorilla Arms",
+     "img": "assets/wiki/WraithsStrongArmsCosmetic-2f9c3163.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Wraiths_Gorilla_Arms"
+    },
+    {
+     "t": "Wraiths Mantis Blades",
+     "img": "assets/wiki/WraithsMantisBladesCosmetic-187fe3c2.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Wraiths_Mantis_Blades"
+    },
+    {
+     "t": "Wraiths Monowire",
+     "img": "assets/wiki/WraithsNanoWiresCosmetic-e605b5f8.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Wraiths_Monowire"
+    }
+   ]
+  },
+  {
+   "key": "Hands",
+   "zh": "手部",
+   "en": "Hands",
+   "short": "手部",
+   "items": [
+    {
+     "t": "Ballistic Coprocessor",
+     "img": "assets/wiki/PowerGrip-e4c36953.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Ballistic_Coprocessor"
+    },
+    {
+     "t": "Handle Wrap",
+     "img": "assets/wiki/KnifeSharpener-eca2156c.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Handle_Wrap"
+    },
+    {
+     "t": "Immovable Force",
+     "img": "assets/wiki/GunStabilizer-e220bee6.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Immovable_Force"
+    },
+    {
+     "t": "Microgenerator",
+     "img": "assets/wiki/MicroGenerator-6ebba2cc.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Microgenerator"
+    },
+    {
+     "t": "Shock Absorber",
+     "img": "assets/wiki/JointLock-6614114d.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Shock_Absorber"
+    },
+    {
+     "t": "Smart Link",
+     "img": "assets/wiki/SmartLink-982cf3ca.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Smart_Link"
+    },
+    {
+     "t": "Tattoo: Johnny's Special",
+     "img": "assets/wiki/CasiusTattoo-3e9c6108.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Tattoo:_Johnny%27s_Special"
+    },
+    {
+     "t": "Tattoo: Together Forever",
+     "img": "assets/wiki/SilverhandTattoo-5e627cea.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Tattoo:_Together_Forever"
+    },
+    {
+     "t": "Tattoo: Tyger Claws Dermal Imprint",
+     "img": "assets/wiki/YakuzaTattoo-725fbb5e.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Tattoo:_Tyger_Claws_Dermal_Imprint"
+    }
+   ]
+  },
+  {
+   "key": "Skeleton",
+   "zh": "骨骼",
+   "en": "Skeleton",
+   "short": "骨骼",
+   "items": [
+    {
+     "t": "Bionic Joints",
+     "img": "assets/wiki/BionicJoints-0f406cca.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Bionic_Joints"
+    },
+    {
+     "t": "Dense Marrow",
+     "img": "assets/wiki/DenseMarrow-33a8baa6.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Dense_Marrow"
+    },
+    {
+     "t": "Epimorphic Skeleton",
+     "img": "assets/wiki/Endoskeleton-39acfbaf.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Epimorphic_Skeleton"
+    },
+    {
+     "t": "Feen-X",
+     "img": "assets/wiki/NeuroMatrix-6504d3fc.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Feen-X"
+    },
+    {
+     "t": "Kinetic Frame",
+     "img": "assets/wiki/BoneMarrowCells-757ee14d.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Kinetic_Frame"
+    },
+    {
+     "t": "Para Bellum",
+     "img": "assets/wiki/T1000-bcb9c0df.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Para_Bellum"
+    },
+    {
+     "t": "RAM Recoup",
+     "img": "assets/wiki/CompilingSkeleton-1ac62b8e.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/RAM_Recoup"
+    },
+    {
+     "t": "Rara Avis",
+     "img": "assets/wiki/T1000-bcb9c0df.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Rara_Avis"
+    },
+    {
+     "t": "Scar Coalescer",
+     "img": "assets/wiki/NoPainNoGain-0f8774b5.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Scar_Coalescer"
+    },
+    {
+     "t": "Scarab",
+     "img": "assets/wiki/RapidMuscleNurish-b1cf7907.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Scarab"
+    },
+    {
+     "t": "Spring Joints",
+     "img": "assets/wiki/AgileJoints-024bf1f7.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Spring_Joints"
+    },
+    {
+     "t": "Titanium Bones",
+     "img": "assets/wiki/TitaniumInfusedBones-5ca773e8.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Titanium_Bones"
+    },
+    {
+     "t": "Universal Booster",
+     "img": "assets/wiki/EnhancedBloodVessels-70ef6a56.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Universal_Booster"
+    }
+   ]
+  },
+  {
+   "key": "Nervous system",
+   "zh": "神经系统",
+   "en": "Nervous System",
+   "short": "神经",
+   "items": [
+    {
+     "t": "Adrenaline Converter",
+     "img": "assets/wiki/DetectorRush-168490b4.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Adrenaline_Converter"
+    },
+    {
+     "t": "Adreno-trigger",
+     "img": "assets/wiki/DetectorRush-168490b4.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Adreno-trigger"
+    },
+    {
+     "t": "Atomic Sensors",
+     "img": "assets/wiki/TroubleFinder-42b76b15.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Atomic_Sensors"
+    },
+    {
+     "t": "Deep-field Visual Interface",
+     "img": "assets/wiki/VisualCortexSupport-0239d655.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Deep-field_Visual_Interface"
+    },
+    {
+     "t": "Kerenzikov",
+     "img": "assets/wiki/Kerenzikov-ba80b6d1.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Kerenzikov"
+    },
+    {
+     "t": "NeoFiber",
+     "img": "assets/wiki/NeoFiber-94455386.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/NeoFiber"
+    },
+    {
+     "t": "Reflex Tuner",
+     "img": "assets/wiki/ReflexRecorder-9175b451.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Reflex_Tuner"
+    },
+    {
+     "t": "Revulsor",
+     "img": "assets/wiki/ReflexRecorder-9175b451.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Revulsor"
+    },
+    {
+     "t": "Stabber",
+     "img": "assets/wiki/OilDispenser-2f799c8b.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Stabber"
+    },
+    {
+     "t": "Synaptic Accelerator",
+     "img": "assets/wiki/SynapticAccelerator-2aaa22ff.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Synaptic_Accelerator"
+    },
+    {
+     "t": "Tyrosine Injector",
+     "img": "assets/wiki/TyrosineInjector-e9e9d556.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Tyrosine_Injector"
+    },
+    {
+     "t": "Visual Cortex Support",
+     "img": "assets/wiki/VisualCortexSupport-0239d655.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Visual_Cortex_Support"
+    }
+   ]
+  },
+  {
+   "key": "Circulatory system",
+   "zh": "循环系统",
+   "en": "Circulatory System",
+   "short": "循环",
+   "items": [
+    {
+     "t": "Adrenaline Booster",
+     "img": "assets/wiki/StaminaRegenBooster-a9b7d2ac.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Adrenaline_Booster"
+    },
+    {
+     "t": "Biomonitor",
+     "img": "assets/wiki/Biomonitor-0c4ca2e5.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Biomonitor"
+    },
+    {
+     "t": "Black Mamba",
+     "img": "assets/wiki/ViralVenom-cfda97f4.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Black_Mamba"
+    },
+    {
+     "t": "Blood Pump",
+     "img": "assets/wiki/BloodPump-5401db84.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Blood_Pump"
+    },
+    {
+     "t": "Clutch Padding",
+     "img": "assets/wiki/ShockAbsorber-370dd3c8.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Clutch_Padding"
+    },
+    {
+     "t": "Electromag Recycler",
+     "img": "assets/wiki/DischargeConnector-ebb3878d.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Electromag_Recycler"
+    },
+    {
+     "t": "Feedback Circuit",
+     "img": "assets/wiki/DischargeConnector-ebb3878d.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Feedback_Circuit"
+    },
+    {
+     "t": "Heal-On-Kill",
+     "img": "assets/wiki/HealOnKill-434bb429.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Heal-On-Kill"
+    },
+    {
+     "t": "Isometric Stabilizer",
+     "img": "assets/wiki/ShockAbsorber-370dd3c8.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Isometric_Stabilizer"
+    },
+    {
+     "t": "Microrotors",
+     "img": "assets/wiki/CyberRotors-3564adbb.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Microrotors"
+    },
+    {
+     "t": "Second Heart",
+     "img": "assets/wiki/SecondHeart-b8d0cf0e.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Second_Heart"
+    },
+    {
+     "t": "ThreatEvac",
+     "img": "assets/wiki/CatchMeIfYouCan-ef6acef7.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/ThreatEvac"
+    }
+   ]
+  },
+  {
+   "key": "Integumentary system",
+   "zh": "皮肤系统",
+   "en": "Integumentary",
+   "short": "皮肤",
+   "items": [
+    {
+     "t": "Carapace",
+     "img": "assets/wiki/WeirdTankyPlating-f187cdee.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Carapace"
+    },
+    {
+     "t": "Cellular Adapter",
+     "img": "assets/wiki/PainDistributor-06d82366.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Cellular_Adapter"
+    },
+    {
+     "t": "Chitin",
+     "img": "assets/wiki/Chiton-22bb7d5d.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Chitin"
+    },
+    {
+     "t": "Cogito Lattice",
+     "img": "assets/wiki/CogitoFrame-d11e6d0b.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Cogito_Lattice"
+    },
+    {
+     "t": "Countershell",
+     "img": "assets/wiki/SuddenAid-0e5b50d4.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Countershell"
+    },
+    {
+     "t": "Defenzikov",
+     "img": "assets/wiki/PlatingGlitch-a26a99cc.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Defenzikov"
+    },
+    {
+     "t": "Nano-plating",
+     "img": "assets/wiki/NanoTechPlates-1f6af976.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Nano-plating"
+    },
+    {
+     "t": "Optical Camo",
+     "img": "assets/wiki/OpticalCamo-71b12695.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Optical_Camo"
+    },
+    {
+     "t": "Pain Editor",
+     "img": "assets/wiki/PainReductor-09599cc3.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Pain_Editor"
+    },
+    {
+     "t": "Painducer",
+     "img": "assets/wiki/BloodDepleter-33446d55.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Painducer"
+    },
+    {
+     "t": "Peripheral Inverse",
+     "img": "assets/wiki/ProximityReducer-a1a27ed5.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Peripheral_Inverse"
+    },
+    {
+     "t": "ProxiShield",
+     "img": "assets/wiki/ProximityReducer-a1a27ed5.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/ProxiShield"
+    },
+    {
+     "t": "RangeGuard",
+     "img": "assets/wiki/Cw_integumentary_extra-afd40a0f.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/RangeGuard"
+    },
+    {
+     "t": "Shock-n-Awe",
+     "img": "assets/wiki/ElectroshockMechanism-e3fd51cd.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Shock-n-Awe"
+    },
+    {
+     "t": "Subdermal Armor",
+     "img": "assets/wiki/BoringPlating-25ca302b.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Subdermal_Armor"
+    }
+   ]
+  },
+  {
+   "key": "Legs",
+   "zh": "腿部",
+   "en": "Legs",
+   "short": "腿部",
+   "items": [
+    {
+     "t": "Fortified Ankles",
+     "img": "assets/wiki/ReinforcedMuscles-c2010ce6.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Fortified_Ankles"
+    },
+    {
+     "t": "Jenkins' Tendons",
+     "img": "assets/wiki/JenkinsTendons-8c9fb159.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Jenkins%27_Tendons"
+    },
+    {
+     "t": "Leeroy Ligament System",
+     "img": "assets/wiki/IconicJenkinsTendons-489537d2.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Leeroy_Ligament_System"
+    },
+    {
+     "t": "Lynx Paws",
+     "img": "assets/wiki/CatPaws-f9d13b62.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Lynx_Paws"
+    },
+    {
+     "t": "Reinforced Tendons",
+     "img": "assets/wiki/BoostedTendons-aafd7274.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Reinforced_Tendons"
+    }
+   ]
+  },
+  {
+   "key": "Miscellaneous",
+   "zh": "其他 / 剧情义体",
+   "en": "Misc",
+   "short": "其他",
+   "items": [
+    {
+     "t": "Arasaka Exoglove",
+     "img": "assets/wiki/Marcin-blaszczak-ripper-glove-engine-10e7491a.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Arasaka_Exoglove"
+    },
+    {
+     "t": "Deep Dive Port",
+     "img": "assets/wiki/Deep_Dive_Port_02_CP2077WB-7b4055f3.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Deep_Dive_Port"
+    },
+    {
+     "t": "Dynalar TX-43 Opti-Zoom",
+     "img": "assets/wiki/Dylanar_tx-43_opti-zoom-86209e02.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Dynalar_TX-43_Opti-Zoom"
+    },
+    {
+     "t": "EMP Threading",
+     "img": null,
+     "url": "https://cyberpunk.fandom.com/wiki/EMP_Threading"
+    },
+    {
+     "t": "Fashionware",
+     "img": "assets/wiki/Light-d8806f8e.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Fashionware"
+    },
+    {
+     "t": "Gene-Tek RealSkinn",
+     "img": null,
+     "url": "https://cyberpunk.fandom.com/wiki/Gene-Tek_RealSkinn"
+    },
+    {
+     "t": "Higurashi 20-13 Mantis Blades",
+     "img": null,
+     "url": "https://cyberpunk.fandom.com/wiki/Higurashi_20-13_Mantis_Blades"
+    },
+    {
+     "t": "Midnight Lady",
+     "img": "assets/wiki/Yee-ling-syncmax-chung-midnight-lady-01-sized-8d80fae8.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Midnight_Lady"
+    },
+    {
+     "t": "Militech Svalinn 9-F Thermaskin",
+     "img": "assets/wiki/Militech_thermaskin-cfdb7a57.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Militech_Svalinn_9-F_Thermaskin"
+    },
+    {
+     "t": "MoorE Technologies Hausstock-W",
+     "img": "assets/wiki/Moore_tech_hausstock-w-37593e20.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/MoorE_Technologies_Hausstock-W"
+    },
+    {
+     "t": "Mr. Studd",
+     "img": "assets/wiki/Mr._Studd-6de5d786.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Mr._Studd"
+    },
+    {
+     "t": "Personal Link",
+     "img": "assets/wiki/Personal_Link_CP2077WB-dd9a2c6e.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Personal_Link"
+    },
+    {
+     "t": "Relic",
+     "img": "assets/wiki/CP2077_Relic-aaa8a39e.webp",
+     "url": "https://cyberpunk.fandom.com/wiki/Relic"
+    }
+   ]
+  }
+ ]
+}

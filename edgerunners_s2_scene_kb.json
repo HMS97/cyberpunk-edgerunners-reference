@@ -1,0 +1,1425 @@
+{
+ "meta": {
+  "title": "边缘行者第二季 · 场景生成知识库",
+  "version": "1.0",
+  "built": "2026-11-15",
+  "season": 2,
+  "style": "anime_s2",
+  "sources": [
+   "cyberpunk.fandom.com 地点页、剧集页、Cyberpunk: Edgerunners 2 主条目与图集页",
+   "第二季剧中截图（只收文件名以 CPEDGEII 结尾的图，不含第一季 CPEDGE）",
+   "CP2077 游戏截图和概念图（只作建筑结构参考，style 标 game）"
+  ],
+  "how_to_use": "第二季是独立的第三种画风 anime_s2，不能和第一季动画风（anime）或游戏风（game）混用。生成第二季场景时：第二季动画用 prompts.anime_s2，游戏风用 prompts.game，各带各的负面词；参考图只看 style 为 anime_s2 的；style 为 game 的图只用来看建筑结构。画风规范见 style_guides.json 的 anime_s2 一节。",
+  "status": "第二季 10 集已于 2026-10-20 在 Netflix 全部上线；但 Wiki 剧集页还是草稿（Stub），只有第 1 集写了剧情摘要，所以大部分地点的剧情用途资料不足，已逐条标出（story_status: insufficient）。",
+  "counts": {
+   "locations": 16,
+   "anime_s2_images": 24,
+   "game_images": 16
+  },
+  "copyright": "图片版权归 CD PROJEKT RED / Studio Trigger / Netflix，仅链接引用，供个人设计参考。",
+  "image_fields": "thumb/full 是 Wiki 原图地址（直接外链会被防盗链换成占位图）；thumb_local/full_local 是 assets/wiki 下的本地副本，网页请用本地路径。"
+ },
+ "series": {
+  "title": "Cyberpunk: Edgerunners 2",
+  "premiere": "2026-10-20（Netflix）",
+  "episodes": 10,
+  "year_in_story": "2078",
+  "director": "Kai Ikarashi（五十岚开）",
+  "showrunner": "Bartosz Sztybor",
+  "character_designer": "Ichigo Kanno（菅野一期）",
+  "color_design": "Yukiko Kakita",
+  "background_directors": "Risa Fuuji、Masanobu Nomura（野村正信，第一季美术监督）",
+  "studio": "TRIGGER",
+  "src": "https://cyberpunk.fandom.com/wiki/Cyberpunk:_Edgerunners_2"
+ },
+ "locations": [
+  {
+   "id": "night_city",
+   "zh": "夜之城全景",
+   "en": "Night City (overview)",
+   "district": "multiple",
+   "district_zh": "多个大区",
+   "episodes": "第 9 集（Night City 01）；官网宣传截图（白天 / 夜晚）",
+   "wiki_page": "https://cyberpunk.fandom.com/wiki/Night_City/Gallery",
+   "wiki_page_note": "Night City 01 只收在 Night City 图集页，Wiki 没写具体位置",
+   "story": "资料不足：Wiki 剧集页目前是草稿（Stub），只有第 1 集写了剧情摘要，没写这个地点在剧中的用途。只能确定画面出现在哪一集。",
+   "story_status": "insufficient",
+   "visual": "白天版：金黄逆光从左上斜射，城市是一片高低错落的塔楼和广告牌，远处有山；暗处偏青灰。官网夜景截图则是仰拍密集楼群，四周悬浮多块发光广告屏。",
+   "key_props": [
+    "金黄逆光",
+    "高低错落的塔楼",
+    "竖排广告牌",
+    "远山"
+   ],
+   "lighting": "白天：强烈金色逆光加光晕；夜晚：广告屏是主光源",
+   "palette": [
+    "#F2C46A",
+    "#2E4A52",
+    "#9FB8B0",
+    "#E8508A"
+   ],
+   "images": [
+    {
+     "type": "第二季截图 · 第9集",
+     "file": "Night City 01 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/d/d1/Night_City_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261023082906",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/d/d1/Night_City_01_CPEDGEII.png/revision/latest?cb=20261023082906",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3ANight_City_01_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Night_City_01_CPEDGEII-bfcc3ade.webp",
+     "full_local": "assets/wiki/Night_City_01_CPEDGEII-50c1077c.webp"
+    },
+    {
+     "type": "第二季官网宣传截图 · 白天",
+     "file": "Screenshot 004 NC Day CPEDGEII.jpeg",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/a/a1/Screenshot_004_NC_Day_CPEDGEII.jpeg/revision/latest/scale-to-width-down/900?cb=20260629163224",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/a/a1/Screenshot_004_NC_Day_CPEDGEII.jpeg/revision/latest?cb=20260629163224",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3AScreenshot_004_NC_Day_CPEDGEII.jpeg",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Screenshot_004_NC_Day_CPEDGEII-28d7a015.webp",
+     "full_local": "assets/wiki/Screenshot_004_NC_Day_CPEDGEII-3d608a0b.webp"
+    },
+    {
+     "type": "第二季官网宣传截图 · 夜晚",
+     "file": "Screenshot 002 NC Dark CPEDGEII.jpeg",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/6/6e/Screenshot_002_NC_Dark_CPEDGEII.jpeg/revision/latest/scale-to-width-down/900?cb=20260629163231",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/6/6e/Screenshot_002_NC_Dark_CPEDGEII.jpeg/revision/latest?cb=20260629163231",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3AScreenshot_002_NC_Dark_CPEDGEII.jpeg",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Screenshot_002_NC_Dark_CPEDGEII-9dd8a35d.webp",
+     "full_local": "assets/wiki/Screenshot_002_NC_Dark_CPEDGEII-99cee210.webp"
+    },
+    {
+     "type": "游戏截图 / 宣传图（与第一季知识库同一张）",
+     "file": "Corporate Plaza Wallpaper CP2077.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/1/14/Corporate_Plaza_Wallpaper_CP2077.png/revision/latest/scale-to-width-down/900?cb=20241202163702",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/1/14/Corporate_Plaza_Wallpaper_CP2077.png/revision/latest?cb=20241202163702",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File:Corporate_Plaza_Wallpaper_CP2077.png",
+     "style": "game",
+     "thumb_local": "assets/wiki/Corporate_Plaza_Wallpaper_CP2077-66ce0aaa.webp",
+     "full_local": "assets/wiki/Corporate_Plaza_Wallpaper_CP2077-3aa67f39.webp"
+    }
+   ],
+   "body_en": "panoramic view over Night City, dense towers of uneven heights, vertical billboards, distant hills",
+   "body_zh": "俯瞰夜之城的全景，高低错落的密集塔楼，竖排广告牌，远处有山",
+   "anime_look": {
+    "style": "anime_s2",
+    "en": "golden backlight raking across the frame, sun glare and bloom, cool grey-teal shadows, fine film grain",
+    "zh": "金色逆光斜扫整个画面，太阳眩光和光晕，暗部是冷的灰青色，细胶片颗粒"
+   },
+   "game_look": {
+    "style": "game",
+    "en": "hazy Californian daylight, smog over the skyline, realistic city scale",
+    "zh": "加州式朦胧日光，天际线上一层雾霾，写实的城市尺度"
+   },
+   "prompts": {
+    "anime_s2": {
+     "style": "anime_s2",
+     "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, panoramic view over Night City, dense towers of uneven heights, vertical billboards, distant hills, golden backlight raking across the frame, sun glare and bloom, cool grey-teal shadows, fine film grain",
+     "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，俯瞰夜之城的全景，高低错落的密集塔楼，竖排广告牌，远处有山，金色逆光斜扫整个画面，太阳眩光和光晕，暗部是冷的灰青色，细胶片颗粒",
+     "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+     "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+    },
+    "game": {
+     "style": "game",
+     "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, panoramic view over Night City, dense towers of uneven heights, vertical billboards, distant hills, hazy Californian daylight, smog over the skyline, realistic city scale",
+     "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，俯瞰夜之城的全景，高低错落的密集塔楼，竖排广告牌，远处有山，加州式朦胧日光，天际线上一层雾霾，写实的城市尺度",
+     "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+     "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+    }
+   }
+  },
+  {
+   "id": "japantown",
+   "zh": "日本街高楼群",
+   "en": "Japantown",
+   "district": "westbrook",
+   "district_zh": "威斯布鲁克",
+   "episodes": "第 6 集（Night City 02）",
+   "wiki_page": "https://cyberpunk.fandom.com/wiki/Japantown_%282077%29",
+   "wiki_page_note": "Wiki 把 Night City 02 放在日本街页面的第二季图里",
+   "story": "资料不足：Wiki 剧集页目前是草稿（Stub），只有第 1 集写了剧情摘要，没写这个地点在剧中的用途。只能确定画面出现在哪一集。",
+   "story_status": "insufficient",
+   "visual": "从低处仰望日本街的巨型楼群：楼体是暖橙、红、粉、青绿的方块拼接，挂满招牌和广告，整个画面被暖橙色的晨昏光笼罩；前景栏杆上坐着一个人物背影。",
+   "key_props": [
+    "方块拼接的巨型楼体",
+    "层层招牌",
+    "暖橙色天空",
+    "前景栏杆"
+   ],
+   "lighting": "暖橙色的晨昏光，整体偏暖、对比低",
+   "palette": [
+    "#F2A35E",
+    "#C9473C",
+    "#E9C27A",
+    "#5FA88A"
+   ],
+   "images": [
+    {
+     "type": "第二季截图 · 第6集",
+     "file": "Night City 02 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/f/f0/Night_City_02_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261023083754",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/f/f0/Night_City_02_CPEDGEII.png/revision/latest?cb=20261023083754",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3ANight_City_02_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Night_City_02_CPEDGEII-0ae061f7.webp",
+     "full_local": "assets/wiki/Night_City_02_CPEDGEII-624169a7.webp"
+    },
+    {
+     "type": "游戏截图 / 宣传图（与第一季知识库同一张）",
+     "file": "Japantown 2077 p1.jpeg",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/f/f4/Japantown_2077_p1.jpeg/revision/latest/scale-to-width-down/900?cb=20201001000528",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/f/f4/Japantown_2077_p1.jpeg/revision/latest?cb=20201001000528",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File:Japantown_2077_p1.jpeg",
+     "style": "game",
+     "thumb_local": "assets/wiki/Japantown_2077_p1-2a710b95.webp",
+     "full_local": "assets/wiki/Japantown_2077_p1-46ceb7fe.webp"
+    }
+   ],
+   "body_en": "towering blocky megastructures of japantown covered in signs and billboards, seen from a low railing",
+   "body_zh": "日本街方块堆叠的巨型楼群，挂满招牌和广告，从低处的栏杆仰望",
+   "anime_look": {
+    "style": "anime_s2",
+    "en": "warm orange dusk haze over everything, painted blocky facades in orange red pink and jade, soft low contrast",
+    "zh": "整个画面笼罩在暖橙色的黄昏雾气里，楼面用橙、红、粉、玉绿色块绘制，对比柔和"
+   },
+   "game_look": {
+    "style": "game",
+    "en": "kitsch neon high-rises, red and gold signage, crowded streets below",
+    "zh": "媚俗风格的霓虹高楼，红金色招牌，下方街道拥挤"
+   },
+   "prompts": {
+    "anime_s2": {
+     "style": "anime_s2",
+     "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, towering blocky megastructures of japantown covered in signs and billboards, seen from a low railing, warm orange dusk haze over everything, painted blocky facades in orange red pink and jade, soft low contrast",
+     "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，日本街方块堆叠的巨型楼群，挂满招牌和广告，从低处的栏杆仰望，整个画面笼罩在暖橙色的黄昏雾气里，楼面用橙、红、粉、玉绿色块绘制，对比柔和",
+     "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+     "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+    },
+    "game": {
+     "style": "game",
+     "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, towering blocky megastructures of japantown covered in signs and billboards, seen from a low railing, kitsch neon high-rises, red and gold signage, crowded streets below",
+     "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，日本街方块堆叠的巨型楼群，挂满招牌和广告，从低处的栏杆仰望，媚俗风格的霓虹高楼，红金色招牌，下方街道拥挤",
+     "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+     "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+    }
+   }
+  },
+  {
+   "id": "toms_diner",
+   "zh": "Tom's Diner",
+   "en": "Tom's Diner",
+   "district": "watson",
+   "district_zh": "沃森 · 小中华区",
+   "episodes": "第 2 集（外景、内景各一张）",
+   "wiki_page": "https://cyberpunk.fandom.com/wiki/Tom%27s_Diner",
+   "story": "资料不足：Wiki 剧集页目前是草稿（Stub），只有第 1 集写了剧情摘要，没写这个地点在剧中的用途。只能确定画面出现在哪一集。",
+   "story_status": "insufficient",
+   "visual": "外景是夜晚的街边，巨大的圆形霓虹招牌「Tom's Diner」带一圈尖角光芒，下方是发白光的大玻璃窗和几个路人；内景是黑白格子地板、橙红色卡座和吧台高脚凳，暖黄顶光。",
+   "key_props": [
+    "圆形尖角霓虹招牌",
+    "黑白格子地板",
+    "橙红色卡座",
+    "吧台高脚凳"
+   ],
+   "lighting": "外景：暗街加暖白窗光；内景：暖黄顶光",
+   "palette": [
+    "#E8572A",
+    "#F4E2B0",
+    "#1E2A28",
+    "#F0F0E8"
+   ],
+   "images": [
+    {
+     "type": "第二季截图 · 第2集 · 外景",
+     "file": "Tom's Diner 01 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/c/c2/Tom%27s_Diner_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261020192951",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/c/c2/Tom%27s_Diner_01_CPEDGEII.png/revision/latest?cb=20261020192951",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3ATom%27s_Diner_01_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Tom_27s_Diner_01_CPEDGEII-37dd0155.webp",
+     "full_local": "assets/wiki/Tom_27s_Diner_01_CPEDGEII-a6478586.webp"
+    },
+    {
+     "type": "第二季截图 · 第2集 · 内景",
+     "file": "Tom's Diner 02 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/7a/Tom%27s_Diner_02_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261020193444",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/7a/Tom%27s_Diner_02_CPEDGEII.png/revision/latest?cb=20261020193444",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3ATom%27s_Diner_02_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Tom_27s_Diner_02_CPEDGEII-2c31ca52.webp",
+     "full_local": "assets/wiki/Tom_27s_Diner_02_CPEDGEII-e4df2a9a.webp"
+    },
+    {
+     "type": "游戏截图 / 宣传图（与第一季知识库同一张）",
+     "file": "Tom's Diner Exterior 01 CP2077.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/e/eb/Tom%27s_Diner_Exterior_01_CP2077.png/revision/latest/scale-to-width-down/900?cb=20260301145759",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/e/eb/Tom%27s_Diner_Exterior_01_CP2077.png/revision/latest?cb=20260301145759",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File:Tom%27s_Diner_Exterior_01_CP2077.png",
+     "style": "game",
+     "thumb_local": "assets/wiki/Tom_27s_Diner_Exterior_01_CP2077-5590ceaf.webp",
+     "full_local": "assets/wiki/Tom_27s_Diner_Exterior_01_CP2077-aaaa0d4d.webp"
+    }
+   ],
+   "body_en": "retro roadside diner, big round neon sign with starburst, checkered black and white floor, orange-red vinyl booths, counter stools",
+   "body_zh": "复古路边餐厅，带星芒的大圆形霓虹招牌，黑白格子地板，橙红色人造革卡座，吧台高脚凳",
+   "anime_look": {
+    "style": "anime_s2",
+    "en": "dark street with a glowing white storefront, warm yellow interior light, small thin-lined figures against a detailed background",
+    "zh": "暗街上一面发白光的店面，室内暖黄光，细线条的小人物站在细节丰富的背景前"
+   },
+   "game_look": {
+    "style": "game",
+    "en": "1950s americana diner, chrome trim, warm practical lights, rain-wet sidewalk",
+    "zh": "五十年代美式餐厅，镀铬饰条，暖色实际光源，雨后湿人行道"
+   },
+   "prompts": {
+    "anime_s2": {
+     "style": "anime_s2",
+     "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, retro roadside diner, big round neon sign with starburst, checkered black and white floor, orange-red vinyl booths, counter stools, dark street with a glowing white storefront, warm yellow interior light, small thin-lined figures against a detailed background",
+     "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，复古路边餐厅，带星芒的大圆形霓虹招牌，黑白格子地板，橙红色人造革卡座，吧台高脚凳，暗街上一面发白光的店面，室内暖黄光，细线条的小人物站在细节丰富的背景前",
+     "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+     "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+    },
+    "game": {
+     "style": "game",
+     "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, retro roadside diner, big round neon sign with starburst, checkered black and white floor, orange-red vinyl booths, counter stools, 1950s americana diner, chrome trim, warm practical lights, rain-wet sidewalk",
+     "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，复古路边餐厅，带星芒的大圆形霓虹招牌，黑白格子地板，橙红色人造革卡座，吧台高脚凳，五十年代美式餐厅，镀铬饰条，暖色实际光源，雨后湿人行道",
+     "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+     "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+    }
+   }
+  },
+  {
+   "id": "arasaka_industrial_park",
+   "zh": "荒坂工业园",
+   "en": "Arasaka Industrial Park",
+   "district": "santo_domingo",
+   "district_zh": "圣多明戈 · 阿罗约",
+   "episodes": "第 1 集",
+   "wiki_page": "https://cyberpunk.fandom.com/wiki/Arasaka_Industrial_Park",
+   "story": "第 1 集（Wiki 剧情摘要）：Weak Kingsley 带队员 Miguel、Emily、Meshuga 潜入荒坂工业园偷一个生物芯片箱，警报被触发、队伍被困；Kingsley 在逃出园区后出现赛博精神病症状，杀光了附近的荒坂守卫。Roman 正好在附近，用摄像机拍下了这一幕。",
+   "story_status": "wiki",
+   "visual": "晴天蓝天下的荒坂园区外墙：深灰色高楼侧面竖排「ARASAKA」字样，围墙是黑色金属栏杆，墙根一排干草，几棵棕榈树，远处有烟。",
+   "key_props": [
+    "竖排荒坂标志",
+    "黑色金属围栏",
+    "棕榈树",
+    "远处烟柱"
+   ],
+   "lighting": "正午强日光，浅蓝天空，硬阴影",
+   "palette": [
+    "#7FB6E0",
+    "#2E323A",
+    "#C9B98A",
+    "#D8282F"
+   ],
+   "images": [
+    {
+     "type": "第二季截图 · 第1集 · 外景",
+     "file": "Arasaka Industrial Park Exterior 01 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/9/92/Arasaka_Industrial_Park_Exterior_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261020201131",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/9/92/Arasaka_Industrial_Park_Exterior_01_CPEDGEII.png/revision/latest?cb=20261020201131",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3AArasaka_Industrial_Park_Exterior_01_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Arasaka_Industrial_Park_Exterior_01_CPEDGEII-017f5834.webp",
+     "full_local": "assets/wiki/Arasaka_Industrial_Park_Exterior_01_CPEDGEII-412f68e8.webp"
+    },
+    {
+     "type": "游戏截图 / 概念图",
+     "file": "Arasaka Industrial Park Database CP2077.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/4/49/Arasaka_Industrial_Park_Database_CP2077.png/revision/latest/scale-to-width-down/900?cb=20220716203519",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/4/49/Arasaka_Industrial_Park_Database_CP2077.png/revision/latest?cb=20220716203519",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File:Arasaka_Industrial_Park_Database_CP2077.png",
+     "style": "game",
+     "thumb_local": "assets/wiki/Arasaka_Industrial_Park_Database_CP2077-35701a1c.webp",
+     "full_local": "assets/wiki/Arasaka_Industrial_Park_Database_CP2077-b56f16b1.webp"
+    }
+   ],
+   "body_en": "heavily guarded corporate industrial park, dark grey tower with vertical ARASAKA lettering, black metal perimeter fence, palm trees, dry grass",
+   "body_zh": "戒备森严的公司工业园，深灰色高楼上竖排荒坂字样，黑色金属围栏，棕榈树，干草",
+   "anime_look": {
+    "style": "anime_s2",
+    "en": "bright midday sky with painted cumulus clouds, hard sunlight, naturalistic detailed background",
+    "zh": "明亮的正午天空和手绘积云，硬朗的日光，自然写实、细节丰富的背景"
+   },
+   "game_look": {
+    "style": "game",
+    "en": "neomilitarist warehouses, security turrets, sun-bleached concrete, Santo Domingo smog",
+    "zh": "新军国主义风格的仓库，安保炮塔，被晒白的混凝土，圣多明戈的雾霾"
+   },
+   "prompts": {
+    "anime_s2": {
+     "style": "anime_s2",
+     "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, heavily guarded corporate industrial park, dark grey tower with vertical ARASAKA lettering, black metal perimeter fence, palm trees, dry grass, bright midday sky with painted cumulus clouds, hard sunlight, naturalistic detailed background",
+     "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，戒备森严的公司工业园，深灰色高楼上竖排荒坂字样，黑色金属围栏，棕榈树，干草，明亮的正午天空和手绘积云，硬朗的日光，自然写实、细节丰富的背景",
+     "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+     "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+    },
+    "game": {
+     "style": "game",
+     "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, heavily guarded corporate industrial park, dark grey tower with vertical ARASAKA lettering, black metal perimeter fence, palm trees, dry grass, neomilitarist warehouses, security turrets, sun-bleached concrete, Santo Domingo smog",
+     "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，戒备森严的公司工业园，深灰色高楼上竖排荒坂字样，黑色金属围栏，棕榈树，干草，新军国主义风格的仓库，安保炮塔，被晒白的混凝土，圣多明戈的雾霾",
+     "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+     "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+    }
+   }
+  },
+  {
+   "id": "afterlife",
+   "zh": "来生酒吧",
+   "en": "Afterlife",
+   "district": "watson",
+   "district_zh": "沃森 · 小中华区",
+   "episodes": "第 1 集（3 张）",
+   "wiki_page": "https://cyberpunk.fandom.com/wiki/Afterlife",
+   "story": "资料不足：Wiki 剧集页目前是草稿（Stub），只有第 1 集写了剧情摘要，没写这个地点在剧中的用途。只能确定画面出现在哪一集。",
+   "story_status": "insufficient",
+   "visual": "入口是酸性绿的闪电字招牌「AFTERLIFE」，走廊被青绿色烟雾填满；室内吧台整体被青绿色染色，发光的绿色酒柜，人物也一起变成青绿单色。",
+   "key_props": [
+    "绿色闪电字招牌",
+    "烟雾走廊",
+    "发光酒柜",
+    "吧台高脚凳"
+   ],
+   "lighting": "整画面青绿色单色调，局部白色灯管",
+   "palette": [
+    "#3BFF6B",
+    "#0E3B34",
+    "#79E0C8",
+    "#0A1A18"
+   ],
+   "images": [
+    {
+     "type": "第二季截图 · 第1集 · 室内",
+     "file": "Afterlife 01 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/4/47/Afterlife_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261020212555",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/4/47/Afterlife_01_CPEDGEII.png/revision/latest?cb=20261020212555",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3AAfterlife_01_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Afterlife_01_CPEDGEII-c072ff18.webp",
+     "full_local": "assets/wiki/Afterlife_01_CPEDGEII-77d22540.webp"
+    },
+    {
+     "type": "第二季截图 · 第1集 · 室内",
+     "file": "Afterlife 02 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/6/67/Afterlife_02_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261020212557",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/6/67/Afterlife_02_CPEDGEII.png/revision/latest?cb=20261020212557",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3AAfterlife_02_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Afterlife_02_CPEDGEII-4653f4cd.webp",
+     "full_local": "assets/wiki/Afterlife_02_CPEDGEII-7ae6e6be.webp"
+    },
+    {
+     "type": "第二季截图 · 第1集 · 入口",
+     "file": "Afterlife 03 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/d/d1/Afterlife_03_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261020212559",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/d/d1/Afterlife_03_CPEDGEII.png/revision/latest?cb=20261020212559",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3AAfterlife_03_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Afterlife_03_CPEDGEII-28a3b140.webp",
+     "full_local": "assets/wiki/Afterlife_03_CPEDGEII-a0aaf8dd.webp"
+    },
+    {
+     "type": "游戏截图 / 宣传图（与第一季知识库同一张）",
+     "file": "Afterlife Infobox CP2077.jpg",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/3/3f/Afterlife_Infobox_CP2077.jpg/revision/latest/scale-to-width-down/900?cb=20240820041416",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/3/3f/Afterlife_Infobox_CP2077.jpg/revision/latest?cb=20240820041416",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File:Afterlife_Infobox_CP2077.jpg",
+     "style": "game",
+     "thumb_local": "assets/wiki/Afterlife_Infobox_CP2077-f8502663.webp",
+     "full_local": "assets/wiki/Afterlife_Infobox_CP2077-625e2a02.webp"
+    }
+   ],
+   "body_en": "legendary merc bar, jagged green neon AFTERLIFE sign over a smoky corridor, glowing green bottle cabinets, bar counter with stools",
+   "body_zh": "传奇佣兵酒吧，烟雾走廊上方是锯齿状的绿色霓虹 AFTERLIFE 招牌，发光的绿色酒柜，带高脚凳的吧台",
+   "anime_look": {
+    "style": "anime_s2",
+    "en": "entire frame washed in teal-green, characters tinted the same color, thin linework, deep shadow shapes",
+    "zh": "整个画面被青绿色染色，人物也被同一种颜色覆盖，细线条，大块深色阴影"
+   },
+   "game_look": {
+    "style": "game",
+    "en": "underground club in a former morgue, green and teal practical lights, cold stone and steel",
+    "zh": "由旧停尸房改成的地下酒吧，绿色和青色的实际光源，冰冷的石材和钢"
+   },
+   "prompts": {
+    "anime_s2": {
+     "style": "anime_s2",
+     "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, legendary merc bar, jagged green neon AFTERLIFE sign over a smoky corridor, glowing green bottle cabinets, bar counter with stools, entire frame washed in teal-green, characters tinted the same color, thin linework, deep shadow shapes",
+     "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，传奇佣兵酒吧，烟雾走廊上方是锯齿状的绿色霓虹 AFTERLIFE 招牌，发光的绿色酒柜，带高脚凳的吧台，整个画面被青绿色染色，人物也被同一种颜色覆盖，细线条，大块深色阴影",
+     "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+     "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+    },
+    "game": {
+     "style": "game",
+     "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, legendary merc bar, jagged green neon AFTERLIFE sign over a smoky corridor, glowing green bottle cabinets, bar counter with stools, underground club in a former morgue, green and teal practical lights, cold stone and steel",
+     "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，传奇佣兵酒吧，烟雾走廊上方是锯齿状的绿色霓虹 AFTERLIFE 招牌，发光的绿色酒柜，带高脚凳的吧台，由旧停尸房改成的地下酒吧，绿色和青色的实际光源，冰冷的石材和钢",
+     "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+     "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+    }
+   }
+  },
+  {
+   "id": "all_foods",
+   "zh": "All Foods 工厂",
+   "en": "All Foods Factory",
+   "district": "watson",
+   "district_zh": "沃森 · 北部工业区",
+   "episodes": "第 2 集、第 4 集",
+   "wiki_page": "https://cyberpunk.fandom.com/wiki/All_Foods_Factory",
+   "story": "资料不足：Wiki 剧集页目前是草稿（Stub），只有第 1 集写了剧情摘要，没写这个地点在剧中的用途。只能确定画面出现在哪一集。",
+   "story_status": "insufficient",
+   "visual": "白天的废弃工厂：屋顶上巨大的红色「ALL FOODS」字牌和一个卡通猪头，墙上有血红色喷溅涂鸦，粗管道从墙上穿出，门口是带刺铁丝的铁网大门。",
+   "key_props": [
+    "红色 ALL FOODS 字牌",
+    "卡通猪头",
+    "血红喷溅涂鸦",
+    "带刺铁丝网门"
+   ],
+   "lighting": "晴天蓝天，平光，阴影偏冷",
+   "palette": [
+    "#D8333A",
+    "#E8DCC8",
+    "#6FA6D8",
+    "#4A4A50"
+   ],
+   "images": [
+    {
+     "type": "第二季截图 · 第2集 · 外景",
+     "file": "All Foods Factory Exterior 01 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/3/3c/All_Foods_Factory_Exterior_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261021014630",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/3/3c/All_Foods_Factory_Exterior_01_CPEDGEII.png/revision/latest?cb=20261021014630",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3AAll_Foods_Factory_Exterior_01_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/All_Foods_Factory_Exterior_01_CPEDGEII-c97cb585.webp",
+     "full_local": "assets/wiki/All_Foods_Factory_Exterior_01_CPEDGEII-1a892f36.webp"
+    },
+    {
+     "type": "第二季截图 · 第4集 · 外景",
+     "file": "All Foods Factory Exterior 02 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/c/c5/All_Foods_Factory_Exterior_02_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261021002056",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/c/c5/All_Foods_Factory_Exterior_02_CPEDGEII.png/revision/latest?cb=20261021002056",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3AAll_Foods_Factory_Exterior_02_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/All_Foods_Factory_Exterior_02_CPEDGEII-19d4e315.webp",
+     "full_local": "assets/wiki/All_Foods_Factory_Exterior_02_CPEDGEII-5440e5ed.webp"
+    },
+    {
+     "type": "游戏截图 / 概念图",
+     "file": "All Foods Factory Database CP2077.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/a/ae/All_Foods_Factory_Database_CP2077.png/revision/latest/scale-to-width-down/900?cb=20210806103226",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/a/ae/All_Foods_Factory_Database_CP2077.png/revision/latest?cb=20210806103226",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File:All_Foods_Factory_Database_CP2077.png",
+     "style": "game",
+     "thumb_local": "assets/wiki/All_Foods_Factory_Database_CP2077-75ed6974.webp",
+     "full_local": "assets/wiki/All_Foods_Factory_Database_CP2077-1656021d.webp"
+    }
+   ],
+   "body_en": "defunct protein processing plant, giant red ALL FOODS rooftop sign with a cartoon pig head, blood-red splatter graffiti, thick pipes, razor-wire chain-link gate",
+   "body_zh": "废弃的蛋白质加工厂，屋顶巨大的红色 ALL FOODS 字牌配卡通猪头，血红色喷溅涂鸦，粗管道，带刺铁丝的铁网大门",
+   "anime_look": {
+    "style": "anime_s2",
+    "en": "flat daylight under a clear blue sky, grimy painted textures, thin-lined figure in a long coat for scale",
+    "zh": "晴朗蓝天下的平光，脏旧的手绘质感，用一个穿长外套的细线条人物衬托比例"
+   },
+   "game_look": {
+    "style": "game",
+    "en": "abandoned factory exterior, rust, peeling paint, Maelstrom graffiti, industrial haze",
+    "zh": "废弃工厂外景，锈迹，剥落的油漆，漩涡帮涂鸦，工业雾霾"
+   },
+   "prompts": {
+    "anime_s2": {
+     "style": "anime_s2",
+     "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, defunct protein processing plant, giant red ALL FOODS rooftop sign with a cartoon pig head, blood-red splatter graffiti, thick pipes, razor-wire chain-link gate, flat daylight under a clear blue sky, grimy painted textures, thin-lined figure in a long coat for scale",
+     "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，废弃的蛋白质加工厂，屋顶巨大的红色 ALL FOODS 字牌配卡通猪头，血红色喷溅涂鸦，粗管道，带刺铁丝的铁网大门，晴朗蓝天下的平光，脏旧的手绘质感，用一个穿长外套的细线条人物衬托比例",
+     "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+     "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+    },
+    "game": {
+     "style": "game",
+     "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, defunct protein processing plant, giant red ALL FOODS rooftop sign with a cartoon pig head, blood-red splatter graffiti, thick pipes, razor-wire chain-link gate, abandoned factory exterior, rust, peeling paint, Maelstrom graffiti, industrial haze",
+     "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，废弃的蛋白质加工厂，屋顶巨大的红色 ALL FOODS 字牌配卡通猪头，血红色喷溅涂鸦，粗管道，带刺铁丝的铁网大门，废弃工厂外景，锈迹，剥落的油漆，漩涡帮涂鸦，工业雾霾",
+     "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+     "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+    }
+   }
+  },
+  {
+   "id": "kabuki_market",
+   "zh": "歌舞伎市场",
+   "en": "Kabuki Market",
+   "district": "watson",
+   "district_zh": "沃森 · 歌舞伎区",
+   "episodes": "第 4 集",
+   "wiki_page": "https://cyberpunk.fandom.com/wiki/Kabuki_Market",
+   "story": "资料不足：Wiki 剧集页目前是草稿（Stub），只有第 1 集写了剧情摘要，没写这个地点在剧中的用途。只能确定画面出现在哪一集。",
+   "story_status": "insufficient",
+   "visual": "环岛中央是一根柱子顶着巨大的圆环形广告屏，下方是日式宝塔屋顶的建筑；四周有高架轨道、杂乱的电线和外挂空调的楼，晴天蓝天。",
+   "key_props": [
+    "圆环形广告屏",
+    "宝塔屋顶",
+    "高架轨道",
+    "杂乱电线"
+   ],
+   "lighting": "晴天强日光，天空浅蓝",
+   "palette": [
+    "#8FC6EA",
+    "#3A3F48",
+    "#E8E0C8",
+    "#D8443A"
+   ],
+   "images": [
+    {
+     "type": "第二季截图 · 第4集 · 外景",
+     "file": "Kabuki Market Exterior 01 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/a/a4/Kabuki_Market_Exterior_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261021003315",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/a/a4/Kabuki_Market_Exterior_01_CPEDGEII.png/revision/latest?cb=20261021003315",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3AKabuki_Market_Exterior_01_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Kabuki_Market_Exterior_01_CPEDGEII-6a4071c2.webp",
+     "full_local": "assets/wiki/Kabuki_Market_Exterior_01_CPEDGEII-e3546f53.webp"
+    },
+    {
+     "type": "游戏截图 / 概念图",
+     "file": "Kabuki Market Exterior View 01 CP2077.jpg",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/b/b5/Kabuki_Market_Exterior_View_01_CP2077.jpg/revision/latest/scale-to-width-down/900?cb=20261113040719",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/b/b5/Kabuki_Market_Exterior_View_01_CP2077.jpg/revision/latest?cb=20261113040719",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File:Kabuki_Market_Exterior_View_01_CP2077.jpg",
+     "style": "game",
+     "thumb_local": "assets/wiki/Kabuki_Market_Exterior_View_01_CP2077-0682e87a.webp",
+     "full_local": "assets/wiki/Kabuki_Market_Exterior_View_01_CP2077-d6d9e5fc.webp"
+    }
+   ],
+   "body_en": "roundabout open-air bazaar, central pillar holding a huge ring-shaped billboard, pagoda roofs below, elevated rail lines, tangled power cables",
+   "body_zh": "环岛露天市场，中央立柱顶着巨大的圆环广告屏，下方是宝塔屋顶，高架轨道，纠缠的电线",
+   "anime_look": {
+    "style": "anime_s2",
+    "en": "crisp daylight, light blue sky, very dense painted background detail, slight haze",
+    "zh": "清亮的日光，浅蓝天空，绘制背景细节极密，带一点薄雾"
+   },
+   "game_look": {
+    "style": "game",
+    "en": "crowded night market stalls, lanterns, tyger claws signage, steam from food stands",
+    "zh": "拥挤的夜市摊位，灯笼，虎爪帮的招牌，小吃摊冒出的蒸汽"
+   },
+   "prompts": {
+    "anime_s2": {
+     "style": "anime_s2",
+     "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, roundabout open-air bazaar, central pillar holding a huge ring-shaped billboard, pagoda roofs below, elevated rail lines, tangled power cables, crisp daylight, light blue sky, very dense painted background detail, slight haze",
+     "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，环岛露天市场，中央立柱顶着巨大的圆环广告屏，下方是宝塔屋顶，高架轨道，纠缠的电线，清亮的日光，浅蓝天空，绘制背景细节极密，带一点薄雾",
+     "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+     "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+    },
+    "game": {
+     "style": "game",
+     "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, roundabout open-air bazaar, central pillar holding a huge ring-shaped billboard, pagoda roofs below, elevated rail lines, tangled power cables, crowded night market stalls, lanterns, tyger claws signage, steam from food stands",
+     "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，环岛露天市场，中央立柱顶着巨大的圆环广告屏，下方是宝塔屋顶，高架轨道，纠缠的电线，拥挤的夜市摊位，灯笼，虎爪帮的招牌，小吃摊冒出的蒸汽",
+     "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+     "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+    }
+   }
+  },
+  {
+   "id": "el_coyote_cojo",
+   "zh": "瘸腿土狼酒吧（El Coyote Cojo）",
+   "en": "El Coyote Cojo",
+   "district": "heywood",
+   "district_zh": "海伍德 · 格伦区",
+   "episodes": "第 4 集（外景）、第 5 集（内景）",
+   "wiki_page": "https://cyberpunk.fandom.com/wiki/El_Coyote_Cojo",
+   "story": "资料不足：Wiki 剧集页目前是草稿（Stub），只有第 1 集写了剧情摘要，没写这个地点在剧中的用途。只能确定画面出现在哪一集。",
+   "story_status": "insufficient",
+   "visual": "外景是红砖和波纹铁皮的街角店面，暖黄灯管字招牌「EL COYOTE COJO」，门上方挂牛头骨，两侧墙上有骷髅圣母涂鸦；内景墙面画满玫瑰，牛头骨挂在正中，绿色灯管、粉色霓虹小招牌和「18+」灯牌。",
+   "key_props": [
+    "牛头骨",
+    "黄色灯管字招牌",
+    "玫瑰壁画",
+    "骷髅圣母涂鸦"
+   ],
+   "lighting": "外景：傍晚平光加暖黄招牌；内景：绿色顶灯加粉红和红色点光",
+   "palette": [
+    "#F2C04A",
+    "#8A2E24",
+    "#3BE36B",
+    "#FF4FA0"
+   ],
+   "images": [
+    {
+     "type": "第二季截图 · 第4集 · 外景",
+     "file": "El Coyote Cojo Exterior 01 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/c/cb/El_Coyote_Cojo_Exterior_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261021003857",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/c/cb/El_Coyote_Cojo_Exterior_01_CPEDGEII.png/revision/latest?cb=20261021003857",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3AEl_Coyote_Cojo_Exterior_01_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/El_Coyote_Cojo_Exterior_01_CPEDGEII-eafa6e91.webp",
+     "full_local": "assets/wiki/El_Coyote_Cojo_Exterior_01_CPEDGEII-c259c60e.webp"
+    },
+    {
+     "type": "第二季截图 · 第5集 · 内景",
+     "file": "El Coyote Cojo Interior 01 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/f/ff/El_Coyote_Cojo_Interior_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261021012921",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/f/ff/El_Coyote_Cojo_Interior_01_CPEDGEII.png/revision/latest?cb=20261021012921",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3AEl_Coyote_Cojo_Interior_01_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/El_Coyote_Cojo_Interior_01_CPEDGEII-623689a3.webp",
+     "full_local": "assets/wiki/El_Coyote_Cojo_Interior_01_CPEDGEII-d40cfe67.webp"
+    },
+    {
+     "type": "游戏截图 / 概念图",
+     "file": "Cyberpunk 2077 Location El Coyote Cojo Exterior.jpg",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/2/20/Cyberpunk_2077_Location_El_Coyote_Cojo_Exterior.jpg/revision/latest/scale-to-width-down/900?cb=20210102002920",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/2/20/Cyberpunk_2077_Location_El_Coyote_Cojo_Exterior.jpg/revision/latest?cb=20210102002920",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File:Cyberpunk_2077_Location_El_Coyote_Cojo_Exterior.jpg",
+     "style": "game",
+     "thumb_local": "assets/wiki/Cyberpunk_2077_Location_El_Coyote_Cojo_Exterior-169697a6.webp",
+     "full_local": "assets/wiki/Cyberpunk_2077_Location_El_Coyote_Cojo_Exterior-37ac5075.webp"
+    }
+   ],
+   "body_en": "Valentinos neighborhood bar, red brick and corrugated metal facade, warm yellow tube-lettered sign, bull skull over the door, rose murals and Santa Muerte graffiti",
+   "body_zh": "瓦伦蒂诺帮街区酒吧，红砖和波纹铁皮的立面，暖黄灯管字招牌，门上挂牛头骨，玫瑰壁画和死神圣母涂鸦",
+   "anime_look": {
+    "style": "anime_s2",
+    "en": "worn painted textures, mixed green and pink accent lights inside, heavy black shadow areas",
+    "zh": "磨旧的手绘质感，室内是绿色和粉色的点缀光，大面积纯黑阴影"
+   },
+   "game_look": {
+    "style": "game",
+    "en": "latino street bar, warm interior, gold and red decor, Heywood evening light",
+    "zh": "拉丁街区酒吧，温暖的室内，金红色装饰，海伍德的傍晚光"
+   },
+   "prompts": {
+    "anime_s2": {
+     "style": "anime_s2",
+     "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, Valentinos neighborhood bar, red brick and corrugated metal facade, warm yellow tube-lettered sign, bull skull over the door, rose murals and Santa Muerte graffiti, worn painted textures, mixed green and pink accent lights inside, heavy black shadow areas",
+     "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，瓦伦蒂诺帮街区酒吧，红砖和波纹铁皮的立面，暖黄灯管字招牌，门上挂牛头骨，玫瑰壁画和死神圣母涂鸦，磨旧的手绘质感，室内是绿色和粉色的点缀光，大面积纯黑阴影",
+     "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+     "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+    },
+    "game": {
+     "style": "game",
+     "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Valentinos neighborhood bar, red brick and corrugated metal facade, warm yellow tube-lettered sign, bull skull over the door, rose murals and Santa Muerte graffiti, latino street bar, warm interior, gold and red decor, Heywood evening light",
+     "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，瓦伦蒂诺帮街区酒吧，红砖和波纹铁皮的立面，暖黄灯管字招牌，门上挂牛头骨，玫瑰壁画和死神圣母涂鸦，拉丁街区酒吧，温暖的室内，金红色装饰，海伍德的傍晚光",
+     "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+     "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+    }
+   }
+  },
+  {
+   "id": "medcenter",
+   "zh": "小中华区医疗中心",
+   "en": "Night City Medical Center (Little China)",
+   "district": "watson",
+   "district_zh": "沃森 · 小中华区",
+   "episodes": "第 2 集",
+   "wiki_page": "https://cyberpunk.fandom.com/wiki/Night_City_Medical_Center_%28Little_China%29",
+   "story": "资料不足：Wiki 剧集页目前是草稿（Stub），只有第 1 集写了剧情摘要，没写这个地点在剧中的用途。只能确定画面出现在哪一集。",
+   "story_status": "insufficient",
+   "visual": "从天桥仰望医疗中心：白色阶梯状巨型建筑，顶部是红白相间的块状结构，楼面印有「MedCenter」标志；强烈的太阳从右上角射来，蓝天白云，前景栏杆上贴着 All Foods 广告。",
+   "key_props": [
+    "白色阶梯状楼体",
+    "MedCenter 标志",
+    "顶部红白结构",
+    "天桥栏杆"
+   ],
+   "lighting": "强烈日光，大光晕，蓝天积云",
+   "palette": [
+    "#2F7FD0",
+    "#EDEDE6",
+    "#D8443A",
+    "#9AA6B0"
+   ],
+   "images": [
+    {
+     "type": "第二季截图 · 第2集 · 外景",
+     "file": "MedCenter Exterior 01 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/70/MedCenter_Exterior_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261021015027",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/70/MedCenter_Exterior_01_CPEDGEII.png/revision/latest?cb=20261021015027",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3AMedCenter_Exterior_01_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/MedCenter_Exterior_01_CPEDGEII-2be56c4d.webp",
+     "full_local": "assets/wiki/MedCenter_Exterior_01_CPEDGEII-619a812e.webp"
+    },
+    {
+     "type": "游戏截图 / 概念图",
+     "file": "CP77 Night City Medical Center (Little China) 01.jpg",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/5/55/CP77_Night_City_Medical_Center_%28Little_China%29_01.jpg/revision/latest/scale-to-width-down/900?cb=20210401211724",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/5/55/CP77_Night_City_Medical_Center_%28Little_China%29_01.jpg/revision/latest?cb=20210401211724",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File:CP77_Night_City_Medical_Center_%28Little_China%29_01.jpg",
+     "style": "game",
+     "thumb_local": "assets/wiki/CP77_Night_City_Medical_Center__28Little_China_29_01-59732d4f.webp",
+     "full_local": "assets/wiki/CP77_Night_City_Medical_Center__28Little_China_29_01-f33316f2.webp"
+    }
+   ],
+   "body_en": "massive white stepped hospital complex with a red and white crown structure and MedCenter logo, seen from a pedestrian overpass",
+   "body_zh": "巨大的白色阶梯状医院建筑群，顶部是红白相间的冠状结构和 MedCenter 标志，从人行天桥仰望",
+   "anime_look": {
+    "style": "anime_s2",
+    "en": "blazing sun with large lens flare, deep blue sky with painted cumulus, low-angle heroic composition",
+    "zh": "耀眼的太阳和大片镜头光晕，深蓝天空配手绘积云，低角度仰拍构图"
+   },
+   "game_look": {
+    "style": "game",
+    "en": "clean corporate medical architecture, ambulances and AVs, bright overcast daylight",
+    "zh": "干净的公司式医疗建筑，救护车和浮空车，明亮的阴天日光"
+   },
+   "prompts": {
+    "anime_s2": {
+     "style": "anime_s2",
+     "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, massive white stepped hospital complex with a red and white crown structure and MedCenter logo, seen from a pedestrian overpass, blazing sun with large lens flare, deep blue sky with painted cumulus, low-angle heroic composition",
+     "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，巨大的白色阶梯状医院建筑群，顶部是红白相间的冠状结构和 MedCenter 标志，从人行天桥仰望，耀眼的太阳和大片镜头光晕，深蓝天空配手绘积云，低角度仰拍构图",
+     "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+     "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+    },
+    "game": {
+     "style": "game",
+     "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, massive white stepped hospital complex with a red and white crown structure and MedCenter logo, seen from a pedestrian overpass, clean corporate medical architecture, ambulances and AVs, bright overcast daylight",
+     "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，巨大的白色阶梯状医院建筑群，顶部是红白相间的冠状结构和 MedCenter 标志，从人行天桥仰望，干净的公司式医疗建筑，救护车和浮空车，明亮的阴天日光",
+     "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+     "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+    }
+   }
+  },
+  {
+   "id": "sunset_motel",
+   "zh": "日落汽车旅馆",
+   "en": "Sunset Motel",
+   "district": "badlands",
+   "district_zh": "荒地 · 9 号州际公路旁",
+   "episodes": "第 2 集",
+   "wiki_page": "https://cyberpunk.fandom.com/wiki/Sunset_Motel",
+   "story": "资料不足：Wiki 剧集页目前是草稿（Stub），只有第 1 集写了剧情摘要，没写这个地点在剧中的用途。只能确定画面出现在哪一集。",
+   "story_status": "insufficient",
+   "visual": "两层木板外墙的汽车旅馆，屋顶立着半圆形的太阳招牌和「SUNSET」字样，蓝色栏杆的长走廊，前面是空旷的停车场和路灯，暖色阳光从右侧照来。",
+   "key_props": [
+    "半圆太阳招牌",
+    "SUNSET 字样",
+    "二层长走廊",
+    "空停车场"
+   ],
+   "lighting": "午后暖阳，浅蓝天空，轻微光晕",
+   "palette": [
+    "#E8C27A",
+    "#4A78A8",
+    "#B88A5A",
+    "#DCD6C8"
+   ],
+   "images": [
+    {
+     "type": "第二季截图 · 第2集 · 外景",
+     "file": "Sunset Motel Exterior 01 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/3/39/Sunset_Motel_Exterior_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261021015127",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/3/39/Sunset_Motel_Exterior_01_CPEDGEII.png/revision/latest?cb=20261021015127",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3ASunset_Motel_Exterior_01_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Sunset_Motel_Exterior_01_CPEDGEII-660bf6ba.webp",
+     "full_local": "assets/wiki/Sunset_Motel_Exterior_01_CPEDGEII-a5221e22.webp"
+    },
+    {
+     "type": "游戏截图 / 概念图",
+     "file": "Sunset Motel 02 CP2077.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/e/e3/Sunset_Motel_02_CP2077.png/revision/latest/scale-to-width-down/900?cb=20251029183813",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/e/e3/Sunset_Motel_02_CP2077.png/revision/latest?cb=20251029183813",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File:Sunset_Motel_02_CP2077.png",
+     "style": "game",
+     "thumb_local": "assets/wiki/Sunset_Motel_02_CP2077-120ea19e.webp",
+     "full_local": "assets/wiki/Sunset_Motel_02_CP2077-65ff30aa.webp"
+    }
+   ],
+   "body_en": "two-story roadside motel by the interstate, half-sun sign with SUNSET letters on the roof, long balcony walkway, empty parking lot, desert",
+   "body_zh": "州际公路旁的两层汽车旅馆，屋顶是半个太阳形招牌和 SUNSET 字样，长长的二层走廊，空旷的停车场，荒漠",
+   "anime_look": {
+    "style": "anime_s2",
+    "en": "warm afternoon sun, faded wood siding, soft haze, quiet and empty",
+    "zh": "午后暖阳，褪色的木板外墙，柔和的薄雾，安静空旷"
+   },
+   "game_look": {
+    "style": "game",
+    "en": "badlands roadside motel, dusty golden light, long shadows",
+    "zh": "荒地路边旅馆，沙尘中的金色光线，长影子"
+   },
+   "prompts": {
+    "anime_s2": {
+     "style": "anime_s2",
+     "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, two-story roadside motel by the interstate, half-sun sign with SUNSET letters on the roof, long balcony walkway, empty parking lot, desert, warm afternoon sun, faded wood siding, soft haze, quiet and empty",
+     "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，州际公路旁的两层汽车旅馆，屋顶是半个太阳形招牌和 SUNSET 字样，长长的二层走廊，空旷的停车场，荒漠，午后暖阳，褪色的木板外墙，柔和的薄雾，安静空旷",
+     "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+     "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+    },
+    "game": {
+     "style": "game",
+     "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, two-story roadside motel by the interstate, half-sun sign with SUNSET letters on the roof, long balcony walkway, empty parking lot, desert, badlands roadside motel, dusty golden light, long shadows",
+     "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，州际公路旁的两层汽车旅馆，屋顶是半个太阳形招牌和 SUNSET 字样，长长的二层走廊，空旷的停车场，荒漠，荒地路边旅馆，沙尘中的金色光线，长影子",
+     "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+     "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+    }
+   }
+  },
+  {
+   "id": "red_dirt",
+   "zh": "Red Dirt 摇滚酒吧",
+   "en": "Red Dirt",
+   "district": "santo_domingo",
+   "district_zh": "圣多明戈 · 阿罗约",
+   "episodes": "第 6 集",
+   "wiki_page": "https://cyberpunk.fandom.com/wiki/Red_Dirt",
+   "story": "资料不足：Wiki 剧集页目前是草稿（Stub），只有第 1 集写了剧情摘要，没写这个地点在剧中的用途。只能确定画面出现在哪一集。",
+   "story_status": "insufficient",
+   "visual": "夜晚，高架钢结构下方的小酒吧入口，橙红色霓虹字「RED DIRT」，两盏橙色壁灯，门口站着几个人；前景右侧是一个大块阴影里的人物侧影。",
+   "key_props": [
+    "橙红 RED DIRT 霓虹字",
+    "高架钢梁",
+    "橙色壁灯",
+    "前景人物剪影"
+   ],
+   "lighting": "夜晚，橙红色霓虹是唯一主光，其余压到近黑",
+   "palette": [
+    "#FF5A1F",
+    "#141A1E",
+    "#3A4A50",
+    "#F2A04A"
+   ],
+   "images": [
+    {
+     "type": "第二季截图 · 第6集 · 外景",
+     "file": "Red Dirt Exterior 01 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/c/c7/Red_Dirt_Exterior_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261021024336",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/c/c7/Red_Dirt_Exterior_01_CPEDGEII.png/revision/latest?cb=20261021024336",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3ARed_Dirt_Exterior_01_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Red_Dirt_Exterior_01_CPEDGEII-7bc03414.webp",
+     "full_local": "assets/wiki/Red_Dirt_Exterior_01_CPEDGEII-9b6a8528.webp"
+    },
+    {
+     "type": "游戏截图 / 概念图",
+     "file": "Ward-lindhout-reddirt-conceptart-cyberpunk2077-wardlindhout-small2.jpg",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/9/94/Ward-lindhout-reddirt-conceptart-cyberpunk2077-wardlindhout-small2.jpg/revision/latest/scale-to-width-down/900?cb=20261112093126",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/9/94/Ward-lindhout-reddirt-conceptart-cyberpunk2077-wardlindhout-small2.jpg/revision/latest?cb=20261112093126",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File:Ward-lindhout-reddirt-conceptart-cyberpunk2077-wardlindhout-small2.jpg",
+     "style": "game",
+     "thumb_local": "assets/wiki/Ward-lindhout-reddirt-conceptart-cyberpunk2077-wardlindhout-small2-6de59d3a.webp",
+     "full_local": "assets/wiki/Ward-lindhout-reddirt-conceptart-cyberpunk2077-wardlindhout-small2-a9067150.webp"
+    }
+   ],
+   "body_en": "small old rock bar under elevated steel girders, orange-red neon RED DIRT sign, two orange wall lamps, people at the entrance",
+   "body_zh": "高架钢梁下的老摇滚小酒吧，橙红色霓虹 RED DIRT 字样，两盏橙色壁灯，门口站着人",
+   "anime_look": {
+    "style": "anime_s2",
+    "en": "night scene crushed to near-black, single orange neon light source, large foreground silhouette in hard shadow",
+    "zh": "夜景几乎压成全黑，只有一处橙色霓虹光源，前景是硬边阴影里的大块人物剪影"
+   },
+   "game_look": {
+    "style": "game",
+    "en": "industrial Arroyo street at night, sodium lights, grimy brick, rock posters",
+    "zh": "夜晚阿罗约的工业街道，钠灯，脏旧砖墙，摇滚海报"
+   },
+   "prompts": {
+    "anime_s2": {
+     "style": "anime_s2",
+     "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, small old rock bar under elevated steel girders, orange-red neon RED DIRT sign, two orange wall lamps, people at the entrance, night scene crushed to near-black, single orange neon light source, large foreground silhouette in hard shadow",
+     "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，高架钢梁下的老摇滚小酒吧，橙红色霓虹 RED DIRT 字样，两盏橙色壁灯，门口站着人，夜景几乎压成全黑，只有一处橙色霓虹光源，前景是硬边阴影里的大块人物剪影",
+     "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+     "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+    },
+    "game": {
+     "style": "game",
+     "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, small old rock bar under elevated steel girders, orange-red neon RED DIRT sign, two orange wall lamps, people at the entrance, industrial Arroyo street at night, sodium lights, grimy brick, rock posters",
+     "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，高架钢梁下的老摇滚小酒吧，橙红色霓虹 RED DIRT 字样，两盏橙色壁灯，门口站着人，夜晚阿罗约的工业街道，钠灯，脏旧砖墙，摇滚海报",
+     "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+     "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+    }
+   }
+  },
+  {
+   "id": "north_oak_columbarium",
+   "zh": "北橡树骨灰堂",
+   "en": "North Oak Columbarium",
+   "district": "westbrook",
+   "district_zh": "威斯布鲁克 · 北橡树",
+   "episodes": "第 6 集",
+   "wiki_page": "https://cyberpunk.fandom.com/wiki/North_Oak_Columbarium",
+   "story": "资料不足：Wiki 剧集页目前是草稿（Stub），只有第 1 集写了剧情摘要，没写这个地点在剧中的用途。只能确定画面出现在哪一集。",
+   "story_status": "insufficient",
+   "visual": "夜晚的山坡上排列着一排排长方形骨灰墙，每块墙脚有暖白小灯向上打光；背景山上是发光的「North Oak」草书大字和黑色树影。",
+   "key_props": [
+    "成排的骨灰墙",
+    "地灯向上照",
+    "山坡上的 North Oak 大字",
+    "树影"
+   ],
+   "lighting": "夜晚，暖白地灯是唯一光源，整体很暗",
+   "palette": [
+    "#0C0F0C",
+    "#E8D8B0",
+    "#2A3A2A",
+    "#8A8A70"
+   ],
+   "images": [
+    {
+     "type": "第二季截图 · 第6集 · 外景",
+     "file": "North Oak Columbarium Exterior 01 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/f/ff/North_Oak_Columbarium_Exterior_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261021031125",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/f/ff/North_Oak_Columbarium_Exterior_01_CPEDGEII.png/revision/latest?cb=20261021031125",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3ANorth_Oak_Columbarium_Exterior_01_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/North_Oak_Columbarium_Exterior_01_CPEDGEII-73f9af2b.webp",
+     "full_local": "assets/wiki/North_Oak_Columbarium_Exterior_01_CPEDGEII-3c293a84.webp"
+    },
+    {
+     "type": "游戏截图 / 概念图",
+     "file": "Columbarium Concept Art 01 CP2077.jpg",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/6/61/Columbarium_Concept_Art_01_CP2077.jpg/revision/latest/scale-to-width-down/900?cb=20240731005419",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/6/61/Columbarium_Concept_Art_01_CP2077.jpg/revision/latest?cb=20240731005419",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File:Columbarium_Concept_Art_01_CP2077.jpg",
+     "style": "game",
+     "thumb_local": "assets/wiki/Columbarium_Concept_Art_01_CP2077-c9bb63c1.webp",
+     "full_local": "assets/wiki/Columbarium_Concept_Art_01_CP2077-5a19bd03.webp"
+    }
+   ],
+   "body_en": "hillside columbarium at night, rows of rectangular memorial walls lit from below by small warm lamps, glowing North Oak script sign on the hill behind",
+   "body_zh": "夜晚山坡上的骨灰堂，一排排长方形纪念墙由脚下的暖色小灯照亮，背后山上是发光的 North Oak 草书字",
+   "anime_look": {
+    "style": "anime_s2",
+    "en": "very dark low-key night, warm pin lights, quiet mournful mood, faint grain",
+    "zh": "非常暗的低调夜景，暖色点光，安静哀伤的气氛，淡淡的颗粒"
+   },
+   "game_look": {
+    "style": "game",
+    "en": "realistic memorial park on a hill, uplights, city glow on the horizon",
+    "zh": "写实的山坡纪念园，地灯上照，地平线上的城市光"
+   },
+   "prompts": {
+    "anime_s2": {
+     "style": "anime_s2",
+     "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, hillside columbarium at night, rows of rectangular memorial walls lit from below by small warm lamps, glowing North Oak script sign on the hill behind, very dark low-key night, warm pin lights, quiet mournful mood, faint grain",
+     "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，夜晚山坡上的骨灰堂，一排排长方形纪念墙由脚下的暖色小灯照亮，背后山上是发光的 North Oak 草书字，非常暗的低调夜景，暖色点光，安静哀伤的气氛，淡淡的颗粒",
+     "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+     "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+    },
+    "game": {
+     "style": "game",
+     "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, hillside columbarium at night, rows of rectangular memorial walls lit from below by small warm lamps, glowing North Oak script sign on the hill behind, realistic memorial park on a hill, uplights, city glow on the horizon",
+     "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，夜晚山坡上的骨灰堂，一排排长方形纪念墙由脚下的暖色小灯照亮，背后山上是发光的 North Oak 草书字，写实的山坡纪念园，地灯上照，地平线上的城市光",
+     "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+     "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+    }
+   }
+  },
+  {
+   "id": "totentanz",
+   "zh": "Totentanz 夜店",
+   "en": "Totentanz",
+   "district": "watson",
+   "district_zh": "沃森 · 北部工业区",
+   "episodes": "第 1 集",
+   "wiki_page": "https://cyberpunk.fandom.com/wiki/Totentanz",
+   "story": "Wiki 地点页：漩涡帮（Maelstrom）的据点夜店。第二季角色介绍里说 Talia 投身漩涡帮的重度义体文化。第二季中这个地点的具体剧情：资料不足（剧集摘要未写）。",
+   "story_status": "wiki",
+   "visual": "仰望一栋又高又窄的深色大楼，楼顶被背光照得发亮，四周空气里有闪烁的浮尘；晴天蓝天，侧面能看到烟囱和远处城市。",
+   "key_props": [
+    "高窄深色大楼",
+    "顶部背光",
+    "空中浮尘",
+    "远处烟囱"
+   ],
+   "lighting": "白天强逆光，楼体压暗，空中闪光颗粒",
+   "palette": [
+    "#1E2A3A",
+    "#4A90D8",
+    "#E8EEF4",
+    "#8A9AA8"
+   ],
+   "images": [
+    {
+     "type": "第二季截图 · 第1集 · 外景",
+     "file": "Totentanz Exterior 01 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/5/5f/Totentanz_Exterior_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261023090139",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/5/5f/Totentanz_Exterior_01_CPEDGEII.png/revision/latest?cb=20261023090139",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3ATotentanz_Exterior_01_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Totentanz_Exterior_01_CPEDGEII-37f2afed.webp",
+     "full_local": "assets/wiki/Totentanz_Exterior_01_CPEDGEII-2810113c.webp"
+    },
+    {
+     "type": "游戏概念图（与第一季知识库同一张）",
+     "file": "Totentanz Concept Art 01 CP2077.jpg",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/b/b5/Totentanz_Concept_Art_01_CP2077.jpg/revision/latest/scale-to-width-down/900?cb=20210516204401",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/b/b5/Totentanz_Concept_Art_01_CP2077.jpg/revision/latest?cb=20210516204401",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File:Totentanz_Concept_Art_01_CP2077.jpg",
+     "style": "game",
+     "thumb_local": "assets/wiki/Totentanz_Concept_Art_01_CP2077-f26dfb6c.webp",
+     "full_local": "assets/wiki/Totentanz_Concept_Art_01_CP2077-6a628529.webp"
+    }
+   ],
+   "body_en": "tall narrow dark building that houses the Maelstrom club, rooftop backlit by the sun, industrial chimneys nearby",
+   "body_zh": "漩涡帮夜店所在的高窄深色大楼，楼顶被太阳逆光照亮，旁边有工业烟囱",
+   "anime_look": {
+    "style": "anime_s2",
+    "en": "harsh daytime backlight, building silhouetted against a bright blue sky, sparkling dust particles in the air",
+    "zh": "白天刺眼的逆光，楼体在亮蓝天空前成为剪影，空气里闪着浮尘颗粒"
+   },
+   "game_look": {
+    "style": "game",
+    "en": "red-lit Maelstrom club, industrial steel, smoke, aggressive chrome and graffiti",
+    "zh": "红光笼罩的漩涡帮夜店，工业钢结构，烟雾，张扬的金属义体元素和涂鸦"
+   },
+   "prompts": {
+    "anime_s2": {
+     "style": "anime_s2",
+     "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, tall narrow dark building that houses the Maelstrom club, rooftop backlit by the sun, industrial chimneys nearby, harsh daytime backlight, building silhouetted against a bright blue sky, sparkling dust particles in the air",
+     "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，漩涡帮夜店所在的高窄深色大楼，楼顶被太阳逆光照亮，旁边有工业烟囱，白天刺眼的逆光，楼体在亮蓝天空前成为剪影，空气里闪着浮尘颗粒",
+     "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+     "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+    },
+    "game": {
+     "style": "game",
+     "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, tall narrow dark building that houses the Maelstrom club, rooftop backlit by the sun, industrial chimneys nearby, red-lit Maelstrom club, industrial steel, smoke, aggressive chrome and graffiti",
+     "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，漩涡帮夜店所在的高窄深色大楼，楼顶被太阳逆光照亮，旁边有工业烟囱，红光笼罩的漩涡帮夜店，工业钢结构，烟雾，张扬的金属义体元素和涂鸦",
+     "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+     "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+    }
+   }
+  },
+  {
+   "id": "silver_pixel_cloud",
+   "zh": "银色像素云汽车影院",
+   "en": "Silver Pixel Cloud",
+   "district": "westbrook",
+   "district_zh": "威斯布鲁克 · 北橡树",
+   "episodes": "第 7 集（2 张）",
+   "wiki_page": "https://cyberpunk.fandom.com/wiki/Silver_Pixel_Cloud",
+   "story": "资料不足：Wiki 剧集页目前是草稿（Stub），只有第 1 集写了剧情摘要，没写这个地点在剧中的用途。只能确定画面出现在哪一集。",
+   "story_status": "insufficient",
+   "visual": "夜晚废弃的汽车露天影院，巨大的银幕上放着一群人相拥跳舞的画面（青紫色调，画面右上有红色放射光点），前景是一个人物背影坐在空地上看。",
+   "key_props": [
+    "巨大银幕",
+    "银幕里相拥的人群",
+    "红色放射光点",
+    "空荡停车场"
+   ],
+   "lighting": "夜晚，银幕的青紫光是主光，四周近黑",
+   "palette": [
+    "#5A6AF0",
+    "#C05AE0",
+    "#E8303A",
+    "#0C0C14"
+   ],
+   "images": [
+    {
+     "type": "第二季截图 · 第7集",
+     "file": "Silver Pixel Cloud 01 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/75/Silver_Pixel_Cloud_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261026050931",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/75/Silver_Pixel_Cloud_01_CPEDGEII.png/revision/latest?cb=20261026050931",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3ASilver_Pixel_Cloud_01_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Silver_Pixel_Cloud_01_CPEDGEII-67d38c89.webp",
+     "full_local": "assets/wiki/Silver_Pixel_Cloud_01_CPEDGEII-134bce2c.webp"
+    },
+    {
+     "type": "第二季截图 · 第7集",
+     "file": "Silver Pixel Cloud 02 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/1/10/Silver_Pixel_Cloud_02_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261026050932",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/1/10/Silver_Pixel_Cloud_02_CPEDGEII.png/revision/latest?cb=20261026050932",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3ASilver_Pixel_Cloud_02_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Silver_Pixel_Cloud_02_CPEDGEII-ffe2fc62.webp",
+     "full_local": "assets/wiki/Silver_Pixel_Cloud_02_CPEDGEII-845d1b00.webp"
+    },
+    {
+     "type": "游戏截图 / 概念图",
+     "file": "Silver Pixel Cloud 01 CP2077.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/c/cc/Silver_Pixel_Cloud_01_CP2077.png/revision/latest/scale-to-width-down/900?cb=20261026193309",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/c/cc/Silver_Pixel_Cloud_01_CP2077.png/revision/latest?cb=20261026193309",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File:Silver_Pixel_Cloud_01_CP2077.png",
+     "style": "game",
+     "thumb_local": "assets/wiki/Silver_Pixel_Cloud_01_CP2077-bad2caa7.webp",
+     "full_local": "assets/wiki/Silver_Pixel_Cloud_01_CP2077-58c199b0.webp"
+    }
+   ],
+   "body_en": "abandoned drive-in theater at night, huge screen showing a crowd embracing and slow dancing, red radiating light dots, empty lot, lone viewer from behind",
+   "body_zh": "夜晚废弃的汽车露天影院，巨大银幕上是相拥慢舞的人群，红色放射光点，空荡的停车场，一个观众的背影",
+   "anime_look": {
+    "style": "anime_s2",
+    "en": "screen glow in blue-violet as the only light, film-within-film look, soft halation on the screen image",
+    "zh": "银幕的蓝紫光是唯一光源，片中片的效果，银幕画面带柔和的光晕"
+   },
+   "game_look": {
+    "style": "game",
+    "en": "derelict drive-in, rusted screen frame, overgrown lot, cold moonlight",
+    "zh": "破败的汽车影院，生锈的银幕框架，长草的停车场，冷月光"
+   },
+   "prompts": {
+    "anime_s2": {
+     "style": "anime_s2",
+     "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, abandoned drive-in theater at night, huge screen showing a crowd embracing and slow dancing, red radiating light dots, empty lot, lone viewer from behind, screen glow in blue-violet as the only light, film-within-film look, soft halation on the screen image",
+     "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，夜晚废弃的汽车露天影院，巨大银幕上是相拥慢舞的人群，红色放射光点，空荡的停车场，一个观众的背影，银幕的蓝紫光是唯一光源，片中片的效果，银幕画面带柔和的光晕",
+     "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+     "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+    },
+    "game": {
+     "style": "game",
+     "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, abandoned drive-in theater at night, huge screen showing a crowd embracing and slow dancing, red radiating light dots, empty lot, lone viewer from behind, derelict drive-in, rusted screen frame, overgrown lot, cold moonlight",
+     "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，夜晚废弃的汽车露天影院，巨大银幕上是相拥慢舞的人群，红色放射光点，空荡的停车场，一个观众的背影，破败的汽车影院，生锈的银幕框架，长草的停车场，冷月光",
+     "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+     "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+    }
+   }
+  },
+  {
+   "id": "sal_bigelow",
+   "zh": "Sal Bigelow 超梦天堂",
+   "en": "Sal Bigelow's Braindance Paradise",
+   "district": "heywood",
+   "district_zh": "海伍德 · 维斯塔德雷",
+   "episodes": "第 1 集",
+   "wiki_page": "https://cyberpunk.fandom.com/wiki/Sal_Bigelow%27s_Braindance_Paradise",
+   "story": "Wiki：Sal Bigelow 开的超梦（braindance）店，位于 Pigeon 街。第二季角色 Jessie 是这里的超梦工程师（官方 X 账号角色介绍）。Sal 和 Jessie 出现在第 1、6 集，Sal 还出现在第 9 集（剧集页角色表）。具体剧情：资料不足。",
+   "story_status": "wiki",
+   "visual": "白天街边店面：粉紫色屏幕招牌上是戴超梦头环的侧脸和「Sal Bigelow's Braindance Paradise」手写字，青绿色窗框，黄色遮阳棚；街上有义体路人，前景人物被大透视拉长。",
+   "key_props": [
+    "粉紫屏幕招牌",
+    "超梦头环侧脸",
+    "青绿色窗框",
+    "黄色遮阳棚"
+   ],
+   "lighting": "白天平光，招牌自发粉紫光",
+   "palette": [
+    "#C86AE0",
+    "#2FA8A0",
+    "#F2C83A",
+    "#E8E4DA"
+   ],
+   "images": [
+    {
+     "type": "第二季截图 · 第1集 · 外景",
+     "file": "Sal Bigelow's Braindance Paradise 01 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/8/84/Sal_Bigelow%27s_Braindance_Paradise_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261026075829",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/8/84/Sal_Bigelow%27s_Braindance_Paradise_01_CPEDGEII.png/revision/latest?cb=20261026075829",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3ASal_Bigelow%27s_Braindance_Paradise_01_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Sal_Bigelow_27s_Braindance_Paradise_01_CPEDGEII-c94f4008.webp",
+     "full_local": "assets/wiki/Sal_Bigelow_27s_Braindance_Paradise_01_CPEDGEII-d7dc8e76.webp"
+    },
+    {
+     "type": "游戏截图 / 概念图",
+     "file": "Sal Bigelow's Braindance Paradise Exterior 01 CP2077.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/2/23/Sal_Bigelow%27s_Braindance_Paradise_Exterior_01_CP2077.png/revision/latest/scale-to-width-down/900?cb=20261025123647",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/2/23/Sal_Bigelow%27s_Braindance_Paradise_Exterior_01_CP2077.png/revision/latest?cb=20261025123647",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File:Sal_Bigelow%27s_Braindance_Paradise_Exterior_01_CP2077.png",
+     "style": "game",
+     "thumb_local": "assets/wiki/Sal_Bigelow_27s_Braindance_Paradise_Exterior_01_CP2077-a64d0ab2.webp",
+     "full_local": "assets/wiki/Sal_Bigelow_27s_Braindance_Paradise_Exterior_01_CP2077-fedac537.webp"
+    }
+   ],
+   "body_en": "small braindance parlor storefront, pink-violet screen sign showing a profile with a BD headset and handwritten shop name, teal window frames, yellow awning, chromed passers-by",
+   "body_zh": "小超梦店店面，粉紫色屏幕招牌上是戴超梦头环的侧脸和手写店名，青绿色窗框，黄色遮阳棚，装了义体的路人",
+   "anime_look": {
+    "style": "anime_s2",
+    "en": "wide-angle exaggerated perspective with stretched foreground figures, retro 80s pastel signage, flat daylight",
+    "zh": "广角夸张透视，前景人物被拉长，80 年代复古粉彩招牌，白天平光"
+   },
+   "game_look": {
+    "style": "game",
+    "en": "Vista del Rey street shop, worn signage, Heywood daylight",
+    "zh": "维斯塔德雷街边小店，磨旧的招牌，海伍德的日光"
+   },
+   "prompts": {
+    "anime_s2": {
+     "style": "anime_s2",
+     "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, small braindance parlor storefront, pink-violet screen sign showing a profile with a BD headset and handwritten shop name, teal window frames, yellow awning, chromed passers-by, wide-angle exaggerated perspective with stretched foreground figures, retro 80s pastel signage, flat daylight",
+     "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，小超梦店店面，粉紫色屏幕招牌上是戴超梦头环的侧脸和手写店名，青绿色窗框，黄色遮阳棚，装了义体的路人，广角夸张透视，前景人物被拉长，80 年代复古粉彩招牌，白天平光",
+     "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+     "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+    },
+    "game": {
+     "style": "game",
+     "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, small braindance parlor storefront, pink-violet screen sign showing a profile with a BD headset and handwritten shop name, teal window frames, yellow awning, chromed passers-by, Vista del Rey street shop, worn signage, Heywood daylight",
+     "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，小超梦店店面，粉紫色屏幕招牌上是戴超梦头环的侧脸和手写店名，青绿色窗框，黄色遮阳棚，装了义体的路人，维斯塔德雷街边小店，磨旧的招牌，海伍德的日光",
+     "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+     "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+    }
+   }
+  },
+  {
+   "id": "apartment_columbus",
+   "zh": "哥伦布街公寓楼",
+   "en": "Apartment Building (Columbus St.)",
+   "district": "watson",
+   "district_zh": "沃森 · 歌舞伎区南部",
+   "episodes": "第 2 集",
+   "wiki_page": "https://cyberpunk.fandom.com/wiki/Apartment_Building_%28Columbus_St.%29",
+   "story": "资料不足：Wiki 剧集页目前是草稿（Stub），只有第 1 集写了剧情摘要，没写这个地点在剧中的用途。只能确定画面出现在哪一集。",
+   "story_status": "insufficient",
+   "visual": "仰拍一栋层层叠叠的老公寓楼，外墙挂满空调外机和加建阳台，旁边是弧形的现代楼体和贴着黄色编号牌的灰墙，晴天蓝天。",
+   "key_props": [
+    "密集空调外机",
+    "加建阳台",
+    "弧形邻楼",
+    "黄色编号牌"
+   ],
+   "lighting": "晴天，浅蓝天空，平光",
+   "palette": [
+    "#5FA8E0",
+    "#B8C0C8",
+    "#3A4048",
+    "#E8B83A"
+   ],
+   "images": [
+    {
+     "type": "第二季截图 · 第2集 · 外景",
+     "file": "Apartment Columbus 01 CPEDGEII.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/8/86/Apartment_Columbus_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261028101518",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/8/86/Apartment_Columbus_01_CPEDGEII.png/revision/latest?cb=20261028101518",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File%3AApartment_Columbus_01_CPEDGEII.png",
+     "style": "anime_s2",
+     "thumb_local": "assets/wiki/Apartment_Columbus_01_CPEDGEII-e310575e.webp",
+     "full_local": "assets/wiki/Apartment_Columbus_01_CPEDGEII-029df47f.webp"
+    },
+    {
+     "type": "游戏截图 / 概念图",
+     "file": "Apartment Columbus Exterior 01 CP2077.png",
+     "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/0/05/Apartment_Columbus_Exterior_01_CP2077.png/revision/latest/scale-to-width-down/900?cb=20261028101221",
+     "full": "https://static.wikia.nocookie.net/cyberpunk/images/0/05/Apartment_Columbus_Exterior_01_CP2077.png/revision/latest?cb=20261028101221",
+     "source_page": "https://cyberpunk.fandom.com/wiki/File:Apartment_Columbus_Exterior_01_CP2077.png",
+     "style": "game",
+     "thumb_local": "assets/wiki/Apartment_Columbus_Exterior_01_CP2077-cf0edba9.webp",
+     "full_local": "assets/wiki/Apartment_Columbus_Exterior_01_CP2077-9636f20c.webp"
+    }
+   ],
+   "body_en": "dense run-down apartment block seen from below, facade cluttered with AC units and add-on balconies, curved modern building beside it",
+   "body_zh": "从下往上看的密集老公寓楼，外墙堆满空调外机和加建阳台，旁边是一栋弧形的现代建筑",
+   "anime_look": {
+    "style": "anime_s2",
+    "en": "steep low-angle shot, meticulous painted clutter, clear blue sky",
+    "zh": "陡峭的仰拍，一丝不苟画出来的杂物，晴朗蓝天"
+   },
+   "game_look": {
+    "style": "game",
+    "en": "Kabuki tenement, homeless camps, fire escapes, neon at street level",
+    "zh": "歌舞伎区的老式出租楼，流浪者营地，消防梯，街面上的霓虹"
+   },
+   "prompts": {
+    "anime_s2": {
+     "style": "anime_s2",
+     "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, dense run-down apartment block seen from below, facade cluttered with AC units and add-on balconies, curved modern building beside it, steep low-angle shot, meticulous painted clutter, clear blue sky",
+     "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，从下往上看的密集老公寓楼，外墙堆满空调外机和加建阳台，旁边是一栋弧形的现代建筑，陡峭的仰拍，一丝不苟画出来的杂物，晴朗蓝天",
+     "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+     "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+    },
+    "game": {
+     "style": "game",
+     "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, dense run-down apartment block seen from below, facade cluttered with AC units and add-on balconies, curved modern building beside it, Kabuki tenement, homeless camps, fire escapes, neon at street level",
+     "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，从下往上看的密集老公寓楼，外墙堆满空调外机和加建阳台，旁边是一栋弧形的现代建筑，歌舞伎区的老式出租楼，流浪者营地，消防梯，街面上的霓虹",
+     "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+     "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+    }
+   }
+  }
+ ],
+ "episodes": [
+  {
+   "n": 1,
+   "title": "Last Chance for a Slow Dance",
+   "summary_zh": "一个正在滑向赛博精神病的前边缘行者，和一个过去破碎的孤独幸存者，在夜之城的两端各自开始故事。",
+   "summary_src": "Wiki 剧集页 Description（Netflix 官方简介）",
+   "url": "https://cyberpunk.fandom.com/wiki/Last_Chance_for_a_Slow_Dance"
+  },
+  {
+   "n": 2,
+   "title": "Give Me Another Day",
+   "summary_zh": "一通求救电话把 Weak 拉回危险中，去救一个叛逆少女；D 和一个年轻的电影迷建立起关系，痛苦的闪回加深了他的复仇欲。",
+   "summary_src": "Wiki 剧集页 Description（Netflix 官方简介）",
+   "url": "https://cyberpunk.fandom.com/wiki/Give_Me_Another_Day"
+  },
+  {
+   "n": 3,
+   "title": "0+2=1",
+   "summary_zh": "Weak 试图把 Talia 从一场危险手术中救出，结局是灾难；D 和 Roman 发现一块引发混乱的芯片。",
+   "summary_src": "Wiki 剧集页 Description（Netflix 官方简介）",
+   "url": "https://cyberpunk.fandom.com/wiki/0%2B2%3D1"
+  },
+  {
+   "n": 4,
+   "title": "Someone That I Used To Know",
+   "summary_zh": "D 借助 Capri 的力量潜入一处荒坂研究设施；Talia 和 Weak 找到共同点。",
+   "summary_src": "Wiki 剧集页 Description（Netflix 官方简介）",
+   "url": "https://cyberpunk.fandom.com/wiki/Someone_That_I_Used_To_Know"
+  },
+  {
+   "n": 5,
+   "title": "Fades (Pass the Distance)",
+   "summary_zh": "一次冲动让 Talia 陷入可怕的螺旋；D 的复仇执念升级成令人不安的暴力。",
+   "summary_src": "Wiki 剧集页 Description（Netflix 官方简介）",
+   "url": "https://cyberpunk.fandom.com/wiki/Fades_%28Pass_the_Distance%29"
+  },
+  {
+   "n": 6,
+   "title": "Everything Hate",
+   "summary_zh": "D 成为反公司的义警，让 Roman 拍下他的一举一动；Weak 调查能转移数字化意识的技术传闻。",
+   "summary_src": "Wiki 剧集页 Description（Netflix 官方简介）",
+   "url": "https://cyberpunk.fandom.com/wiki/Everything_Hate"
+  },
+  {
+   "n": 7,
+   "title": "To the Depths With You",
+   "summary_zh": "Talia 的状况在 Capri 的看护下出现惊人变化；D 与旧友重逢；Weak 和 Avida 追寻奇迹般的治疗。",
+   "summary_src": "Wiki 剧集页 Description（Netflix 官方简介）",
+   "url": "https://cyberpunk.fandom.com/wiki/To_the_Depths_With_You"
+  },
+  {
+   "n": 8,
+   "title": "Serce",
+   "summary_zh": "街头爆发骚乱，D 深挖 Capricorn 计划的黑暗过去；时间不多，Avida 和 Weak 为 Talia 的未来而战。",
+   "summary_src": "Wiki 剧集页 Description（Netflix 官方简介）",
+   "url": "https://cyberpunk.fandom.com/wiki/Serce"
+  },
+  {
+   "n": 9,
+   "title": "Strictly Reserved For You",
+   "summary_zh": "Omi 和 D 断网潜行，Kiril 把 Talia 带走看管；Kyoko 推进 Capricorn 计划，结果骇人。",
+   "summary_src": "Wiki 剧集页 Description（Netflix 官方简介）",
+   "url": "https://cyberpunk.fandom.com/wiki/Strictly_Reserved_For_You"
+  },
+  {
+   "n": 10,
+   "title": "Then Everyone Went Home",
+   "summary_zh": "一场令人发寒的变化把城市变成战场，最终爆发激烈对决。",
+   "summary_src": "Wiki 剧集页 Description（Netflix 官方简介）",
+   "url": "https://cyberpunk.fandom.com/wiki/Then_Everyone_Went_Home"
+  }
+ ],
+ "lighting": {
+  "anime_s2": "见 style_guides.json 的 anime_s2.lighting_rules（第二季不用第一季的情绪主色表）",
+  "game": "沿用 style_guides.json 的 game.lighting_presets"
+ },
+ "prompt_templates": {
+  "anime_s2": {
+   "establishing": {
+    "zh": "{第二季画风关键词}，远景建立镜头，{地点描述}，{第二季外观}，无人物",
+    "en": "{anime_s2_keywords}, wide establishing shot, {location_body}, {anime_s2_look}, no characters"
+   },
+   "character_in_scene": {
+    "zh": "{第二季画风关键词}，{角色描述}，身处{地点描述}，大块硬边阴影压在角色脸上，中景",
+    "en": "{anime_s2_keywords}, {character_prompt}, in {location_body}, large hard shadow shapes across the character, medium shot"
+   }
+  },
+  "game": {
+   "establishing": {
+    "zh": "{游戏画风关键词}，远景建立镜头，{地点描述}，{光照预设}",
+    "en": "{game_keywords}, wide establishing shot, {location_body}, {lighting_preset}"
+   },
+   "character_in_scene": {
+    "zh": "{游戏画风关键词}，{角色描述（补写实细节）}，身处{地点描述}，{光照预设}，电影感中景",
+    "en": "{game_keywords}, {character_prompt with realistic details}, in {location_body}, {lighting_preset}, cinematic medium shot"
+   }
+  }
+ },
+ "data_gaps": [
+  "第 2–10 集 Wiki 剧集页的 Summary 段落为空（Stub），这些地点在剧中做了什么无法从 Wiki 确认。",
+  "Night City 01 只有图、没有说明文字，Wiki 没写拍的是哪个区。",
+  "Arasaka Industrial Park Exterior 01 的文件说明没写集数；按第 1 集剧情摘要归入第 1 集。",
+  "第 4 集简介提到的「荒坂研究设施」、第 8 集的街头骚乱、第 10 集的战场，Wiki 上没有对应的地点页或截图，没收。",
+  "第二季第三种画风（anime_s2）的条目里，标 observed 的是看截图总结的，不是官方说法。"
+ ]
+}

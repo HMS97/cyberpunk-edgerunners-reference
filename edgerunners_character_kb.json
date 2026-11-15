@@ -1,0 +1,2407 @@
+{
+  "meta": {
+    "title": "边缘行者第一、二季 · 角色生成知识库",
+    "version": "1.4",
+    "built": "2026-11-15",
+    "sources": [
+      "cyberpunk.fandom.com 角色页（Appearance / Stats & Equipment）",
+      "剧中截图、定妆图、官方 Cosplay 指南、Yoshiyuki Kaneko 署名的宣传插画（JSON 里是 Wiki 链接，页面里用本地副本 assets/wiki）"
+    ],
+    "how_to_use": "生成角色时按顺序取用：style_guide（画风）→ class_styles（阶层穿搭）→ cyberware_vocab（义体外形词）→ characters（参考角色）→ prompt_templates / oc_builder（拼提示词）。characters[].cyberware 中的 id 对应 cyberware_vocab。 第一季角色 season=1，用 style_guide；第二季角色 season=2，用 style_guide_s2。",
+    "copyright": "角色与图片版权归 CD PROJEKT RED / Studio Trigger，仅供个人设计参考。",
+    "changelog": "1.1（2026-11-15）：对照剧中截图和官方设定图，改正大卫、露西、丽贝卡、曼恩、琪薇、多里奥、皮拉的发型、眼睛、服装描述和提示词。；更正制作人员：角色设计为吉成曜，黄底图为 Yoshiyuki Kaneko 署名的宣传插画；每张参考图加 style 字段（anime=动画，game=游戏）。；1.2（2026-11-15）：新增第二季（Edgerunners 2，2026）12 个角色、style_guide_s2（导演五十岚海、角色设计菅野一期）和 10 种第二季义体词条；每个角色和每张图加 season 字段。；1.3（2026-11-15）：每个角色加 prompts（动画 + 游戏两套，各带负面词）；第二季图片 style 改为 anime_s2；补 Weak Kingsley 和 Meshuga 的游戏头像（CP2077）。；1.4（2026-11-15）：第二季画风关键词和负面词改为与 style_guides.json 的 anime_s2 一致。；style_guide_s2 文字按 s2-locations 的对照修正：阴影区分日常镜头和戏剧性特写，脸型分出处和观察，补制作人员。"
+  },
+  "style_guide": {
+    "name": "Cyberpunk: Edgerunners S1（Studio Trigger，2022）",
+    "credits": {
+      "animation": "Studio Trigger",
+      "director": "今石洋之 Hiroyuki Imaishi",
+      "character_design": "吉成曜 Yoh Yoshinari",
+      "art_director": "野村正信 Masanobu Nomura"
+    },
+    "line": "粗细变化明显的黑色描线，轮廓线最粗；肌肉、面部用少量硬朗折线概括，不画细碎排线。",
+    "shading": "两阶赛璐璐：一层亮面、一层硬边暗部；暗部形状是锐利的几何块（脸部常被切成大块阴影），暗部常带蓝紫或洋红色相，而不是灰色。",
+    "palette": {
+      "neon_cyan": "#16F0FF",
+      "hot_magenta": "#FF2A8A",
+      "acid_yellow": "#FCEE0A",
+      "toxic_green": "#3BE36B",
+      "deep_navy_shadow": "#1B1640",
+      "blood_red": "#D8282F"
+    },
+    "lighting": "强烈的霓虹边缘光（常为青色或洋红），环境色直接染到皮肤和金属上；夜景高对比，暗部几乎压成纯色。",
+    "cyberware_rendering": "义体用皮肤上的接缝线、分块面板和发光点来表达；金属部分平涂 + 一道硬高光，不做写实反射。",
+    "fx": [
+      "斯安威斯坦加速：彩虹/绿色残影拖尾、时间凝固的漂浮物体",
+      "速度线和夸张透视（广角近大远小）",
+      "故障/扫描线叠加、全息 UI 碎片",
+      "血液和火光用纯色块"
+    ],
+    "promo_art_convention": "宣传插画（Wiki 署名 Yoshiyuki Kaneko）：纯黄底（约 #FFE600）、半身像、角色看镜头，带签名。",
+    "keywords_en": "anime screencap, Studio Trigger style, Cyberpunk Edgerunners style, bold variable-weight lineart, flat two-tone cel shading, hard geometric shadows, colored shadows, neon rim light, cyan and magenta lighting, high contrast night city, exaggerated perspective",
+    "keywords_zh": "日本动画截图，扳机社画风，赛博朋克边缘行者风格，粗细变化描线，两阶赛璐璐平涂，硬边几何阴影，彩色暗部，霓虹边缘光，青色与洋红灯光，高对比夜之城，夸张透视",
+    "avoid": "写实 3D 渲染、柔和渐变阴影、细腻厚涂、低饱和灰暗配色、复杂写实金属反射",
+    "style": "anime",
+    "note": "本知识库的角色都按动画风（边缘行者第一季）整理；要出游戏风角色，换用 style_guides.json 里 game 的关键词和负面词，并按「动画 → 游戏」转换规则补写实细节。"
+  },
+  "class_styles": [
+    {
+      "id": "entropism",
+      "zh": "熵主义",
+      "who": "底层、贫民",
+      "fashion": "旧衣、实用耐用、补丁和二手零件、廉价义体外露"
+    },
+    {
+      "id": "kitsch",
+      "zh": "媚俗",
+      "who": "街头、中产、帮派",
+      "fashion": "亮色、塑料感、霓虹、夸张轮廓、炫耀式义体"
+    },
+    {
+      "id": "neomilitarism",
+      "zh": "新军国主义",
+      "who": "公司、军方",
+      "fashion": "冷色、剪裁利落、功能面料、隐藏式义体"
+    },
+    {
+      "id": "neokitsch",
+      "zh": "新媚俗",
+      "who": "顶层富人",
+      "fashion": "金、皮革、稀有材质、定制义体"
+    }
+  ],
+  "cyberware_vocab": [
+    {
+      "id": "sandevistan",
+      "zh": "斯安威斯坦（Sandevistan）",
+      "slot": "脊柱 / 神经端口",
+      "visual": "沿脊柱安装的长条形模块，接入神经端口，激活时有发光；剧中实验型号装在后颈至背部。",
+      "effect_visual": "时间变慢：角色拖出绿色/彩虹残影，周围物体悬停",
+      "prompt_en": "spine-mounted sandevistan implant, glowing modules along the spine, rainbow afterimage trail, time-slow effect",
+      "seen_on": [
+        "david"
+      ]
+    },
+    {
+      "id": "monowire",
+      "zh": "单分子线（Monowire）",
+      "slot": "手臂 / 手腕",
+      "visual": "从手腕射出的极细发光线，挥动时成弧线，可切割物体。",
+      "prompt_en": "monowire whip extending from wrist, thin glowing filament arcing through the air",
+      "seen_on": [
+        "lucy"
+      ]
+    },
+    {
+      "id": "gorilla_arms",
+      "zh": "大猩猩手臂 / 超大型义臂",
+      "slot": "双臂",
+      "visual": "比原生手臂粗大很多的机械臂，拳头和前臂明显放大，常涂装鲜艳颜色。",
+      "prompt_en": "oversized chunky cybernetic gorilla arms, enlarged mechanical fists and forearms",
+      "seen_on": [
+        "rebecca",
+        "dorio",
+        "pilar",
+        "kiril",
+        "omi"
+      ]
+    },
+    {
+      "id": "projectile_launch",
+      "zh": "射弹发射系统",
+      "slot": "前臂",
+      "visual": "前臂内置的发射口，展开时露出炮管。",
+      "prompt_en": "forearm-mounted projectile launcher, armor plates opening to reveal a barrel",
+      "seen_on": [
+        "david",
+        "maine"
+      ]
+    },
+    {
+      "id": "kiroshi_optics",
+      "zh": "Kiroshi 义眼",
+      "slot": "眼部",
+      "visual": "虹膜处有彩色光圈或刻度环，常发光；也可做成高亮单色瞳孔。",
+      "prompt_en": "glowing cybernetic eyes, colored iris rings, kiroshi optics",
+      "seen_on": [
+        "david",
+        "rebecca",
+        "kiril",
+        "kyoko",
+        "omi"
+      ]
+    },
+    {
+      "id": "visor_optics",
+      "zh": "护目镜式光学义体",
+      "slot": "眼部 / 面部",
+      "visual": "横跨双眼的黑色条形护目镜，镜片上有一点红色或彩色光。",
+      "prompt_en": "black cybernetic visor across the eyes with a single red light",
+      "seen_on": [
+        "maine",
+        "pilar"
+      ]
+    },
+    {
+      "id": "neuroport",
+      "zh": "神经端口 / 个人接口",
+      "slot": "后颈 / 后脑",
+      "visual": "后颈或后脑的插口，可插入线缆或芯片；网络行者有多个接口。",
+      "prompt_en": "neural port on the back of the neck, plug-in cable jacks",
+      "seen_on": [
+        "david",
+        "lucy",
+        "kiwi",
+        "rebecca",
+        "maine",
+        "dorio",
+        "pilar",
+        "roman",
+        "d",
+        "talia",
+        "yupi",
+        "meshuga"
+      ]
+    },
+    {
+      "id": "deep_dive_port",
+      "zh": "深潜端口",
+      "slot": "后脑",
+      "visual": "后脑头皮下的接口，平时用合成皮肤和头发遮住。",
+      "prompt_en": "hidden deep dive port on the back of the scalp",
+      "seen_on": [
+        "lucy"
+      ]
+    },
+    {
+      "id": "cyberdeck",
+      "zh": "网络接入仓 / 手持网络接入仓",
+      "slot": "神经端口 + 外接设备",
+      "visual": "网络行者用线缆把手持接入仓连到脖子上的接口，入侵时眼睛和全息 UI 发光。",
+      "prompt_en": "netrunner jacked in with cables to a handheld cyberdeck, holographic interface",
+      "seen_on": [
+        "lucy",
+        "kiwi",
+        "d"
+      ]
+    },
+    {
+      "id": "face_seams",
+      "zh": "面部 / 身体接缝线",
+      "slot": "皮肤",
+      "visual": "脸和躯干上的细接缝线，把皮肤切成义体面板，是重度改造的标志。",
+      "prompt_en": "cybernetic panel seams across face and chest, visible implant lines on skin",
+      "seen_on": [
+        "david",
+        "maine",
+        "dorio",
+        "avida",
+        "meshuga"
+      ]
+    },
+    {
+      "id": "subdermal_armor",
+      "zh": "皮下装甲",
+      "slot": "躯干",
+      "visual": "皮肤下的硬质装甲板，轮廓呈块状。",
+      "prompt_en": "subdermal armor plates under the skin",
+      "seen_on": [
+        "david",
+        "maine",
+        "kingsley"
+      ]
+    },
+    {
+      "id": "cyberlegs",
+      "zh": "机械腿",
+      "slot": "腿",
+      "visual": "外露的金属腿或加固脚踝，可内藏武器。",
+      "prompt_en": "exposed bare-metal cybernetic legs",
+      "seen_on": [
+        "david",
+        "maine",
+        "dorio",
+        "omi"
+      ]
+    },
+    {
+      "id": "linear_frame",
+      "zh": "线性框架",
+      "slot": "骨骼",
+      "visual": "强化骨架，体型明显变高、变壮。",
+      "prompt_en": "reinforced cyber-skeleton frame, bulked-up physique",
+      "seen_on": [
+        "david",
+        "maine"
+      ]
+    },
+    {
+      "id": "cyberskeleton",
+      "zh": "军用义体骨骼（原型）",
+      "slot": "全身外骨骼",
+      "visual": "终局形态：巨大的外骨骼盔甲包裹全身，角色像被机械吞没。",
+      "prompt_en": "massive prototype military cyberskeleton exosuit enveloping the body",
+      "seen_on": [
+        "david"
+      ]
+    },
+    {
+      "id": "light_tattoo",
+      "zh": "光纹身",
+      "slot": "皮肤",
+      "visual": "会发光的纹身图案，常是霓虹粉或青色。",
+      "prompt_en": "glowing neon light tattoos on skin",
+      "seen_on": [
+        "rebecca",
+        "kiwi"
+      ]
+    },
+    {
+      "id": "jaw_mask",
+      "zh": "下颌面罩",
+      "slot": "面部",
+      "visual": "覆盖下半张脸的红色面罩，面罩下没有下颌。",
+      "prompt_en": "red mask covering the lower face and jaw",
+      "seen_on": [
+        "kiwi"
+      ]
+    },
+    {
+      "id": "jaw_cyberware",
+      "zh": "下颌义体（像胡子）",
+      "slot": "面部",
+      "visual": "从耳侧延伸到下巴的金属件，远看像胡子。",
+      "prompt_en": "metal cyberware running from ears down to the chin like a beard",
+      "seen_on": [
+        "pilar"
+      ]
+    },
+    {
+      "id": "single_cyberarm",
+      "zh": "单只义臂",
+      "slot": "单臂",
+      "visual": "一侧手臂为银黑色机械臂，另一侧为原生手臂。",
+      "prompt_en": "single silver-and-black cybernetic arm",
+      "seen_on": [
+        "falco",
+        "kyoko",
+        "meshuga"
+      ]
+    },
+    {
+      "id": "full_borg",
+      "zh": "全身义体（Full Borg）",
+      "slot": "全身",
+      "visual": "几乎没有肉体，骷髅状金属面甲、红色发光眼，巨型机械体格。",
+      "prompt_en": "full-body conversion cyborg, skull-like chrome faceplate, glowing red eyes, hulking mechanical body",
+      "seen_on": [
+        "smasher"
+      ]
+    },
+    {
+      "id": "emp_threading",
+      "zh": "EMP 线路",
+      "slot": "皮下",
+      "visual": "皮下的电磁线路，一般看不见；剧中几乎每人都装。",
+      "prompt_en": "",
+      "seen_on": [
+        "david",
+        "lucy",
+        "rebecca",
+        "maine",
+        "dorio"
+      ]
+    },
+    {
+      "id": "insect_mouthpiece",
+      "zh": "昆虫式口部义体",
+      "slot": "面部",
+      "visual": "黑色分段口罩状义体覆盖下半张脸，能显示出一张嘴的图像；放大后像昆虫口器。",
+      "prompt_en": "black segmented insect-like mouthpiece implant covering the lower face, can display a digital mouth",
+      "seen_on": [
+        "talia"
+      ]
+    },
+    {
+      "id": "grasshopper_legs",
+      "zh": "蚱蜢式腿部义体",
+      "slot": "腿 / 脚",
+      "visual": "银色反关节式小腿和脚，脚尖和脚跟有红色尖爪，像蚱蜢腿。",
+      "prompt_en": "silver digitigrade grasshopper-like cybernetic legs with red claw tips",
+      "seen_on": [
+        "talia"
+      ]
+    },
+    {
+      "id": "antenna_hair",
+      "zh": "触角",
+      "slot": "头部",
+      "visual": "从头顶伸出的两根细长弯曲的线，像昆虫触角。",
+      "prompt_en": "two long thin antenna-like strands arching from the top of the head",
+      "seen_on": [
+        "talia"
+      ]
+    },
+    {
+      "id": "ear_implant",
+      "zh": "耳部义体",
+      "slot": "耳",
+      "visual": "缺失的耳朵换成黑色耳部植入件。",
+      "prompt_en": "black ear implant replacing a missing ear",
+      "seen_on": [
+        "d"
+      ]
+    },
+    {
+      "id": "cyber_jaw",
+      "zh": "义体下颌",
+      "slot": "面部",
+      "visual": "下巴和两颊下半部换成金属外壳，常和皮肤之间有明显接缝。",
+      "prompt_en": "cybernetic jaw plating on the chin and lower cheeks",
+      "seen_on": [
+        "kiril",
+        "kingsley"
+      ]
+    },
+    {
+      "id": "neck_armor",
+      "zh": "颈部装甲 / 颈部义体",
+      "slot": "颈",
+      "visual": "包住脖子的硬质装甲环，Kingsley 是深绿色，Avida 是金色。",
+      "prompt_en": "armored cybernetic neck collar",
+      "seen_on": [
+        "kingsley",
+        "avida"
+      ]
+    },
+    {
+      "id": "signet_finger",
+      "zh": "刻字金手指",
+      "slot": "手",
+      "visual": "一根手指换成金色义体，刻着名字首字母（Kingsley 是 K，Avida 是 A）。",
+      "prompt_en": "single gold cybernetic finger engraved with an initial",
+      "seen_on": [
+        "kingsley",
+        "avida"
+      ]
+    },
+    {
+      "id": "partial_faceplate",
+      "zh": "局部面甲",
+      "slot": "面部",
+      "visual": "只覆盖脸的一部分的金属面板，接缝明显。",
+      "prompt_en": "partial metal faceplate with visible seams",
+      "seen_on": [
+        "kyoko"
+      ]
+    },
+    {
+      "id": "bd_glove",
+      "zh": "超梦剪辑手套",
+      "slot": "手",
+      "visual": "带骨架式机械手指的黑色手套，用于剪辑超梦。",
+      "prompt_en": "black braindance editing glove with skeletal mechanical fingers",
+      "seen_on": [
+        "jessie"
+      ]
+    },
+    {
+      "id": "ai_construct",
+      "zh": "人格构造体投影",
+      "slot": "无实体",
+      "visual": "没有肉身，只是投影：黑色剪影身体，洋红色碎片状的大发型，绿色几何贴花，眼睛在绿色方框里。",
+      "prompt_en": "glitchy holographic AI construct, black silhouette body with jagged magenta hair and green geometric decals, eyes boxed in green rectangles",
+      "seen_on": [
+        "capri"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "david",
+      "name_zh": "大卫·马丁内斯",
+      "name_en": "David Martinez",
+      "role": "Solo（街头雇佣兵）",
+      "age": "17→18",
+      "class_style": "kitsch",
+      "body": "拉丁裔少年，起初瘦而结实，随着义体增加变高、变壮。",
+      "face_hair": "浅棕色眼睛，脸窄、鼻梁挺。深棕色头发梳成一束向上、略向前翘起的高刘海，两侧剃得很短（不是一团乱刺）。后期脸上出现义体接缝线。",
+      "outfit": "前期：超大号亮黄色夹克，胸前和袖子有银白色反光横条，内领灰色、内衬发浅蓝光；黑 T 恤、两条金链；蓝灰色宽松七分慢跑裤；灰色运动鞋。后期：同一件夹克，里面裸上身，体型更壮。（Wiki 写的是灰色运动裤加白色网球鞋，官方 Cosplay 指南是蓝灰色裤子和灰色鞋。）",
+      "cyberware": [
+        "sandevistan",
+        "neuroport",
+        "kiroshi_optics",
+        "projectile_launch",
+        "cyberlegs",
+        "linear_frame",
+        "subdermal_armor",
+        "face_seams",
+        "cyberskeleton",
+        "emp_threading"
+      ],
+      "cyberware_raw": "2x 义臂（射弹发射系统）、2x 义腿（加固脚踝）、EMP 线路、2x Kiroshi 义眼、线性框架、神经端口（重型神经处理器、实验型斯安威斯坦）、荒坂原型义体骨骼（临时）、皮下装甲、合成肺",
+      "colors": [
+        "#F5D21E",
+        "#111111",
+        "#3BE36B",
+        "#39C8FF"
+      ],
+      "silhouette": "黄色夹克加高立领，发光的领口内衬，竖起的短发。",
+      "arc_variants": {
+        "early": "瘦削学生，黑 T 恤和金链",
+        "mid": "穿上黄色急救员夹克，装上斯安威斯坦",
+        "late": "体型变壮、脸上出现接缝线、裸上身穿夹克",
+        "final": "被巨型军用外骨骼包裹"
+      },
+      "prompt_en": "David Martinez from Cyberpunk Edgerunners, lean 17-year-old latino boy, narrow face, sharp nose, light brown eyes; dark brown hair styled as one tall swept-up quiff/crest rising up and slightly forward from the forehead, both sides shaved very short (NOT a spiky ball of hair); oversized bright yellow jacket with silver-white reflective horizontal stripes on chest and sleeves, high gray inner collar with glowing light-blue lining; black t-shirt, two gold chain necklaces; loose blue-gray cropped jogger pants; gray sneakers; arms look human (cyberware hidden), slim build",
+      "prompt_zh": "赛博朋克边缘行者的大卫·马丁内斯，17 岁拉丁裔少年，脸窄，浅棕色眼睛，深棕色头发梳成一束向上翘起的高刘海、两侧剃短，超大号亮黄色夹克带银白色反光条、高领内衬发浅蓝光，黑 T 恤，金链，蓝灰色七分慢跑裤，灰色运动鞋，手臂看起来是普通人手",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime",
+          "file": "David Infobox CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/a/ac/David_Infobox_CPEDGE.png/revision/latest?cb=20220915120459",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/a/ac/David_Infobox_CPEDGE.png/revision/latest?cb=20220915120459",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:David_Infobox_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "宣传插画 · Yoshiyuki Kaneko",
+          "style": "anime",
+          "file": "David by Yoshiyuki Kaneko CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/9/91/David_by_Yoshiyuki_Kaneko_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20220916220209",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/9/91/David_by_Yoshiyuki_Kaneko_CPEDGE.png/revision/latest?cb=20220916220209",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:David_by_Yoshiyuki_Kaneko_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "概念图",
+          "style": "anime",
+          "file": "David Martinez Concept Art 01 CPEDGE.jpg",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/8/80/David_Martinez_Concept_Art_01_CPEDGE.jpg/revision/latest/scale-to-width-down/900?cb=20220927173721",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/8/80/David_Martinez_Concept_Art_01_CPEDGE.jpg/revision/latest?cb=20220927173721",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:David_Martinez_Concept_Art_01_CPEDGE.jpg",
+          "season": 1
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime",
+          "file": "Neuralport & Sandevistan CPEDGE.jpg",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/a/af/Neuralport_%26_Sandevistan_CPEDGE.jpg/revision/latest/scale-to-width-down/900?cb=20230917180702",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/a/af/Neuralport_%26_Sandevistan_CPEDGE.jpg/revision/latest?cb=20230917180702",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Neuralport_%26_Sandevistan_CPEDGE.jpg",
+          "season": 1
+        },
+        {
+          "type": "剧中截图 · 第4集",
+          "style": "anime",
+          "file": "David 01 EP4 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/c/cd/David_01_EP4_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261102100240",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/c/cd/David_01_EP4_CPEDGE.png/revision/latest?cb=20261102100240",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:David_01_EP4_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "剧中截图 · 第7集",
+          "style": "anime",
+          "file": "David 06 EP7 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/1/1d/David_06_EP7_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261105185305",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/1/1d/David_06_EP7_CPEDGE.png/revision/latest?cb=20261105185305",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:David_06_EP7_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "剧中截图 · 第8集",
+          "style": "anime",
+          "file": "David 08 EP8 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/a/a6/David_08_EP8_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261111045717",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/a/a6/David_08_EP8_CPEDGE.png/revision/latest?cb=20261111045717",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:David_08_EP8_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "剧中截图 · 第8集",
+          "style": "anime",
+          "file": "David 10 EP8 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/8/8b/David_10_EP8_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261111045722",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/8/8b/David_10_EP8_CPEDGE.png/revision/latest?cb=20261111045722",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:David_10_EP8_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "官方 Cosplay 指南",
+          "style": "anime",
+          "file": "David Martinez Cosplay Guide 03 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/c/c0/David_Martinez_Cosplay_Guide_03_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261030050431",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/c/c0/David_Martinez_Cosplay_Guide_03_CPEDGE.png/revision/latest?cb=20261030050431",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:David_Martinez_Cosplay_Guide_03_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "官方 Cosplay 指南",
+          "style": "anime",
+          "file": "David Martinez Cosplay Guide 04 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/77/David_Martinez_Cosplay_Guide_04_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261030050432",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/77/David_Martinez_Cosplay_Guide_04_CPEDGE.png/revision/latest?cb=20261030050432",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:David_Martinez_Cosplay_Guide_04_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "官方 Cosplay 指南",
+          "style": "anime",
+          "file": "David Martinez Cosplay Guide 05 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/1/1f/David_Martinez_Cosplay_Guide_05_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261030050433",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/1/1f/David_Martinez_Cosplay_Guide_05_CPEDGE.png/revision/latest?cb=20261030050433",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:David_Martinez_Cosplay_Guide_05_CPEDGE.png",
+          "season": 1
+        }
+      ],
+      "season": 1,
+      "prompts": {
+        "anime": {
+          "label": "第一季动画",
+          "en": "anime screencap, Studio Trigger style, Cyberpunk Edgerunners style, bold variable-weight lineart, flat two-tone cel shading, hard geometric shadows, colored shadows, neon rim light, cyan and magenta lighting, high contrast night city, exaggerated perspective, David Martinez from Cyberpunk Edgerunners, lean 17-year-old latino boy, narrow face, sharp nose, light brown eyes; dark brown hair styled as one tall swept-up quiff/crest rising up and slightly forward from the forehead, both sides shaved very short (NOT a spiky ball of hair); oversized bright yellow jacket with silver-white reflective horizontal stripes on chest and sleeves, high gray inner collar with glowing light-blue lining; black t-shirt, two gold chain necklaces; loose blue-gray cropped jogger pants; gray sneakers; arms look human (cyberware hidden), slim build",
+          "zh": "日本动画截图，扳机社画风，赛博朋克边缘行者风格，粗细变化描线，两阶赛璐璐平涂，硬边几何阴影，彩色暗部，霓虹边缘光，青色与洋红灯光，高对比夜之城，夸张透视，赛博朋克边缘行者的大卫·马丁内斯，17 岁拉丁裔少年，脸窄，浅棕色眼睛，深棕色头发梳成一束向上翘起的高刘海、两侧剃短，超大号亮黄色夹克带银白色反光条、高领内衬发浅蓝光，黑 T 恤，金链，蓝灰色七分慢跑裤，灰色运动鞋，手臂看起来是普通人手",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, realistic skin texture, video game screenshot, soft gradient shading",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，写实皮肤纹理，游戏截图，柔和渐变阴影"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, David Martinez, lean 17-year-old latino boy, narrow face, sharp nose, light brown eyes; dark brown hair styled as one tall swept-up quiff/crest rising up and slightly forward from the forehead, both sides shaved very short (NOT a spiky ball of hair); oversized bright yellow jacket with silver-white reflective horizontal stripes on chest and sleeves, high gray inner collar with glowing light-blue lining; black t-shirt, two gold chain necklaces; loose blue-gray cropped jogger pants; gray sneakers; arms look human (cyberware hidden), slim build, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，大卫·马丁内斯，17 岁拉丁裔少年，脸窄，浅棕色眼睛，深棕色头发梳成一束向上翘起的高刘海、两侧剃短，超大号亮黄色夹克带银白色反光条、高领内衬发浅蓝光，黑 T 恤，金链，蓝灰色七分慢跑裤，灰色运动鞋，手臂看起来是普通人手，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "lucy",
+      "name_zh": "露西（Lucyna Kushinada）",
+      "name_en": "Lucy",
+      "role": "Netrunner（网络行者）",
+      "age": "约 20",
+      "class_style": "kitsch + neomilitarism",
+      "body": "纤细，肤色浅。",
+      "face_hair": "直顺的齐刘海波波头，刘海齐眉、左边比右边长；白发，头顶偏粉色、发尾渐变成薄荷青；灰色眼睛，红色上挑眼线，红唇。（Wiki 写的是红紫色眼睛，剧中和设定图看起来是灰色眼睛配红眼线。）",
+      "outfit": "白色短款夹克，常滑落到肩膀以下；黑色高领无袖连体衣，领口有红色 V 字镶边；白色短裤；灰色过膝长袜；黑色及膝高跟靴，红色鞋底。",
+      "cyberware": [
+        "monowire",
+        "neuroport",
+        "deep_dive_port",
+        "cyberdeck",
+        "emp_threading"
+      ],
+      "cyberware_raw": "2x 义臂（2x 单分子线）、EMP 线路、神经端口（网络接入仓端口、深网潜入处理器、多个个人接口、皮下神经处理器）",
+      "colors": [
+        "#F4F4F4",
+        "#111111",
+        "#E8334A",
+        "#FF9CCB",
+        "#9CE6FF",
+        "#C9A6FF"
+      ],
+      "silhouette": "不对称波波头加彩虹渐变发色，白色短夹克，黑色连体衣。",
+      "prompt_en": "Lucy from Cyberpunk Edgerunners, slender young woman; hair: straight sleek blunt bob with heavy straight-cut bangs at eyebrow level, longer on her left side, white hair with pastel pink on top fading to mint-cyan at the ends; gray eyes with sharp red winged eyeliner and red lipstick; cropped white jacket worn off the shoulders; black high-neck sleeveless leotard with a red V-shaped trim at the neck; white shorts; gray thigh-high stockings; black knee-high heeled boots with red soles",
+      "prompt_zh": "赛博朋克边缘行者的露西，纤细年轻女性，直顺的齐刘海波波头、左长右短，白发头顶偏粉、发尾渐变薄荷青，灰色眼睛配红色上挑眼线和红唇，白色短夹克滑落到肩下，黑色高领连体衣带红色 V 字领口，白色短裤，灰色过膝袜，黑色及膝高跟靴",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime",
+          "file": "Lucy Infobox CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/f/ff/Lucy_Infobox_CPEDGE.png/revision/latest?cb=20220912183850",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/f/ff/Lucy_Infobox_CPEDGE.png/revision/latest?cb=20220912183850",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Lucy_Infobox_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "宣传插画 · Yoshiyuki Kaneko",
+          "style": "anime",
+          "file": "Lucy by Yoshiyuki Kaneko CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/7e/Lucy_by_Yoshiyuki_Kaneko_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20220916220236",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/7e/Lucy_by_Yoshiyuki_Kaneko_CPEDGE.png/revision/latest?cb=20220916220236",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Lucy_by_Yoshiyuki_Kaneko_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "剧中截图 · 第2集",
+          "style": "anime",
+          "file": "Lucy's Monowire 01 EP2 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/e/ee/Lucy%27s_Monowire_01_EP2_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261101121724",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/e/ee/Lucy%27s_Monowire_01_EP2_CPEDGE.png/revision/latest?cb=20261101121724",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Lucy%27s_Monowire_01_EP2_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "剧中截图 · 第2集",
+          "style": "anime",
+          "file": "Lucy 02 EP2 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/78/Lucy_02_EP2_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261101121139",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/78/Lucy_02_EP2_CPEDGE.png/revision/latest?cb=20261101121139",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Lucy_02_EP2_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "剧中截图 · 第8集",
+          "style": "anime",
+          "file": "Lucy 07 EP8 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/8/8e/Lucy_07_EP8_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261111045733",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/8/8e/Lucy_07_EP8_CPEDGE.png/revision/latest?cb=20261111045733",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Lucy_07_EP8_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "官方 Cosplay 指南",
+          "style": "anime",
+          "file": "Lucyna Kushinada Cosplay Guide 03 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/0/04/Lucyna_Kushinada_Cosplay_Guide_03_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261030051017",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/0/04/Lucyna_Kushinada_Cosplay_Guide_03_CPEDGE.png/revision/latest?cb=20261030051017",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Lucyna_Kushinada_Cosplay_Guide_03_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "官方 Cosplay 指南",
+          "style": "anime",
+          "file": "Lucyna Kushinada Cosplay Guide 04 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/6/60/Lucyna_Kushinada_Cosplay_Guide_04_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20241216234609",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/6/60/Lucyna_Kushinada_Cosplay_Guide_04_CPEDGE.png/revision/latest?cb=20241216234609",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Lucyna_Kushinada_Cosplay_Guide_04_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "官方 Cosplay 指南",
+          "style": "anime",
+          "file": "Lucyna Kushinada Cosplay Guide 05 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/8/89/Lucyna_Kushinada_Cosplay_Guide_05_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20241216234611",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/8/89/Lucyna_Kushinada_Cosplay_Guide_05_CPEDGE.png/revision/latest?cb=20241216234611",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Lucyna_Kushinada_Cosplay_Guide_05_CPEDGE.png",
+          "season": 1
+        }
+      ],
+      "season": 1,
+      "prompts": {
+        "anime": {
+          "label": "第一季动画",
+          "en": "anime screencap, Studio Trigger style, Cyberpunk Edgerunners style, bold variable-weight lineart, flat two-tone cel shading, hard geometric shadows, colored shadows, neon rim light, cyan and magenta lighting, high contrast night city, exaggerated perspective, Lucy from Cyberpunk Edgerunners, slender young woman; hair: straight sleek blunt bob with heavy straight-cut bangs at eyebrow level, longer on her left side, white hair with pastel pink on top fading to mint-cyan at the ends; gray eyes with sharp red winged eyeliner and red lipstick; cropped white jacket worn off the shoulders; black high-neck sleeveless leotard with a red V-shaped trim at the neck; white shorts; gray thigh-high stockings; black knee-high heeled boots with red soles",
+          "zh": "日本动画截图，扳机社画风，赛博朋克边缘行者风格，粗细变化描线，两阶赛璐璐平涂，硬边几何阴影，彩色暗部，霓虹边缘光，青色与洋红灯光，高对比夜之城，夸张透视，赛博朋克边缘行者的露西，纤细年轻女性，直顺的齐刘海波波头、左长右短，白发头顶偏粉、发尾渐变薄荷青，灰色眼睛配红色上挑眼线和红唇，白色短夹克滑落到肩下，黑色高领连体衣带红色 V 字领口，白色短裤，灰色过膝袜，黑色及膝高跟靴",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, realistic skin texture, video game screenshot, soft gradient shading",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，写实皮肤纹理，游戏截图，柔和渐变阴影"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Lucy, slender young woman; hair: straight sleek blunt bob with heavy straight-cut bangs at eyebrow level, longer on her left side, white hair with pastel pink on top fading to mint-cyan at the ends; gray eyes with sharp red winged eyeliner and red lipstick; cropped white jacket worn off the shoulders; black high-neck sleeveless leotard with a red V-shaped trim at the neck; white shorts; gray thigh-high stockings; black knee-high heeled boots with red soles, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，露西，纤细年轻女性，直顺的齐刘海波波头、左长右短，白发头顶偏粉、发尾渐变薄荷青，灰色眼睛配红色上挑眼线和红唇，白色短夹克滑落到肩下，黑色高领连体衣带红色 V 字领口，白色短裤，灰色过膝袜，黑色及膝高跟靴，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "rebecca",
+      "name_zh": "丽贝卡",
+      "name_en": "Rebecca",
+      "role": "Solo（枪手）",
+      "age": "约 20",
+      "class_style": "kitsch",
+      "body": "个子很矮，五官柔和，皮肤苍白带淡蓝色调。",
+      "face_hair": "个子很矮、身材像小孩，皮肤粉白带淡蓝；浅薄荷青色双马尾（不是荧光绿），用一个带小猫耳状夹子的黑色发箍扎起；超大的圆形义眼，粉红色光圈、黄色瞳心。",
+      "outfit": "超大号黑色连帽外套，袖子长到盖住手，下摆到大腿中部，荧光绿镶边和小月牙标志；里面黑色内衣；光腿，黑色运动鞋配荧光绿鞋底。颈部到胸口有粉色 X 眼骷髅纹身，右大腿有 \"PK DICK\" 纹身。后期装上超大义臂，右臂红、左臂蓝。",
+      "cyberware": [
+        "gorilla_arms",
+        "kiroshi_optics",
+        "light_tattoo",
+        "neuroport",
+        "emp_threading"
+      ],
+      "cyberware_raw": "2x 义臂（2x 高度风格化的大猩猩手臂）、2x 义眼、EMP 线路、光纹身、神经端口、科技头发和化学皮肤",
+      "colors": [
+        "#9FE8D8",
+        "#F2F6FF",
+        "#FF4FA0",
+        "#111111",
+        "#B7FF3A",
+        "#E33B3B",
+        "#3B6BE3"
+      ],
+      "silhouette": "矮小身形配超大义臂（后期右臂红、左臂蓝，模仿哥哥皮拉），绿色双马尾。",
+      "prompt_en": "Rebecca from Cyberpunk Edgerunners, very short petite girl with small childlike proportions, chalk-white skin with a faint blue tint; pale mint-aqua hair in two long twin tails held by a black headband with small cat-ear-like clips; huge round cybernetic eyes with glowing pink-red rings and yellow centers; a pink skull-with-X-eyes tattoo on the neck and chest; a hugely oversized black hooded jacket with neon lime-green trim and small crescent emblems, sleeves so long they cover her hands, hem down to mid-thigh; black bra underneath; bare pale legs, black sneakers with lime soles; in action panels she has huge chunky cyberarms, red right arm and blue left arm",
+      "prompt_zh": "赛博朋克边缘行者的丽贝卡，非常矮小、像小孩的身材，粉白带淡蓝的皮肤，浅薄荷青色双马尾配黑色猫耳发箍，超大的圆形义眼带粉红光圈和黄色瞳心，颈部到胸口粉色 X 眼骷髅纹身，超大号黑色连帽外套袖子盖住手、荧光绿镶边，光腿，黑色运动鞋，超大义臂右红左蓝",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime",
+          "file": "Rebecca Infobox CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/1/19/Rebecca_Infobox_CPEDGE.png/revision/latest?cb=20220916202047",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/1/19/Rebecca_Infobox_CPEDGE.png/revision/latest?cb=20220916202047",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Rebecca_Infobox_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "宣传插画 · Yoshiyuki Kaneko",
+          "style": "anime",
+          "file": "Rebecca by Yoshiyuki Kaneko CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/8/83/Rebecca_by_Yoshiyuki_Kaneko_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20220916220341",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/8/83/Rebecca_by_Yoshiyuki_Kaneko_CPEDGE.png/revision/latest?cb=20220916220341",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Rebecca_by_Yoshiyuki_Kaneko_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "概念图",
+          "style": "anime",
+          "file": "Rebecca Concept Art 01 CPEDGE.jpg",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/6/60/Rebecca_Concept_Art_01_CPEDGE.jpg/revision/latest/scale-to-width-down/900?cb=20221004161514",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/6/60/Rebecca_Concept_Art_01_CPEDGE.jpg/revision/latest?cb=20221004161514",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Rebecca_Concept_Art_01_CPEDGE.jpg",
+          "season": 1
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime",
+          "file": "Rebecca Gorilla Arm 01 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/3/34/Rebecca_Gorilla_Arm_01_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20250414162202",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/3/34/Rebecca_Gorilla_Arm_01_CPEDGE.png/revision/latest?cb=20250414162202",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Rebecca_Gorilla_Arm_01_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "剧中截图 · 第8集",
+          "style": "anime",
+          "file": "Rebecca 06 EP8 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/2/2a/Rebecca_06_EP8_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261111045738",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/2/2a/Rebecca_06_EP8_CPEDGE.png/revision/latest?cb=20261111045738",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Rebecca_06_EP8_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "定妆图",
+          "style": "anime",
+          "file": "Rebecca (Madness) Infobox CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/70/Rebecca_%28Madness%29_Infobox_CPEDGE.png/revision/latest?cb=20260227112142",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/70/Rebecca_%28Madness%29_Infobox_CPEDGE.png/revision/latest?cb=20260227112142",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Rebecca_(Madness)_Infobox_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "官方 Cosplay 指南",
+          "style": "anime",
+          "file": "Rebecca Cosplay Guide 03 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/b/b5/Rebecca_Cosplay_Guide_03_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261030052204",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/b/b5/Rebecca_Cosplay_Guide_03_CPEDGE.png/revision/latest?cb=20261030052204",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Rebecca_Cosplay_Guide_03_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "官方 Cosplay 指南",
+          "style": "anime",
+          "file": "Rebecca Cosplay Guide 04 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/b/b2/Rebecca_Cosplay_Guide_04_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261030052206",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/b/b2/Rebecca_Cosplay_Guide_04_CPEDGE.png/revision/latest?cb=20261030052206",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Rebecca_Cosplay_Guide_04_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime",
+          "file": "CP Edge Rebecca's thigh tatto detail.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/0/0c/CP_Edge_Rebecca%27s_thigh_tatto_detail.png/revision/latest/scale-to-width-down/900?cb=20220925044912",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/0/0c/CP_Edge_Rebecca%27s_thigh_tatto_detail.png/revision/latest?cb=20220925044912",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:CP_Edge_Rebecca%27s_thigh_tatto_detail.png",
+          "season": 1
+        }
+      ],
+      "season": 1,
+      "prompts": {
+        "anime": {
+          "label": "第一季动画",
+          "en": "anime screencap, Studio Trigger style, Cyberpunk Edgerunners style, bold variable-weight lineart, flat two-tone cel shading, hard geometric shadows, colored shadows, neon rim light, cyan and magenta lighting, high contrast night city, exaggerated perspective, Rebecca from Cyberpunk Edgerunners, very short petite girl with small childlike proportions, chalk-white skin with a faint blue tint; pale mint-aqua hair in two long twin tails held by a black headband with small cat-ear-like clips; huge round cybernetic eyes with glowing pink-red rings and yellow centers; a pink skull-with-X-eyes tattoo on the neck and chest; a hugely oversized black hooded jacket with neon lime-green trim and small crescent emblems, sleeves so long they cover her hands, hem down to mid-thigh; black bra underneath; bare pale legs, black sneakers with lime soles; in action panels she has huge chunky cyberarms, red right arm and blue left arm",
+          "zh": "日本动画截图，扳机社画风，赛博朋克边缘行者风格，粗细变化描线，两阶赛璐璐平涂，硬边几何阴影，彩色暗部，霓虹边缘光，青色与洋红灯光，高对比夜之城，夸张透视，赛博朋克边缘行者的丽贝卡，非常矮小、像小孩的身材，粉白带淡蓝的皮肤，浅薄荷青色双马尾配黑色猫耳发箍，超大的圆形义眼带粉红光圈和黄色瞳心，颈部到胸口粉色 X 眼骷髅纹身，超大号黑色连帽外套袖子盖住手、荧光绿镶边，光腿，黑色运动鞋，超大义臂右红左蓝",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, realistic skin texture, video game screenshot, soft gradient shading",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，写实皮肤纹理，游戏截图，柔和渐变阴影"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Rebecca, very short petite girl with small childlike proportions, chalk-white skin with a faint blue tint; pale mint-aqua hair in two long twin tails held by a black headband with small cat-ear-like clips; huge round cybernetic eyes with glowing pink-red rings and yellow centers; a pink skull-with-X-eyes tattoo on the neck and chest; a hugely oversized black hooded jacket with neon lime-green trim and small crescent emblems, sleeves so long they cover her hands, hem down to mid-thigh; black bra underneath; bare pale legs, black sneakers with lime soles; in action panels she has huge chunky cyberarms, red right arm and blue left arm, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，丽贝卡，非常矮小、像小孩的身材，粉白带淡蓝的皮肤，浅薄荷青色双马尾配黑色猫耳发箍，超大的圆形义眼带粉红光圈和黄色瞳心，颈部到胸口粉色 X 眼骷髅纹身，超大号黑色连帽外套袖子盖住手、荧光绿镶边，光腿，黑色运动鞋，超大义臂右红左蓝，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "maine",
+      "name_zh": "曼恩",
+      "name_en": "Maine",
+      "role": "Solo（小队队长，前军方特种部队）",
+      "age": "30 岁后半",
+      "class_style": "kitsch",
+      "body": "全队最高，义体让体型大幅增大，肩背极宽。",
+      "face_hair": "皮肤偏棕，方下巴；奶白色头发梳成一整块光滑、高耸、向后的背头，像一块圆顶（不是尖刺）；黑色环绕式护目镜，左侧有一点红光；脸上有义体接缝线。",
+      "outfit": "红色连帽衫或围巾加黑色外套，胸口敞开，露出带接缝线的躯干。",
+      "cyberware": [
+        "visor_optics",
+        "projectile_launch",
+        "cyberlegs",
+        "linear_frame",
+        "subdermal_armor",
+        "face_seams",
+        "neuroport",
+        "emp_threading"
+      ],
+      "cyberware_raw": "2x 义臂、射弹发射系统、2x 义腿、EMP 线路、线性框架、神经端口、皮下装甲",
+      "colors": [
+        "#F1E7D2",
+        "#D8282F",
+        "#111111",
+        "#FF2A2A",
+        "#B07A55"
+      ],
+      "silhouette": "竖得很高的白金背头，黑色护目镜加红光点，红色围巾，倒三角巨型体格。",
+      "prompt_en": "Maine from Cyberpunk Edgerunners, giant hulking muscular man, tan skin, heavy square jaw; hair: a very tall smooth cream-white pompadour shaped like a solid rounded dome/fin swept straight back (one smooth mass, NOT spiky); black wraparound cyber visor over the eyes with a single small red light on the left; thin cyber seam lines across his face; big red scarf/hood around the neck; black leather jacket with red ring details, worn open over a bare chest with vertical vent-like cyber slits on the abdomen",
+      "prompt_zh": "赛博朋克边缘行者的曼恩，巨型壮汉，棕色皮肤，方下巴，奶白色头发梳成一整块光滑高耸的圆顶背头，黑色环绕护目镜左侧一点红光，脸上义体接缝线，红色大围巾，黑色皮夹克带红色圆环，敞开露出胸膛，腹部有竖条散热口状义体",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime",
+          "file": "Maine Infobox CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/f/fe/Maine_Infobox_CPEDGE.png/revision/latest?cb=20261104083110",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/f/fe/Maine_Infobox_CPEDGE.png/revision/latest?cb=20261104083110",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Maine_Infobox_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "宣传插画 · Yoshiyuki Kaneko",
+          "style": "anime",
+          "file": "Maine by Yoshiyuki Kaneko CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/b/b8/Maine_by_Yoshiyuki_Kaneko_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20220916220306",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/b/b8/Maine_by_Yoshiyuki_Kaneko_CPEDGE.png/revision/latest?cb=20220916220306",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Maine_by_Yoshiyuki_Kaneko_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "剧中截图 · 第3集",
+          "style": "anime",
+          "file": "Maine 01 EP3 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/a/ab/Maine_01_EP3_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261104084330",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/a/ab/Maine_01_EP3_CPEDGE.png/revision/latest?cb=20261104084330",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Maine_01_EP3_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "剧中截图 · 第6集",
+          "style": "anime",
+          "file": "Maine 04 EP6 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/f/f0/Maine_04_EP6_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261102141448",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/f/f0/Maine_04_EP6_CPEDGE.png/revision/latest?cb=20261102141448",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Maine_04_EP6_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "剧中截图 · 第3集",
+          "style": "anime",
+          "file": "Maine's Crew 01 EP3 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/6/64/Maine%27s_Crew_01_EP3_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261031134911",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/6/64/Maine%27s_Crew_01_EP3_CPEDGE.png/revision/latest?cb=20261031134911",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Maine%27s_Crew_01_EP3_CPEDGE.png",
+          "season": 1
+        }
+      ],
+      "season": 1,
+      "prompts": {
+        "anime": {
+          "label": "第一季动画",
+          "en": "anime screencap, Studio Trigger style, Cyberpunk Edgerunners style, bold variable-weight lineart, flat two-tone cel shading, hard geometric shadows, colored shadows, neon rim light, cyan and magenta lighting, high contrast night city, exaggerated perspective, Maine from Cyberpunk Edgerunners, giant hulking muscular man, tan skin, heavy square jaw; hair: a very tall smooth cream-white pompadour shaped like a solid rounded dome/fin swept straight back (one smooth mass, NOT spiky); black wraparound cyber visor over the eyes with a single small red light on the left; thin cyber seam lines across his face; big red scarf/hood around the neck; black leather jacket with red ring details, worn open over a bare chest with vertical vent-like cyber slits on the abdomen",
+          "zh": "日本动画截图，扳机社画风，赛博朋克边缘行者风格，粗细变化描线，两阶赛璐璐平涂，硬边几何阴影，彩色暗部，霓虹边缘光，青色与洋红灯光，高对比夜之城，夸张透视，赛博朋克边缘行者的曼恩，巨型壮汉，棕色皮肤，方下巴，奶白色头发梳成一整块光滑高耸的圆顶背头，黑色环绕护目镜左侧一点红光，脸上义体接缝线，红色大围巾，黑色皮夹克带红色圆环，敞开露出胸膛，腹部有竖条散热口状义体",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, realistic skin texture, video game screenshot, soft gradient shading",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，写实皮肤纹理，游戏截图，柔和渐变阴影"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Maine, giant hulking muscular man, tan skin, heavy square jaw; hair: a very tall smooth cream-white pompadour shaped like a solid rounded dome/fin swept straight back (one smooth mass, NOT spiky); black wraparound cyber visor over the eyes with a single small red light on the left; thin cyber seam lines across his face; big red scarf/hood around the neck; black leather jacket with red ring details, worn open over a bare chest with vertical vent-like cyber slits on the abdomen, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，曼恩，巨型壮汉，棕色皮肤，方下巴，奶白色头发梳成一整块光滑高耸的圆顶背头，黑色环绕护目镜左侧一点红光，脸上义体接缝线，红色大围巾，黑色皮夹克带红色圆环，敞开露出胸膛，腹部有竖条散热口状义体，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "kiwi",
+      "name_zh": "琪薇",
+      "name_en": "Kiwi",
+      "role": "Netrunner（网络行者）",
+      "class_style": "neomilitarism",
+      "body": "极高极瘦，全身大量义体改造。",
+      "face_hair": "浅桃金色直波波头，齐刘海；细长的金黄色眼睛；粉色呼吸器式面罩，带横向格栅，遮住嘴和下颌，面罩下是深色机械下颌。",
+      "outfit": "红色高领紧身长袖连体衣，有黑色横纹和黑色背带；红色长外套；黑色过膝靴。身上有蛛网纹身。",
+      "cyberware": [
+        "jaw_mask",
+        "neuroport",
+        "cyberdeck",
+        "light_tattoo"
+      ],
+      "cyberware_raw": "下颌面罩、神经端口（网络接入仓端口、多个个人接口、皮下神经处理器）、感知与情绪抑制植入体、蛛网光纹身、产蛛丝植入体",
+      "colors": [
+        "#C8212E",
+        "#FF7FA8",
+        "#F2D9B8",
+        "#111111"
+      ],
+      "silhouette": "细长身形，红色长外套，红色下颌面罩，金色波波头。",
+      "prompt_en": "Kiwi from Cyberpunk Edgerunners, very tall slender woman; pale peach-blonde hair in a straight blunt bob with straight-cut bangs; narrow sharp golden-yellow eyes; a pink respirator-style mask with horizontal vent slits covering her mouth and jaw (under it a dark mechanical jaw); red skin-tight high-neck long-sleeve outfit with black horizontal stripes and a black harness, a long red coat, black thigh-high boots",
+      "prompt_zh": "赛博朋克边缘行者的琪薇，极高极瘦的女性，浅桃金色齐刘海直波波头，细长金黄色眼睛，粉色呼吸器式面罩带横向格栅遮住嘴和下颌，红色高领紧身连体衣带黑色横纹和背带，红色长外套，黑色过膝靴",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime",
+          "file": "Kiwi Infobox CPEDGE.jpg",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/6/6a/Kiwi_Infobox_CPEDGE.jpg/revision/latest?cb=20220831221315",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/6/6a/Kiwi_Infobox_CPEDGE.jpg/revision/latest?cb=20220831221315",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Kiwi_Infobox_CPEDGE.jpg",
+          "season": 1
+        },
+        {
+          "type": "宣传插画 · Yoshiyuki Kaneko",
+          "style": "anime",
+          "file": "Kiwi by Yoshiyuki Kaneko CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/a/a3/Kiwi_by_Yoshiyuki_Kaneko_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20220919002828",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/a/a3/Kiwi_by_Yoshiyuki_Kaneko_CPEDGE.png/revision/latest?cb=20220919002828",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Kiwi_by_Yoshiyuki_Kaneko_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime",
+          "file": "Kiwi Mask CPEDGE.jpg",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/d/d2/Kiwi_Mask_CPEDGE.jpg/revision/latest/scale-to-width-down/900?cb=20240718194321",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/d/d2/Kiwi_Mask_CPEDGE.jpg/revision/latest?cb=20240718194321",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Kiwi_Mask_CPEDGE.jpg",
+          "season": 1
+        },
+        {
+          "type": "剧中截图 · 第3集",
+          "style": "anime",
+          "file": "Kiwi 01 EP3 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/1/12/Kiwi_01_EP3_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261101073744",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/1/12/Kiwi_01_EP3_CPEDGE.png/revision/latest?cb=20261101073744",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Kiwi_01_EP3_CPEDGE.png",
+          "season": 1
+        }
+      ],
+      "season": 1,
+      "prompts": {
+        "anime": {
+          "label": "第一季动画",
+          "en": "anime screencap, Studio Trigger style, Cyberpunk Edgerunners style, bold variable-weight lineart, flat two-tone cel shading, hard geometric shadows, colored shadows, neon rim light, cyan and magenta lighting, high contrast night city, exaggerated perspective, Kiwi from Cyberpunk Edgerunners, very tall slender woman; pale peach-blonde hair in a straight blunt bob with straight-cut bangs; narrow sharp golden-yellow eyes; a pink respirator-style mask with horizontal vent slits covering her mouth and jaw (under it a dark mechanical jaw); red skin-tight high-neck long-sleeve outfit with black horizontal stripes and a black harness, a long red coat, black thigh-high boots",
+          "zh": "日本动画截图，扳机社画风，赛博朋克边缘行者风格，粗细变化描线，两阶赛璐璐平涂，硬边几何阴影，彩色暗部，霓虹边缘光，青色与洋红灯光，高对比夜之城，夸张透视，赛博朋克边缘行者的琪薇，极高极瘦的女性，浅桃金色齐刘海直波波头，细长金黄色眼睛，粉色呼吸器式面罩带横向格栅遮住嘴和下颌，红色高领紧身连体衣带黑色横纹和背带，红色长外套，黑色过膝靴",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, realistic skin texture, video game screenshot, soft gradient shading",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，写实皮肤纹理，游戏截图，柔和渐变阴影"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Kiwi, very tall slender woman; pale peach-blonde hair in a straight blunt bob with straight-cut bangs; narrow sharp golden-yellow eyes; a pink respirator-style mask with horizontal vent slits covering her mouth and jaw (under it a dark mechanical jaw); red skin-tight high-neck long-sleeve outfit with black horizontal stripes and a black harness, a long red coat, black thigh-high boots, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，琪薇，极高极瘦的女性，浅桃金色齐刘海直波波头，细长金黄色眼睛，粉色呼吸器式面罩带横向格栅遮住嘴和下颌，红色高领紧身连体衣带黑色横纹和背带，红色长外套，黑色过膝靴，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "dorio",
+      "name_zh": "多里奥",
+      "name_en": "Dorio",
+      "role": "Solo（曼恩的搭档）",
+      "age": "30 岁后半",
+      "class_style": "kitsch",
+      "body": "极高、肌肉发达，在小队里仅次于曼恩。",
+      "face_hair": "金发，长长的侧刘海盖住一只眼，后面剪短；蓝眼睛；脸颊上有青色义体线条。",
+      "outfit": "宽大的蓝紫色外套配黑色领子，敞开不穿上衣；黑色紧身短裤；双腿是外露的金属义腿；一只黑色机械手。",
+      "cyberware": [
+        "gorilla_arms",
+        "cyberlegs",
+        "face_seams",
+        "neuroport",
+        "emp_threading"
+      ],
+      "cyberware_raw": "2x 义臂（2x 大猩猩手臂）、2x 义腿（右腿内藏枪械）、EMP 线路、神经端口",
+      "colors": [
+        "#F2E58A",
+        "#3E4FB8",
+        "#111111",
+        "#9AA3AD"
+      ],
+      "silhouette": "高大的女性力量型身形，敞怀大外套，外露的金属双腿。",
+      "prompt_en": "Dorio from Cyberpunk Edgerunners, very tall muscular woman, blue eyes, small cyan cyber line marks on her cheek; blond hair with a long swept side fringe falling over one eye, short at the back; oversized blue-violet jacket with black collar worn open (chest covered by the jacket edges), black tight shorts; both legs are exposed bare-metal cybernetic legs; one black cybernetic hand",
+      "prompt_zh": "赛博朋克边缘行者的多里奥，高大肌肉女性，金发长侧刘海盖住一只眼、后面短，蓝眼睛，脸颊青色义体线条，宽大的蓝紫色外套配黑领子敞开，黑色紧身短裤，外露的金属义腿，一只黑色机械手",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime",
+          "file": "Dorio Infobox CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/b/bd/Dorio_Infobox_CPEDGE.png/revision/latest?cb=20260622125733",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/b/bd/Dorio_Infobox_CPEDGE.png/revision/latest?cb=20260622125733",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Dorio_Infobox_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "宣传插画 · Yoshiyuki Kaneko",
+          "style": "anime",
+          "file": "Dorio by Yoshiyuki Kaneko CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/2/28/Dorio_by_Yoshiyuki_Kaneko_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20220919121711",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/2/28/Dorio_by_Yoshiyuki_Kaneko_CPEDGE.png/revision/latest?cb=20220919121711",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Dorio_by_Yoshiyuki_Kaneko_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "剧中截图 · 第6集",
+          "style": "anime",
+          "file": "Dorio 01 EP6 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/f/f4/Dorio_01_EP6_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261102141441",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/f/f4/Dorio_01_EP6_CPEDGE.png/revision/latest?cb=20261102141441",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Dorio_01_EP6_CPEDGE.png",
+          "season": 1
+        }
+      ],
+      "season": 1,
+      "prompts": {
+        "anime": {
+          "label": "第一季动画",
+          "en": "anime screencap, Studio Trigger style, Cyberpunk Edgerunners style, bold variable-weight lineart, flat two-tone cel shading, hard geometric shadows, colored shadows, neon rim light, cyan and magenta lighting, high contrast night city, exaggerated perspective, Dorio from Cyberpunk Edgerunners, very tall muscular woman, blue eyes, small cyan cyber line marks on her cheek; blond hair with a long swept side fringe falling over one eye, short at the back; oversized blue-violet jacket with black collar worn open (chest covered by the jacket edges), black tight shorts; both legs are exposed bare-metal cybernetic legs; one black cybernetic hand",
+          "zh": "日本动画截图，扳机社画风，赛博朋克边缘行者风格，粗细变化描线，两阶赛璐璐平涂，硬边几何阴影，彩色暗部，霓虹边缘光，青色与洋红灯光，高对比夜之城，夸张透视，赛博朋克边缘行者的多里奥，高大肌肉女性，金发长侧刘海盖住一只眼、后面短，蓝眼睛，脸颊青色义体线条，宽大的蓝紫色外套配黑领子敞开，黑色紧身短裤，外露的金属义腿，一只黑色机械手",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, realistic skin texture, video game screenshot, soft gradient shading",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，写实皮肤纹理，游戏截图，柔和渐变阴影"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Dorio, very tall muscular woman, blue eyes, small cyan cyber line marks on her cheek; blond hair with a long swept side fringe falling over one eye, short at the back; oversized blue-violet jacket with black collar worn open (chest covered by the jacket edges), black tight shorts; both legs are exposed bare-metal cybernetic legs; one black cybernetic hand, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，多里奥，高大肌肉女性，金发长侧刘海盖住一只眼、后面短，蓝眼睛，脸颊青色义体线条，宽大的蓝紫色外套配黑领子敞开，黑色紧身短裤，外露的金属义腿，一只黑色机械手，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "pilar",
+      "name_zh": "皮拉",
+      "name_en": "Pilar",
+      "role": "Techie（技师），丽贝卡的哥哥",
+      "age": "30 岁后半",
+      "class_style": "kitsch",
+      "body": "高个男性。",
+      "face_hair": "皮肤偏苍白，总是咧嘴笑；巨大的黑色后梳尖刺背头；一条横跨双眼的黑色细护目镜，中间一道发橙黄光的缝；从耳侧绕到下巴的深棕色胡子状义体面板。",
+      "outfit": "黑色无袖背心配灰色衬衫，牛仔裤；双手是超长的金色机械手指。",
+      "cyberware": [
+        "gorilla_arms",
+        "visor_optics",
+        "jaw_cyberware",
+        "neuroport"
+      ],
+      "cyberware_raw": "2x 风格化义臂、单目视觉义体、神经端口",
+      "colors": [
+        "#111111",
+        "#D9C24A",
+        "#3A2A20",
+        "#F2A23A",
+        "#B8C2C8"
+      ],
+      "silhouette": "莫西干头，护目镜，下颌金属件，夸张的机械手指。",
+      "prompt_en": "Pilar from Cyberpunk Edgerunners, lanky grinning man, pale skin; hair: a huge black spiky pompadour swept back and up; a thin horizontal black visor across the eyes with one glowing orange-yellow slit; a dark brown beard-shaped cyberware panel running from his ears down around his jaw and chin; very long thin golden mechanical fingers on both hands; black sleeveless vest over a gray shirt, jeans",
+      "prompt_zh": "赛博朋克边缘行者的皮拉，瘦高个子总在咧嘴笑，苍白皮肤，巨大的黑色后梳尖刺背头，一条黑色细护目镜中间一道橙黄色光缝，从耳侧绕到下巴的深棕色胡子状义体，超长的金色机械手指，黑色无袖背心配灰衬衫，牛仔裤",
+      "note": "Wiki 写的是金色机械手，剧中特写也是金色；黄底宣传插画里偏银灰，是因为那张图的配色。",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime",
+          "file": "Pilar Infobox CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/7b/Pilar_Infobox_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20260622130007",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/7b/Pilar_Infobox_CPEDGE.png/revision/latest?cb=20260622130007",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Pilar_Infobox_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "宣传插画 · Yoshiyuki Kaneko",
+          "style": "anime",
+          "file": "Pilar by Yoshiyuki Kaneko CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/a/ae/Pilar_by_Yoshiyuki_Kaneko_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20220919002759",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/a/ae/Pilar_by_Yoshiyuki_Kaneko_CPEDGE.png/revision/latest?cb=20220919002759",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Pilar_by_Yoshiyuki_Kaneko_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime",
+          "file": "Pilar Inside Look 2 ScreenCap CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/c/cd/Pilar_Inside_Look_2_ScreenCap_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20220801194032",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/c/cd/Pilar_Inside_Look_2_ScreenCap_CPEDGE.png/revision/latest?cb=20220801194032",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Pilar_Inside_Look_2_ScreenCap_CPEDGE.png",
+          "season": 1
+        }
+      ],
+      "season": 1,
+      "prompts": {
+        "anime": {
+          "label": "第一季动画",
+          "en": "anime screencap, Studio Trigger style, Cyberpunk Edgerunners style, bold variable-weight lineart, flat two-tone cel shading, hard geometric shadows, colored shadows, neon rim light, cyan and magenta lighting, high contrast night city, exaggerated perspective, Pilar from Cyberpunk Edgerunners, lanky grinning man, pale skin; hair: a huge black spiky pompadour swept back and up; a thin horizontal black visor across the eyes with one glowing orange-yellow slit; a dark brown beard-shaped cyberware panel running from his ears down around his jaw and chin; very long thin golden mechanical fingers on both hands; black sleeveless vest over a gray shirt, jeans",
+          "zh": "日本动画截图，扳机社画风，赛博朋克边缘行者风格，粗细变化描线，两阶赛璐璐平涂，硬边几何阴影，彩色暗部，霓虹边缘光，青色与洋红灯光，高对比夜之城，夸张透视，赛博朋克边缘行者的皮拉，瘦高个子总在咧嘴笑，苍白皮肤，巨大的黑色后梳尖刺背头，一条黑色细护目镜中间一道橙黄色光缝，从耳侧绕到下巴的深棕色胡子状义体，超长的金色机械手指，黑色无袖背心配灰衬衫，牛仔裤",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, realistic skin texture, video game screenshot, soft gradient shading",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，写实皮肤纹理，游戏截图，柔和渐变阴影"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Pilar, lanky grinning man, pale skin; hair: a huge black spiky pompadour swept back and up; a thin horizontal black visor across the eyes with one glowing orange-yellow slit; a dark brown beard-shaped cyberware panel running from his ears down around his jaw and chin; very long thin golden mechanical fingers on both hands; black sleeveless vest over a gray shirt, jeans, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，皮拉，瘦高个子总在咧嘴笑，苍白皮肤，巨大的黑色后梳尖刺背头，一条黑色细护目镜中间一道橙黄色光缝，从耳侧绕到下巴的深棕色胡子状义体，超长的金色机械手指，黑色无袖背心配灰衬衫，牛仔裤，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "falco",
+      "name_zh": "法尔科",
+      "name_en": "Falco",
+      "role": "车手（小队司机）",
+      "class_style": "entropism",
+      "body": "中等身高体型，年纪偏大。",
+      "face_hair": "深棕色半长发，中分后向两侧蓬开；末端上翘的浓密八字胡。",
+      "outfit": "西部风格：多色棕色马甲配肩带，白色高领长袖衬衫，右袖卷起；深棕色裤子，浅棕色鞋子；腰间挂黄色弹药带，右侧枪套里一把手枪。",
+      "cyberware": [
+        "single_cyberarm"
+      ],
+      "cyberware_raw": "右臂一只银黑色义臂（型号不明），是他唯一明显的义体",
+      "colors": [
+        "#6B4428",
+        "#F2EFE6",
+        "#E2B23A",
+        "#B8BCC2"
+      ],
+      "silhouette": "八字胡，西部马甲，卷起的右袖露出银色义臂。",
+      "prompt_en": "Falco from Cyberpunk Edgerunners, middle-aged man, semi-long dark brown hair parted in the middle and puffed out to the sides, thick dark mustache curled up at the ends, big grin; western style: multi-tone brown waistcoat with shoulder straps over a white high-collar long-sleeve shirt with the right sleeve rolled up revealing a silver-and-black cyberarm; dark brown pants; yellow ammo belt with a holstered heavy revolver",
+      "prompt_zh": "赛博朋克边缘行者的法尔科，中年男人，深棕色中分半长发，末端上翘的浓密八字胡，棕色西部马甲带肩带，白色高领衬衫，右袖卷起露出银黑色义臂，黄色弹药带和枪套",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime",
+          "file": "Falco Infobox CPEDGE.jpg",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/6/6d/Falco_Infobox_CPEDGE.jpg/revision/latest?cb=20220915021736",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/6/6d/Falco_Infobox_CPEDGE.jpg/revision/latest?cb=20220915021736",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Falco_Infobox_CPEDGE.jpg",
+          "season": 1
+        },
+        {
+          "type": "宣传插画 · Yoshiyuki Kaneko",
+          "style": "anime",
+          "file": "Falco by Yoshiyuki Kaneko CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/3/38/Falco_by_Yoshiyuki_Kaneko_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261105210443",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/3/38/Falco_by_Yoshiyuki_Kaneko_CPEDGE.png/revision/latest?cb=20261105210443",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Falco_by_Yoshiyuki_Kaneko_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "剧中截图 · 第6集",
+          "style": "anime",
+          "file": "Falco 01 EP06 CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/4/4d/Falco_01_EP06_CPEDGE.png/revision/latest/scale-to-width-down/900?cb=20261102141444",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/4/4d/Falco_01_EP06_CPEDGE.png/revision/latest?cb=20261102141444",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Falco_01_EP06_CPEDGE.png",
+          "season": 1
+        }
+      ],
+      "season": 1,
+      "prompts": {
+        "anime": {
+          "label": "第一季动画",
+          "en": "anime screencap, Studio Trigger style, Cyberpunk Edgerunners style, bold variable-weight lineart, flat two-tone cel shading, hard geometric shadows, colored shadows, neon rim light, cyan and magenta lighting, high contrast night city, exaggerated perspective, Falco from Cyberpunk Edgerunners, middle-aged man, semi-long dark brown hair parted in the middle and puffed out to the sides, thick dark mustache curled up at the ends, big grin; western style: multi-tone brown waistcoat with shoulder straps over a white high-collar long-sleeve shirt with the right sleeve rolled up revealing a silver-and-black cyberarm; dark brown pants; yellow ammo belt with a holstered heavy revolver",
+          "zh": "日本动画截图，扳机社画风，赛博朋克边缘行者风格，粗细变化描线，两阶赛璐璐平涂，硬边几何阴影，彩色暗部，霓虹边缘光，青色与洋红灯光，高对比夜之城，夸张透视，赛博朋克边缘行者的法尔科，中年男人，深棕色中分半长发，末端上翘的浓密八字胡，棕色西部马甲带肩带，白色高领衬衫，右袖卷起露出银黑色义臂，黄色弹药带和枪套",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, realistic skin texture, video game screenshot, soft gradient shading",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，写实皮肤纹理，游戏截图，柔和渐变阴影"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Falco, middle-aged man, semi-long dark brown hair parted in the middle and puffed out to the sides, thick dark mustache curled up at the ends, big grin; western style: multi-tone brown waistcoat with shoulder straps over a white high-collar long-sleeve shirt with the right sleeve rolled up revealing a silver-and-black cyberarm; dark brown pants; yellow ammo belt with a holstered heavy revolver, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，法尔科，中年男人，深棕色中分半长发，末端上翘的浓密八字胡，棕色西部马甲带肩带，白色高领衬衫，右袖卷起露出银黑色义臂，黄色弹药带和枪套，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "smasher",
+      "name_zh": "亚当·重锤",
+      "name_en": "Adam Smasher",
+      "role": "荒坂安保主管，全身义体雇佣兵（剧中最终反派）",
+      "class_style": "neomilitarism",
+      "body": "全身义体，巨型机械体格，几乎没有剩下的肉体。",
+      "face_hair": "骷髅状的金属面甲，红色发光眼；没有头发。",
+      "outfit": "无服装，整个身体都是装甲外壳。",
+      "cyberware": [
+        "full_borg"
+      ],
+      "colors": [
+        "#2A2A30",
+        "#8A8F99",
+        "#FF2A2A",
+        "#E25822"
+      ],
+      "silhouette": "骷髅面甲，两点红眼，巨大的块状机械身躯。",
+      "prompt_en": "Adam Smasher from Cyberpunk Edgerunners, towering full-body cyborg, almost no human flesh left: skull-like dark chrome faceplate with glowing red eyes, hulking heavily armored mechanical body with layered plates, huge arm cannon",
+      "prompt_zh": "赛博朋克边缘行者的亚当·重锤，全身义体改造人，骷髅状深色金属面甲，红色发光眼，巨大的装甲机械身躯，火焰和烟雾背景",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime",
+          "file": "Adam Smasher Infobox CPEDGE.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/8/87/Adam_Smasher_Infobox_CPEDGE.png/revision/latest?cb=20220913205918",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/8/87/Adam_Smasher_Infobox_CPEDGE.png/revision/latest?cb=20220913205918",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Adam_Smasher_Infobox_CPEDGE.png",
+          "season": 1
+        },
+        {
+          "type": "游戏定妆图（CP2077）",
+          "style": "game",
+          "file": "Adam Smasher Infobox CP2077.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/8/89/Adam_Smasher_Infobox_CP2077.png/revision/latest?cb=20201230173541",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/8/89/Adam_Smasher_Infobox_CP2077.png/revision/latest?cb=20201230173541",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Adam_Smasher_Infobox_CP2077.png",
+          "season": 1
+        }
+      ],
+      "season": 1,
+      "prompts": {
+        "anime": {
+          "label": "第一季动画",
+          "en": "anime screencap, Studio Trigger style, Cyberpunk Edgerunners style, bold variable-weight lineart, flat two-tone cel shading, hard geometric shadows, colored shadows, neon rim light, cyan and magenta lighting, high contrast night city, exaggerated perspective, Adam Smasher from Cyberpunk Edgerunners, towering full-body cyborg, almost no human flesh left: skull-like dark chrome faceplate with glowing red eyes, hulking heavily armored mechanical body with layered plates, huge arm cannon",
+          "zh": "日本动画截图，扳机社画风，赛博朋克边缘行者风格，粗细变化描线，两阶赛璐璐平涂，硬边几何阴影，彩色暗部，霓虹边缘光，青色与洋红灯光，高对比夜之城，夸张透视，赛博朋克边缘行者的亚当·重锤，全身义体改造人，骷髅状深色金属面甲，红色发光眼，巨大的装甲机械身躯，火焰和烟雾背景",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, realistic skin texture, video game screenshot, soft gradient shading",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，写实皮肤纹理，游戏截图，柔和渐变阴影"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Adam Smasher, towering full-body cyborg, almost no human flesh left: skull-like dark chrome faceplate with glowing red eyes, hulking heavily armored mechanical body with layered plates, huge arm cannon, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，亚当·重锤，全身义体改造人，骷髅状深色金属面甲，红色发光眼，巨大的装甲机械身躯，火焰和烟雾背景，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "roman",
+      "season": 2,
+      "name_zh": "罗曼·卡拉克斯",
+      "name_en": "Roman Carax",
+      "role": "Media（自由电影人），12 岁；父亲是理发师 Olek Carax",
+      "age": "12",
+      "class_style": "kitsch",
+      "body": "小个子男孩，大腿上贴着创可贴（右腿两块、左腿一块）。",
+      "face_hair": "金发，发尾和两侧带一点桃橙色，蓬松短发、从左侧分开；翠绿色眼睛；左耳一个耳环；左额有一个银色小义体标记。",
+      "outfit": "白色加藏青色的长袖翻领飞行员夹克，前襟有一条绿色 LED 灯带，领子内衬亮绿色；里面红色 T 恤，胸前白色大字母 B（父亲理发店的标志）；黑色绒面颈环；蓝色短裤带白色侧条；白色厚底运动鞋配红袜子、深蓝鞋底；斜挎黄色单肩包（绿色点缀），手里常拿一台绿色手持摄像机。",
+      "cyberware": [
+        "neuroport"
+      ],
+      "colors": [
+        "#F6E08A",
+        "#F4F4F4",
+        "#2B3A6B",
+        "#D8282F",
+        "#3BE36B",
+        "#F2C230"
+      ],
+      "silhouette": "蓬松金发小男孩，白色大夹克，红 T 恤上的大写 B，手里的绿色摄像机。",
+      "prompt_en": "Roman Carax from Cyberpunk Edgerunners 2, small 12-year-old boy, fluffy blond hair with peach-orange tips parted on the left, emerald green eyes, small silver cyber mark on the left forehead, earring in the left ear, white and navy oversized bomber jacket with green LED strip and bright green inner collar, red t-shirt with a big white letter B logo, black velvet choker, blue shorts with white side stripes, bandages on his thighs, chunky white sneakers with red socks, yellow sling bag, holding a green handheld video camera",
+      "prompt_zh": "赛博朋克边缘行者第二季的罗曼·卡拉克斯，12 岁小男孩，蓬松金发发尾带桃橙色、左侧分，翠绿色眼睛，左额银色小义体标记，左耳耳环，白色加藏青色宽大飞行员夹克、绿色 LED 灯带和亮绿内领，红 T 恤印白色大写 B，黑色颈环，蓝色短裤带白侧条，大腿贴创可贴，白色厚底运动鞋配红袜，黄色斜挎包，手拿绿色手持摄像机",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Roman Infobox CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/71/Roman_Infobox_CPEDGEII.png/revision/latest?cb=20261106122207",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/71/Roman_Infobox_CPEDGEII.png/revision/latest?cb=20261106122207",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Roman_Infobox_CPEDGEII.png"
+        },
+        {
+          "type": "倒计时宣传图 · TRIGGER",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "0 Day Roman TRIGGER CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/a/ae/0_Day_Roman_TRIGGER_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261021034125",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/a/ae/0_Day_Roman_TRIGGER_CPEDGEII.png/revision/latest?cb=20261021034125",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:0_Day_Roman_TRIGGER_CPEDGEII.png"
+        },
+        {
+          "type": "官方 Cosplay 指南",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Roman Carax Cosplay Guide 05 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/a/aa/Roman_Carax_Cosplay_Guide_05_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261029094022",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/a/aa/Roman_Carax_Cosplay_Guide_05_CPEDGEII.png/revision/latest?cb=20261029094022",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Roman_Carax_Cosplay_Guide_05_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Roman 01 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/0/03/Roman_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261027233200",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/0/03/Roman_01_CPEDGEII.png/revision/latest?cb=20261027233200",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Roman_01_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Roman 02 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/7f/Roman_02_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261027233324",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/7f/Roman_02_CPEDGEII.png/revision/latest?cb=20261027233324",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Roman_02_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Screenshot 013 Roman CPEDGEII.jpg",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/c/cb/Screenshot_013_Roman_CPEDGEII.jpg/revision/latest/scale-to-width-down/900?cb=20260629204941",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/c/cb/Screenshot_013_Roman_CPEDGEII.jpg/revision/latest?cb=20260629204941",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Screenshot_013_Roman_CPEDGEII.jpg"
+        }
+      ],
+      "prompts": {
+        "anime_s2": {
+          "label": "第二季动画",
+          "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, Roman Carax from Cyberpunk Edgerunners 2, small 12-year-old boy, fluffy blond hair with peach-orange tips parted on the left, emerald green eyes, small silver cyber mark on the left forehead, earring in the left ear, white and navy oversized bomber jacket with green LED strip and bright green inner collar, red t-shirt with a big white letter B logo, black velvet choker, blue shorts with white side stripes, bandages on his thighs, chunky white sneakers with red socks, yellow sling bag, holding a green handheld video camera",
+          "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，赛博朋克边缘行者第二季的罗曼·卡拉克斯，12 岁小男孩，蓬松金发发尾带桃橙色、左侧分，翠绿色眼睛，左额银色小义体标记，左耳耳环，白色加藏青色宽大飞行员夹克、绿色 LED 灯带和亮绿内领，红 T 恤印白色大写 B，黑色颈环，蓝色短裤带白侧条，大腿贴创可贴，白色厚底运动鞋配红袜，黄色斜挎包，手拿绿色手持摄像机",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Roman Carax, small 12-year-old boy, fluffy blond hair with peach-orange tips parted on the left, emerald green eyes, small silver cyber mark on the left forehead, earring in the left ear, white and navy oversized bomber jacket with green LED strip and bright green inner collar, red t-shirt with a big white letter B logo, black velvet choker, blue shorts with white side stripes, bandages on his thighs, chunky white sneakers with red socks, yellow sling bag, holding a green handheld video camera, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，罗曼·卡拉克斯，12 岁小男孩，蓬松金发发尾带桃橙色、左侧分，翠绿色眼睛，左额银色小义体标记，左耳耳环，白色加藏青色宽大飞行员夹克、绿色 LED 灯带和亮绿内领，红 T 恤印白色大写 B，黑色颈环，蓝色短裤带白侧条，大腿贴创可贴，白色厚底运动鞋配红袜，黄色斜挎包，手拿绿色手持摄像机，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "d",
+      "season": 2,
+      "name_zh": "D",
+      "name_en": "D",
+      "role": "Nomad / Netrunner（游牧民网络行者，Snake Nation）",
+      "class_style": "neomilitarism",
+      "body": "高瘦，手长腿长。",
+      "face_hair": "黑色（带一点蓝绿色调）的凌乱长刺发，常垂下来盖住脸；绿色眼睛；右半边脸和身体有一大片红色烧伤疤痕；右耳缺失，换成黑色耳部义体。",
+      "outfit": "宽大的蓝色皮夹克，白色镶边和多个口袋，胸前一块灰色方形补丁；里面深蓝色网络行者紧身衣，红色镶边，衣服延伸到两根中指；深色紧身裤，带红边的护胫，芭蕾风平底鞋。",
+      "cyberware": [
+        "ear_implant",
+        "neuroport",
+        "cyberdeck"
+      ],
+      "colors": [
+        "#2F5FD0",
+        "#F4F4F4",
+        "#1B2340",
+        "#E8213F",
+        "#3BE36B",
+        "#123A44"
+      ],
+      "silhouette": "高瘦身形，凌乱黑色长刺发，半张脸红色烧伤，宽大的蓝色夹克。",
+      "prompt_en": "D from Cyberpunk Edgerunners 2, tall very slender man, messy long spiky black hair with a teal tint falling over his face, green eyes, a large red burn scar covering the right side of his face and neck, black ear implant in place of the missing right ear, oversized blue leather jacket with white trim, pockets and a gray square patch, dark navy netrunner bodysuit with red trim covering up to his middle fingers, dark slim pants, shin guards with red trim, ballet-style flat shoes",
+      "prompt_zh": "赛博朋克边缘行者第二季的 D，高瘦男人，凌乱的黑色长刺发带蓝绿色调、垂在脸上，绿色眼睛，右半边脸和脖子大片红色烧伤疤，右耳换成黑色耳部义体，宽大的蓝色皮夹克带白边、口袋和灰色方形补丁，深蓝色网络行者紧身衣带红边、延伸到中指，深色紧身裤，红边护胫，芭蕾风平底鞋",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "D Infobox CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/78/D_Infobox_CPEDGEII.png/revision/latest?cb=20261106122607",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/78/D_Infobox_CPEDGEII.png/revision/latest?cb=20261106122607",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:D_Infobox_CPEDGEII.png"
+        },
+        {
+          "type": "倒计时宣传图 · TRIGGER",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "1 Day D TRIGGER CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/7f/1_Day_D_TRIGGER_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261019083455",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/7f/1_Day_D_TRIGGER_CPEDGEII.png/revision/latest?cb=20261019083455",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:1_Day_D_TRIGGER_CPEDGEII.png"
+        },
+        {
+          "type": "官方 Cosplay 指南",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "D Cosplay Guide 05 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/f/fa/D_Cosplay_Guide_05_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261029093812",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/f/fa/D_Cosplay_Guide_05_CPEDGEII.png/revision/latest?cb=20261029093812",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:D_Cosplay_Guide_05_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "D 01 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/79/D_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261026080622",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/79/D_01_CPEDGEII.png/revision/latest?cb=20261026080622",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:D_01_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "D 02 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/b/b1/D_02_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261026080624",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/b/b1/D_02_CPEDGEII.png/revision/latest?cb=20261026080624",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:D_02_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Screenshot 010 D CPEDGEII.jpg",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/75/Screenshot_010_D_CPEDGEII.jpg/revision/latest/scale-to-width-down/900?cb=20260629204934",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/75/Screenshot_010_D_CPEDGEII.jpg/revision/latest?cb=20260629204934",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Screenshot_010_D_CPEDGEII.jpg"
+        }
+      ],
+      "prompts": {
+        "anime_s2": {
+          "label": "第二季动画",
+          "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, D from Cyberpunk Edgerunners 2, tall very slender man, messy long spiky black hair with a teal tint falling over his face, green eyes, a large red burn scar covering the right side of his face and neck, black ear implant in place of the missing right ear, oversized blue leather jacket with white trim, pockets and a gray square patch, dark navy netrunner bodysuit with red trim covering up to his middle fingers, dark slim pants, shin guards with red trim, ballet-style flat shoes",
+          "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，赛博朋克边缘行者第二季的 D，高瘦男人，凌乱的黑色长刺发带蓝绿色调、垂在脸上，绿色眼睛，右半边脸和脖子大片红色烧伤疤，右耳换成黑色耳部义体，宽大的蓝色皮夹克带白边、口袋和灰色方形补丁，深蓝色网络行者紧身衣带红边、延伸到中指，深色紧身裤，红边护胫，芭蕾风平底鞋",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, D, tall very slender man, messy long spiky black hair with a teal tint falling over his face, green eyes, a large red burn scar covering the right side of his face and neck, black ear implant in place of the missing right ear, oversized blue leather jacket with white trim, pockets and a gray square patch, dark navy netrunner bodysuit with red trim covering up to his middle fingers, dark slim pants, shin guards with red trim, ballet-style flat shoes, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城， D，高瘦男人，凌乱的黑色长刺发带蓝绿色调、垂在脸上，绿色眼睛，右半边脸和脖子大片红色烧伤疤，右耳换成黑色耳部义体，宽大的蓝色皮夹克带白边、口袋和灰色方形补丁，深蓝色网络行者紧身衣带红边、延伸到中指，深色紧身裤，红边护胫，芭蕾风平底鞋，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "talia",
+      "season": 2,
+      "name_zh": "塔莉亚·杨",
+      "name_en": "Talia Yang",
+      "role": "前康陶高管，后加入漩涡帮；Avida 和 Kiril 的女儿",
+      "class_style": "kitsch",
+      "body": "高瘦，身体大部分换成义体，躯干有分块的义体面板和接缝。",
+      "face_hair": "粉色染发，编成一条很长的辫子（辫子边缘呈锯齿状），中间垂下一缕长发；头顶伸出两根细长的触角；锐利的蓝绿色眼睛，瞳孔像昆虫；下半张脸是黑色分段的口部义体。年少时（改造前）是天生的红发。",
+      "outfit": "敞开的黑色连帽连体运动服，中长袖，大部分躯干露在外面，内衬和细节有橙红色；银色机械手臂、红色手指；银色蚱蜢式腿部义体，脚上有红色尖爪。",
+      "cyberware": [
+        "insect_mouthpiece",
+        "grasshopper_legs",
+        "antenna_hair",
+        "neuroport"
+      ],
+      "colors": [
+        "#F2A3B8",
+        "#111111",
+        "#B8C2C8",
+        "#E8213F",
+        "#5FE0D0"
+      ],
+      "silhouette": "粉色长辫子加头顶两根触角，黑色口部义体，敞开的黑色长运动服，银色反关节腿。",
+      "prompt_en": "Talia Yang from Cyberpunk Edgerunners 2, tall slender heavily augmented girl, pink hair in one very long braid with a jagged edge plus a long middle lock, two long thin antenna-like strands arching from the top of her head, sharp teal eyes with insect-like pupils, black segmented insect-like mouthpiece implant covering her lower face, open hooded black one-piece tracksuit with mid-length sleeves exposing a torso of cybernetic body panels, silver cybernetic arms with red fingers, silver digitigrade grasshopper-like cybernetic legs with red claw tips",
+      "prompt_zh": "赛博朋克边缘行者第二季的塔莉亚·杨，高瘦的重度改造少女，粉色长辫子边缘呈锯齿状、中间垂一缕长发，头顶两根细长触角，锐利的蓝绿色昆虫瞳孔，下半张脸是黑色分段的昆虫式口部义体，敞开的黑色连帽连体运动服露出义体面板躯干，银色机械手臂配红色手指，银色反关节蚱蜢式义腿带红色尖爪",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Talia Yang Infobox CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/e/e6/Talia_Yang_Infobox_CPEDGEII.png/revision/latest?cb=20261106122408",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/e/e6/Talia_Yang_Infobox_CPEDGEII.png/revision/latest?cb=20261106122408",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Talia_Yang_Infobox_CPEDGEII.png"
+        },
+        {
+          "type": "倒计时宣传图 · TRIGGER",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "2 Days Talia TRIGGER CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/3/3e/2_Days_Talia_TRIGGER_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261018084957",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/3/3e/2_Days_Talia_TRIGGER_CPEDGEII.png/revision/latest?cb=20261018084957",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:2_Days_Talia_TRIGGER_CPEDGEII.png"
+        },
+        {
+          "type": "官方 Cosplay 指南",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Talia Yang Cosplay Guide 05 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/3/32/Talia_Yang_Cosplay_Guide_05_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261029094050",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/3/32/Talia_Yang_Cosplay_Guide_05_CPEDGEII.png/revision/latest?cb=20261029094050",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Talia_Yang_Cosplay_Guide_05_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Talia 01 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/6/69/Talia_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261026082903",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/6/69/Talia_01_CPEDGEII.png/revision/latest?cb=20261026082903",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Talia_01_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Talia 02 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/a/ab/Talia_02_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261026083054",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/a/ab/Talia_02_CPEDGEII.png/revision/latest?cb=20261026083054",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Talia_02_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Screenshot 017 Talia CPEDGEII.jpg",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/f/fc/Screenshot_017_Talia_CPEDGEII.jpg/revision/latest/scale-to-width-down/900?cb=20260629204952",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/f/fc/Screenshot_017_Talia_CPEDGEII.jpg/revision/latest?cb=20260629204952",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Screenshot_017_Talia_CPEDGEII.jpg"
+        }
+      ],
+      "prompts": {
+        "anime_s2": {
+          "label": "第二季动画",
+          "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, Talia Yang from Cyberpunk Edgerunners 2, tall slender heavily augmented girl, pink hair in one very long braid with a jagged edge plus a long middle lock, two long thin antenna-like strands arching from the top of her head, sharp teal eyes with insect-like pupils, black segmented insect-like mouthpiece implant covering her lower face, open hooded black one-piece tracksuit with mid-length sleeves exposing a torso of cybernetic body panels, silver cybernetic arms with red fingers, silver digitigrade grasshopper-like cybernetic legs with red claw tips",
+          "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，赛博朋克边缘行者第二季的塔莉亚·杨，高瘦的重度改造少女，粉色长辫子边缘呈锯齿状、中间垂一缕长发，头顶两根细长触角，锐利的蓝绿色昆虫瞳孔，下半张脸是黑色分段的昆虫式口部义体，敞开的黑色连帽连体运动服露出义体面板躯干，银色机械手臂配红色手指，银色反关节蚱蜢式义腿带红色尖爪",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Talia Yang, tall slender heavily augmented girl, pink hair in one very long braid with a jagged edge plus a long middle lock, two long thin antenna-like strands arching from the top of her head, sharp teal eyes with insect-like pupils, black segmented insect-like mouthpiece implant covering her lower face, open hooded black one-piece tracksuit with mid-length sleeves exposing a torso of cybernetic body panels, silver cybernetic arms with red fingers, silver digitigrade grasshopper-like cybernetic legs with red claw tips, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，塔莉亚·杨，高瘦的重度改造少女，粉色长辫子边缘呈锯齿状、中间垂一缕长发，头顶两根细长触角，锐利的蓝绿色昆虫瞳孔，下半张脸是黑色分段的昆虫式口部义体，敞开的黑色连帽连体运动服露出义体面板躯干，银色机械手臂配红色手指，银色反关节蚱蜢式义腿带红色尖爪，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "kingsley",
+      "season": 2,
+      "name_zh": "韦克·金斯利",
+      "name_en": "Weak Kingsley",
+      "role": "Solo，Team King 前首领；Avida 的旧情人",
+      "class_style": "kitsch",
+      "body": "高大魁梧，身体大部分改造过。",
+      "face_hair": "金色短发，两侧剃短、顶部向后梳；修整过的金色「王者」式山羊胡（下巴一撮）；棕色眼睛，戴一副红色圆镜片的眼镜；左侧头部有红色皮下线条；脖子被深绿色装甲包住。后期：消瘦、伤疤更多，一只眼戴金属眼罩，部分下颌换成义体。",
+      "outfit": "长款灰色立领大衣，内衬是青绿色、领口有红色色块，背后画着金色三尖皇冠；里面黑色防弹背心，脖子挂项链；绿色裤子，膝盖有骷髅形护膝和黑色护腿；深棕色黑底靴子；红色机械手，右手食指是刻着 K 的金色义体。",
+      "cyberware": [
+        "neck_armor",
+        "signet_finger",
+        "cyber_jaw",
+        "subdermal_armor"
+      ],
+      "colors": [
+        "#C9C6C0",
+        "#2BC1B5",
+        "#E8213F",
+        "#4E6B4A",
+        "#E2B23A",
+        "#F2E58A"
+      ],
+      "silhouette": "红色圆镜片，金色背头，宽大的灰色长大衣配青绿内衬，红色机械手，骷髅护膝。",
+      "arc_variants": {
+        "early": "魁梧，红色圆镜片，灰色大衣，绿色裤子配骷髅护膝",
+        "late": "消瘦落魄，金属眼罩、更多伤疤，部分下颌是义体，穿浅色宽松外套"
+      },
+      "prompt_en": "Weak Kingsley from Cyberpunk Edgerunners 2, tall burly man, short blond hair slicked back with trimmed sides, small trimmed blond royal goatee, round red-lensed glasses, red line implants on the left side of his head, dark green armored neck, long gray high-collared coat with teal lining and red patches and a gold three-point crown painted on the back, black bulletproof vest, necklace, green pants with skull-shaped knee guards, dark brown boots, red cybernetic hands with a gold index finger engraved K",
+      "prompt_zh": "赛博朋克边缘行者第二季的韦克·金斯利，高大魁梧的男人，金色短发向后梳、两侧剃短，修整过的金色下巴小胡子，红色圆镜片眼镜，左侧头部红色线条义体，深绿色颈部装甲，灰色立领长大衣配青绿内衬和红色色块、背后金色皇冠，黑色防弹背心，项链，绿色裤子配骷髅护膝，深棕色靴子，红色机械手、右手食指是刻着 K 的金色义体",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Weak Kingsley Infobox CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/4/4c/Weak_Kingsley_Infobox_CPEDGEII.png/revision/latest?cb=20261106122531",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/4/4c/Weak_Kingsley_Infobox_CPEDGEII.png/revision/latest?cb=20261106122531",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Weak_Kingsley_Infobox_CPEDGEII.png"
+        },
+        {
+          "type": "倒计时宣传图 · TRIGGER",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "3 Days Weak TRIGGER CPEDGEII.jpg",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/b/b2/3_Days_Weak_TRIGGER_CPEDGEII.jpg/revision/latest/scale-to-width-down/900?cb=20261017070658",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/b/b2/3_Days_Weak_TRIGGER_CPEDGEII.jpg/revision/latest?cb=20261017070658",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:3_Days_Weak_TRIGGER_CPEDGEII.jpg"
+        },
+        {
+          "type": "官方 Cosplay 指南",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Weak Kingsley Cosplay Guide 05 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/c/ce/Weak_Kingsley_Cosplay_Guide_05_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261029094118",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/c/ce/Weak_Kingsley_Cosplay_Guide_05_CPEDGEII.png/revision/latest?cb=20261029094118",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Weak_Kingsley_Cosplay_Guide_05_CPEDGEII.png"
+        },
+        {
+          "type": "官方 Cosplay 指南",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Weak Kingsley Cosplay Guide 08 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/6/6a/Weak_Kingsley_Cosplay_Guide_08_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261029094126",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/6/6a/Weak_Kingsley_Cosplay_Guide_08_CPEDGEII.png/revision/latest?cb=20261029094126",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Weak_Kingsley_Cosplay_Guide_08_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Screenshot 007 Weak CPEDGEII.jpg",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/1/1e/Screenshot_007_Weak_CPEDGEII.jpg/revision/latest/scale-to-width-down/900?cb=20260629204958",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/1/1e/Screenshot_007_Weak_CPEDGEII.jpg/revision/latest?cb=20260629204958",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Screenshot_007_Weak_CPEDGEII.jpg"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Screenshot 033 Weak CPEDGEII.jpg",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/c/cc/Screenshot_033_Weak_CPEDGEII.jpg/revision/latest/scale-to-width-down/900?cb=20261015061133",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/c/cc/Screenshot_033_Weak_CPEDGEII.jpg/revision/latest?cb=20261015061133",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Screenshot_033_Weak_CPEDGEII.jpg"
+        },
+        {
+          "type": "游戏手机联系人头像（CP2077）",
+          "style": "game",
+          "season": 2,
+          "file": "Weak Kingsley Phone Avatar CP2077.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/8/86/Weak_Kingsley_Phone_Avatar_CP2077.png/revision/latest?cb=20261111075725",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/8/86/Weak_Kingsley_Phone_Avatar_CP2077.png/revision/latest?cb=20261111075725",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Weak_Kingsley_Phone_Avatar_CP2077.png"
+        }
+      ],
+      "prompts": {
+        "anime_s2": {
+          "label": "第二季动画",
+          "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, Weak Kingsley from Cyberpunk Edgerunners 2, tall burly man, short blond hair slicked back with trimmed sides, small trimmed blond royal goatee, round red-lensed glasses, red line implants on the left side of his head, dark green armored neck, long gray high-collared coat with teal lining and red patches and a gold three-point crown painted on the back, black bulletproof vest, necklace, green pants with skull-shaped knee guards, dark brown boots, red cybernetic hands with a gold index finger engraved K",
+          "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，赛博朋克边缘行者第二季的韦克·金斯利，高大魁梧的男人，金色短发向后梳、两侧剃短，修整过的金色下巴小胡子，红色圆镜片眼镜，左侧头部红色线条义体，深绿色颈部装甲，灰色立领长大衣配青绿内衬和红色色块、背后金色皇冠，黑色防弹背心，项链，绿色裤子配骷髅护膝，深棕色靴子，红色机械手、右手食指是刻着 K 的金色义体",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Weak Kingsley, tall burly man, short blond hair slicked back with trimmed sides, small trimmed blond royal goatee, round red-lensed glasses, red line implants on the left side of his head, dark green armored neck, long gray high-collared coat with teal lining and red patches and a gold three-point crown painted on the back, black bulletproof vest, necklace, green pants with skull-shaped knee guards, dark brown boots, red cybernetic hands with a gold index finger engraved K, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，韦克·金斯利，高大魁梧的男人，金色短发向后梳、两侧剃短，修整过的金色下巴小胡子，红色圆镜片眼镜，左侧头部红色线条义体，深绿色颈部装甲，灰色立领长大衣配青绿内衬和红色色块、背后金色皇冠，黑色防弹背心，项链，绿色裤子配骷髅护膝，深棕色靴子，红色机械手、右手食指是刻着 K 的金色义体，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      },
+      "note": "这个角色也出现在《赛博朋克 2077》游戏里（Wiki 记为 appears_games: 2077），目前只有游戏里的手机联系人头像，已单独标为游戏图。"
+    },
+    {
+      "id": "avida",
+      "season": 2,
+      "name_zh": "阿维达·杨",
+      "name_en": "Avida Yang",
+      "role": "Corpo（康陶内部人员），前爵士歌手 / 萨克斯手；Talia 的母亲、Kiril 的妻子",
+      "class_style": "neokitsch",
+      "body": "成熟女性，深色皮肤，身形高挑。",
+      "face_hair": "深棕色卷发，头顶向后梳贴、额前一道波浪形发线，脑后的卷发蓬成一大团云状；蓝眼睛；浓重的紫色眼影、红色眼线、蓝色口红；太阳穴有金白色义体；脸上有细义体接缝；长耳坠。",
+      "outfit": "宽肩廓形的深藏青色公司西装（剪裁夸张、肩部方正），里面白色衬衫；金色颈部义体非常显眼；左手中指是刻着 A 的金色义体。",
+      "cyberware": [
+        "neck_armor",
+        "signet_finger",
+        "face_seams"
+      ],
+      "colors": [
+        "#3A2418",
+        "#2A3346",
+        "#F2C230",
+        "#7B5CE8",
+        "#3D8BFF",
+        "#F4F1E8"
+      ],
+      "silhouette": "脑后大团云状卷发，宽肩藏青西装，金色颈部义体，蓝唇。",
+      "prompt_en": "Avida Yang from Cyberpunk Edgerunners 2, mature dark-skinned woman, dark brown curly hair slicked back on top with a wavy hairline and a huge cloud-like mass of curls behind her head, blue eyes, heavy purple eyeshadow, red eyeliner, blue lipstick, gold-white cyberware at the temples and thin implant seams on her face, long drop earrings, golden cybernetic neck collar, broad-shouldered boxy dark navy corporate suit over a white shirt, gold cybernetic middle finger engraved A",
+      "prompt_zh": "赛博朋克边缘行者第二季的阿维达·杨，成熟的深肤色女性，深棕色卷发头顶向后梳、额前波浪发线、脑后一大团云状卷发，蓝眼睛，浓重紫色眼影，红色眼线，蓝色口红，太阳穴金白色义体，脸上细接缝，长耳坠，金色颈部义体，宽肩廓形深藏青公司西装配白衬衫，刻着 A 的金色中指义体",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Avida Yang Infobox CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/6/68/Avida_Yang_Infobox_CPEDGEII.png/revision/latest?cb=20260903151509",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/6/68/Avida_Yang_Infobox_CPEDGEII.png/revision/latest?cb=20260903151509",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Avida_Yang_Infobox_CPEDGEII.png"
+        },
+        {
+          "type": "倒计时宣传图 · TRIGGER",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "4 Days Avida TRIGGER CPEDGEII.jpg",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/79/4_Days_Avida_TRIGGER_CPEDGEII.jpg/revision/latest/scale-to-width-down/900?cb=20261016120703",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/79/4_Days_Avida_TRIGGER_CPEDGEII.jpg/revision/latest?cb=20261016120703",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:4_Days_Avida_TRIGGER_CPEDGEII.jpg"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Avida 01 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/1/1c/Avida_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261023055305",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/1/1c/Avida_01_CPEDGEII.png/revision/latest?cb=20261023055305",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Avida_01_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Avida 02 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/a/ad/Avida_02_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261023055353",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/a/ad/Avida_02_CPEDGEII.png/revision/latest?cb=20261023055353",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Avida_02_CPEDGEII.png"
+        }
+      ],
+      "prompts": {
+        "anime_s2": {
+          "label": "第二季动画",
+          "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, Avida Yang from Cyberpunk Edgerunners 2, mature dark-skinned woman, dark brown curly hair slicked back on top with a wavy hairline and a huge cloud-like mass of curls behind her head, blue eyes, heavy purple eyeshadow, red eyeliner, blue lipstick, gold-white cyberware at the temples and thin implant seams on her face, long drop earrings, golden cybernetic neck collar, broad-shouldered boxy dark navy corporate suit over a white shirt, gold cybernetic middle finger engraved A",
+          "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，赛博朋克边缘行者第二季的阿维达·杨，成熟的深肤色女性，深棕色卷发头顶向后梳、额前波浪发线、脑后一大团云状卷发，蓝眼睛，浓重紫色眼影，红色眼线，蓝色口红，太阳穴金白色义体，脸上细接缝，长耳坠，金色颈部义体，宽肩廓形深藏青公司西装配白衬衫，刻着 A 的金色中指义体",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Avida Yang, mature dark-skinned woman, dark brown curly hair slicked back on top with a wavy hairline and a huge cloud-like mass of curls behind her head, blue eyes, heavy purple eyeshadow, red eyeliner, blue lipstick, gold-white cyberware at the temples and thin implant seams on her face, long drop earrings, golden cybernetic neck collar, broad-shouldered boxy dark navy corporate suit over a white shirt, gold cybernetic middle finger engraved A, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，阿维达·杨，成熟的深肤色女性，深棕色卷发头顶向后梳、额前波浪发线、脑后一大团云状卷发，蓝眼睛，浓重紫色眼影，红色眼线，蓝色口红，太阳穴金白色义体，脸上细接缝，长耳坠，金色颈部义体，宽肩廓形深藏青公司西装配白衬衫，刻着 A 的金色中指义体，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "kiril",
+      "season": 2,
+      "name_zh": "基里尔·杨",
+      "name_en": "Kiril Yang",
+      "role": "Corpo（康陶）；Talia 的父亲、Avida 的丈夫",
+      "class_style": "neomilitarism",
+      "body": "中年男性，身材结实。",
+      "face_hair": "深藏青色的短刺发；橙色瞳孔的深灰色光学义体；白色义体下颌，带橙色线条和下巴上的橙色色块；常叼着烟。",
+      "outfit": "深灰近黑的高立领西装，全身有康陶橙的细线条；白色的大猩猩手臂（机械手是白色）。",
+      "cyberware": [
+        "cyber_jaw",
+        "kiroshi_optics",
+        "gorilla_arms"
+      ],
+      "colors": [
+        "#1E1F26",
+        "#F28C1E",
+        "#F4F4F4",
+        "#2B3A6B"
+      ],
+      "silhouette": "白色加橙色的义体下颌，黑色立领西装上的橙色线条，白色机械手。",
+      "prompt_en": "Kiril Yang from Cyberpunk Edgerunners 2, middle-aged man, short spiky dark navy hair, orange cybernetic irises, white cybernetic jaw plating with orange lines and an orange chin plate, cigarette in his mouth, dark gray almost black high-collared suit with thin Kang Tao orange piping, white cybernetic gorilla arm hands",
+      "prompt_zh": "赛博朋克边缘行者第二季的基里尔·杨，中年男人，深藏青色短刺发，橙色瞳孔义眼，白色义体下颌带橙色线条和橙色下巴，叼着烟，深灰近黑的高立领西装带康陶橙细线，白色大猩猩手臂",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Kiril Yang Infobox CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/d/d3/Kiril_Yang_Infobox_CPEDGEII.png/revision/latest?cb=20261007155903",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/d/d3/Kiril_Yang_Infobox_CPEDGEII.png/revision/latest?cb=20261007155903",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Kiril_Yang_Infobox_CPEDGEII.png"
+        },
+        {
+          "type": "倒计时宣传图 · TRIGGER",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "5 Days Kiril TRIGGER CPEDGEII.jpg",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/1/12/5_Days_Kiril_TRIGGER_CPEDGEII.jpg/revision/latest/scale-to-width-down/900?cb=20261015211239",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/1/12/5_Days_Kiril_TRIGGER_CPEDGEII.jpg/revision/latest?cb=20261015211239",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:5_Days_Kiril_TRIGGER_CPEDGEII.jpg"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Kiril 01 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/1/18/Kiril_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261023060520",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/1/18/Kiril_01_CPEDGEII.png/revision/latest?cb=20261023060520",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Kiril_01_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Kiril 02 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/0/0b/Kiril_02_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261023060557",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/0/0b/Kiril_02_CPEDGEII.png/revision/latest?cb=20261023060557",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Kiril_02_CPEDGEII.png"
+        }
+      ],
+      "prompts": {
+        "anime_s2": {
+          "label": "第二季动画",
+          "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, Kiril Yang from Cyberpunk Edgerunners 2, middle-aged man, short spiky dark navy hair, orange cybernetic irises, white cybernetic jaw plating with orange lines and an orange chin plate, cigarette in his mouth, dark gray almost black high-collared suit with thin Kang Tao orange piping, white cybernetic gorilla arm hands",
+          "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，赛博朋克边缘行者第二季的基里尔·杨，中年男人，深藏青色短刺发，橙色瞳孔义眼，白色义体下颌带橙色线条和橙色下巴，叼着烟，深灰近黑的高立领西装带康陶橙细线，白色大猩猩手臂",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Kiril Yang, middle-aged man, short spiky dark navy hair, orange cybernetic irises, white cybernetic jaw plating with orange lines and an orange chin plate, cigarette in his mouth, dark gray almost black high-collared suit with thin Kang Tao orange piping, white cybernetic gorilla arm hands, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，基里尔·杨，中年男人，深藏青色短刺发，橙色瞳孔义眼，白色义体下颌带橙色线条和橙色下巴，叼着烟，深灰近黑的高立领西装带康陶橙细线，白色大猩猩手臂，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "jessie",
+      "season": 2,
+      "name_zh": "杰西",
+      "name_en": "Jessie",
+      "role": "Techie（超梦工程师），在 Sal Bigelow 的超梦店工作",
+      "class_style": "kitsch",
+      "body": "身材匀称，皮肤大部分是苍白色，右侧身体和整条右臂是紫色，中间有一道蓝色分界线（合成皮肤）。",
+      "face_hair": "灰银色长直发，盖住一部分脸；紫色眼睛；脸上有淡紫色线条。",
+      "outfit": "黄色露肩短上衣（领口有破洞），蓝色牛仔背带短裤；一只手戴超梦剪辑手套（黑色骨架式机械手指）。",
+      "cyberware": [
+        "bd_glove"
+      ],
+      "colors": [
+        "#D9DCE0",
+        "#9B6BD8",
+        "#F2C230",
+        "#3B5FA8",
+        "#4FB3E8"
+      ],
+      "silhouette": "银灰色长发，黄色露肩上衣，背带短裤，一半紫色的手臂。",
+      "prompt_en": "Jessie from Cyberpunk Edgerunners 2, young woman, long straight silver-gray hair, purple eyes, pale white skin with the right side of her body and entire right arm purple divided by a blue streak, yellow off-shoulder crop top, blue denim overall shorts, black braindance editing glove with skeletal mechanical fingers",
+      "prompt_zh": "赛博朋克边缘行者第二季的杰西，年轻女性，银灰色长直发，紫色眼睛，苍白皮肤、右侧身体和整条右臂是紫色并有一道蓝色分界，黄色露肩短上衣，蓝色牛仔背带短裤，黑色骨架式超梦剪辑手套",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Jessie Infobox CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/1/10/Jessie_Infobox_CPEDGEII.png/revision/latest?cb=20260910142831",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/1/10/Jessie_Infobox_CPEDGEII.png/revision/latest?cb=20260910142831",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Jessie_Infobox_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Jessie 01 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/1/12/Jessie_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261022063113",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/1/12/Jessie_01_CPEDGEII.png/revision/latest?cb=20261022063113",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Jessie_01_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Jessie & Roman 01 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/8/87/Jessie_%26_Roman_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261023063328",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/8/87/Jessie_%26_Roman_01_CPEDGEII.png/revision/latest?cb=20261023063328",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Jessie_%26_Roman_01_CPEDGEII.png"
+        }
+      ],
+      "prompts": {
+        "anime_s2": {
+          "label": "第二季动画",
+          "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, Jessie from Cyberpunk Edgerunners 2, young woman, long straight silver-gray hair, purple eyes, pale white skin with the right side of her body and entire right arm purple divided by a blue streak, yellow off-shoulder crop top, blue denim overall shorts, black braindance editing glove with skeletal mechanical fingers",
+          "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，赛博朋克边缘行者第二季的杰西，年轻女性，银灰色长直发，紫色眼睛，苍白皮肤、右侧身体和整条右臂是紫色并有一道蓝色分界，黄色露肩短上衣，蓝色牛仔背带短裤，黑色骨架式超梦剪辑手套",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Jessie, young woman, long straight silver-gray hair, purple eyes, pale white skin with the right side of her body and entire right arm purple divided by a blue streak, yellow off-shoulder crop top, blue denim overall shorts, black braindance editing glove with skeletal mechanical fingers, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，杰西，年轻女性，银灰色长直发，紫色眼睛，苍白皮肤、右侧身体和整条右臂是紫色并有一道蓝色分界，黄色露肩短上衣，蓝色牛仔背带短裤，黑色骨架式超梦剪辑手套，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "kyoko",
+      "season": 2,
+      "name_zh": "京子（田网京子）",
+      "name_en": "Kyoko Tanaami",
+      "role": "Medtech / Netrunner，前荒坂；Capri 的创造者",
+      "class_style": "entropism",
+      "body": "个子非常矮小。",
+      "face_hair": "黑色头发向后梳成马尾，头顶能看到一道道梳齿般的发线；红色义眼；八角形方框眼镜；脸中间一块灰色局部面甲，一直到上唇，脸上有缝合式接缝；笑起来露出尖牙。",
+      "outfit": "绿色衬衫，卡其绿短裤，粉色凉鞋；回忆戏里穿白大褂；右臂是红色机械臂。",
+      "cyberware": [
+        "partial_faceplate",
+        "kiroshi_optics",
+        "single_cyberarm"
+      ],
+      "colors": [
+        "#111111",
+        "#9AA3AD",
+        "#E8213F",
+        "#4CAF50",
+        "#8A9A5B",
+        "#FF8FB1"
+      ],
+      "silhouette": "矮小，八角眼镜后的红眼，脸中间的面甲接缝，红色机械右臂。",
+      "prompt_en": "Kyoko Tanaami from Cyberpunk Edgerunners 2, extremely short woman, black hair slicked back into a ponytail, red cybernetic eyes behind octagonal glasses, gray partial faceplate running down the center of her face to her upper lip with stitch-like seams, toothy grin with small fangs, green shirt, khaki green shorts, pink sandals, red cybernetic right arm",
+      "prompt_zh": "赛博朋克边缘行者第二季的京子，个子非常矮小的女性，黑发向后梳成马尾，八角形眼镜后是红色义眼，脸中间到上唇一块灰色局部面甲带缝合接缝，咧嘴露出小尖牙，绿色衬衫，卡其绿短裤，粉色凉鞋，红色机械右臂",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Kyoko Infobox CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/e/e5/Kyoko_Infobox_CPEDGEII.png/revision/latest?cb=20261022092755",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/e/e5/Kyoko_Infobox_CPEDGEII.png/revision/latest?cb=20261022092755",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Kyoko_Infobox_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Kyoko 01 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/2/2d/Kyoko_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261023044804",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/2/2d/Kyoko_01_CPEDGEII.png/revision/latest?cb=20261023044804",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Kyoko_01_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Kyoko 02 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/6/67/Kyoko_02_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261023050951",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/6/67/Kyoko_02_CPEDGEII.png/revision/latest?cb=20261023050951",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Kyoko_02_CPEDGEII.png"
+        }
+      ],
+      "prompts": {
+        "anime_s2": {
+          "label": "第二季动画",
+          "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, Kyoko Tanaami from Cyberpunk Edgerunners 2, extremely short woman, black hair slicked back into a ponytail, red cybernetic eyes behind octagonal glasses, gray partial faceplate running down the center of her face to her upper lip with stitch-like seams, toothy grin with small fangs, green shirt, khaki green shorts, pink sandals, red cybernetic right arm",
+          "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，赛博朋克边缘行者第二季的京子，个子非常矮小的女性，黑发向后梳成马尾，八角形眼镜后是红色义眼，脸中间到上唇一块灰色局部面甲带缝合接缝，咧嘴露出小尖牙，绿色衬衫，卡其绿短裤，粉色凉鞋，红色机械右臂",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Kyoko Tanaami, extremely short woman, black hair slicked back into a ponytail, red cybernetic eyes behind octagonal glasses, gray partial faceplate running down the center of her face to her upper lip with stitch-like seams, toothy grin with small fangs, green shirt, khaki green shorts, pink sandals, red cybernetic right arm, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，京子，个子非常矮小的女性，黑发向后梳成马尾，八角形眼镜后是红色义眼，脸中间到上唇一块灰色局部面甲带缝合接缝，咧嘴露出小尖牙，绿色衬衫，卡其绿短裤，粉色凉鞋，红色机械右臂，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "omi",
+      "season": 2,
+      "name_zh": "奥米",
+      "name_en": "Omi",
+      "role": "Nomad（Snake Nation）",
+      "class_style": "entropism",
+      "body": "年轻女性，健壮有曲线；身上有和 D 类似的烧伤疤痕。",
+      "face_hair": "深绿色狼尾发，蓬乱、从帽子下面炸开；义眼外圈蓝色、内圈紫色，横向瞳孔；脸颊上有粉色斜条疤痕或纹路。",
+      "outfit": "蓝色鸭舌帽带红白条纹；蓝色无袖高领拉链背心配粉色背带；宽松裤子；黄白色高帮鞋；双臂是深色大猩猩手臂。",
+      "cyberware": [
+        "gorilla_arms",
+        "kiroshi_optics",
+        "cyberlegs"
+      ],
+      "colors": [
+        "#3E5A1E",
+        "#2F4FA0",
+        "#FF5FA2",
+        "#E8213F",
+        "#F2D23A"
+      ],
+      "silhouette": "蓝色鸭舌帽下炸开的绿色乱发，粉色背带，粗壮的深色机械臂。",
+      "prompt_en": "Omi from Cyberpunk Edgerunners 2, young athletic woman, messy dark green wolf-cut hair bursting out from under a blue baseball cap with red and white stripes, cyber eyes with blue outer and purple inner irises and horizontal pupils, pink slash marks on her cheek, sleeveless blue high-zip vest with a pink harness, baggy pants, yellow and white high-top sneakers, dark chunky gorilla cyberarms",
+      "prompt_zh": "赛博朋克边缘行者第二季的奥米，健壮的年轻女性，深绿色蓬乱狼尾发从蓝色鸭舌帽下炸开、帽子有红白条纹，义眼外圈蓝内圈紫、横向瞳孔，脸颊粉色斜条疤痕，蓝色无袖高领拉链背心配粉色背带，宽松裤子，黄白色高帮鞋，粗壮的深色大猩猩手臂",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Omi Infobox CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/a/ae/Omi_Infobox_CPEDGEII.png/revision/latest?cb=20261022092757",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/a/ae/Omi_Infobox_CPEDGEII.png/revision/latest?cb=20261022092757",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Omi_Infobox_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Omi 01 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/0/0b/Omi_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261022001148",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/0/0b/Omi_01_CPEDGEII.png/revision/latest?cb=20261022001148",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Omi_01_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Omi 02 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/9/9c/Omi_02_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261022001215",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/9/9c/Omi_02_CPEDGEII.png/revision/latest?cb=20261022001215",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Omi_02_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Omi 03 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/74/Omi_03_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261022001245",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/74/Omi_03_CPEDGEII.png/revision/latest?cb=20261022001245",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Omi_03_CPEDGEII.png"
+        }
+      ],
+      "prompts": {
+        "anime_s2": {
+          "label": "第二季动画",
+          "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, Omi from Cyberpunk Edgerunners 2, young athletic woman, messy dark green wolf-cut hair bursting out from under a blue baseball cap with red and white stripes, cyber eyes with blue outer and purple inner irises and horizontal pupils, pink slash marks on her cheek, sleeveless blue high-zip vest with a pink harness, baggy pants, yellow and white high-top sneakers, dark chunky gorilla cyberarms",
+          "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，赛博朋克边缘行者第二季的奥米，健壮的年轻女性，深绿色蓬乱狼尾发从蓝色鸭舌帽下炸开、帽子有红白条纹，义眼外圈蓝内圈紫、横向瞳孔，脸颊粉色斜条疤痕，蓝色无袖高领拉链背心配粉色背带，宽松裤子，黄白色高帮鞋，粗壮的深色大猩猩手臂",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Omi, young athletic woman, messy dark green wolf-cut hair bursting out from under a blue baseball cap with red and white stripes, cyber eyes with blue outer and purple inner irises and horizontal pupils, pink slash marks on her cheek, sleeveless blue high-zip vest with a pink harness, baggy pants, yellow and white high-top sneakers, dark chunky gorilla cyberarms, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，奥米，健壮的年轻女性，深绿色蓬乱狼尾发从蓝色鸭舌帽下炸开、帽子有红白条纹，义眼外圈蓝内圈紫、横向瞳孔，脸颊粉色斜条疤痕，蓝色无袖高领拉链背心配粉色背带，宽松裤子，黄白色高帮鞋，粗壮的深色大猩猩手臂，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "yupi",
+      "season": 2,
+      "name_zh": "尤皮",
+      "name_en": "Yupi",
+      "role": "跟随 D 的年轻女性",
+      "class_style": "neokitsch",
+      "body": "中等身高，纤细。",
+      "face_hair": "浅柠檬绿色及肩发，发尾渐变成青绿色；蓝眼睛、下方带一点绿；紫色眼影，眼下小点状装饰；额头上推着一副超大的紫色护目镜；黑色颈部义体；长耳坠。",
+      "outfit": "新媚俗风格：薰衣草紫色交叉绑带的吊带短上衣，粉色和紫色的迷你裙和腰包；银色首饰（项链、手链、耳环、戒指、肚脐钉）；紫色指甲。",
+      "cyberware": [
+        "neuroport"
+      ],
+      "colors": [
+        "#D6F27A",
+        "#4FD1C5",
+        "#B48CF2",
+        "#FF8FC8",
+        "#C0C6D0"
+      ],
+      "silhouette": "额头上的大号紫色护目镜，柠檬绿渐变青的头发，紫色绑带吊带上衣。",
+      "prompt_en": "Yupi from Cyberpunk Edgerunners 2, slim young woman, shoulder-length light lime-green hair fading to teal at the ends, blue eyes with a hint of green, purple eyeshadow with small dot accents under the eyes, oversized purple goggles pushed up on her forehead, black cyber choker, long earrings, lavender criss-cross strappy crop tank top, pink and purple miniskirt with a belt pouch, silver jewelry, purple fingernails",
+      "prompt_zh": "赛博朋克边缘行者第二季的尤皮，纤细年轻女性，浅柠檬绿及肩发、发尾渐变青绿，蓝眼睛带一点绿，紫色眼影和眼下小点装饰，额头上推着超大紫色护目镜，黑色颈部义体，长耳坠，薰衣草紫交叉绑带吊带短上衣，粉紫迷你裙配腰包，银色首饰，紫色指甲",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Yupi Infobox CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/b/b7/Yupi_Infobox_CPEDGEII.png/revision/latest?cb=20261022092803",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/b/b7/Yupi_Infobox_CPEDGEII.png/revision/latest?cb=20261022092803",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Yupi_Infobox_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Yupi 01 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/c/cc/Yupi_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261023035712",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/c/cc/Yupi_01_CPEDGEII.png/revision/latest?cb=20261023035712",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Yupi_01_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Yupi 02 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/8/85/Yupi_02_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261023035714",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/8/85/Yupi_02_CPEDGEII.png/revision/latest?cb=20261023035714",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Yupi_02_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Yupi 03 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/7/79/Yupi_03_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261023035716",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/7/79/Yupi_03_CPEDGEII.png/revision/latest?cb=20261023035716",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Yupi_03_CPEDGEII.png"
+        }
+      ],
+      "prompts": {
+        "anime_s2": {
+          "label": "第二季动画",
+          "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, Yupi from Cyberpunk Edgerunners 2, slim young woman, shoulder-length light lime-green hair fading to teal at the ends, blue eyes with a hint of green, purple eyeshadow with small dot accents under the eyes, oversized purple goggles pushed up on her forehead, black cyber choker, long earrings, lavender criss-cross strappy crop tank top, pink and purple miniskirt with a belt pouch, silver jewelry, purple fingernails",
+          "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，赛博朋克边缘行者第二季的尤皮，纤细年轻女性，浅柠檬绿及肩发、发尾渐变青绿，蓝眼睛带一点绿，紫色眼影和眼下小点装饰，额头上推着超大紫色护目镜，黑色颈部义体，长耳坠，薰衣草紫交叉绑带吊带短上衣，粉紫迷你裙配腰包，银色首饰，紫色指甲",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Yupi, slim young woman, shoulder-length light lime-green hair fading to teal at the ends, blue eyes with a hint of green, purple eyeshadow with small dot accents under the eyes, oversized purple goggles pushed up on her forehead, black cyber choker, long earrings, lavender criss-cross strappy crop tank top, pink and purple miniskirt with a belt pouch, silver jewelry, purple fingernails, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，尤皮，纤细年轻女性，浅柠檬绿及肩发、发尾渐变青绿，蓝眼睛带一点绿，紫色眼影和眼下小点装饰，额头上推着超大紫色护目镜，黑色颈部义体，长耳坠，薰衣草紫交叉绑带吊带短上衣，粉紫迷你裙配腰包，银色首饰，紫色指甲，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    },
+    {
+      "id": "meshuga",
+      "season": 2,
+      "name_zh": "梅舒加",
+      "name_en": "Meshuga",
+      "role": "Netrunner / 雇佣兵（Team King）",
+      "class_style": "kitsch",
+      "body": "高大，身穿宽大衣服。",
+      "face_hair": "黄绿色寸头和短胡子；红色或绿色眼睛（剧中光线下难辨）；头侧和脸上有金属义体件；鼻梁上贴着胶布。",
+      "outfit": "超大号浅蓝色连帽衫和同色宽松裤，里面橙色内衬；脖子上挂多条金链；一只黑色机械手，手腕戴金色手镯。",
+      "cyberware": [
+        "neuroport",
+        "face_seams",
+        "single_cyberarm"
+      ],
+      "colors": [
+        "#4FB3E8",
+        "#F28C1E",
+        "#E2B23A",
+        "#C9E05A",
+        "#1E1F26"
+      ],
+      "silhouette": "宽大的浅蓝色连帽套装，金链，黑色机械手配金手镯。",
+      "prompt_en": "Meshuga from Cyberpunk Edgerunners 2, big man, yellow-green buzz cut and short beard, metal implants on the sides of his head and face, tape across his nose, oversized light blue hoodie and matching baggy pants with orange lining, several gold chains, one black cybernetic hand with gold bangles",
+      "prompt_zh": "赛博朋克边缘行者第二季的梅舒加，高大男人，黄绿色寸头和短胡子，头侧和脸上有金属义体件，鼻梁贴胶布，超大号浅蓝色连帽衫和同色宽松裤、橙色内衬，多条金链，一只黑色机械手戴金手镯",
+      "images": [
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Meshuga 01 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/9/9e/Meshuga_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261022045525",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/9/9e/Meshuga_01_CPEDGEII.png/revision/latest?cb=20261022045525",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Meshuga_01_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Meshuga 02 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/0/08/Meshuga_02_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261022045559",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/0/08/Meshuga_02_CPEDGEII.png/revision/latest?cb=20261022045559",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Meshuga_02_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图 · 团队",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Team King CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/9/9b/Team_King_CPEDGEII.png/revision/latest?cb=20261009162817",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/9/9b/Team_King_CPEDGEII.png/revision/latest?cb=20261009162817",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Team_King_CPEDGEII.png"
+        },
+        {
+          "type": "游戏手机联系人头像（CP2077）",
+          "style": "game",
+          "season": 2,
+          "file": "Meshuga Phone Avatar CP2077.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/5/56/Meshuga_Phone_Avatar_CP2077.png/revision/latest?cb=20261111075852",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/5/56/Meshuga_Phone_Avatar_CP2077.png/revision/latest?cb=20261111075852",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Meshuga_Phone_Avatar_CP2077.png"
+        }
+      ],
+      "prompts": {
+        "anime_s2": {
+          "label": "第二季动画",
+          "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, Meshuga from Cyberpunk Edgerunners 2, big man, yellow-green buzz cut and short beard, metal implants on the sides of his head and face, tape across his nose, oversized light blue hoodie and matching baggy pants with orange lining, several gold chains, one black cybernetic hand with gold bangles",
+          "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，赛博朋克边缘行者第二季的梅舒加，高大男人，黄绿色寸头和短胡子，头侧和脸上有金属义体件，鼻梁贴胶布，超大号浅蓝色连帽衫和同色宽松裤、橙色内衬，多条金链，一只黑色机械手戴金手镯",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Meshuga, big man, yellow-green buzz cut and short beard, metal implants on the sides of his head and face, tape across his nose, oversized light blue hoodie and matching baggy pants with orange lining, several gold chains, one black cybernetic hand with gold bangles, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，梅舒加，高大男人，黄绿色寸头和短胡子，头侧和脸上有金属义体件，鼻梁贴胶布，超大号浅蓝色连帽衫和同色宽松裤、橙色内衬，多条金链，一只黑色机械手戴金手镯，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      },
+      "note": "这个角色也出现在《赛博朋克 2077》游戏里（Wiki 记为 appears_games: 2077），目前只有游戏里的手机联系人头像，已单独标为游戏图。"
+    },
+    {
+      "id": "capri",
+      "season": 2,
+      "name_zh": "卡普里",
+      "name_en": "Capri",
+      "role": "人格构造体（AI），由 Kyoko 创造，存在于一块芯片里",
+      "class_style": "kitsch",
+      "body": "没有实体，只对当前宿主投影出来：纤细的黑色剪影女性身体，带绿色几何贴花。",
+      "face_hair": "夸张的洋红色碎片状大发型（Wiki 写的是粉色、发梢绿色）；蓝眼睛、白色瞳孔、黑色眼白外圈绿色，眼睛被框在绿色方框里。",
+      "outfit": "没有服装，身体本身就是黑色加洋红、绿色的平面图形；载体是一块红色芯片，上面有绿色电路纹。",
+      "cyberware": [
+        "ai_construct"
+      ],
+      "colors": [
+        "#E8213F",
+        "#FF3FA4",
+        "#111111",
+        "#2BE07A",
+        "#3D8BFF"
+      ],
+      "silhouette": "黑色剪影身体顶着一大团洋红色锯齿状头发，眼睛在绿色方框里。",
+      "prompt_en": "Capri from Cyberpunk Edgerunners 2, glitchy holographic AI construct, lean black silhouette feminine body with green geometric decals, huge jagged magenta-pink hair with green tips, blue eyes with white pupils and green-ringed black sclera boxed in green rectangles, flat graphic style",
+      "prompt_zh": "赛博朋克边缘行者第二季的卡普里，故障感全息 AI 人格构造体，纤细的黑色剪影女性身体带绿色几何贴花，巨大的洋红色锯齿状头发、发梢绿色，蓝眼睛白瞳孔、黑眼白外圈绿色、框在绿色方框里，平面图形风格",
+      "images": [
+        {
+          "type": "定妆图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Capri Infobox CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/1/14/Capri_Infobox_CPEDGEII.png/revision/latest?cb=20261020221606",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/1/14/Capri_Infobox_CPEDGEII.png/revision/latest?cb=20261020221606",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Capri_Infobox_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Capri 01 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/1/19/Capri_01_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261020221500",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/1/19/Capri_01_CPEDGEII.png/revision/latest?cb=20261020221500",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Capri_01_CPEDGEII.png"
+        },
+        {
+          "type": "剧中截图",
+          "style": "anime_s2",
+          "season": 2,
+          "file": "Capri 02 CPEDGEII.png",
+          "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/6/63/Capri_02_CPEDGEII.png/revision/latest/scale-to-width-down/900?cb=20261020200625",
+          "full": "https://static.wikia.nocookie.net/cyberpunk/images/6/63/Capri_02_CPEDGEII.png/revision/latest?cb=20261020200625",
+          "source_page": "https://cyberpunk.fandom.com/wiki/File:Capri_02_CPEDGEII.png"
+        }
+      ],
+      "prompts": {
+        "anime_s2": {
+          "label": "第二季动画",
+          "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, Capri from Cyberpunk Edgerunners 2, glitchy holographic AI construct, lean black silhouette feminine body with green geometric decals, huge jagged magenta-pink hair with green tips, blue eyes with white pupils and green-ringed black sclera boxed in green rectangles, flat graphic style",
+          "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，赛博朋克边缘行者第二季的卡普里，故障感全息 AI 人格构造体，纤细的黑色剪影女性身体带绿色几何贴花，巨大的洋红色锯齿状头发、发梢绿色，蓝眼睛白瞳孔、黑眼白外圈绿色、框在绿色方框里，平面图形风格",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
+        },
+        "game": {
+          "label": "游戏（CP2077）",
+          "en": "Cyberpunk 2077 game screenshot, photorealistic 3D render, physically based lighting, ray traced reflections, volumetric fog, PBR materials, high detail textures, realistic proportions, cinematic composition, Night City, Capri, glitchy holographic AI construct, lean black silhouette feminine body with green geometric decals, huge jagged magenta-pink hair with green tips, blue eyes with white pupils and green-ringed black sclera boxed in green rectangles, flat graphic style, realistic proportions, detailed skin pores, real fabric and leather textures, cyberware with visible screws, panel seams and brand markings, worn metal",
+          "zh": "赛博朋克 2077 游戏截图，写实 3D 渲染，物理正确的光照，光线追踪反射，体积雾，PBR 材质，高细节贴图，写实比例，电影感构图，夜之城，卡普里，故障感全息 AI 人格构造体，纤细的黑色剪影女性身体带绿色几何贴花，巨大的洋红色锯齿状头发、发梢绿色，蓝眼睛白瞳孔、黑眼白外圈绿色、框在绿色方框里，平面图形风格，写实比例，皮肤毛孔细节，真实的布料和皮革纹理，义体上有螺丝、面板接缝和品牌标志，金属磨损",
+          "negative_en": "anime, cel shading, flat colors, thick outlines, cartoon, 2D illustration, manga",
+          "negative_zh": "动漫，赛璐璐，平涂，粗描边，卡通，二维插画，漫画"
+        }
+      }
+    }
+  ],
+  "prompt_templates": {
+    "character_sheet": {
+      "en": "{style_keywords}, character reference sheet, full body front view, side view and back view, {character_prompt}, cyberware details: {cyberware_prompts}, plain flat background",
+      "zh": "{画风关键词}，角色三视图，全身正面、侧面、背面，{角色描述}，义体细节：{义体描述}，纯色平涂背景"
+    },
+    "promo_portrait": {
+      "en": "{style_keywords}, half-body portrait looking at viewer, flat solid yellow background, {character_prompt}",
+      "zh": "{画风关键词}，半身像看向镜头，纯黄色平涂背景，{角色描述}"
+    },
+    "action_shot": {
+      "en": "{style_keywords}, dynamic action shot, extreme foreshortening, speed lines, {character_prompt}, activating {hero_cyberware}, neon night city street, rain",
+      "zh": "{画风关键词}，动态动作镜头，极端透视，速度线，{角色描述}，正在启动{主义体}，霓虹夜之城街道，雨夜"
+    }
+  },
+  "oc_builder": {
+    "steps": [
+      "1 定身份：Solo / Netrunner / Techie / 车手 / Fixer / 公司人 / 游牧民",
+      "2 定阶层穿搭：从 class_styles 选一个，决定衣服材质和义体是外露还是隐藏",
+      "3 选一个主义体：它决定剪影（如超大义臂、护目镜、面罩、斯安威斯坦残影）",
+      "4 再选 2–3 个辅助义体：接缝线、义眼、神经端口、光纹身等",
+      "5 定撞色：一个主色加一个霓虹对比色，参考 characters[].colors",
+      "6 定改造程度：轻度只在关节和眼睛 → 中度有接缝线 → 重度体型改变 → 赛博精神病（眼睛失焦、义体失控、全身血红色调）",
+      "7 套 prompt_templates，先出三视图，确认后再出动作图"
+    ],
+    "silhouette_rule": "每个主要角色都要一眼认出：至少有一个头部特征（发型、面罩、护目镜）加一个身体特征（义臂、外套、义腿）。",
+    "color_rule": "每个角色限 2 个主色加 1 个霓虹点缀色；暗部用蓝紫色而不是灰色。"
+  },
+  "style_guide_s2": {
+    "name": "Cyberpunk: Edgerunners 2（Studio Trigger，2026，Netflix 10 集）",
+    "style": "anime_s2",
+    "credits": {
+      "animation": "TRIGGER",
+      "director": "五十岚海 Kai Ikarashi",
+      "character_design": "菅野一期 Ichigo Kanno",
+      "story": "Bartosz Sztybor",
+      "script": "大塚雅彦 Masahiko Ōtsuka",
+      "color_design": "柿田由纪子 Yukiko Kakita",
+      "background_directors": "Risa Fuuji、野村正信 Masanobu Nomura"
+    },
+    "vs_s1": "结论：和第一季同属 TRIGGER 的赛璐璐风格，但不统一，生成第二季角色要用这一套（权威版本是 style_guides.json 的 anime_s2，本节是角色侧的补充）。出处：io9/Gizmodo 访谈（2026-10-21）里 Sztybor 说第二季 \"shouldn't look like the first season\"，五十岚海把方向定为致敬 80、90 年代动画；io9 评价新角色造型更锋利、更夸张。以下逐项对比是我把两季同类镜头并排看得到的观察：①光照：第一季霓虹色光铺满画面，脸常被染成青绿或洋红；第二季偏自然光，肤色保持本色，强光、太阳眩光多。②线条：第一季粗、粗细变化大；第二季更细更干净。③阴影：日常镜头里，第二季阴影是硬边但面积小、沿五官走；戏剧性特写（如 D、Weak Kingsley）仍会用一大块硬边阴影压住半张脸。④脸型：出处——io9 说新角色造型更锋利、更夸张（如 Weak Kingsley、Talia）；观察——年轻角色（Roman、Yupi）脸更圆润、眼睛大而亮。两者并存，按角色选。⑤背景：第一季简化、霓虹抽象；第二季细节丰富、偏写实的绘制背景，带胶片颗粒和光晕。⑥官方设定图：第一季深灰底单视图；第二季黑到暗红渐变底、三视图。",
+    "palette": {
+      "signal_red": "#E8213F",
+      "sky_blue": "#4FB3E8",
+      "jacket_blue": "#2F5FD0",
+      "pink_hair": "#F2A3B8",
+      "teal_lining": "#2BC1B5",
+      "dusk_purple": "#3B2C5E"
+    },
+    "promo_art_convention": "倒计时宣传图（Wiki 标为 TRIGGER）：每天一个角色，底色各不相同（黄、蓝、洋红等），大号倒数数字，部分是原画师的草图风格。主视觉用红色撕裂几何块和破碎画面拼贴。",
+    "keywords_en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents",
+    "keywords_zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀",
+    "avoid": "见 negative_en / negative_zh（与 style_guides.json 的 anime_s2 一致）。",
+    "key_visuals": [
+      {
+        "type": "主视觉",
+        "style": "anime_s2",
+        "season": 2,
+        "file": "Cyberpunk Edgerunners 2 Key Visual 01 CPEDGEII.jpg",
+        "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/f/fc/Cyberpunk_Edgerunners_2_Key_Visual_01_CPEDGEII.jpg/revision/latest/scale-to-width-down/900?cb=20260629163538",
+        "full": "https://static.wikia.nocookie.net/cyberpunk/images/f/fc/Cyberpunk_Edgerunners_2_Key_Visual_01_CPEDGEII.jpg/revision/latest?cb=20260629163538",
+        "source_page": "https://cyberpunk.fandom.com/wiki/File:Cyberpunk_Edgerunners_2_Key_Visual_01_CPEDGEII.jpg"
+      },
+      {
+        "type": "主视觉",
+        "style": "anime_s2",
+        "season": 2,
+        "file": "Cyberpunk Edgerunners 2 Key Visual 02 CPEDGEII.jpg",
+        "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/c/ce/Cyberpunk_Edgerunners_2_Key_Visual_02_CPEDGEII.jpg/revision/latest/scale-to-width-down/900?cb=20260630013254",
+        "full": "https://static.wikia.nocookie.net/cyberpunk/images/c/ce/Cyberpunk_Edgerunners_2_Key_Visual_02_CPEDGEII.jpg/revision/latest?cb=20260630013254",
+        "source_page": "https://cyberpunk.fandom.com/wiki/File:Cyberpunk_Edgerunners_2_Key_Visual_02_CPEDGEII.jpg"
+      },
+      {
+        "type": "主视觉",
+        "style": "anime_s2",
+        "season": 2,
+        "file": "Cyberpunk Edgerunners 2 Key Visual 03 CPEDGEII.jpg",
+        "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/4/4a/Cyberpunk_Edgerunners_2_Key_Visual_03_CPEDGEII.jpg/revision/latest/scale-to-width-down/900?cb=20261015201951",
+        "full": "https://static.wikia.nocookie.net/cyberpunk/images/4/4a/Cyberpunk_Edgerunners_2_Key_Visual_03_CPEDGEII.jpg/revision/latest?cb=20261015201951",
+        "source_page": "https://cyberpunk.fandom.com/wiki/File:Cyberpunk_Edgerunners_2_Key_Visual_03_CPEDGEII.jpg"
+      },
+      {
+        "type": "主视觉",
+        "style": "anime_s2",
+        "season": 2,
+        "file": "Cyberpunk Edgerunners 2 Key Visual 04 CPEDGEII.jpg",
+        "thumb": "https://static.wikia.nocookie.net/cyberpunk/images/a/af/Cyberpunk_Edgerunners_2_Key_Visual_04_CPEDGEII.jpg/revision/latest/scale-to-width-down/900?cb=20261016121434",
+        "full": "https://static.wikia.nocookie.net/cyberpunk/images/a/af/Cyberpunk_Edgerunners_2_Key_Visual_04_CPEDGEII.jpg/revision/latest?cb=20261016121434",
+        "source_page": "https://cyberpunk.fandom.com/wiki/File:Cyberpunk_Edgerunners_2_Key_Visual_04_CPEDGEII.jpg"
+      }
+    ],
+    "unified_with_s1": false,
+    "line": "干净的细线，粗细变化比第一季小。",
+    "shading": "硬边赛璐璐阴影。日常镜头面积小、沿五官和衣褶走；戏剧性特写可以用一大块硬边阴影压住半张脸。肤色保持本色。",
+    "lighting": "强光、太阳眩光和光晕多；夜景霓虹只做局部点缀，不把整张脸染色。",
+    "id": "anime_s2",
+    "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+    "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色",
+    "note": "第二季动画风的关键词和负面词与 style_guides.json 的 anime_s2 一致（以那边为准）；本节保留角色侧的逐项对比结论。",
+    "face_note": {
+      "source": "io9/Gizmodo 访谈（2026-10-21）：新角色造型更锋利、更夸张。",
+      "observed": "年轻角色（Roman、Yupi）脸更圆润、眼睛大而亮。"
+    }
+  },
+  "prompt_sets_note": "characters[].prompts：第一季角色有 anime（第一季动画）和 game 两套，第二季角色有 anime_s2（第二季动画）和 game 两套；每套都是画风关键词 + 角色描述，并带负面词。游戏套的关键词和负面词取自 style_guides.json 的 game，写实细节按其 conversion.anime_to_game 补上。prompt_en / prompt_zh 是不带画风的纯角色描述。"
+}
