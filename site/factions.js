@@ -114,10 +114,15 @@
     return w;
   }
 
+  /* default prompt tab: game → game; anime + season 2 → anime_s2 when available; else anime */
+  function wantStyle(keys) {
+    var w = KB.state.style === 'game' ? 'game' : (KB.state.season === '2' && keys.indexOf('anime_s2') >= 0 ? 'anime_s2' : 'anime');
+    return keys.indexOf(w) >= 0 ? w : keys[0];
+  }
   /* 场景提示词：无负面词，沿用同风格人物提示词的负面词 */
   function scenePromptPanel(e) {
     var sp = e.scene_prompts || {}, pp = e.prompts || {};
-    var keys = ['game', 'anime'].filter(function (k) { return sp[k]; });
+    var keys = ['game', 'anime', 'anime_s2'].filter(function (k) { return sp[k]; });
     if (!keys.length) return h('p', { class: 'muted' }, t('prompts.none'));
     var items = keys.map(function (k) {
       return { key: k, label: t('style.' + k), render: function () {
@@ -126,17 +131,15 @@
           KB.pbox(t('fa.negEnReuse'), neg.negative_en, true), KB.pbox(t('fa.negZhReuse'), neg.negative_zh, true));
       } };
     });
-    var want = KB.state.style === 'game' ? 'game' : 'anime';
-    if (keys.indexOf(want) < 0) want = keys[0];
+    var want = wantStyle(keys);
     return KB.tabs(items, { active: want, label: t('prompts.aria') });
   }
   function personPromptPanel(e) {
     var pp = e.prompts || {};
-    var keys = ['game', 'anime'].filter(function (k) { return pp[k]; });
+    var keys = ['game', 'anime', 'anime_s2'].filter(function (k) { return pp[k]; });
     if (!keys.length) return h('p', { class: 'muted' }, t('prompts.none'));
     var items = keys.map(function (k) { return { key: k, label: t('style.' + k), render: function () { return KB.promptSet(pp[k]); } }; });
-    var want = KB.state.style === 'game' ? 'game' : 'anime';
-    if (keys.indexOf(want) < 0) want = keys[0];
+    var want = wantStyle(keys);
     return KB.tabs(items, { active: want, label: t('prompts.aria') });
   }
 

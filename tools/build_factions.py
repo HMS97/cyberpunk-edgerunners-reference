@@ -13,6 +13,8 @@ ck = json.loads((ROOT / "edgerunners_character_kb.json").read_text())
 sk = json.loads((ROOT / "edgerunners_scene_kb.json").read_text())
 icons = json.loads((ROOT / "cyberware_icons.json").read_text())
 CLASS_IDS = {c["id"] for c in ck["class_styles"]}
+sg = json.loads((ROOT / "style_guides.json").read_text())
+A1, A2 = sg["anime"], sg["anime_s2"]
 EVID = {"source": "source", "observed": "observed"}  # everything else → inferred
 
 # cyberware arm styles by brand prefix
@@ -38,6 +40,23 @@ for e in entries:
     e["location_ids"] = [l["id"] for l in sk["locations"] if mentions(json.dumps({k: l.get(k) for k in ("zh", "en", "story", "visual")}, ensure_ascii=False), e)]
     for i in e.get("images", []):
         assert i["style"] in ("game", "anime", "anime_s2"), (e["id"], i)
+    # Season 2 anime prompt set for groups that appear in Edgerunners 2 (same description, S2 style keywords)
+    in_s2 = "EDGEII" in e.get("appears_in", []) or any(i["style"] == "anime_s2" for i in e.get("images", []))
+    if in_s2:
+        for bucket in ("prompts", "scene_prompts"):
+            a = e.get(bucket, {}).get("anime")
+            if not a: continue
+            def swap(text, old, new):
+                return new + text[len(old):] if text.startswith(old) else new + ("，" if old.endswith("区") else ", ") + text
+            s2 = {"en": swap(a["en"], A1["keywords_en"], A2["keywords_en"]),
+                  "zh": swap(a["zh"], A1["keywords_zh"], A2["keywords_zh"])}
+            if bucket == "prompts":
+                s2.update(negative_en=A2["negative_en"], negative_zh=A2["negative_zh"])
+            e[bucket]["anime_s2"] = s2
+    # an anime appearance without any anime still: say so
+    if any(x in e.get("appears_in", []) for x in ("EDGE", "EDGEII")) and not any(i["style"] != "game" for i in e.get("images", [])):
+        note = "未找到动画剧照，动画提示词只来自风格关键词。"
+        if note not in e.setdefault("gaps", []): e["gaps"].append(note)
 
 KINDS = [{"id": "gang", "zh": "帮派", "en": "Gangs"}, {"id": "nomad", "zh": "游牧民", "en": "Nomads"},
          {"id": "corp", "zh": "公司", "en": "Corporations"}, {"id": "institution", "zh": "机构", "en": "Institutions"},
@@ -56,6 +75,7 @@ kb = {
 (ROOT / "factions_kb.json").write_text(json.dumps(kb, ensure_ascii=False, indent=2))
 
 EVZ = {"source": "出处", "observed": "观察", "inferred": "推断"}
+SL = {"game": "游戏", "anime": "第一季动画", "anime_s2": "第二季动画"}
 L = [f"# {kb['meta']['title']}\n", kb["meta"]["how_to_use"] + "\n", f"> {kb['meta']['evidence_note']}\n", f"> {kb['meta']['anime_note']}\n"]
 for k in KINDS:
     es = [e for e in entries if e["kind"] == k["id"]]
@@ -75,9 +95,9 @@ for k in KINDS:
         sc = e.get("scene", {})
         if sc: L.append(f"- 场景：{sc.get('zh','')}（光线：{sc.get('lighting','')}）")
         for s, p in e.get("prompts", {}).items():
-            L += [f"- **{'游戏' if s=='game' else '动画'}人物提示词**：`{p['en']}`", f"  - 负面词：`{p['negative_en']}`"]
+            L += [f"- **{SL[s]}人物提示词**：`{p['en']}`", f"  - 负面词：`{p['negative_en']}`"]
         for s, p in e.get("scene_prompts", {}).items():
-            L.append(f"- **{'游戏' if s=='game' else '动画'}场景提示词**：`{p['en']}`")
+            L.append(f"- **{SL[s]}场景提示词**：`{p['en']}`")
         L.append("- 参考图：" + "，".join(f"[{i['type']}]({i['full']})" for i in e.get("images", [])))
         if e.get("gaps"): L.append("- 资料缺口：" + "；".join(e["gaps"]))
         L.append("")

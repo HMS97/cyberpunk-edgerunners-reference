@@ -143,7 +143,8 @@
         "维基页面列为出现在边缘行者（EDGE, EDGEII），但未找到以该帮命名的 CPEDGE 剧照，因此动画参考图为空；动画提示词仅来自风格关键词。",
         "颜色中的灰色 #6B7075 为设计挑选，维基只写了红色义眼与黑色皮革。",
         "用户简报中提到的边缘行者具体情节（Rebecca 纹身、Maine 与 Lucy/David 对战）未在页面中出现，未采用。",
-        "没有找到官方标志的文字描述（徽记仅来自 2010 年代的文字段落）。"
+        "没有找到官方标志的文字描述（徽记仅来自 2010 年代的文字段落）。",
+        "未找到动画剧照，动画提示词只来自风格关键词。"
       ],
       "prompts": {
         "game": {
@@ -157,6 +158,12 @@
           "zh": "赛博朋克边缘行者动画截图，扳机社画风，二维赛璐璐动画，粗细变化描线，两阶赛璐璐平涂，硬边几何阴影，彩色暗部，强烈的单色霓虹调色，细节丰富的绘制背景，漩涡帮成员，重度义体化，发红光的护目式义眼，合成皮夹克和皮裤，内藏刀片，前臂爪刃义体，神秘学纹身，脏旧的工业风",
           "negative_en": "photorealistic, 3D render, PBR, ray tracing, realistic skin texture, video game screenshot, soft gradient shading",
           "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，写实皮肤纹理，游戏截图，柔和渐变阴影"
+        },
+        "anime_s2": {
+          "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, a Maelstrom gang member, heavily cybered, glowing red goggle-like cyberoptics, synthetic leather jacket and pants with concealed blades, forearm mantis-blade implants, occult tattoos, dirty industrial look",
+          "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，漩涡帮成员，重度义体化，发红光的护目式义眼，合成皮夹克和皮裤，内藏刀片，前臂爪刃义体，神秘学纹身，脏旧的工业风",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
         }
       },
       "scene_prompts": {
@@ -167,6 +174,10 @@
         "anime": {
           "en": "Cyberpunk Edgerunners anime screencap, Studio Trigger style, 2D cel animation, bold variable-weight lineart, flat two-tone cel shading, hard geometric shadows, colored shadows, strong monochrome neon color grading, detailed painted background, abandoned hotel club interior with graffiti, welding sparks in an industrial yard, red cyberoptic glow, smoke and oil stains, no people in focus, detailed painted background",
           "zh": "赛博朋克边缘行者动画截图，扳机社画风，二维赛璐璐动画，粗细变化描线，两阶赛璐璐平涂，硬边几何阴影，彩色暗部，强烈的单色霓虹调色，细节丰富的绘制背景，废弃酒店改成的夜店内部，墙上涂鸦，工业院子里的焊接火花，红色义眼的光，烟雾和油污，画面中人物不是重点，细节丰富的绘制背景"
+        },
+        "anime_s2": {
+          "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, abandoned hotel club interior with graffiti, welding sparks in an industrial yard, red cyberoptic glow, smoke and oil stains, no people in focus, detailed painted background",
+          "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，废弃酒店改成的夜店内部，墙上涂鸦，工业院子里的焊接火花，红色义眼的光，烟雾和油污，画面中人物不是重点，细节丰富的绘制背景"
         }
       },
       "cyberware_styles": [],
@@ -283,7 +294,8 @@
         "维基列为出现在边缘行者（EDGE），但未找到以该帮命名的 CPEDGE 剧照，动画参考图为空。",
         "页面未给出颜色，#D7263D、#0F1B2D、#F2E8CF 为依据发光纹身和霓虹氛围的设计挑选（evidence 标 design_pick）。",
         "头目（Boss）外观在维基中没有描述。",
-        "徽记只能参考 Logo 图，文字无描述。"
+        "徽记只能参考 Logo 图，文字无描述。",
+        "未找到动画剧照，动画提示词只来自风格关键词。"
       ],
       "prompts": {
         "game": {
@@ -852,7 +864,8 @@
       "gaps": [
         "维基列为出现在边缘行者（EDGE），但未找到以该帮命名的 CPEDGE 剧照，动画参考图为空。",
         "颜色为依据服装和场景的设计挑选（design_pick），维基没有给出颜色。",
-        "维基的 Notable 列表有多位 pack 首领，只记录了其中四位。"
+        "维基的 Notable 列表有多位 pack 首领，只记录了其中四位。",
+        "未找到动画剧照，动画提示词只来自风格关键词。"
       ],
       "prompts": {
         "game": {
@@ -1116,7 +1129,8 @@
         "维基列为出现在边缘行者（EDGE），但未找到以该帮命名的 CPEDGE 剧照，动画参考图为空。",
         "维基没有列出首领或成员，notable 为空。",
         "颜色为设计挑选（design_pick）；维基只描述运动套装与苏联风格。",
-        "页面标注了 Cleanup 提示（引用问题），这里只采用其描述性内容。"
+        "页面标注了 Cleanup 提示（引用问题），这里只采用其描述性内容。",
+        "未找到动画剧照，动画提示词只来自风格关键词。"
       ],
       "prompts": {
         "game": {
@@ -2569,6 +2583,12 @@
           "zh": "赛博朋克边缘行者动画截图，扳机社画风，二维赛璐璐动画，粗细变化描线，两阶赛璐璐平涂，硬边几何阴影，彩色暗部，强烈的单色霓虹调色，细节丰富的绘制背景，创伤小组急救员，蓝色制服配黄色动力装甲护具，军用战斗头盔，背后自给式医疗包，抬着担架，挎步枪",
           "negative_en": "photorealistic, 3D render, PBR, ray tracing, realistic skin texture, video game screenshot, soft gradient shading",
           "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，写实皮肤纹理，游戏截图，柔和渐变阴影"
+        },
+        "anime_s2": {
+          "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, Trauma Team paramedic in blue uniform with yellow power-armor support pads, mil-spec combat helmet, self-contained medipac on back, carrying a medical stretcher, rifle slung",
+          "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，创伤小组急救员，蓝色制服配黄色动力装甲护具，军用战斗头盔，背后自给式医疗包，抬着担架，挎步枪",
+          "negative_en": "photorealistic, 3D render, PBR, ray tracing, video game screenshot, Edgerunners season 1 style, thick variable-weight lineart, whole-frame single neon color wash on every scene",
+          "negative_zh": "写实照片，三维渲染，PBR 材质，光线追踪，游戏截图，边缘行者第一季画风，粗细变化很大的粗线条，每个场景都整画面单一霓虹色染色"
         }
       },
       "scene_prompts": {
@@ -2579,6 +2599,10 @@
         "anime": {
           "en": "Cyberpunk Edgerunners anime screencap, Studio Trigger style, 2D cel animation, bold variable-weight lineart, flat two-tone cel shading, hard geometric shadows, colored shadows, strong monochrome neon color grading, detailed painted background, Night City Medical Center in Watson, large hospital with emergency entrance, Trauma Team AV-4A aerodyne on the landing pad, blue and yellow vehicles, flashing emergency lights, rainy street, empty scene, no people in focus",
           "zh": "赛博朋克边缘行者动画截图，扳机社画风，二维赛璐璐动画，粗细变化描线，两阶赛璐璐平涂，硬边几何阴影，彩色暗部，强烈的单色霓虹调色，细节丰富的绘制背景，夜之城 Watson 的夜之城医疗中心，大型医院急诊入口，创伤小组 AV-4A 飞行器停在停机坪，蓝黄色车辆，闪烁警示灯，雨夜街道，无人物焦点"
+        },
+        "anime_s2": {
+          "en": "Cyberpunk Edgerunners 2 anime screencap, 1980s-1990s anime homage, retro cel look, clean thin lineart, flat cel shading with hard-edged shadows, natural skin tones, harsh glaring light, sun flare and bloom, fine film grain and floating dust specks, highly detailed realistic painted background, neon only as local accents, Night City Medical Center in Watson, large hospital with emergency entrance, Trauma Team AV-4A aerodyne on the landing pad, blue and yellow vehicles, flashing emergency lights, rainy street, empty scene, no people in focus",
+          "zh": "赛博朋克边缘行者第二季动画截图，致敬 80–90 年代老动画，复古赛璐璐质感，干净的细线，平涂加硬边阴影，自然肤色，刺眼的强光，太阳眩光和光晕，细胶片颗粒和漂浮的尘粒，细节丰富、偏写实的绘制背景，霓虹只做局部点缀，夜之城 Watson 的夜之城医疗中心，大型医院急诊入口，创伤小组 AV-4A 飞行器停在停机坪，蓝黄色车辆，闪烁警示灯，雨夜街道，无人物焦点"
         }
       },
       "images": [
@@ -2914,7 +2938,8 @@
       "gaps": [
         "颜色：维基未记载，hex 为占位。",
         "CPEDGE 截图：搜索未找到 MaxTac 专属的 CPEDGE 静帧，仅有 Edgerunners 中的剪辑链接，本条目未放入动画图。",
-        "成员外观细节（制服、徽章）维基未详述。"
+        "成员外观细节（制服、徽章）维基未详述。",
+        "未找到动画剧照，动画提示词只来自风格关键词。"
       ],
       "cyberware_styles": [],
       "district_ids": [],
@@ -4122,7 +4147,8 @@
       "gaps": [
         "wiki 没有列出媒体人角色名单，notable 留空",
         "服装、配色、场景为推断",
-        "class_style 为推断"
+        "class_style 为推断",
+        "未找到动画剧照，动画提示词只来自风格关键词。"
       ],
       "cyberware_styles": [],
       "district_ids": [],
@@ -4243,7 +4269,8 @@
       "gaps": [
         "wiki 未列出公司职员的角色名单，notable 留空",
         "配色、徽记、义体为推断",
-        "动画风（CPEDGE）截图未找到，仅提供游戏风图片"
+        "动画风（CPEDGE）截图未找到，仅提供游戏风图片",
+        "未找到动画剧照，动画提示词只来自风格关键词。"
       ],
       "cyberware_styles": [],
       "district_ids": [
@@ -5193,7 +5220,8 @@
       "gaps": [
         "wiki 中摇滚客的 2077 服装未描述，服装为推断",
         "没有找到摇滚客的动画风截图（CPEDGE 无命中），仅提供游戏风",
-        "Jack Maximum 仅由 Jenni Flexx 页的提及得知其身份"
+        "Jack Maximum 仅由 Jenni Flexx 页的提及得知其身份",
+        "未找到动画剧照，动画提示词只来自风格关键词。"
       ],
       "cyberware_styles": [],
       "district_ids": [],
