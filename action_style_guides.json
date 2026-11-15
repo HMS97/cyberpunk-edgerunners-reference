@@ -1,0 +1,1469 @@
+{
+  "meta": {
+    "title": "赛博朋克三套动作风格：游戏 / 边缘行者第一季 / 第二季",
+    "built": "2026-11-15",
+    "version": "1.0",
+    "rule": "动作风格和画风一一对应，不要混用：游戏风画面配游戏动作，第一季动画配第一季动作，第二季动画配第二季动作。生成时把 style_guides.json 里对应画风的 keywords 放在最前面，再接本文件的动作 keywords、角色描述、义体动作和地点。",
+    "evidence_note": "evidence=source 的条目有出处（src 对应 sources 里的 id）；observed 是从官方截图或 Sakugabooru 预览图归纳的。",
+    "limits": "本版没有下载或观看任何视频：Sakugabooru 预览图只是片段第一帧，节奏、帧数、残影换色顺序、镜头运动这类只能靠视频确认的点都列在各节的 gaps 里。",
+    "prompt_order": [
+      "画风 keywords（style_guides.json）",
+      "动作 keywords（本文件）",
+      "角色描述（edgerunners_character_kb.json）",
+      "义体动作 ability_moves[].motion/fx",
+      "地点描述（scene KB 的 body）",
+      "两份负面词合并"
+    ]
+  },
+  "sources": [
+    {
+      "id": "g_cp_u20",
+      "title": "CD PROJEKT RED 官方：Update 2.0 更新说明",
+      "url": "https://www.cyberpunk.net/en/news/49060/update-2-0",
+      "style": "game"
+    },
+    {
+      "id": "g_pcg_matyasik",
+      "title": "PC Gamer：2.0 重做受《暗黑破坏神2》技能树与《DOOM》战斗启发（Karol Matyasik 访谈）",
+      "url": "https://www.pcgamer.com/cyberpunk-2077s-20-overhaul-was-inspired-by-the-old-school-design-of-diablo-2s-skill-trees-and-dooms-relentless-combat/",
+      "style": "game"
+    },
+    {
+      "id": "g_gb_kapala",
+      "title": "GamingBolt：CDPR 仍在打磨近战，“并非 100% 满意”（Pawel Kapala 对 VG247 的发言）",
+      "url": "https://gamingbolt.com/cyberpunk-2077-cd-projekt-red-still-working-on-melee-combat-not-100-percent-happy",
+      "style": "game"
+    },
+    {
+      "id": "g_siggraph_bd",
+      "title": "SIGGRAPH 博客：Cyberspaces and Braindances in Cyberpunk 2077（CDPR 技术美术）",
+      "url": "https://blog.siggraph.org/2021/08/cyberspaces-and-braindances-in-cyberpunk-2077.html/",
+      "style": "game"
+    },
+    {
+      "id": "g_lv80_nc",
+      "title": "80.lv：夜之城几乎全部手工打造（CDPR 美术总监访谈）",
+      "url": "https://80.lv/articles/interview-how-cyberpunk-2077-s-night-city-was-built-almost-entirely-by-hand/",
+      "style": "game"
+    },
+    {
+      "id": "g_gdd_kasprowicz",
+      "title": "Game Developer：CDPR 如何融合过场与互动（GDC，Kajetan Kasprowicz）",
+      "url": "https://www.gamedeveloper.com/design/hidden-choices-small-ripples-how-cdpr-merged-cinematics-and-interactivity-in-cyberpunk-2077",
+      "style": "game"
+    },
+    {
+      "id": "g_cdpr_gdc25",
+      "title": "CDPR 官方博客：GDC 2025 参会回顾（含过场动画演讲标题）",
+      "url": "https://cdprojektred.com/en/blog/140/the-game-developers-conference-2025-experience",
+      "style": "game"
+    },
+    {
+      "id": "g_gdcv_ui",
+      "title": "GDC Vault：User Interface in Cyberpunk 2077（Arkadiusz Antonik）",
+      "url": "https://gdcvault.com/play/1034160/User-Interface-in-Cyberpunk-2077",
+      "style": "game"
+    },
+    {
+      "id": "g_vgc_fpp",
+      "title": "VGC：《赛博朋克 2077》将“100% 第一人称”，除部分过场外（CDPR 声明）",
+      "url": "https://www.videogameschronicle.com/news/cyberpunk-will-be-100-first-person-apart-from-some-cut-scenes/",
+      "style": "game"
+    },
+    {
+      "id": "g_wcc_mills",
+      "title": "Wccftech：CDPR 解释第一人称视角（Patrick Mills）",
+      "url": "https://wccftech.com/cyberpunk-2077-first-person/",
+      "style": "game"
+    },
+    {
+      "id": "g_shack_pl",
+      "title": "Shacknews：《往日之影》总监 Gabe Amatangelo 访谈（转述）",
+      "url": "https://www.shacknews.com/article/136031/cyberpunk-2077-phantom-liberty-interview-2023",
+      "style": "game"
+    },
+    {
+      "id": "g_gog_tost",
+      "title": "GOG：2.0 更新与关卡设计负责人 Miles Tost 访谈",
+      "url": "https://www.gog.com/news/update_20_to_cyberpunk_2077_is_here_check_out_an_interview_with_miles_tost_level_design_acting_lead_of_the_game",
+      "style": "game"
+    },
+    {
+      "id": "g_gp_pryimak",
+      "title": "GamePressure：玩法设计师 Yuliia Pryimak 访谈",
+      "url": "https://www.gamepressure.com/editorials/i-do-believe-that-cyberpunk-was-always-a-good-game-interview-with/zd706",
+      "style": "game"
+    },
+    {
+      "id": "g_wiki_sandevistan",
+      "title": "Cyberpunk Wiki：Sandevistan（社区维基，转录游戏内数据）",
+      "url": "https://cyberpunk.fandom.com/wiki/Sandevistan",
+      "style": "game"
+    },
+    {
+      "id": "g_wiki_apogee",
+      "title": "Cyberpunk Wiki：Militech \"Apogee\" Sandevistan",
+      "url": "https://cyberpunk.fandom.com/wiki/Militech_%22Apogee%22_Sandevistan",
+      "style": "game"
+    },
+    {
+      "id": "g_wiki_kerenzikov",
+      "title": "Cyberpunk Wiki：Kerenzikov",
+      "url": "https://cyberpunk.fandom.com/wiki/Kerenzikov",
+      "style": "game"
+    },
+    {
+      "id": "g_wiki_berserk",
+      "title": "Cyberpunk Wiki：Berserk",
+      "url": "https://cyberpunk.fandom.com/wiki/Berserk",
+      "style": "game"
+    },
+    {
+      "id": "g_wiki_mantis",
+      "title": "Cyberpunk Wiki：Mantis Blades",
+      "url": "https://cyberpunk.fandom.com/wiki/Mantis_Blades",
+      "style": "game"
+    },
+    {
+      "id": "g_wiki_gorilla",
+      "title": "Cyberpunk Wiki：Gorilla Arms",
+      "url": "https://cyberpunk.fandom.com/wiki/Gorilla_Arms",
+      "style": "game"
+    },
+    {
+      "id": "g_wiki_monowire",
+      "title": "Cyberpunk Wiki：Monowire",
+      "url": "https://cyberpunk.fandom.com/wiki/Monowire",
+      "style": "game"
+    },
+    {
+      "id": "g_wiki_pls",
+      "title": "Cyberpunk Wiki：Projectile Launch System",
+      "url": "https://cyberpunk.fandom.com/wiki/Projectile_Launch_System",
+      "style": "game"
+    },
+    {
+      "id": "g_wiki_jailbreak",
+      "title": "Cyberpunk Wiki：Jailbreak（遗物技能）",
+      "url": "https://cyberpunk.fandom.com/wiki/Jailbreak",
+      "style": "game"
+    },
+    {
+      "id": "g_wiki_dash",
+      "title": "Cyberpunk Wiki：Dash",
+      "url": "https://cyberpunk.fandom.com/wiki/Dash",
+      "style": "game"
+    },
+    {
+      "id": "g_wiki_airdash",
+      "title": "Cyberpunk Wiki：Air Dash",
+      "url": "https://cyberpunk.fandom.com/wiki/Air_Dash",
+      "style": "game"
+    },
+    {
+      "id": "g_wiki_tendons",
+      "title": "Cyberpunk Wiki：Reinforced Tendons（二段跳）",
+      "url": "https://cyberpunk.fandom.com/wiki/Reinforced_Tendons",
+      "style": "game"
+    },
+    {
+      "id": "g_steam_cp",
+      "title": "Steam：Cyberpunk 2077 官方商店页截图",
+      "url": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
+      "style": "game"
+    },
+    {
+      "id": "g_steam_pl",
+      "title": "Steam：Cyberpunk 2077: Phantom Liberty 官方商店页截图",
+      "url": "https://store.steampowered.com/app/2138330/Cyberpunk_2077_Phantom_Liberty/",
+      "style": "game"
+    },
+    {
+      "id": "g_gog_cp",
+      "title": "GOG：Cyberpunk 2077 官方商店页截图",
+      "url": "https://www.gog.com/en/game/cyberpunk_2077",
+      "style": "game"
+    },
+    {
+      "id": "a1_awn",
+      "title": "AWN：《赛博朋克：边缘行者》——向复古动画致敬（今石洋之、吉成曜访谈）",
+      "url": "https://www.awn.com/animationworld/cyberpunk-edgerunners-vibrant-ode-retro-anime",
+      "style": "anime"
+    },
+    {
+      "id": "a1_famitsu",
+      "title": "Fami 通：《赛博朋克：边缘行者》今石洋之 × CDPR 本间觉长篇访谈（约两万字，2022 年 10 月）",
+      "url": "https://www.famitsu.com/news/202210/15278443.html",
+      "style": "anime"
+    },
+    {
+      "id": "a1_slashfilm",
+      "title": "/Film：为什么《边缘行者》的导演喜欢迈克尔·贝",
+      "url": "https://www.slashfilm.com/1012757/why-the-director-of-cyberpunk-edgerunners-loves-michael-bay",
+      "style": "anime"
+    },
+    {
+      "id": "a1_ama",
+      "title": "Bubbleblabber：今石洋之 Reddit AMA 整理（2022 年 12 月）",
+      "url": "https://www.bubbleblabber.com/2022/12/reddit-ama-recap-hiroyuki-imaishi/",
+      "style": "anime"
+    },
+    {
+      "id": "a1_animetudes_imaishi",
+      "title": "Animetudes：画师专题——今石洋之",
+      "url": "https://animetudes.com/2021/07/11/artist-spotlight-hiroyuki-imaishi/",
+      "style": "anime"
+    },
+    {
+      "id": "a1_animetudes_neokanada",
+      "title": "Animetudes：GAINAX 与新金田派的复兴",
+      "url": "https://animetudes.com/2021/07/02/gainax-and-the-neo-kanada-renaissance/",
+      "style": "anime"
+    },
+    {
+      "id": "a1_cgworld_kanada",
+      "title": "CGWORLD 用语解说：金田透视",
+      "url": "https://cgworld.jp/terms/%E9%87%91%E7%94%B0%E3%83%91%E3%83%BC%E3%82%B9.html",
+      "style": "anime"
+    },
+    {
+      "id": "a1_sb_tag",
+      "title": "Sakugabooru：cyberpunk:_edgerunners 标签（第一季，共 132 帖，第二季另有独立标签）",
+      "url": "https://www.sakugabooru.com/post?tags=cyberpunk%3A_edgerunners",
+      "style": "anime"
+    },
+    {
+      "id": "a2_sb_s2",
+      "title": "Sakugabooru：cyberpunk:_edgerunners_season_2 标签（157 条）",
+      "url": "https://www.sakugabooru.com/post?tags=cyberpunk:_edgerunners_season_2",
+      "style": "anime_s2"
+    },
+    {
+      "id": "a2_sb_s1",
+      "title": "Sakugabooru：cyberpunk:_edgerunners 标签（第一季，130 条）",
+      "url": "https://www.sakugabooru.com/post?tags=cyberpunk:_edgerunners",
+      "style": "anime_s2"
+    },
+    {
+      "id": "a2_sb_320056",
+      "title": "Sakugabooru #320056：第二季原画（TRIGGER CHANNEL）",
+      "url": "https://www.sakugabooru.com/post/show/320056",
+      "style": "anime_s2"
+    },
+    {
+      "id": "a2_io9_interview",
+      "title": "io9/Gizmodo：'Cyberpunk: Edgerunners 2' Had One Rule: Don't Look Like Season One",
+      "url": "https://gizmodo.com/cyberpunk-edgerunners-2-anime-netflix-studio-trigger-cd-projekt-red-interview-2000828837",
+      "style": "anime_s2"
+    },
+    {
+      "id": "a2_io9_review",
+      "title": "io9/Gizmodo：Cyberpunk: Edgerunners 2 评论",
+      "url": "https://gizmodo.com/cyberpunk-edgerunners-2-review-anime-netflix-studio-trigger-cd-projekt-red-2000826996",
+      "style": "anime_s2"
+    },
+    {
+      "id": "a2_gamebusiness_jp",
+      "title": "GameBusiness.jp：五十岚海监督与大冢雅彦访谈（2026-10-28）",
+      "url": "https://www.gamebusiness.jp/article/2026/10/28/28478.html",
+      "style": "anime_s2"
+    },
+    {
+      "id": "a2_gamesgg",
+      "title": "GAMES.GG：Cyberpunk: Edgerunners Season 2 Director Reveals Its Radical New Look",
+      "url": "https://games.gg/news/cyberpunk-edgerunners-season-2-new-direction/",
+      "style": "anime_s2"
+    },
+    {
+      "id": "a2_animecorner_ep1",
+      "title": "Anime Corner：第二季第一集评论（Gamescom 2026）",
+      "url": "https://animecorner.me/cyberpunk-edgerunners-season-2-episode-1-review-first-impressions-from-gamescom-2026/",
+      "style": "anime_s2"
+    },
+    {
+      "id": "a2_animecorner_review",
+      "title": "Anime Corner：Cyberpunk Edgerunners 2 Review",
+      "url": "https://animecorner.me/cyberpunk-edgerunners-2-review-great-anime-impossible-expectations/",
+      "style": "anime_s2"
+    },
+    {
+      "id": "a2_otakukart_review",
+      "title": "OtakuKart：Cyberpunk: Edgerunners 2 Review",
+      "url": "https://otakukart.com/cyberpunk-edgerunners-2-review-a-stunning-return-to-night-city-with-a-powerful-story-of-friendship/",
+      "style": "anime_s2"
+    },
+    {
+      "id": "a2_newsone_review",
+      "title": "NewsOne：'Cyberpunk Edgerunners II': A Thrilling Return To Night City",
+      "url": "https://newsone.com/6875152/cyberpunk-edgerunners-ii-thrilling-return/",
+      "style": "anime_s2"
+    },
+    {
+      "id": "a2_kotaku_ep1",
+      "title": "Kotaku：第二季首集更像斯科塞斯而非迈克尔·贝",
+      "url": "https://kotaku.com/cyberpunk-edgerunners-returns-with-a-season-2-premier-thats-way-more-martin-scorsese-than-michael-bay-2000712575",
+      "style": "anime_s2"
+    },
+    {
+      "id": "a2_rpgsite_ep1",
+      "title": "RPG Site：Edgerunners 2 首集观感",
+      "url": "https://www.rpgsite.net/feature/20873-cyberpunk-edgerunners-2-may-be-another-hit-in-the-making-even-if-its-way-different-than-the-first-series",
+      "style": "anime_s2"
+    },
+    {
+      "id": "a2_btt_premiere",
+      "title": "Beneath the Tangles：Anime Expo 首映观感",
+      "url": "https://beneaththetangles.com/2026/07/05/first-impression-cyberpunk-edgerunners-2-anime-expo-world-premiere/",
+      "style": "anime_s2"
+    },
+    {
+      "id": "a2_reframe_review",
+      "title": "Reframe（Buttondown）：Cyberpunk Edgerunners 2 Review",
+      "url": "https://buttondown.com/reframe/archive/cyberpunk-edgerunners-2-review/",
+      "style": "anime_s2"
+    },
+    {
+      "id": "a2_awn_s1",
+      "title": "AWN：第一季今石洋之、吉成曜谈 Sandevistan 等（第一季资料）",
+      "url": "https://awn.com/animationworld/cyberpunk-edgerunners-vibrant-ode-retro-anime",
+      "style": "anime_s2"
+    }
+  ],
+  "game": {
+    "style": "game",
+    "name": "游戏动作风格 · Cyberpunk 2077",
+    "one_line": "以第一人称为核心的写实义体战斗：手臂与武器占据画面下缘，动作快、往前压、不留喘息（开发者以《DOOM》为参照），靠斯安威斯坦、Kerenzikov 这类时间减速制造节奏断点；驾驶和部分过场才切到第三人称，宣传图则偏电影感的低机位、霓虹和烟尘。",
+    "sections": [
+      {
+        "k": "视角原则",
+        "v": "游戏几乎全程第一人称，过场也以第一人称为主。CDPR 官方说法：只有在物品栏、驾驶、镜子和“极少数”过场里才能看到自己的角色。生成画面时，默认用玩家眼睛的高度去看，主角只露出手、前臂和武器。",
+        "evidence": "source",
+        "src": [
+          "g_vgc_fpp",
+          "g_wcc_mills"
+        ]
+      },
+      {
+        "k": "第一人称近战的设计难点",
+        "v": "资深玩法设计师 Pawel Kapala 承认，第一人称近战“从一开始就极难做”，团队来自第三人称游戏背景；发售前最不满意的是近战命中时的视觉反馈。所以近战画面的重点是命中瞬间的反馈，靠刀光、血雾、断肢和受击硬直来体现，不靠镜头绕着角色转。",
+        "evidence": "source",
+        "src": [
+          "g_gb_kapala"
+        ]
+      },
+      {
+        "k": "战斗节奏（2.0）",
+        "v": "2.0 的玩法设计负责人 Karol Matyasik 说，许多战斗技能以《DOOM》系列为灵感，追求“高速、不停歇、凶狠、往前推进”的战斗。技能树按“strong solo”“cyberninja”等角色幻想来设计，《边缘行者》也是直接灵感来源（例如 Edgerunner 技能）。动作提示词应强调持续压上，不要写成掩体后慢慢对射。",
+        "evidence": "source",
+        "src": [
+          "g_pcg_matyasik"
+        ]
+      },
+      {
+        "k": "动画制作方式",
+        "v": "官方资料能确认的只有这些：2.0 加入了近战处决（Finishers）；每把武器都有“首次装备”检视动画，2.0 起可以随时触发（PC 按住 B 或双击 Alt）；在义体医生处安装义体时，V 坐在手术椅上，不同义体播放不同动画。CDPR 2025 年在 GDC 讲过过场动画（Cinematic Animation，David Cordero Iglesias），但没找到公开的内容摘要。第一人称战斗动画是否用动作捕捉、用了多少，没有找到开发者原话。",
+        "evidence": "source",
+        "src": [
+          "g_cp_u20",
+          "g_cdpr_gdc25"
+        ]
+      },
+      {
+        "k": "过场与互动",
+        "v": "CDPR 过场设计师 Kajetan Kasprowicz（GDC）把过场定义为“可互动的剧情段落”，玩家不仅靠选项，也靠动作控制过场的走向；《往日之影》的 Gig 追求过场和正常游玩“难以区分”。环境美术总监 Kacper Niepokólczycki 说，改用第一人称后，脚本场景变成 360° 可环顾的空间，玩家可以转头看。因此过场镜头不切镜、不做景别跳切，主观视角和角色保持对话距离。",
+        "evidence": "source",
+        "src": [
+          "g_gdd_kasprowicz",
+          "g_lv80_nc"
+        ]
+      },
+      {
+        "k": "第三人称的使用场景",
+        "v": "2.0 允许在驾驶时用第一人称或第三人称战斗，开车时可以用手枪、冲锋枪，摩托上可以近战，还能射击或砍车胎；驾驶时第三人称镜头有三档距离。官方宣传图大量用第三人称低机位追车视角：车侧贴地、轮胎卷起白烟、枪口火焰和曳光弹横穿画面。",
+        "evidence": "source",
+        "src": [
+          "g_cp_u20",
+          "g_steam_cp",
+          "g_steam_pl"
+        ]
+      },
+      {
+        "k": "宣传图镜头语言",
+        "v": "从 Steam 和 GOG 官方截图归纳：多用贴地广角低机位（人物或车辆从下往上看，显得高大）；体积光、烟尘、逆光霓虹很多；动作定格在高潮瞬间，比如摩托侧滑射击、机甲爆炸后的烟尘、敌人跃起扑来；第一人称图中，枪械和手在画面下缘或右下，敌人直接冲向镜头。画面没有速度线和漫画式夸张透视。",
+        "evidence": "observed",
+        "src": []
+      },
+      {
+        "k": "受击与画面特效",
+        "v": "技术美术开发者（SIGGRAPH 博客）介绍过超梦、赛博空间的后处理：类似高强度 JPEG 压缩的模糊；“VR 头显里的 VHS”式模拟信号质感；全屏实时像素排序（“像素在融化”）；点云扫描。这些是官方确认的“数字故障”美术语汇。战斗受击时的屏幕震动、色差、故障的具体参数，没有找到开发者原话。",
+        "evidence": "source",
+        "src": [
+          "g_siggraph_bd"
+        ]
+      },
+      {
+        "k": "界面即玩法",
+        "v": "UI 开发者 Arkadiusz Antonik 在 GDC 讲过：UI 系统从零自建，城市里同时运行数千个独立 UI 实例，并且被用来实现独特的玩法功能（摘要原意：UI 不按常规用法，而是用于本作特有的玩法）。快速破解、扫描都直接叠在第一人称视野上。",
+        "evidence": "source",
+        "src": [
+          "g_gdcv_ui"
+        ]
+      },
+      {
+        "k": "姿势与体量",
+        "v": "官方截图中，第三人称姿势多为写实站姿：肩扛重武器、手插口袋背对镜头、靠着车。没有动漫式定格大见得（大姿势亮相），力量感来自机位和光线，不来自夸张的肢体。",
+        "evidence": "observed",
+        "src": []
+      },
+      {
+        "k": "机动性（2.0 / 往日之影）",
+        "v": "游戏总监 Gabe Amatangelo 提到空中冲刺、用武士刀格挡，把动作串成连招，“让你觉得自己是个赛博战士”，还能把人举起来砸向车辆（像《终结者》）。关卡设计负责人 Miles Tost 说，在狗镇“有合适的 build 时，跑酷穿行会顺畅、好玩得多”。",
+        "evidence": "source",
+        "src": [
+          "g_shack_pl",
+          "g_gog_tost"
+        ]
+      }
+    ],
+    "ability_moves": [
+      {
+        "id": "sandevistan",
+        "zh": "斯安威斯坦（Sandevistan）",
+        "motion": "主动开启后，除使用者外的时间都被大幅放慢（Militech“Apogee”型号减速 85%，最长 6 秒），使用者仍以正常速度移动，在慢动作的敌群中穿行并逐个击杀；击杀可以延长持续时间。2.0 起可以中途手动关闭，带斯安威斯坦的敌人也会开启它来反制玩家。",
+        "camera": "第一人称，镜头跟随快速转身和突进，敌人在画面里几乎静止。",
+        "timing": "开启有短暂延迟，之后约 6 秒“世界冻结、自己正常速度”，结束时回到正常速度；冷却 25–30 秒。",
+        "fx": "游戏内画面色调变化和残影的具体样式未找到出处，需视频确认。《边缘行者》中大卫的彩色残影是动画表现，不能直接当作游戏表现。",
+        "evidence": "source",
+        "src": [
+          "g_wiki_apogee",
+          "g_wiki_sandevistan",
+          "g_cp_u20"
+        ]
+      },
+      {
+        "id": "kerenzikov",
+        "zh": "Kerenzikov 反射加速",
+        "motion": "在滑铲、闪避或冲刺的过程中举枪瞄准，即触发短暂子弹时间（时间减慢约 60%，持续 2–3.75 秒），可以边滑行边射击。",
+        "camera": "第一人称，镜头随滑铲压低，接近贴地视角，同时开镜瞄准。",
+        "timing": "滑铲或冲刺的瞬间进入慢动作，开几枪后恢复；冷却 6–8 秒。",
+        "fx": "特效细节未找到出处，需视频确认。",
+        "evidence": "source",
+        "src": [
+          "g_wiki_kerenzikov",
+          "g_cp_u20"
+        ]
+      },
+      {
+        "id": "berserk",
+        "zh": "狂暴（Berserk）",
+        "motion": "主动开启的短时状态：大幅减伤，生命值不会掉到 25% 以下，并强化近战；结束后，每击杀一个敌人恢复 25% 生命。动作表现上适合用重武器或拳头正面硬冲。",
+        "camera": "第一人称近身。",
+        "timing": "短时爆发，开启后持续压上。",
+        "fx": "开启时的画面特效未找到出处，需视频确认。",
+        "evidence": "source",
+        "src": [
+          "g_wiki_berserk"
+        ]
+      },
+      {
+        "id": "mantis_blades",
+        "zh": "螳螂刀（Mantis Blades）",
+        "motion": "前臂弹出刀刃，快速连续斩击，可以对范围内的敌人跃起扑杀。点出遗物技能 Jailbreak 后，断肢或处决会给下一次跃击充能；蓄力跃击射程增加 30 米，并以大范围横斩同时命中周围敌人，击杀必定断肢。（遗物技能的原始构思之一，就是一个螳螂刀新技能。）",
+        "camera": "第一人称，镜头随跃起抛高再俯冲到敌人面前，刀刃从画面两侧挥过。",
+        "timing": "蓄力 → 远距离弹射 → 落地一刀，节奏为短停顿接爆发。",
+        "fx": "断肢、流血（10–20% 流血几率）；刀光和拖尾样式需视频确认。",
+        "evidence": "source",
+        "src": [
+          "g_wiki_mantis",
+          "g_wiki_jailbreak",
+          "g_gp_pryimak"
+        ]
+      },
+      {
+        "id": "gorilla_arms",
+        "zh": "大猩猩手臂（Gorilla Arms）",
+        "motion": "义体铁拳近战，造成物理伤害并可能流血。点出 Jailbreak 后，每次攻击都会为手臂充能，充满后一记重击造成巨额伤害并产生冲击波，震退周围敌人；用这一击击杀时，敌人尸体会被打飞。",
+        "camera": "第一人称，双拳在画面下缘，重拳向画面中心挥出。",
+        "timing": "连续轻击积攒能量，最后一记蓄满的重拳，节奏类似“攒力 → 爆发”。",
+        "fx": "冲击波、敌人被击飞（来自技能描述）；具体视觉需视频确认。",
+        "evidence": "source",
+        "src": [
+          "g_wiki_gorilla",
+          "g_wiki_jailbreak"
+        ]
+      },
+      {
+        "id": "monowire",
+        "zh": "单分子线（Monowire）",
+        "motion": "从手腕甩出的单分子线，像鞭子一样远距离同时抽打多个敌人，射程是手臂义体中最长的。点出 Jailbreak 后有专属的控制类快速破解槽：蓄满力后挥出，命中目标时免费上传快速破解（例如短路、瘫痪）。2.0 智力树里也有单分子线处决。",
+        "camera": "第一人称，线从手部向前甩出，大幅横扫。",
+        "timing": "蓄力后一记长鞭，命中多人。",
+        "fx": "线的发光颜色、抓取或拉拽表现未找到出处；“抓取”效果在资料中未出现，需视频确认。",
+        "evidence": "source",
+        "src": [
+          "g_wiki_monowire",
+          "g_wiki_jailbreak",
+          "g_pcg_matyasik"
+        ]
+      },
+      {
+        "id": "projectile_launch",
+        "zh": "射弹发射系统（Projectile Launch System）",
+        "motion": "前臂展开成发射器，瞄准后发射爆炸弹头。蓄力弹伤害 +30%、爆炸半径 +25%、断肢几率 +40%。点出 Jailbreak 后可以超载，一次齐射 5 发，覆盖更大范围。",
+        "camera": "第一人称，手臂抬起当枪用。",
+        "timing": "蓄力 → 发射 → 爆炸。",
+        "fx": "爆炸、断肢；具体视觉需视频确认。",
+        "evidence": "source",
+        "src": [
+          "g_wiki_pls",
+          "g_wiki_jailbreak"
+        ]
+      },
+      {
+        "id": "quickhack",
+        "zh": "快速破解 / 网络入侵",
+        "motion": "通过扫描锁定目标，从远处上传快速破解。2.0 可以对同一目标排队上传多个破解；内存不足时可以超频（Overclock），消耗生命值继续上传；能入侵 NCPD 警员和车辆。",
+        "camera": "第一人称，敌人身上叠加扫描框和上传进度。",
+        "timing": "上传有读条（2.0 调整了上传时间），属于“锁定 → 等待 → 生效”的延迟型节奏。",
+        "fx": "官方确认的数字美术语汇有像素排序（融化）、JPEG 压缩式模糊、VHS 质感和点云扫描（出自超梦和赛博空间的说明）。战斗中快速破解生效时的故障特效未见开发者原话，需视频确认。",
+        "evidence": "source",
+        "src": [
+          "g_cp_u20",
+          "g_siggraph_bd",
+          "g_gdcv_ui"
+        ]
+      },
+      {
+        "id": "dash_double_jump",
+        "zh": "冲刺 / 空中冲刺 / 二段跳 / 蓄力跳",
+        "motion": "2.0 的 Dash 技能取代原来的闪避，位移更远，并能自动翻越低矮障碍；Air Dash 允许空中冲刺。腿部义体“强化肌腱”提供二段跳，“强化脚踝”提供蓄力跳（按住起跳键蓄力，松开后跳得更远）。",
+        "camera": "第一人称，镜头随冲刺快速横移，跳跃时视野抬高。",
+        "timing": "短促的瞬间位移，可以与滑铲和 Kerenzikov 衔接。",
+        "fx": "冲刺时的画面特效需视频确认。",
+        "evidence": "source",
+        "src": [
+          "g_wiki_dash",
+          "g_wiki_airdash",
+          "g_wiki_tendons",
+          "g_shack_pl"
+        ]
+      },
+      {
+        "id": "gunplay",
+        "zh": "枪战（含车战）",
+        "motion": "第一人称射击，武器有首次装备或检视动画，2.0 起可随时触发。2.0 起射击和近战消耗耐力；可以在驾驶中用手枪和冲锋枪射击，射击车胎。官方截图中，第一人称时霰弹枪从右下角入画，敌人从正面扑来。",
+        "camera": "第一人称持枪；车战可以切第三人称追车镜头。",
+        "timing": "连续压上，配合滑铲和冲刺。",
+        "fx": "枪口火焰、曳光弹、白烟（宣传图可见）。",
+        "evidence": "source",
+        "src": [
+          "g_cp_u20",
+          "g_gog_cp"
+        ]
+      },
+      {
+        "id": "finisher",
+        "zh": "处决（Finishers）",
+        "motion": "2.0 新增近战武器处决；也有螳螂刀、单分子线等义体处决。处决可以触发其他能力，例如螳螂刀的跃击充能。另有举起敌人扔进人群或砸向车辆的动作。",
+        "camera": "第一人称近距离，处决动画的具体镜头运动未找到资料。",
+        "timing": "处决是战斗中的短暂停顿点，之后接下一段爆发。",
+        "fx": "断肢、流血；具体动画需视频确认。",
+        "evidence": "source",
+        "src": [
+          "g_cp_u20",
+          "g_wiki_jailbreak",
+          "g_gp_pryimak",
+          "g_shack_pl"
+        ]
+      }
+    ],
+    "keywords_en": "first-person POV, cybernetic forearm and weapon in lower frame, gritty realistic cyberpunk combat, visceral push-forward aggression, Doom-like relentless pace, time-dilation slow motion with player at full speed, mantis blade leap strike, chrome gorilla-arm charged punch with shockwave, glowing monowire whip lash, arm-mounted projectile launcher, slide into bullet-time aim, air dash, double jump, holographic scan overlay, digital glitch pixel-sorting, VHS-in-VR-headset texture, neon rim light, volumetric smoke, muzzle flash and tracer rounds, low-angle wide lens chase shot, Night City streets",
+    "keywords_zh": "第一人称主观视角、画面下缘的义体前臂与武器、写实粗粝的赛博朋克战斗、凶狠向前压、DOOM 式不停歇节奏、时间减速而自身正常速度、螳螂刀跃击、铬合金大猩猩手臂蓄力重拳加冲击波、发光单分子线鞭打、手臂射弹发射器、滑铲接子弹时间瞄准、空中冲刺、二段跳、全息扫描叠层、数字故障与像素排序、“VR 头显里的 VHS”质感、霓虹轮廓光、体积烟雾、枪口火焰与曳光弹、低机位广角追车镜头、夜之城街头",
+    "negative_en": "anime speed lines, manga-style exaggerated foreshortening, cel shading, cartoon impact frames, chibi proportions, rainbow anime afterimages copied from Edgerunners, over-the-top superhero poses, floating third-person orbit camera during melee, clean sterile sci-fi, fantasy magic particles, slapstick ragdoll, low-detail plastic look",
+    "negative_zh": "动漫速度线、漫画式夸张透视、赛璐璐着色、卡通冲击帧、Q 版比例、照搬《边缘行者》的彩虹残影、夸张的超级英雄亮相姿势、近战时绕角色旋转的第三人称镜头、干净无菌的科幻风、奇幻魔法粒子、闹剧式布娃娃物理、低细节塑料感",
+    "video_prompt": {
+      "en": "First-person POV, gritty photoreal Cyberpunk 2077 style. {character}'s chrome cybernetic forearms fill the lower frame in {location}, neon signs bleeding through volumetric smoke. {character} triggers {ability}: the world drops into heavy time dilation while the viewer keeps moving at full speed, dashing forward and closing distance on frozen enemies; one decisive strike lands with sparks, blood mist and dismemberment, then time snaps back to normal speed. Handheld camera inertia, short stagger shake on impact, subtle digital glitch and holographic scan overlay at the edges, muzzle flashes and tracer rounds in the background. Relentless push-forward pacing, realistic body mechanics, no speed lines, no anime foreshortening.",
+      "zh": "第一人称主观视角，写实粗粝的《赛博朋克 2077》风格。{character}的铬合金义体前臂占据画面下缘，场景是{location}，霓虹招牌的光透过体积烟雾渗出。{character}发动{ability}：世界进入强烈的时间减速，镜头仍以正常速度向前冲刺，逼近几乎静止的敌人；决定性的一击落下，迸出火花、血雾并造成断肢，随后时间猛然恢复正常。镜头带手持惯性，命中时短促硬直震动，画面边缘有轻微数字故障和全息扫描叠层，背景是枪口火焰和曳光弹。节奏持续向前压，人体动作写实，不要速度线，不要动漫式夸张透视。"
+    },
+    "refs": [
+      {
+        "label": "第一人称战斗官方截图：右下角霰弹枪入画，持刀莫霍克敌人挥砍，背景有敌人跃起扑来",
+        "page": "https://www.gog.com/en/game/cyberpunk_2077",
+        "thumb": "https://images-2.gog-statics.com/7dace9375fc7eab73ef17a5eb736ac8ee1986099580cc8335c863be316e5e079_product_card_v2_mobile_slider_639.png",
+        "thumb_local": "assets/action/game-14619ef102.png"
+      },
+      {
+        "label": "第一人称对峙：V 的手持枪抵住漩涡帮成员，周围敌人的红色义眼发光",
+        "page": "https://www.gog.com/en/game/cyberpunk_2077",
+        "thumb": "https://images-2.gog-statics.com/2c5fa4d21cda2b3842b781b6c1a5d7499349d7ca9d0ad739732652ae67f2c953_product_card_v2_mobile_slider_639.png",
+        "thumb_local": "assets/action/game-69ef80a164.png"
+      },
+      {
+        "label": "第一人称过场：画面下缘能看到 V 自己的腿（超梦椅），朱迪俯身看向镜头",
+        "page": "https://www.gog.com/en/game/cyberpunk_2077",
+        "thumb": "https://images-2.gog-statics.com/e79473d3e4579430b5ce2c092868cf1bfec46ffb77f6468cd382541571e8c058_product_card_v2_mobile_slider_639.png",
+        "thumb_local": "assets/action/game-65a166230e.png"
+      },
+      {
+        "label": "车战第三人称：开着鸥翼门的车中枪手与 NCPD 警员对射，白烟加曳光弹",
+        "page": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
+        "thumb": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/ss_7924f64b6e5d586a80418c9896a1c92881a7905b.600x338.jpg",
+        "thumb_local": "assets/action/game-7fcb10a355.jpg"
+      },
+      {
+        "label": "往日之影：低机位追拍摩托上的 V 回身射击，背后是喷烟的机甲",
+        "page": "https://store.steampowered.com/app/2138330/Cyberpunk_2077_Phantom_Liberty/",
+        "thumb": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2138330/ss_7bbae8adf0c05471dfea2ebb1dc2611ee0f72835.600x338.jpg",
+        "thumb_local": "assets/action/game-5d7a02dce5.jpg"
+      },
+      {
+        "label": "往日之影：狗镇日光下摩托车战，与装甲车对射",
+        "page": "https://store.steampowered.com/app/2138330/Cyberpunk_2077_Phantom_Liberty/",
+        "thumb": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2138330/ss_36dd158f7fb3d6a0ac30ad67dae3ce6cddfe1ac9.600x338.jpg",
+        "thumb_local": "assets/action/game-0839735413.jpg"
+      },
+      {
+        "label": "追车撞击：车辆翻滚、碎片和烟尘定格",
+        "page": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
+        "thumb": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/ss_4eb068b1cf52c91b57157b84bed18a186ed7714b.600x338.jpg",
+        "thumb_local": "assets/action/game-6696e4e7dc.jpg"
+      },
+      {
+        "label": "第三人称写实站姿：V 肩扛重武器，霓虹逆光",
+        "page": "https://store.steampowered.com/app/1091500/Cyberpunk_2077/",
+        "thumb": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/ss_8640d9db74f7cad714f6ecfb0e1aceaa3f887e58.600x338.jpg",
+        "thumb_local": "assets/action/game-e66b971674.jpg"
+      }
+    ],
+    "gaps": [
+      "斯安威斯坦开启时游戏内的画面色调、残影和音效：没有找到开发者描述，需看实机视频确认；不能把《边缘行者》的彩虹残影直接当作游戏表现。",
+      "受击反馈（屏幕震动幅度、色差、故障效果、低血量时的画面变化）：没有开发者原话，需视频确认。",
+      "快速破解上传与生效时的故障特效、受到敌方网络入侵时的画面干扰：只有超梦和赛博空间的技术美术资料，战斗内表现需视频确认。",
+      "第一人称战斗动画是否用动作捕捉、用了多少，以及手臂和武器视角模型的制作方法：没有找到公开的 GDC 或访谈内容；GDC 2025 过场动画演讲只有标题，没有摘要。",
+      "近战处决、螳螂刀跃击、大猩猩手臂冲击波、单分子线的具体动画镜头（是否短暂接管镜头、有无慢镜）：只有技能文字描述，需视频确认。",
+      "单分子线的“抓取或拉拽”效果在资料中没有出现，可能不存在。",
+      "狂暴、二段跳和空中冲刺的视觉特效（屏幕泛红、残影、气流等）：未找到资料。",
+      "官方宣传片（2018 演示、E3 2019 预告、《往日之影》预告）的具体运镜：本次没有看视频，只从静态截图归纳了低机位、广角和烟尘逆光。",
+      "拍照模式的镜头参数（2.2 重做后的功能细节）：只有第三方报道，未纳入 sections。"
+    ],
+    "id": "game"
+  },
+  "anime": {
+    "style": "anime",
+    "name": "动画动作风格 · 边缘行者第一季",
+    "one_line": "金田系夸张透视与定格大姿势，配上逐帧摊开、每帧换色的子弹时间；动作里有大量 smear 形变和红黑冲击帧，血浆像泼出去的颜料，爆炸烟雾是有棱角的几何块面，霓虹逆光勾出轮廓。",
+    "sections": [
+      {
+        "k": "节奏 · 斯安威斯坦式慢动作",
+        "v": "做慢动作时不靠补间，而是把一个本来很快的动作拆开，原本会一闪而过的各个姿势全部留在画面上，像残影一样平铺，并逐张描绘。今石说：普通作画三张能画完的动作，做成慢动作要画到四十张左右；把画面停住、把姿势排开，靠画面信息量撑出慢放的感觉（他自己称之为“唬人”的手法）。",
+        "evidence": "source",
+        "src": [
+          "a1_awn",
+          "a1_famitsu"
+        ]
+      },
+      {
+        "k": "色彩 · 每帧换色",
+        "v": "斯安威斯坦残影的每一层都换一种色调，按时间先后逐张偏色，形成彩虹或红青交替的拖尾。今石认为“每一张细细换色”是现在才做得到的表现；吉成曜说这是老动画里就有的手法，这次重新拿出来用。",
+        "evidence": "source",
+        "src": [
+          "a1_awn",
+          "a1_famitsu"
+        ]
+      },
+      {
+        "k": "姿势 · 定格大姿势（金田系 / 今石 pose）",
+        "v": "动作不追求连续流畅，而是在几个夸张的关键姿势之间急切换，切到大姿势后停住十几帧，和极短的快速动作形成反差。四肢大幅伸展或收缩，剪影明确，像海报一样定格。",
+        "evidence": "source",
+        "src": [
+          "a1_animetudes_imaishi",
+          "a1_animetudes_neokanada",
+          "a1_cgworld_kanada"
+        ]
+      },
+      {
+        "k": "镜头 · 夸张透视与纵深运动",
+        "v": "用“金田透视”（又叫“假透视”“动画透视”）：拳头、枪口、脚掌朝镜头冲出，近大远小被夸大到失真。镜头运动很多，常做快速拉远再猛推回，角色沿纵深方向冲进冲出画面。第一季的背景以游戏截图为参考，所以整体是写实的城市空间，前景人物则按动画方式变形。",
+        "evidence": "source",
+        "src": [
+          "a1_cgworld_kanada",
+          "a1_animetudes_neokanada",
+          "a1_slashfilm",
+          "a1_famitsu"
+        ]
+      },
+      {
+        "k": "形变与冲击帧",
+        "v": "快速动作用拉长的 smear 和沿轮廓的拖影表现，物体会整体变形。冲击帧是红黑、红青等强对比色块做成的抽象构图，或者是大面积黑底加红色剪影。Sakugabooru 上第一季大部分动作片段都带 smears 标签，第 1、3、4、6、9、10 集都有 impact_frames 标签。",
+        "evidence": "source",
+        "src": [
+          "a1_animetudes_neokanada",
+          "a1_sb_tag"
+        ]
+      },
+      {
+        "k": "特效 · 几何化爆炸与烟雾",
+        "v": "延续吉成曜式的爆炸：烟雾外轮廓有棱有角、不规则，内部阴影却是圆的，用来表现体积。火焰和光效用三角形、尖刺状色块组成。第 10 集导弹走廊那段（千田孝文原画）的评论直接说“吉成式效果太明显”。预览图中还能看到十字形的金田光芒和大面积镜头光晕（第 3 集带 kanada_light_flare 标签）。",
+        "evidence": "source",
+        "src": [
+          "a1_animetudes_neokanada",
+          "a1_animetudes_imaishi",
+          "a1_sb_tag"
+        ]
+      },
+      {
+        "k": "血液与暴力",
+        "v": "血不按写实方式画，而是像泼溅的颜料：成片的红色、放射状飞溅，常放在纯黑底上。今石明确表示不想因为审查就把表现藏起来，残酷和悲伤的场面要原样摆出来。从预览图看，第 6 集爆头镜头就是黑底、红色放射状血花、白色碎骨块。",
+        "evidence": "source",
+        "src": [
+          "a1_animetudes_imaishi",
+          "a1_famitsu"
+        ]
+      },
+      {
+        "k": "光影 · 霓虹逆光与单色压暗",
+        "v": "从预览图归纳：动作场面常把整个画面压成一种主色（暗青绿、深蓝、黑），再用高饱和的品红或红色勾出角色轮廓（rim light）。曼恩发疯和亚当·重锤的镜头里，角色几乎只剩黑色剪影加红色描边。今石说轮廓光“没有规则，按场面情绪来配”。",
+        "evidence": "observed",
+        "src": [
+          "a1_ama"
+        ]
+      },
+      {
+        "k": "节奏 · 一拍二、一拍三混用，急起急停",
+        "v": "金田系一贯的节奏是缓入缓出对比极强：动作要么停在姿势上，要么几帧之内完成；特效循环故意抽帧，做成不规则的节奏。第一季动作戏的原画阵容（菅野一期、佐藤利幸、五十岚海、金子雄人等）大多出自这一谱系。",
+        "evidence": "source",
+        "src": [
+          "a1_animetudes_neokanada",
+          "a1_sb_tag"
+        ]
+      },
+      {
+        "k": "整体取向 · 过量与速度优先",
+        "v": "今石喜欢迈克尔·贝式的“规模与速度”，原话是追求“有点歪、有点过头”的东西。动作重速度和数量，不重写实的重量和精确的招式设计。他也承认动画不可能比游戏画面更写实，所以要用动画特有的夸张来打。",
+        "evidence": "source",
+        "src": [
+          "a1_slashfilm",
+          "a1_famitsu"
+        ]
+      }
+    ],
+    "ability_moves": [
+      {
+        "id": "sandevistan",
+        "zh": "斯安威斯坦（加速义体）",
+        "motion": "启动瞬间脊椎义体发光，角色停在蓄力姿势上，随后世界几乎停止。角色在静止的子弹、碎片和人群间穿行，每一步都留下一个完整的身体残影，残影沿路径排成一串；最后一下击打落到敌人身上时，时间恢复，所有冲击同时爆发。",
+        "camera": "多为横向长距离平移或环绕，把整串残影一次收进画面；收尾切到敌人被打飞的特写，或者大透视冲向镜头的拳头。",
+        "timing": "加速段把本来三张的动作摊成几十张，每张都停留；结束时一两帧内完成恢复和冲击，形成从极慢到极快的落差。",
+        "fx": "残影逐层换色（红、品红、青、绿等彩虹偏色），静止在空中的子弹、玻璃渣和血滴，脊椎发光，恢复时出现冲击帧。",
+        "evidence": "source",
+        "src": [
+          "a1_awn",
+          "a1_famitsu"
+        ]
+      },
+      {
+        "id": "monowire",
+        "zh": "单分子线（露西）",
+        "motion": "线从手腕义体弹出，在空中甩成弧线和折线，像鞭子一样横扫或缠绕目标；切割完成后有短暂停顿，目标才分成两段。",
+        "camera": "常以手部或线头的大透视近景开场，再接全景显示线的轨迹。",
+        "timing": "甩出一两帧完成，切割后停留几帧再让目标分离（推测，未逐帧核实）。",
+        "fx": "发光的细线、高光拖尾和切口的血线。",
+        "evidence": "observed",
+        "src": []
+      },
+      {
+        "id": "gorilla_arms",
+        "zh": "大猩猩手臂 / 重击",
+        "motion": "大幅后拉蓄力，拳头被放大到占满半个画面，打中后对象和地面一起碎裂、凹陷，身体被打飞很远。",
+        "camera": "拳头朝镜头的金田透视；打中瞬间切到冲击帧，然后拉远看飞出去的距离。",
+        "timing": "蓄力姿势停留，出拳一两帧，命中后停顿再爆开碎片。",
+        "fx": "冲击帧（红黑反色）、放射状速度线、有棱角的碎块和烟尘。",
+        "evidence": "source",
+        "src": [
+          "a1_cgworld_kanada",
+          "a1_animetudes_neokanada",
+          "a1_sb_tag"
+        ]
+      },
+      {
+        "id": "mantis_blades",
+        "zh": "螳螂刀",
+        "motion": "前臂外壳弹开，刀刃翻出，接着冲刺、横斩或从上劈下；斩击轨迹画成一整片弧形的 smear。",
+        "camera": "低角度仰拍刀刃展开；斩击时镜头跟着轨迹扫过。",
+        "timing": "展开那一下是机械式的快速咔嗒动作；斩击是一张 smear 加一张收刀的定格姿势。",
+        "fx": "刀刃高光、弧形拖影、喷溅成片的血。",
+        "evidence": "observed",
+        "src": []
+      },
+      {
+        "id": "netrunning",
+        "zh": "网络潜行 / 骇入",
+        "motion": "角色本身几乎不动，靠画面上的界面、数据层和人物特写来叙事；被骇入的目标身体会痉挛、冒烟，最后倒下。",
+        "camera": "眼睛或面部大特写，叠加半透明的红色 HUD 面板（第 3 集预览图中有通话界面叠在角色脸上）。",
+        "timing": "节奏偏慢，以切镜和界面变化推进，到骇入成功时才有爆发。",
+        "fx": "全息界面、扫描线、类比视频式的噪点和色散。今石说深潜场面最难，因为现有工具做不出来，只好参照老式模拟影像的表现，走动画里偏古典的路子。",
+        "evidence": "source",
+        "src": [
+          "a1_awn",
+          "a1_famitsu"
+        ]
+      },
+      {
+        "id": "berserk",
+        "zh": "狂暴 / 人体极限冲刺",
+        "motion": "全身前倾，以爆发式的冲刺撞穿障碍；四肢伸展的幅度远超常人，落地时把地面踩碎。",
+        "camera": "纵深方向冲向镜头，或背后跟拍再猛然拉远。",
+        "timing": "缓入缓出对比极强：蓄势停住，冲出时几帧就完成。",
+        "fx": "速度线、尘土、地面裂纹、冲击帧。",
+        "evidence": "source",
+        "src": [
+          "a1_animetudes_neokanada",
+          "a1_slashfilm"
+        ]
+      },
+      {
+        "id": "projectile_launch",
+        "zh": "导弹 / 弹射武器齐射",
+        "motion": "发射口打开，导弹带着弯曲的尾烟成群飞出，在走廊或空中交错，命中后连锁爆炸。",
+        "camera": "从发射端追拍尾烟，或者从命中点反打；爆炸时拉远，让整个画面被烟填满。",
+        "timing": "尾烟逐帧画出，爆炸的循环故意不规则。",
+        "fx": "吉成式有棱角的烟团和带圆形阴影的体积感，三角形火焰，强烈的白光闪光（第 10 集导弹走廊，千田孝文原画）。",
+        "evidence": "source",
+        "src": [
+          "a1_animetudes_neokanada",
+          "a1_sb_tag"
+        ]
+      },
+      {
+        "id": "cyberpsychosis",
+        "zh": "赛博精神病发作（曼恩等）",
+        "motion": "角色面部扭曲、狞笑，义体失控，对周围的人做出一连串粗暴杀戮；动作不连贯，姿势之间跳切，夹杂幻觉镜头。",
+        "camera": "画面整体压暗，人物只剩剪影和红色描边；从低角度和近距离逼近，混入不稳定的构图。",
+        "timing": "停住的狞笑特写加一两帧的暴力动作，再夹冲击帧和幻觉闪回。",
+        "fx": "红黑冲击帧、泼溅颜料式的血花、黑底上的红色放射状飞溅。从第 6 集预览图看，曼恩在昏暗中只有红色轮廓光（菅野一期原画，五十岚海作监）。",
+        "evidence": "observed",
+        "src": [
+          "a1_sb_tag",
+          "a1_animetudes_imaishi"
+        ]
+      },
+      {
+        "id": "gunfight",
+        "zh": "枪战（丽贝卡等）",
+        "motion": "身形娇小的角色扛着远大于自己的武器，后坐力把整个人往后推，然后又摆出夸张的射击定格姿势；双持乱射时子弹和弹壳满天飞。",
+        "camera": "枪口朝镜头的大透视，或者仰拍人物和重武器的剪影；被打中时切成特写。",
+        "timing": "开火时射击的帧和后坐力的帧快速交替，打中后定格。",
+        "fx": "白色闪光和十字形枪火、弹道光束（第 9 集预览图中是青白色的横向弹道）、飞散的弹壳和火花。今石说他们有意拉开角色之间的身高和体格差距。",
+        "evidence": "observed",
+        "src": [
+          "a1_famitsu",
+          "a1_sb_tag"
+        ]
+      },
+      {
+        "id": "vehicle_chase",
+        "zh": "载具追逐 / 撞车",
+        "motion": "车辆急转、漂移、撞击，车体变形翻滚，碎片和玻璃四散；第 1 集有挡风玻璃被打碎到刹车翻车的段落。",
+        "camera": "车内主观视角和外部追拍交替；三维车辆模型配合手绘特效，背景动画跟着镜头走。",
+        "timing": "撞击前有急停，撞击时一两帧冲击，之后翻滚的过程稍拉长。",
+        "fx": "火花、碎玻璃、有棱角的烟和爆炸。Sakugabooru 上第 1、3、10 集的这类片段带 vehicle、cgi、background_animation 标签。",
+        "evidence": "observed",
+        "src": [
+          "a1_sb_tag"
+        ]
+      }
+    ],
+    "keywords_en": "Studio Trigger Imaishi action, Kanada-style exaggerated perspective, foreshortened fist toward camera, held dynamic key poses, snappy timing with extreme slow-in slow-out, smear frames, outline smears, red-black impact frames, abstract stark-color impact compositions, sandevistan bullet-time afterimages, each afterimage tinted a different color, rainbow chromatic trail, frozen bullets and glass shards, angular geometric smoke with round shadows, triangular flame shapes, Yoshinari-style explosions, cross-shaped Kanada light flare, paint-splatter blood on black background, neon magenta rim light, monochrome teal or dark blue dominant palette, cel-shaded 2D with flat colors and hard shadows, speed lines, screen-shaking impact, Night City neon",
+    "keywords_zh": "扳机社 今石洋之式动作, 金田透视 夸张透视, 拳头冲向镜头, 定格大姿势, 急起急停的节奏, smear 形变, 轮廓拖影, 红黑冲击帧, 强对比色的抽象冲击构图, 斯安威斯坦子弹时间残影, 每层残影换色, 彩虹色拖尾, 悬停在空中的子弹和玻璃渣, 有棱角的几何烟雾 圆形阴影, 三角形火焰, 吉成式爆炸, 十字金田光芒, 黑底上泼颜料式血花, 霓虹品红轮廓光, 青绿或深蓝单色压暗, 平涂赛璐珞硬阴影, 速度线, 画面震动的冲击, 夜之城霓虹",
+    "negative_en": "realistic motion capture, smooth interpolated 60fps motion, floaty tweening, soft cinematic motion blur, photorealistic rendering, 3D game cutscene look, first-person shooter HUD view, video game screenshot, shaky handheld realism, realistic blood and gore textures, volumetric photoreal smoke, round soft cartoon explosions, pastel low-contrast palette, chibi or moe proportions, static talking-head framing, weak foreshortening, Western 3D animation style, sketchy watercolor",
+    "negative_zh": "写实动作捕捉, 平滑插值的 60 帧动作, 飘忽的补间, 柔和的电影运动模糊, 照片级写实渲染, 3D 游戏过场的质感, 第一人称射击游戏视角和 HUD, 游戏截图感, 写实的手持晃动, 写实的血肉质感, 体积感写实烟雾, 圆滚滚的卡通爆炸, 粉彩低对比配色, Q 版或萌系比例, 静态对话镜头, 透视太弱, 欧美 3D 动画风格, 水彩草稿感",
+    "video_prompt": {
+      "en": "2D cel-shaded anime action shot in the style of Studio Trigger's Cyberpunk: Edgerunners (2022), directed with Hiroyuki Imaishi's Kanada-school energy. {character} uses {ability} in {location}, Night City at night. Open on a held, extreme-foreshortened key pose with magenta neon rim light against a dark teal monochrome background. The action snaps between bold poses with only one or two frames in between, using smear frames and outline smears for speed. If time slows, show bullet-time: the world freezes and {character} leaves a chain of full-body afterimages, each tinted a different color (red, magenta, cyan, green), with bullets and glass shards hanging in the air. At the moment of contact, cut to a stark red-and-black impact frame, then snap back to full speed with radial speed lines, angular geometric smoke with round shadows, triangular sparks and fire, and paint-splatter blood on a black background. The camera is aggressive: fist or gun barrel thrusting at the lens, a fast pull-out, then a snap zoom back in. Limited animation timing on twos and threes, flat colors, hard shadows.",
+      "zh": "二维赛璐珞平涂的动画动作镜头，风格参考扳机社《赛博朋克：边缘行者》（2022），带今石洋之那种金田系的冲劲。{character} 在 {location}（夜之城的夜晚）使用 {ability}。开场是一个定格的大透视关键姿势：深青绿色的单色背景，人物被霓虹品红勾出轮廓。动作在几个夸张姿势之间急切换，中间只有一两帧，用 smear 形变和轮廓拖影表现速度。如果有减速，就做子弹时间：世界静止，{character} 身后留下一串完整的身体残影，每一层残影换一种颜色（红、品红、青、绿），子弹和玻璃渣悬停在空中。命中瞬间切到红黑强对比的冲击帧，然后猛然恢复正常速度，配放射状速度线、有棱角的几何烟雾（阴影是圆的）、三角形的火花和火焰，以及黑底上泼颜料式的血花。镜头要凶：拳头或枪口直戳镜头，快速拉远再猛推回来。按有限动画的一拍二、一拍三节奏，平涂上色，硬阴影。"
+    },
+    "refs": [
+      {
+        "label": "第1集·开场，警察围攻赛博精神病患者，冲击帧加雷光",
+        "page": "https://www.sakugabooru.com/post/show/203917",
+        "thumb": "https://www.sakugabooru.com/data/preview/fc9f56704e53b268238a6731c896262a.jpg",
+        "credit": "菅野一期 Ichigo Kanno（Sakugabooru 标为 presumed）",
+        "thumb_local": "assets/action/anime-01d9e91251.jpg"
+      },
+      {
+        "label": "第1集·赛博精神病患者在警车间开打，绿色单色压暗",
+        "page": "https://www.sakugabooru.com/post/show/203918",
+        "thumb": "https://www.sakugabooru.com/data/preview/ca96c32d95268e28aad2f76eb039cdce.jpg",
+        "credit": "金子雄人 Yuuto Kaneko",
+        "thumb_local": "assets/action/anime-5e9b922ed3.jpg"
+      },
+      {
+        "label": "第1集·大卫在荒坂学院被胜男殴打，最后一脚",
+        "page": "https://www.sakugabooru.com/post/show/203927",
+        "thumb": "https://www.sakugabooru.com/data/preview/1fc9f71dacf4d1846a0f11a1574c0994.jpg",
+        "credit": "佐藤利幸 Toshiyuki Sato（吉成曜修正）",
+        "thumb_local": "assets/action/anime-30a215c4f9.jpg"
+      },
+      {
+        "label": "第2集·大卫用斯安威斯坦痛打胜男",
+        "page": "https://www.sakugabooru.com/post/show/204912",
+        "thumb": "https://www.sakugabooru.com/data/preview/b9c70edceee629200dd1ca7fc926ab14.jpg",
+        "credit": "佐藤利幸 Toshiyuki Sato",
+        "thumb_local": "assets/action/anime-62deb3559b.jpg"
+      },
+      {
+        "label": "第2集·露西在列车里的表演和动作，带三维载具",
+        "page": "https://www.sakugabooru.com/post/show/204424",
+        "thumb": "https://www.sakugabooru.com/data/preview/744b8e3507885d497a64e8d66205fb9b.jpg",
+        "credit": "宇田早纪子 Sakiko Uda",
+        "thumb_local": "assets/action/anime-f96c706a1b.jpg"
+      },
+      {
+        "label": "第3集·露西的骇入界面叠在脸上，之后接载具追逐",
+        "page": "https://www.sakugabooru.com/post/show/203949",
+        "thumb": "https://www.sakugabooru.com/data/preview/5af3baeb471b0f189994b27ca889a990.jpg",
+        "credit": "牧野秀纪 Hidenori Makino、金子雄人 Yuuto Kaneko（作监修正）",
+        "thumb_local": "assets/action/anime-9144632396.jpg"
+      },
+      {
+        "label": "第3集·无字幕版大场面，有背景动画、金田光芒和载具",
+        "page": "https://www.sakugabooru.com/post/show/203954",
+        "thumb": "https://www.sakugabooru.com/data/preview/24d96de0bf937c786b8cc23cd07448e5.jpg",
+        "credit": "菅野一期 Ichigo Kanno（帖子评论说片尾未署名）",
+        "thumb_local": "assets/action/anime-03008aaf2c.jpg"
+      },
+      {
+        "label": "第4集·爆炸、雷光和 smear 的混战",
+        "page": "https://www.sakugabooru.com/post/show/203966",
+        "thumb": "https://www.sakugabooru.com/data/preview/8d66287626115aecbe8989d64576fdd2.jpg",
+        "credit": "土肥紫门 Shimon Dohi",
+        "thumb_local": "assets/action/anime-e935e020f8.jpg"
+      },
+      {
+        "label": "第6集·曼恩赛博精神病发作，在暗处杀戮，红色剪影",
+        "page": "https://www.sakugabooru.com/post/show/239348",
+        "thumb": "https://www.sakugabooru.com/data/preview/6f2322a018ccf6eb11fd5cb456738b21.jpg",
+        "credit": "菅野一期 Ichigo Kanno 原画，五十岚海 Kai Ikarashi 分镜和作监",
+        "thumb_local": "assets/action/anime-0ab5da855a.jpg"
+      },
+      {
+        "label": "第6集·曼恩狞笑和冲击帧",
+        "page": "https://www.sakugabooru.com/post/show/204000",
+        "thumb": "https://www.sakugabooru.com/data/preview/997d8cf8a8fc01a4881811f3f7933502.jpg",
+        "credit": "佐藤利幸 Toshiyuki Sato",
+        "thumb_local": "assets/action/anime-71e13a8cc6.jpg"
+      },
+      {
+        "label": "第6集·爆头镜头，黑底上红色放射状血花",
+        "page": "https://www.sakugabooru.com/post/show/204001",
+        "thumb": "https://www.sakugabooru.com/data/preview/84ecd9737a11031d88bbd8a3258e219b.jpg",
+        "credit": "五十岚海 Kai Ikarashi、三木达也 Tatsuya Miki",
+        "thumb_local": "assets/action/anime-6cfc2c3ce1.jpg"
+      },
+      {
+        "label": "第9集·重型机甲和弹道光束的枪战",
+        "page": "https://www.sakugabooru.com/post/show/204021",
+        "thumb": "https://www.sakugabooru.com/data/preview/e71cb6bdf574d5314f1dc7b07480025e.jpg",
+        "credit": "菅野一期 Ichigo Kanno（presumed）",
+        "thumb_local": "assets/action/anime-5bb1fc3b78.jpg"
+      },
+      {
+        "label": "第10集·丽贝卡举枪迎战，亚当·重锤命中时出冲击帧",
+        "page": "https://www.sakugabooru.com/post/show/204030",
+        "thumb": "https://www.sakugabooru.com/data/preview/856512249b51b1e07d236001f3e7f21c.jpg",
+        "credit": "原画师不明（artist_unknown）",
+        "thumb_local": "assets/action/anime-ba2cb977df.jpg"
+      },
+      {
+        "label": "第10集·亚当·重锤登场，红色剪影和大型义体",
+        "page": "https://www.sakugabooru.com/post/show/204031",
+        "thumb": "https://www.sakugabooru.com/data/preview/19e5eb3bcdd4ff1bb2601eb35a672f7b.jpg",
+        "credit": "菅野一期 Ichigo Kanno（presumed）",
+        "thumb_local": "assets/action/anime-67c9d4901e.jpg"
+      },
+      {
+        "label": "第10集·荒坂走廊导弹齐射，吉成式爆炸",
+        "page": "https://www.sakugabooru.com/post/show/204064",
+        "thumb": "https://www.sakugabooru.com/data/preview/b10cfd081f85b5c2fe45face994040a2.jpg",
+        "credit": "千田孝文 Takafumi Chida",
+        "thumb_local": "assets/action/anime-5ebb67d178.jpg"
+      },
+      {
+        "label": "片头·爆炸特效（片头分镜五十岚海，演出今石洋之）",
+        "page": "https://www.sakugabooru.com/post/show/203931",
+        "thumb": "https://www.sakugabooru.com/data/preview/427fc375640f44f37c9a25ea458c0fc8.jpg",
+        "credit": "原画师不明（artist_unknown）",
+        "thumb_local": "assets/action/anime-4d7d6c6f89.jpg"
+      }
+    ],
+    "gaps": [
+      "没找到第一季动作作画监督或具体原画师谈招式设计的访谈（アニメスタイル、アニメージュ的相关内容没能在网上读到），各原画师的个人分工只能依赖 Sakugabooru 的标签和评论，很多标为 presumed 或 artist_unknown。",
+      "露西单分子线和螳螂刀的具体动作过程、帧数和特效样式没有文字资料，在 Sakugabooru 上也没能找到对应的确切帖子，只能看视频确认。",
+      "Sakugabooru 的 preview_url 只是片段第一帧（sample_url 是视频，按要求没有下载），所以斯安威斯坦残影换色的具体顺序、冲击帧的配色和持续帧数、一拍几的节奏都没法从静态图核实。",
+      "第 3 集 203954（荒漠场景）和第 9 集 204021 的具体情节没能确认，标签说明是按标签和预览图写的。",
+      "“今石 pose”不是有文献定义的正式术语；这里用金田透视和新金田派的分析来支撑，没有找到今石或吉成曜谈《边缘行者》姿势设计的原话。",
+      "亚当·重锤和大卫最终战（第 10 集）的完整动作流程，以及大卫大猩猩手臂的具体用法，没有找到可靠的文字拆解。"
+    ],
+    "id": "anime"
+  },
+  "anime_s2": {
+    "style": "anime_s2",
+    "name": "动画动作风格 · 边缘行者第二季",
+    "one_line": "粗粝、不那么「编排」的暴力：动作更脏更重、常夹在 Roman 摄像机的画中画里；特效以红色闪电、烟、火和金田式尖刺光为主，色彩会在打斗中掉光只剩线稿，光被当成压在人身上的力量。",
+    "sections": [
+      {
+        "k": "整体定位：更粗粝、更不像编排好的",
+        "v": "Anime Corner 评第一集：暴力比第一季「更丑、更少编排」，赛博精神病被表现得不像爆炸，更像信号逐渐劣化；身体动起来带一种粗糙感。io9 评论说每一帧都更粗、更生、更不受控。",
+        "evidence": "source",
+        "src": [
+          "a2_animecorner_ep1",
+          "a2_io9_review"
+        ]
+      },
+      {
+        "k": "90 年代动画味：粗线、颗粒光",
+        "v": "评论描述为「90 年代动画风味」，线更重、光更有颗粒，像同一座城换了胶片拍。导演本人在访谈里补充：菅野的特效参考其实先是「金田风」的尖刺特效，而不是笼统的 90 年代。",
+        "evidence": "source",
+        "src": [
+          "a2_animecorner_ep1",
+          "a2_gamebusiness_jp"
+        ]
+      },
+      {
+        "k": "金田式尖刺特效",
+        "v": "五十岚海说菅野一期作画时，先有的参考是金田伊功式的刺状特效。Sakugabooru 第二季帖子里也有 kanada_light_flare（#03、#10）和 kanada_dragon（#10）标签。写提示词时可用：锯齿状光芒、尖刺形爆光、几何化火焰。",
+        "evidence": "source",
+        "src": [
+          "a2_gamebusiness_jp",
+          "a2_sb_s2"
+        ]
+      },
+      {
+        "k": "特效构成：闪电、烟、火占大头",
+        "v": "Sakugabooru 第二季 157 条帖子里：effects 111、smears 83、smoke 64、lightning 62、liquid 33、fire 21、explosions 12、impact_frames 5。和第一季 130 条比，lightning 从 16 条升到 62 条，fire 从 5 条升到 21 条，sparks 反而从 36 条降到 22 条（标签由用户标注，只能看趋势）。",
+        "evidence": "source",
+        "src": [
+          "a2_sb_s2",
+          "a2_sb_s1"
+        ]
+      },
+      {
+        "k": "D 的骇入：红色闪电满屏弹跳",
+        "v": "评论描述 D 的网络骇入是一道道红色闪电在画面里穿梭、弹跳，落到哪里哪里就乱：把车掀飞、让整片街区断电。",
+        "evidence": "source",
+        "src": [
+          "a2_reframe_review"
+        ]
+      },
+      {
+        "k": "拖影（smear）仍是主力",
+        "v": "smears 标签在第二季 157 条里占 83 条，快动作仍大量用变形拖影帧来表现速度，而不是用三维运动模糊。",
+        "evidence": "source",
+        "src": [
+          "a2_sb_s2"
+        ]
+      },
+      {
+        "k": "Roman 摄像机的画中画",
+        "v": "大量动作是透过 Roman 的摄像机看到的，带模拟录像的颗粒感。导演说制作中把这种「画面里的画面」叫「Roman 框」，既是 Roman 的视角，也当作一种上帝视角，用来突然切换画面气氛、制造节奏的缓急。",
+        "evidence": "source",
+        "src": [
+          "a2_newsone_review",
+          "a2_io9_review",
+          "a2_gamebusiness_jp",
+          "a2_animecorner_review"
+        ]
+      },
+      {
+        "k": "打斗中色彩掉光，只剩线稿",
+        "v": "io9 评论：动作段落里色彩有时会整片消失，只剩人物的线描轮廓。",
+        "evidence": "source",
+        "src": [
+          "a2_io9_review"
+        ]
+      },
+      {
+        "k": "阴影、剪影与扭曲透视",
+        "v": "评论说第二季用阴影、剪影、扭曲透视和突然的变色来和前作区分；画风在一集里会频繁切换视觉语言。",
+        "evidence": "source",
+        "src": [
+          "a2_otakukart_review"
+        ]
+      },
+      {
+        "k": "光是一种力量",
+        "v": "五十岚海：光不当作希望，只是一种力量；会让人朝光奔跑，也会让人被光照得受不了。Capri 被当作「光本身」、一种特效体来画。动作镜头里适合用强逆光、眩光压住人物。",
+        "evidence": "source",
+        "src": [
+          "a2_gamesgg",
+          "a2_gamebusiness_jp"
+        ]
+      },
+      {
+        "k": "Capri：平面化、可随意变形",
+        "v": "导演说第 3 集让 Capri 用平面化、可以自由变形的方式表现；评论提到 Capri 分裂时用绿/红两色表示，简单但有效。Sakugabooru #05 有 morphing 标签的帖子。",
+        "evidence": "source",
+        "src": [
+          "a2_gamebusiness_jp",
+          "a2_animecorner_review",
+          "a2_sb_s2"
+        ]
+      },
+      {
+        "k": "Talia 的空中特技",
+        "v": "首映评论单独点名 Talia 的空中杂技式动作「优雅、几乎催眠」；io9 配图也有 Talia 跃起在空中。",
+        "evidence": "source",
+        "src": [
+          "a2_btt_premiere",
+          "a2_io9_review"
+        ]
+      },
+      {
+        "k": "Weak：反复拍手部",
+        "v": "第一集反复拍 Weak 的手，强调他缺失和替换的手指；他没有义体，身体的脆弱比动作更能体现情绪。持枪动作宜落在手和握枪的特写上。",
+        "evidence": "source",
+        "src": [
+          "a2_animecorner_ep1",
+          "a2_kotaku_ep1",
+          "a2_gamesgg"
+        ]
+      },
+      {
+        "k": "血腥直给、不切走",
+        "v": "首映评论：能直接展示就不暗示，斩首、肢解、爆头都画出来；整体用深红色来「画」。",
+        "evidence": "source",
+        "src": [
+          "a2_btt_premiere"
+        ]
+      },
+      {
+        "k": "夸张的动作与表情",
+        "v": "评论说部分打斗很夸张、动作幅度大，能力展示得很残暴；otakukart 也提到保留了系列的活力动作和夸张表情、锐角构图。",
+        "evidence": "source",
+        "src": [
+          "a2_animecorner_review",
+          "a2_otakukart_review"
+        ]
+      },
+      {
+        "k": "作画重心：演技与奔跑多于格斗",
+        "v": "第二季帖子里 character_acting 122/157（第一季 68/130），running 29（第一季 11），fighting 只有 22（第一季 33）；mecha 19、background_animation 12，都明显多于第一季。可见动作场面里背景动画、机甲和奔跑追逐占比更高。",
+        "evidence": "source",
+        "src": [
+          "a2_sb_s2",
+          "a2_sb_s1"
+        ]
+      },
+      {
+        "k": "原画张：强透视仍在",
+        "v": "TRIGGER 频道公开的第二季原画（Weak 的枪（ブーリャ））用极端的透视，枪口巨大贴近镜头、身体缩小在后方，并附有多层影色指示。说明第二季并没有放弃夸张透视。",
+        "evidence": "observed",
+        "src": [
+          "a2_sb_320056"
+        ]
+      },
+      {
+        "k": "缩略图观察：脸部排线与红色边缘光",
+        "v": "Sakugabooru 第二季缩略图里，特写脸上有密集的排线表现伤痕和皱纹，人物常有一道红色边缘光；打斗画面常被大片纯黑剪影或雨丝、红色火光盖住大半。缩略图只是首帧，代表性有限。",
+        "evidence": "observed",
+        "src": [
+          "a2_sb_s2"
+        ]
+      }
+    ],
+    "vs_s1": [
+      {
+        "k": "招牌能力的视觉",
+        "s1": "David 的 Sandevistan：子弹时间，每一帧残影用不同颜色铺开，形成蓝绿/彩虹色的连续残像。",
+        "s2": "主角 Weak 没有义体；最显眼的能力特效是 D 骇入时满屏弹跳的红色闪电，以及 Capri 的平面化变形和绿/红分裂。",
+        "evidence": "source"
+      },
+      {
+        "k": "暴力的编排感",
+        "s1": "被形容为浪漫化、近似迈克尔·贝式的大片动作。",
+        "s2": "更丑、更少编排，更接近斯科塞斯式的落地感；赛博精神病像信号劣化而不是爆炸。",
+        "evidence": "source"
+      },
+      {
+        "k": "节奏",
+        "s1": "先安静铺垫，再逐渐推向爆发性高潮。",
+        "s2": "第一集评论说节奏更慢；另一篇评论说开场就是爆点。两种说法并存，需要以具体段落为准。",
+        "evidence": "source"
+      },
+      {
+        "k": "镜头语言",
+        "s1": "以常规电影式镜头为主（本次没有找到第一季画中画手法的资料）。",
+        "s2": "大量「Roman 框」画中画、摄像机录像式颗粒画面，用来突然切换气氛。",
+        "evidence": "source"
+      },
+      {
+        "k": "特效构成",
+        "s1": "Sakugabooru 标签：火花 sparks 36/130，闪电 16/130，火 5/130。",
+        "s2": "闪电 62/157，火 21/157，火花 22/157；还出现了金田光（kanada_light_flare）标签。",
+        "evidence": "source"
+      },
+      {
+        "k": "色彩处理",
+        "s1": "高饱和霓虹，Sandevistan 段落色彩反而更多。",
+        "s2": "打斗里色彩会整片掉光只剩线稿；整体偏深红。",
+        "evidence": "source"
+      }
+    ],
+    "ability_moves": [
+      {
+        "id": "d_netrun_lightning",
+        "zh": "D 的骇入红色闪电",
+        "motion": "D 发动骇入，红色闪电从他身上射出，在画面里折线状弹跳；击中的车辆被掀起，街区灯光成片熄灭。",
+        "camera": "大全景或俯瞰街区，让闪电横穿画面；也可从被击中物体处切近景。",
+        "timing": "闪电以几帧为单位跳跃前进，命中瞬间配一两帧冲击帧，之后停在断电后的黑暗里。",
+        "fx": "红色锯齿闪电、手绘烟、断电后的大片黑。",
+        "evidence": "source",
+        "src": [
+          "a2_reframe_review",
+          "a2_sb_s2"
+        ]
+      },
+      {
+        "id": "capri_split",
+        "zh": "Capri 分裂与变形",
+        "motion": "Capri 作为光体出现，身体变成平面形状自由变形，随后分裂成绿、红两色。",
+        "camera": "正面平视，接近平面构图，强调图形感。",
+        "timing": "变形用连续的形状过渡（morphing）。",
+        "fx": "纯色平涂的光体、绿/红双色、强光晕。",
+        "evidence": "source",
+        "src": [
+          "a2_gamebusiness_jp",
+          "a2_animecorner_review",
+          "a2_sb_s2"
+        ]
+      },
+      {
+        "id": "talia_aerial",
+        "zh": "Talia 空中特技",
+        "motion": "Talia 跃起，在空中做杂技式翻转，落点前拔枪或出刀。",
+        "camera": "跟随她的弧线，低机位仰拍跃起。",
+        "timing": "评论用「优雅、近乎催眠」形容，宜用较长的滞空。",
+        "fx": "头发和衣物飘动；具体特效无资料。",
+        "evidence": "source",
+        "src": [
+          "a2_btt_premiere",
+          "a2_io9_review"
+        ]
+      },
+      {
+        "id": "weak_gunfight",
+        "zh": "Weak 的枪战",
+        "motion": "没有义体的 Weak 举着巨大的手枪（原画注释写作ブーリャ） 开火，动作重、不花哨；镜头反复落在他缺指的手上。",
+        "camera": "强透视，枪口贴近镜头、身体在后方缩小；手部特写。",
+        "timing": "更接近写实的重量感，不是编排好的连招。",
+        "fx": "枪口火光、喷溅的血。",
+        "evidence": "source",
+        "src": [
+          "a2_sb_320056",
+          "a2_animecorner_ep1",
+          "a2_kotaku_ep1",
+          "a2_rpgsite_ep1"
+        ]
+      },
+      {
+        "id": "roman_cam",
+        "zh": "Roman 摄像机视角下的打斗",
+        "motion": "打斗被 Roman 的摄像机拍下，在画面里以画中画的录像形式出现。",
+        "camera": "画框套画框；录像画面带颗粒、晃动。",
+        "timing": "用画中画突然切换画面气氛，制造缓急。",
+        "fx": "模拟录像颗粒、扫描线式质感（扫描线为推测，未见明确出处）。",
+        "evidence": "source",
+        "src": [
+          "a2_newsone_review",
+          "a2_gamebusiness_jp",
+          "a2_io9_review"
+        ]
+      },
+      {
+        "id": "kanada_flare",
+        "zh": "金田式尖刺光爆",
+        "motion": "能力或爆炸爆发时，光以尖刺、锯齿形状向外炸开。",
+        "camera": "中景或特写，光芒占满画面。",
+        "timing": "几帧爆闪后迅速收束。",
+        "fx": "几何化尖刺光、硬边火焰、手绘烟。",
+        "evidence": "source",
+        "src": [
+          "a2_gamebusiness_jp",
+          "a2_sb_s2"
+        ]
+      },
+      {
+        "id": "cyberpsycho_degrade",
+        "zh": "赛博精神病发作",
+        "motion": "不是一下爆发，而是像信号逐渐劣化：画面和动作越来越乱。",
+        "camera": "可结合色彩掉光、只剩线稿的处理。",
+        "timing": "渐进式，不靠单一爆点。",
+        "fx": "颜色流失、线稿化（与信号劣化的结合方式为推测）。",
+        "evidence": "source",
+        "src": [
+          "a2_animecorner_ep1",
+          "a2_io9_review"
+        ]
+      }
+    ],
+    "keywords_en": "Cyberpunk Edgerunners 2 action sequence, Studio Trigger, 1990s anime action homage, rough raw hand-drawn animation, heavy lines, grainy lighting, smear frames, hand-drawn smoke, jagged red lightning bolts, Kanada-style spiky light flares, geometric flames, colors dropping out to bare line art mid-fight, picture-in-picture camcorder footage, grainy analog video, strong backlight as an oppressive force, deep crimson, graphic gore, grounded weighty gunplay, extreme foreshortening",
+    "keywords_zh": "赛博朋克边缘行者第二季动作场面，TRIGGER，致敬 90 年代动画动作，粗粝手绘作画，粗线，颗粒感光线，变形拖影帧，手绘烟雾，锯齿状红色闪电，金田式尖刺光芒，几何化火焰，打斗中色彩掉光只剩线稿，画中画摄像机录像，模拟录像颗粒，压迫感的强逆光，深红色调，直给的血腥，有重量的写实枪战，极端透视",
+    "negative_en": "Sandevistan bullet-time rainbow afterimages, multicolored frame-trail clones, Edgerunners season 1 style, smooth 3D motion blur, CG camera fly-through, glossy clean choreographed martial-arts combo, photorealistic, video game screenshot",
+    "negative_zh": "Sandevistan 子弹时间彩虹残影，多色逐帧残像分身，边缘行者第一季画风，平滑的三维运动模糊，CG 镜头飞越，光滑干净的套路化格斗连招，写实照片，游戏截图",
+    "video_prompt": {
+      "en": "Cyberpunk Edgerunners 2 anime action shot, Studio Trigger, 1990s anime homage, rough hand-drawn cel animation with heavy lines and fine film grain. {character} unleashes {ability} in {location}. Raw, ugly, weighty motion rather than slick choreography; smear frames on fast moves, one or two impact frames on the hit. Effects drawn by hand: jagged lightning, Kanada-style spiky light flares, geometric flames, billowing hand-drawn smoke. Harsh backlight presses down on the figure like a force. Mid-fight the colors drop out, leaving only line art for a few frames, then cut to grainy picture-in-picture camcorder footage of the same moment. Deep crimson accents, graphic but hand-drawn gore. Strong foreshortening toward the lens. No rainbow afterimages, no 3D motion blur.",
+      "zh": "赛博朋克边缘行者第二季动画动作镜头，TRIGGER，致敬 90 年代动画，粗线加细胶片颗粒的手绘赛璐璐。{character} 在 {location} 发动 {ability}。动作粗粝、难看、有重量，不是光滑的套路编排；快动作用变形拖影帧，命中时插一两帧冲击帧。特效全部手绘：锯齿闪电、金田式尖刺光芒、几何化火焰、翻滚的手绘烟。强逆光像一股力量压在人物身上。打到一半色彩掉光，只剩线稿几帧，再切到同一瞬间的颗粒感画中画摄像机录像。深红色点缀，血腥直给但保持手绘。朝镜头的强透视。不要彩虹残影，不要三维运动模糊。"
+    },
+    "refs": [
+      {
+        "label": "#01 动作段落（作画监督菅野一期）",
+        "page": "https://www.sakugabooru.com/post/show/319723",
+        "thumb": "https://www.sakugabooru.com/data/preview/b7ebeb93a0c5efcde63a9a383c715543.jpg",
+        "credit": "Takafumi Chida、Yuuto Kaneko",
+        "thumb_local": "assets/action/anime_s2-f2e6eb8261.jpg"
+      },
+      {
+        "label": "#03 火焰、闪电、冲击帧",
+        "page": "https://www.sakugabooru.com/post/show/319768",
+        "thumb": "https://www.sakugabooru.com/data/preview/b89ebce9ba606ee8cc1534303b379aa9.jpg",
+        "credit": "Shouichi、yooto（含 artist_unknown）",
+        "thumb_local": "assets/action/anime_s2-c2240d43f0.jpg"
+      },
+      {
+        "label": "#03 机甲战与金田光",
+        "page": "https://www.sakugabooru.com/post/show/319759",
+        "thumb": "https://www.sakugabooru.com/data/preview/b2d59b593b1b10300ea6252d73db9ab4.jpg",
+        "credit": "BS Kim、Sota Shigetsugu、Yoshitaka Mano",
+        "thumb_local": "assets/action/anime_s2-2f25910df3.jpg"
+      },
+      {
+        "label": "#05 爆炸、碎片、火花的大场面",
+        "page": "https://www.sakugabooru.com/post/show/319792",
+        "thumb": "https://www.sakugabooru.com/data/preview/7e1d9774360e2eef1301138119c61469.jpg",
+        "credit": "Akira Amemiya、Toshiyuki Sato（含 artist_unknown）",
+        "thumb_local": "assets/action/anime_s2-dc8a682d6e.jpg"
+      },
+      {
+        "label": "#08 雨中火光与打斗",
+        "page": "https://www.sakugabooru.com/post/show/319832",
+        "thumb": "https://www.sakugabooru.com/data/preview/725c15d813203e389e1e1eb5dc05d7dc.jpg",
+        "credit": "Yasushi Muraki、evakoi（含 artist_unknown，presumed）",
+        "thumb_local": "assets/action/anime_s2-8437be1208.jpg"
+      },
+      {
+        "label": "#08 液体与烟的打斗",
+        "page": "https://www.sakugabooru.com/post/show/319839",
+        "thumb": "https://www.sakugabooru.com/data/preview/6b3ecb2dfa4ca68380888d482c5ac75f.jpg",
+        "credit": "Taisei Uchida",
+        "thumb_local": "assets/action/anime_s2-4d05d9f5df.jpg"
+      },
+      {
+        "label": "#09 闪电与液体（导演本人作画，推定）",
+        "page": "https://www.sakugabooru.com/post/show/319849",
+        "thumb": "https://www.sakugabooru.com/data/preview/d9b5a657b5b4c06246d9f17e74dd30ca.jpg",
+        "credit": "Kai Ikarashi（presumed）",
+        "thumb_local": "assets/action/anime_s2-8107d3ed3f.jpg"
+      },
+      {
+        "label": "#10 机甲飞行、金田龙与金田光",
+        "page": "https://www.sakugabooru.com/post/show/319912",
+        "thumb": "https://www.sakugabooru.com/data/preview/f43c8cc01d14ec29202530ffa05b8915.jpg",
+        "credit": "Keisuke Watabe（含 artist_unknown，presumed）",
+        "thumb_local": "assets/action/anime_s2-39605db86b.jpg"
+      },
+      {
+        "label": "#10 导弹与载具",
+        "page": "https://www.sakugabooru.com/post/show/319903",
+        "thumb": "https://www.sakugabooru.com/data/preview/1148e2c7f7c34e55be1bd70049027e31.jpg",
+        "credit": "Yoh Yoshinari",
+        "thumb_local": "assets/action/anime_s2-45bb6f698b.jpg"
+      },
+      {
+        "label": "#10 奔跑、碎片、闪电",
+        "page": "https://www.sakugabooru.com/post/show/319907",
+        "thumb": "https://www.sakugabooru.com/data/preview/cfa8d45728da52da56dd78556f494ca6.jpg",
+        "credit": "Hisashi Mori、Tatsuya Miki",
+        "thumb_local": "assets/action/anime_s2-8c86c79541.jpg"
+      },
+      {
+        "label": "Weak 与手枪（原画注释写作ブーリャ） 原画（TRIGGER 频道）",
+        "page": "https://www.sakugabooru.com/post/show/320056",
+        "thumb": "https://www.sakugabooru.com/data/sample/9cccf4be6ddae8d00b80295bda82158d.jpg",
+        "credit": "原画师未署名（Sakugabooru 收录，出自 TRIGGER 频道）",
+        "thumb_local": "assets/action/anime_s2-fd4c3c5094.jpg"
+      }
+    ],
+    "gaps": [
+      "没有找到动作作画监督、特效作画监督的署名，也没有任何一篇访谈专门谈动作编排、镜头调度或时间表（timing）；五十岚海、菅野一期都没有直接谈动作的发言。",
+      "Sakugabooru 第二季 157 条帖子中 132 条带 artist_unknown，原画师归属多为 presumed；帖子主体是视频，只看了首帧缩略图（300×169），无法判断定格时长、镜头数量、一拍几。",
+      "「长时间定格」「较少的镜头切换」「写实重量感」这些 80–90 年代特征，没有找到能直接对应到第二季的出处，因此没有写入 sections；只有「更少编排」「粗糙的身体运动」「节奏更慢」可作间接依据。",
+      "节奏说法有冲突：Anime Corner 说第一集节奏更慢，Reframe 说开场就是爆点。",
+      "导演明确说菅野的特效参考是金田式尖刺特效，并认为第二季画面未必是典型的 90 年代设计；评论里「90 年代风」的说法主要来自评论者。",
+      "第一季夸张透视不宜列为负面：第二季原画仍有极端透视，otakukart 也提到「扭曲透视」。negative 只排除 Sandevistan 彩虹残影（第二季主角无义体，依据 GAMES.GG），但并未找到第二季明确不用残影的出处。",
+      "没有找到 Polygon、Anime News Network、Crunchyroll News 的第二季动作评论或访谈；Crunchyroll 关于日光的访谈只见于二手转述，未核实。",
+      "Roman 摄像机画面是否带扫描线、Talia 空中特技的特效细节，均无资料。"
+    ],
+    "id": "anime_s2"
+  },
+  "compare": [
+    {
+      "k": "视角",
+      "game": "几乎全程第一人称，主角只露手、前臂和武器；驾驶和少数过场用第三人称",
+      "anime": "第三人称电影式，常用金田透视让拳头、枪口冲向镜头",
+      "anime_s2": "第三人称，夹大量 Roman 摄像机的画中画录像视角"
+    },
+    {
+      "k": "节奏",
+      "game": "DOOM 式高速、不停歇、往前压；靠时间减速技能制造节奏断点",
+      "anime": "急起急停：大姿势定格十几帧，再几帧内完成动作",
+      "anime_s2": "更粗粝、不像编排好的；评论对节奏快慢说法不一"
+    },
+    {
+      "k": "慢动作 / 斯安威斯坦",
+      "game": "世界放慢、自己正常速度；画面色调和残影样式没有资料，不要照搬动画的彩虹残影",
+      "anime": "把动作拆开逐张画，残影每层换色，形成彩虹拖尾，子弹和玻璃渣悬停",
+      "anime_s2": "主角没有斯安威斯坦；第一季那种彩虹残影列为负面"
+    },
+    {
+      "k": "姿势",
+      "game": "写实站姿，力量感来自机位和光，不做夸张亮相",
+      "anime": "定格大姿势，四肢大幅伸展，剪影像海报",
+      "anime_s2": "动作和表情仍夸张，但更脏更重；Talia 有空中杂技"
+    },
+    {
+      "k": "速度表现",
+      "game": "写实运动模糊、枪口火焰、曳光弹，没有速度线",
+      "anime": "smear 形变拖影、速度线、轮廓拖影",
+      "anime_s2": "smear 仍是主力（157 个片段里 83 个）"
+    },
+    {
+      "k": "冲击",
+      "game": "命中反馈靠刀光、血雾、断肢和硬直；屏幕震动等参数没有资料",
+      "anime": "红黑、红青强对比的抽象冲击帧",
+      "anime_s2": "冲击帧少（5/157），打斗中色彩会整片掉光只剩线稿"
+    },
+    {
+      "k": "特效",
+      "game": "体积烟雾、枪火、全息扫描叠层，数字故障用像素排序和 VHS 质感",
+      "anime": "吉成式有棱角的几何烟雾、三角形火焰、十字金田光芒",
+      "anime_s2": "红色锯齿闪电、手绘烟和火、金田式尖刺光"
+    },
+    {
+      "k": "血液",
+      "game": "写实流血和断肢",
+      "anime": "像泼溅的颜料，常是黑底上的红色放射状飞溅",
+      "anime_s2": "直给不切走，整体用深红来画"
+    },
+    {
+      "k": "光",
+      "game": "体积光、霓虹逆光、烟尘里的低机位",
+      "anime": "整画面压成一种主色，再加品红或红色轮廓光",
+      "anime_s2": "光被当成压在人身上的力量，强逆光和眩光"
+    },
+    {
+      "k": "网络入侵",
+      "game": "扫描锁定后远程上传，叠在第一人称视野上的 UI",
+      "anime": "角色几乎不动，靠界面和特写叙事，参考老式模拟影像",
+      "anime_s2": "D 的骇入是满屏弹跳的红色闪电，能掀车、断电"
+    }
+  ]
+}

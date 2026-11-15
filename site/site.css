@@ -262,3 +262,27 @@ footer.foot{border-top:1px solid var(--line); color:var(--mute); font-size:13px;
   .sheet:nth-child(3n+2):hover,.sheet:nth-child(3n+2):focus-visible{transform:translateY(-3px)}
   .sheet-n{font-size:11px; white-space:nowrap; overflow:hidden}
 }
+
+/* ---------- English ---------- */
+html[lang="en"]{--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans SC",sans-serif}
+html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3,html[lang="en"] .brand,html[lang="en"] .nav a,
+html[lang="en"] .tablist [role=tab],html[lang="en"] details.fold > summary,html[lang="en"] .homecard .go{font-family:var(--disp)}
+html[lang="en"] .hero h1,html[lang="en"] .home-hero h1{font-weight:700; letter-spacing:0; overflow-wrap:break-word}
+html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3{overflow-wrap:break-word}
+@media (min-width:561px){html[lang="en"] .kv{grid-template-columns:120px minmax(0,1fr)}}
+
+/* ---------- 首页五张分区卡：上 2 下 3 ---------- */
+.home-cards.five{grid-template-columns:repeat(6,minmax(0,1fr))}
+.home-cards.five > *{grid-column:span 2}
+.home-cards.five > :nth-child(-n+2){grid-column:span 3}
+.home-cards.five .pv-grid.six{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (min-width:961px){.home-cards.five .pv.portrait{aspect-ratio:1/1}}
+@media (max-width:960px){
+  .home-cards.five{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .home-cards.five > *,.home-cards.five > :nth-child(-n+2){grid-column:auto}
+  .home-cards.five > :last-child{grid-column:1 / -1}
+}
+@media (max-width:720px){
+  .home-cards.five{grid-template-columns:minmax(0,1fr)}
+  .home-cards.five > :last-child{grid-column:auto}
+}

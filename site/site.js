@@ -3,6 +3,9 @@
   'use strict';
 
   var KB = (window.KB = {});
+  var I18N = window.I18N;
+  var t = I18N.t, tr = I18N.tr;
+  KB.t = t; KB.tr = tr;
   var LS_SEASON = 'erkb.season', LS_STYLE = 'erkb.style';
 
   function lsGet(k, d) { try { var v = localStorage.getItem(k); return v == null ? d : v; } catch (e) { return d; } }
@@ -15,6 +18,8 @@
   if (['all', '1', '2'].indexOf(state.season) < 0) state.season = 'all';
   if (['anime', 'game'].indexOf(state.style) < 0) state.style = 'anime';
   KB.state = state;
+  Object.defineProperty(state, 'lang', { get: function () { return I18N.lang; }, enumerable: true });
+  KB.en = function () { return I18N.lang === 'en'; };
 
   /* ---------- DOM helper ---------- */
   function h(tag, attrs) {
@@ -46,6 +51,37 @@
   KB.isStr = function (v) { return typeof v === 'string' && v.trim() !== ''; };
   KB.arr = function (v) { return Array.isArray(v) ? v : []; };
 
+  /* ---------- 语言相关取值 ---------- */
+  /* 内容字段：字符串走 tr()，数组逐项 tr() */
+  KB.trv = function (v) { return Array.isArray(v) ? v.map(tr) : tr(v); };
+  /* o[base+'_en'] / o[base+'_zh'] 二选一 */
+  KB.pick = function (o, base) {
+    if (!o) return '';
+    var zh = o[base + '_zh'], en = o[base + '_en'];
+    if (KB.en()) return KB.isStr(en) ? en : (KB.isStr(zh) ? tr(zh) : '');
+    return KB.isStr(zh) ? zh : (KB.isStr(en) ? en : '');
+  };
+  /* {zh, en} 对象（或带 zh/en 名称字段的条目） */
+  KB.zhen = function (o) {
+    if (!o) return '';
+    if (KB.en()) return KB.isStr(o.en) ? o.en : (KB.isStr(o.zh) ? tr(o.zh) : (o.id || ''));
+    return KB.isStr(o.zh) ? o.zh : (KB.isStr(o.en) ? o.en : (o.id || ''));
+  };
+  /* 只有 zh + id 的条目名：EN 下依次用 en.json 译文、括号里的英文、id */
+  KB.nm = function (o) {
+    if (!o) return '';
+    if (!KB.en()) return o.zh || o.id || '';
+    if (KB.isStr(o.en)) return o.en;
+    if (KB.isStr(o.zh)) {
+      var x = tr(o.zh); if (x !== o.zh) return x;
+      var m = o.zh.match(/[（(]\s*([A-Za-z][^）)]*)[）)]/); if (m) return m[1].trim();
+    }
+    return o.id ? String(o.id).replace(/[_-]+/g, ' ').replace(/^./, function (c) { return c.toUpperCase(); }) : (o.zh || '');
+  };
+  /* 角色名 */
+  KB.cname = function (c) { return c ? (KB.en() ? (c.name_en || tr(c.name_zh) || c.id) : (c.name_zh || c.name_en || c.id)) : ''; };
+  KB.cname2 = function (c) { return c ? (KB.en() ? (c.name_zh || '') : (c.name_en || '')) : ''; };
+
   /* ---------- data ---------- */
   var cache = {};
   KB.load = function (name) {
@@ -58,7 +94,10 @@
     return cache[name];
   };
   KB.manifest = {};
-  KB.ready = KB.load('assets/manifest.json').then(function (m) { KB.manifest = m || {}; }).catch(function () { KB.manifest = {}; });
+  KB.ready = Promise.all([
+    KB.load('assets/manifest.json').then(function (m) { KB.manifest = m || {}; }).catch(function () { KB.manifest = {}; }),
+    I18N.ready()
+  ]);
 
   /* 图片地址：优先 *_local，其次 manifest，最后 null（显示占位） */
   KB.local = function (url) {
@@ -74,23 +113,23 @@
     if (KB.isStr(loc)) return '../' + loc;
     return KB.local(full ? (im.full || im.thumb) : (im.thumb || im.full));
   };
-  KB.placeholder = function (label) { return h('div', { class: 'ph', role: 'img', 'aria-label': label || '暂无本地图片' }, label || '暂无本地图片'); };
+  KB.placeholder = function (label) { label = label || t('img.none'); return h('div', { class: 'ph', role: 'img', 'aria-label': label }, label); };
   KB.img = function (src, alt, cls) {
     if (!src) return KB.placeholder();
     var img = h('img', { src: src, alt: alt || '', loading: 'lazy', decoding: 'async', class: cls || null });
     img.addEventListener('error', function () {
-      if (img.parentNode) img.parentNode.replaceChild(KB.placeholder('图片加载失败'), img);
+      if (img.parentNode) img.parentNode.replaceChild(KB.placeholder(t('img.fail')), img);
     });
     return img;
   };
 
   /* ---------- styles ---------- */
-  var STYLE_LABEL = { anime: '动画', anime_s2: 'S2动画', game: '游戏' };
-  var SET_LABEL = { anime: '第一季动画', anime_s2: '第二季动画', game: '游戏', plain: '纯描述' };
-  KB.STYLE_LABEL = STYLE_LABEL; KB.SET_LABEL = SET_LABEL;
+  var STYLES = ['anime', 'anime_s2', 'game'], SETS = ['anime', 'anime_s2', 'game', 'plain'];
+  KB.styleLabel = function (k) { return STYLES.indexOf(k) >= 0 ? t('style.' + k) : k; };
+  KB.setLabel = function (k) { return SETS.indexOf(k) >= 0 ? t('set.' + k) : k; };
   KB.badge = function (style) {
     if (!style) return null;
-    return h('span', { class: 'badge ' + (STYLE_LABEL[style] ? style : 'neutral') }, STYLE_LABEL[style] || style);
+    return h('span', { class: 'badge ' + (STYLES.indexOf(style) >= 0 ? style : 'neutral') }, KB.styleLabel(style));
   };
   /* 当前风格下应选的提示词集 */
   KB.setFor = function (season) {
@@ -127,14 +166,14 @@
   }
   KB.copyText = copyText;
   KB.copyBtn = function (text, label) {
-    var lab = label || '复制';
-    var b = h('button', { type: 'button', class: 'copy', 'aria-label': lab === '复制' ? '复制文本' : lab }, lab);
+    var lab = label || t('copy');
+    var b = h('button', { type: 'button', class: 'copy', 'aria-label': label ? lab : t('copy.aria') }, lab);
     b._copy = text;
     b.addEventListener('click', function () {
       copyText(String(b._copy || '')).then(function () {
-        b.textContent = '已复制'; b.classList.add('done');
+        b.textContent = t('copied'); b.classList.add('done');
         clearTimeout(b._t); b._t = setTimeout(function () { b.textContent = lab; b.classList.remove('done'); }, 1500);
-      }, function () { b.textContent = '复制失败'; setTimeout(function () { b.textContent = lab; }, 1500); });
+      }, function () { b.textContent = t('copy.fail'); setTimeout(function () { b.textContent = lab; }, 1500); });
     });
     return b;
   };
@@ -147,13 +186,13 @@
   };
   /* 一套提示词 {en, zh, negative_en, negative_zh} */
   KB.promptSet = function (p) {
-    if (!p) return KB.placeholder('无');
-    if (typeof p === 'string') return KB.pbox('提示词', p);
+    if (!p) return KB.placeholder(t('none'));
+    if (typeof p === 'string') return KB.pbox(t('p.prompt'), p);
     return h('div', null,
-      KB.pbox('EN 提示词', p.en),
-      KB.pbox('中文提示词', p.zh),
-      KB.pbox('负面词 EN', p.negative_en, true),
-      KB.pbox('负面词 中文', p.negative_zh, true));
+      KB.pbox(t('p.en'), p.en),
+      KB.pbox(t('p.zh'), p.zh),
+      KB.pbox(t('p.negEn'), p.negative_en, true),
+      KB.pbox(t('p.negZh'), p.negative_zh, true));
   };
 
   /* ---------- tabs ---------- */
@@ -162,7 +201,7 @@
   KB.tabs = function (items, opts) {
     opts = opts || {};
     var id = 'tb' + (++tabSeq);
-    var list = h('div', { class: 'tablist' + (opts.big ? ' big' : ''), role: 'tablist', 'aria-label': opts.label || '标签页' });
+    var list = h('div', { class: 'tablist' + (opts.big ? ' big' : ''), role: 'tablist', 'aria-label': opts.label || t('tabs.aria') });
     var wrap = h('div', { class: 'tabs' }, list);
     var btns = [], panels = [];
     var activeKey = items.some(function (it) { return it.key === opts.active; }) ? opts.active : (items[0] && items[0].key);
@@ -201,13 +240,14 @@
     var order = ['anime', 'anime_s2', 'game'];
     var keys = order.filter(function (k) { return sets[k]; }).concat(Object.keys(sets).filter(function (k) { return order.indexOf(k) < 0; }));
     var items = keys.map(function (k) {
-      return { key: k, label: (sets[k] && sets[k].label) || SET_LABEL[k] || k, render: function () { return KB.promptSet(sets[k]); } };
+      var lb = SETS.indexOf(k) >= 0 ? KB.setLabel(k) : ((sets[k] && tr(sets[k].label)) || k);
+      return { key: k, label: lb, render: function () { return KB.promptSet(sets[k]); } };
     });
     (extra || []).forEach(function (x) { items.push(x); });
-    if (!items.length) return h('p', { class: 'muted' }, '没有提示词数据。');
+    if (!items.length) return h('p', { class: 'muted' }, t('prompts.none'));
     var want = KB.setFor(season);
     if (!sets[want]) want = keys.filter(function (k) { return (k === 'game') === (state.style === 'game'); })[0] || keys[0];
-    return KB.tabs(items, { active: want, label: '提示词集' });
+    return KB.tabs(items, { active: want, label: t('prompts.aria') });
   };
 
   /* ---------- swatches ---------- */
@@ -229,17 +269,18 @@
     opts = opts || {};
     var list = KB.sortImages(images);
     var g = h('div', { class: 'gallery' });
-    if (!list.length) { g.appendChild(h('p', { class: 'muted' }, '暂无图片。')); return g; }
+    if (!list.length) { g.appendChild(h('p', { class: 'muted' }, t('gallery.none'))); return g; }
     list.forEach(function (im) {
       var src = KB.imgSrc(im, 'thumb');
-      var cap = [im.type || im.label || '', im.file ? ' · ' + im.file : ''].join('');
-      var btn = h('button', { type: 'button', class: 'thumb', 'aria-label': '放大查看：' + (im.label || im.type || im.file || '图片') },
-        KB.img(src, im.label || im.type || im.file || ''), KB.badge(im.style));
+      var lab = tr(im.label) || tr(im.type) || '';
+      var cap = [tr(im.type) || tr(im.label) || '', im.file ? ' · ' + im.file : ''].join('');
+      var btn = h('button', { type: 'button', class: 'thumb', 'aria-label': t('gallery.zoom', { x: lab || im.file || t('gallery.img') }) },
+        KB.img(src, lab || im.file || ''), KB.badge(im.style));
       btn.addEventListener('click', function () {
-        KB.lightbox({ src: KB.imgSrc(im, 'full') || src, caption: cap, link: im.source_page, linkText: 'Wiki 文件页' });
+        KB.lightbox({ src: KB.imgSrc(im, 'full') || src, caption: cap, link: im.source_page, linkText: t('wiki.file') });
       });
-      g.appendChild(h('figure', null, btn, h('figcaption', null, im.label || im.type || '',
-        KB.isStr(im.source_page) ? [' · ', h('a', { href: im.source_page, target: '_blank', rel: 'noopener' }, '来源')] : null)));
+      g.appendChild(h('figure', null, btn, h('figcaption', null, lab,
+        KB.isStr(im.source_page) ? [' · ', h('a', { href: im.source_page, target: '_blank', rel: 'noopener' }, t('source'))] : null)));
     });
     return g;
   };
@@ -250,8 +291,8 @@
     if (lb) return;
     lbImg = h('img', { alt: '' });
     lbCap = h('div', { class: 'lb-cap' });
-    var close = h('button', { type: 'button', class: 'lb-close', 'aria-label': '关闭大图' }, '关闭 ✕');
-    lb = h('div', { class: 'lb', role: 'dialog', 'aria-modal': 'true', 'aria-label': '大图', hidden: true }, close, lbImg, lbCap);
+    var close = h('button', { type: 'button', class: 'lb-close' });
+    lb = h('div', { class: 'lb', role: 'dialog', 'aria-modal': 'true', hidden: true }, close, lbImg, lbCap);
     close.addEventListener('click', KB.closeLightbox);
     lb.addEventListener('click', function (e) { if (e.target === lb) KB.closeLightbox(); });
     lb.addEventListener('keydown', function (e) { if (e.key === 'Tab') { e.preventDefault(); var f = lb.querySelectorAll('button,a[href]'); var a = Array.prototype.indexOf.call(f, document.activeElement); f[(a + (e.shiftKey ? f.length - 1 : 1)) % f.length].focus(); } });
@@ -260,11 +301,13 @@
   }
   KB.lightbox = function (o) {
     ensureLb();
+    var cl = lb.querySelector('.lb-close');
+    cl.textContent = t('lb.close'); cl.setAttribute('aria-label', t('lb.closeAria')); lb.setAttribute('aria-label', t('lb.aria'));
     lbLast = document.activeElement;
     lbImg.removeAttribute('src');
     if (o.src) { lbImg.hidden = false; lbImg.src = o.src; lbImg.alt = o.caption || ''; } else { lbImg.hidden = true; }
     lbCap.textContent = '';
-    append(lbCap, [o.caption || '', o.link ? [' · ', h('a', { href: o.link, target: '_blank', rel: 'noopener' }, o.linkText || '来源')] : null]);
+    append(lbCap, [o.caption || '', o.link ? [' · ', h('a', { href: o.link, target: '_blank', rel: 'noopener' }, o.linkText || t('source'))] : null]);
     lb.hidden = false;
     document.body.style.overflow = 'hidden';
     lb.querySelector('.lb-close').focus();
@@ -284,60 +327,81 @@
   };
 
   /* ---------- chrome: top bar + footer ---------- */
-  var PAGES = [['index', '首页'], ['styles', '画风'], ['characters', '角色'], ['scenes', '场景'], ['cyberware', '义体']];
+  var PAGES = ['index', 'styles', 'actions', 'characters', 'scenes', 'cyberware'];
+  var LS = { season: LS_SEASON, style: LS_STYLE };
   var listeners = [];
   KB.onChange = function (fn) { listeners.push(fn); };
   function emit(what) { listeners.forEach(function (fn) { try { fn(what); } catch (e) { console.error(e); } }); }
 
-  function seg(label, key, opts) {
-    var wrap = h('div', { class: 'seg', role: 'group', 'aria-label': label });
+  function markSeg(key, v) {
+    document.querySelectorAll('.seg[data-key="' + key + '"] .seg-btns button').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-v') === v ? 'true' : 'false');
+    });
+  }
+  /* 语言切换：重建顶栏/页脚文字，再通知页面重渲染（保留滚动位置和 hash） */
+  function applyLang(v, save) {
+    var y = window.scrollY;
+    return I18N.setLang(v, save).then(function () {
+      chrome();
+      emit('lang');
+      window.scrollTo(0, y);
+    });
+  }
+  KB.setLang = function (v) { return applyLang(v, true); };
+
+  function seg(label, key, opts, showLabel) {
+    var wrap = h('div', { class: 'seg', role: 'group', 'aria-label': label, 'data-key': key });
     var btns = h('div', { class: 'seg-btns' });
     opts.forEach(function (o) {
-      var b = h('button', { type: 'button', 'aria-pressed': state[key] === o[0] ? 'true' : 'false', 'data-v': o[0] }, o[1]);
+      var b = h('button', { type: 'button', 'aria-pressed': state[key] === o[0] ? 'true' : 'false', 'data-v': o[0], lang: o[2] || null }, o[1]);
       b.addEventListener('click', function () {
         if (state[key] === o[0]) return;
+        if (key === 'lang') { applyLang(o[0], true); return; }
         state[key] = o[0];
-        lsSet(key === 'season' ? LS_SEASON : LS_STYLE, o[0]);
-        Array.prototype.forEach.call(btns.children, function (x) { x.setAttribute('aria-pressed', x.getAttribute('data-v') === o[0] ? 'true' : 'false'); });
+        lsSet(LS[key], o[0]);
+        markSeg(key, o[0]);
         emit(key);
       });
       btns.appendChild(b);
     });
-    wrap.appendChild(h('span', { 'aria-hidden': 'true' }, label + '：'));
+    if (showLabel !== false) wrap.appendChild(h('span', { 'aria-hidden': 'true' }, label + t('colon').trim()));
     wrap.appendChild(btns);
     return wrap;
   }
 
   function chrome() {
     var page = document.body.getAttribute('data-page') || 'index';
-    var nav = h('nav', { class: 'nav', 'aria-label': '主导航' });
-    PAGES.forEach(function (p) { nav.appendChild(h('a', { href: p[0] + '.html', 'aria-current': p[0] === page ? 'page' : null }, p[1])); });
+    ['.topbar', '.skip', 'footer.foot'].forEach(function (sel) { var o = document.querySelector(sel); if (o) o.parentNode.removeChild(o); });
+    var nav = h('nav', { class: 'nav', 'aria-label': t('nav.aria') });
+    PAGES.forEach(function (p) { nav.appendChild(h('a', { href: p + '.html', 'aria-current': p === page ? 'page' : null }, t('nav.' + p))); });
     var bar = h('header', { class: 'topbar' },
       h('div', { class: 'topbar-in' },
-        h('a', { class: 'brand', href: 'index.html' }, '边缘行者知识库'),
+        h('a', { class: 'brand', href: 'index.html' }, t('brand')),
         nav,
         h('div', { class: 'toggles' },
-          seg('季', 'season', [['all', '全部'], ['1', '第一季'], ['2', '第二季']]),
-          seg('风格', 'style', [['anime', '动画'], ['game', '游戏']]))));
+          seg(t('tg.season'), 'season', [['all', t('opt.all')], ['1', t('opt.s1')], ['2', t('opt.s2')]]),
+          seg(t('tg.style'), 'style', [['anime', t('opt.anime')], ['game', t('opt.game')]]),
+          seg(t('tg.lang'), 'lang', [['zh', '中', 'zh-CN'], ['en', 'EN', 'en']], false))));
     document.body.insertBefore(bar, document.body.firstChild);
-    document.body.insertBefore(h('a', { class: 'skip', href: '#main' }, '跳到正文'), bar);
-    document.body.appendChild(h('footer', { class: 'foot' }, '角色与图片版权归 CD PROJEKT RED / Studio Trigger，本站为非商业粉丝参考资料，仅供个人设计参考。数据来源：',
+    document.body.insertBefore(h('a', { class: 'skip', href: '#main' }, t('skip')), bar);
+    document.body.appendChild(h('footer', { class: 'foot' }, t('foot.a'),
       h('a', { href: 'https://cyberpunk.fandom.com', target: '_blank', rel: 'noopener' }, 'cyberpunk.fandom.com'),
-      '。侵权必删：版权方请通过 ',
+      t('foot.b'),
       h('a', { href: 'https://github.com/HMS97/cyberpunk-edgerunners-reference/issues', target: '_blank', rel: 'noopener' }, 'GitHub Issues'),
-      ' 联系，相关内容会尽快删除。'));
+      t('foot.c')));
   }
 
   /* 其他标签页改了开关时同步 */
   window.addEventListener('storage', function (e) {
+    if (e.key === I18N.LS_KEY) {
+      if (e.newValue && e.newValue !== I18N.lang) applyLang(e.newValue, false);
+      return;
+    }
     if (e.key === LS_SEASON || e.key === LS_STYLE) {
       var key = e.key === LS_SEASON ? 'season' : 'style';
       if (e.newValue && e.newValue !== state[key]) {
         state[key] = e.newValue;
-        document.querySelectorAll('.seg-btns button').forEach(function (b) {
-          var grp = b.closest('.seg').getAttribute('aria-label') === '季' ? 'season' : 'style';
-          if (grp === key) b.setAttribute('aria-pressed', b.getAttribute('data-v') === e.newValue ? 'true' : 'false');
-        });
+        markSeg(key, e.newValue);
         emit(key);
       }
     }
@@ -346,7 +410,7 @@
   KB.fail = function (root, err) {
     console.error(err);
     root.textContent = '';
-    root.appendChild(h('p', { class: 'err' }, '数据加载失败：' + (err && err.message ? err.message : err) + '。请通过本地 HTTP 服务打开本页面（例如 python3 -m http.server）。'));
+    root.appendChild(h('p', { class: 'err' }, t('fail', { msg: err && err.message ? err.message : err })));
   };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', chrome); else chrome();
